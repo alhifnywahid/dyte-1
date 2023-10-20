@@ -5,11 +5,11 @@ const code_themes = {
 
 /** @type {import('@docusaurus/types').Config} */
 const meta = {
-  title: 'Dyte Docs',
-  tagline: 'Real-time audio & video SDKs, ready to launch 🚀',
-  url: 'https://docs.dyte.io',
+  title: 'My Notes',
+  tagline: 'Website ini berisi catatan dari materi yang telah saya pelajari.',
+  url: 'https://www.mynotes.engineer/',
   baseUrl: '/',
-  favicon: '/favicon.ico',
+  favicon: '/svg/logoku.svg',
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -407,7 +407,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: '/img/dyte-docs-card.png',
+      image: '/svg/logoku.svg',
       colorMode: {
         defaultMode: 'light',
       },
@@ -420,9 +420,9 @@ const config = {
       navbar: {
         logo: {
           href: '/',
-          src: '/logo/light.svg',
-          srcDark: '/logo/dark.svg',
-          alt: 'Dyte Docs',
+          src: '/svg/logoku.svg',
+          srcDark: '/svg/logoku.svg',
+          alt: 'My Notes',
           height: '40px',
           width: '101px',
         },
@@ -460,24 +460,24 @@ const config = {
               },
             ],
           },
-          {
-            label: 'Support',
-            to: 'https://dyte.io/contact',
-          },
+          // {
+          //   label: 'Support',
+          //   to: 'https://dyte.io/contact',
+          // },
 
           {
             type: 'search',
             position: 'right',
           },
+          // {
+          //   label: 'Book a demo',
+          //   href: 'https://dyte.io/schedule-demo',
+          //   position: 'right',
+          //   className: 'navbar-book-demo',
+          // },
           {
-            label: 'Book a demo',
-            href: 'https://dyte.io/schedule-demo',
-            position: 'right',
-            className: 'navbar-book-demo',
-          },
-          {
-            label: 'Sign Up',
-            href: 'https://dev.dyte.io/register',
+            label: 'Hubungi Saya',
+            href: 'https://api.whatsapp.com/send/?phone=6285655207366&text&type=phone_number&app_absent=0',
             position: 'right',
             className: 'dev-portal-signup dev-portal-link',
           },
