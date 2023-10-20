@@ -486,9 +486,9 @@ const config = {
       footer: {
         logo: {
           href: '/',
-          src: '/logo/light.svg',
-          srcDark: '/logo/dark.svg',
-          alt: 'Dyte Docs',
+          src: '/svg/logoku.svg',
+          srcDark: '/svg/logoku.svg',
+          alt: 'My Notes',
           height: '36px',
         },
         links: [

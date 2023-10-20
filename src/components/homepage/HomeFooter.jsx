@@ -164,7 +164,7 @@ export default function Footer() {
     <footer className="bg-[#F4F7FF]">
       <div className="mx-auto flex w-full max-w-[1080px] flex-col px-6 py-12">
         <div className="mb-12 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-          <img src="/logo/dyte.svg" alt="Dyte" className="h-9 w-fit lg:h-12" />
+          <img src="/svg/logoku.svg" alt="Dyte" className="h-9 w-fit lg:h-12" />
 
           <Safety className="hidden lg:flex" />
           <BrowserOnly>

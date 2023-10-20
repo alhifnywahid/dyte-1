@@ -114,11 +114,11 @@
 
 @layer components {
   .noise-bg {
-    background-image: url('/static/landing-page/grid-light.svg');
+    background-image: url('/svg/grid-light.svg');
   }
 
   html[data-theme='dark'] .noise-bg {
-    background-image: url('/static/landing-page/grid-dark.svg');
+    background-image: url('/svg/grid-dark.svg');
   }
 
   .dyte-badge {
