@@ -436,14 +436,26 @@ const config = {
           //   to: 'guides',
           //   className: 'guides-top-header',
           // },
+          // {
+          //   label: 'Materi',
+          //   type: 'dropdown',
+          //   className: 'dyte-dropdown',
+          //   items: [
+          //     {
+          //       type: 'html',
+          //       value: sdksHTML,
+          //       className: 'dyte-dropdown',
+          //     },
+          //   ],
+          // },
           {
             label: 'Materi',
             type: 'dropdown',
-            className: 'dyte-dropdown',
+            className: 'dyte-dropdown resources-dropdown',
             items: [
               {
                 type: 'html',
-                value: sdksHTML,
+                value: resourcesHTML,
                 className: 'dyte-dropdown',
               },
             ],
