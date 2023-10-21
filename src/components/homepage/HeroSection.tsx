@@ -106,7 +106,7 @@ export default function HeroSection() {
           <h4 className="mb-2 text-2xl">Materi</h4>
           <p className="mb-6 text-text-400">Mau Belajar Apa Hari Ini?</p>
         </div>
-        <div className='mx-auto grid w-full max-w-5xl grid-cols-1 grid-rows-2 gap-6 px-4 md:grid-cols-2 no-pad-lef-rig'>
+        <div style={{paddingLeft: '0px', paddingRight: '0px'}} className='mx-auto grid w-full max-w-5xl grid-cols-1 grid-rows-2 gap-6 px-4 md:grid-cols-2'>
         {PRODUCTS.map((product) => (
           <HeroProduct {...product} key={product.title} />
         ))}
