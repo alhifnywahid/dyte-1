@@ -465,10 +465,10 @@ const config = {
           //   to: 'https://dyte.io/contact',
           // },
 
-          {
-            type: 'search',
-            position: 'right',
-          },
+          // {
+          //   type: 'search',
+          //   position: 'right',
+          // },
           // {
           //   label: 'Book a demo',
           //   href: 'https://dyte.io/schedule-demo',
