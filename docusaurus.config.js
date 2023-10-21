@@ -428,12 +428,16 @@ const config = {
         },
         items: [
           {
-            label: 'Guides',
-            to: 'guides',
-            className: 'guides-top-header',
+            label: 'Blog',
+            to: '/coming-soon',
           },
+          // {
+          //   label: 'Guides',
+          //   to: 'guides',
+          //   className: 'guides-top-header',
+          // },
           {
-            label: 'SDKs',
+            label: 'Materi',
             type: 'dropdown',
             className: 'dyte-dropdown',
             items: [
@@ -444,12 +448,8 @@ const config = {
               },
             ],
           },
-          // {
-          //   label: 'REST API',
-          //   to: '/api/',
-          // },
           {
-            label: 'Resources',
+            label: 'Tutorial',
             type: 'dropdown',
             className: 'dyte-dropdown resources-dropdown',
             items: [
