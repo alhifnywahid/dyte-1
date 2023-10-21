@@ -18,3 +18,12 @@
 .elemen-none {
   display: none;
 }
+
+.plus-margin {
+  margin-top: 20px;
+}
+
+.no-pad-lef-rig {
+  padding-left: 0px;
+  padding-right: 0px;
+}

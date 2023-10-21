@@ -11,33 +11,33 @@ import clsx from 'clsx';
 
 const PRODUCTS = [
   {
-    title: 'Live Video',
-    link: '/guides/live-video/intro-video-conf',
+    title: 'Bahasa Pemerograman',
+    link: '/coming-soon',
     icon: VideoRegular,
     lightImage: '/static/landing-page/hero/video-graphic.png',
     darkImage: '/static/landing-page/hero/video-graphic-dark.png',
     text: 'Enable live video communication within your application. Perfect for education, telemedicine, social networks and gaming',
   },
   {
-    title: 'Voice',
-    link: '/guides/voice-conf/intro-voice-conf',
+    title: 'Database',
+    link: '/coming-soon',
     icon: MicRegular,
     lightImage: '/static/landing-page/hero/voice-graphic.png',
     darkImage: '/static/landing-page/hero/voice-graphic-dark.png',
     text: 'Incorporate high-quality real-time audio into your application. Build voice calls, audio conferences, voice chats in games and more',
   },
   {
-    title: 'Interactive Live Streaming',
-    link: '/guides/livestream/livestream-overview',
+    title: 'Bahasa Inggris',
+    link: '/coming-soon',
     icon: LiveRegular,
     lightImage: '/static/landing-page/hero/livestream-graphic.png',
     darkImage: '/static/landing-page/hero/livestream-graphic-dark.png',
     text: 'Integrate highly scalable live video broadcasting capabilities into your app, ideal for apps that involve streaming webinars, sports or live events',
   },
   {
-    title: 'Chat',
-    beta: true,
-    link: '/guides/realtime-chat/intro-chat',
+    title: 'Web Scrapping',
+    beta: false,
+    link: '/coming-soon',
     icon: ChatMultipleRegular,
     lightImage: '/static/landing-page/hero/chat-graphic.png',
     darkImage: '/static/landing-page/hero/chat-graphic-dark.png',
@@ -48,7 +48,7 @@ const PRODUCTS = [
 function HeroProduct({
   link,
   title,
-  icon: Icon,
+  // icon: Icon,
   text,
   lightImage,
   darkImage,
@@ -67,7 +67,7 @@ function HeroProduct({
     >
       <div className="p-6 !pb-0">
         <h3 className="mb-1.5 flex items-center gap-3 font-jakarta group-hover:text-primary">
-          <Icon className="h-7 w-7" />
+          {/* <Icon className="h-7 w-7" /> */}
           <div>
             {title}
             {beta && <span className="font-normal text-text-400"> (Beta)</span>}
@@ -93,21 +93,24 @@ export default function HeroSection() {
       <section className="noise-bg no-underline-links px-4 pt-16 lg:py-0">
         <div className="flex flex-col items-center justify-between py-14">
           <h2 className="mb-4 font-jakarta text-5xl font-bold">
-            Build with Dyte
+            My Notes
           </h2>
           <p className="max-w-xl text-center text-text-400">
-            At Dyte, we're building the future of real-time communication.
-            Integrate programmable, and easily customizable live video and voice
-            into your web, mobile, and desktop applications with just a few
-            lines of code.
+            Catatan adalah jendela ke dalam pelajaran hidup kita. Mereka mengabadikan pengalaman dan pengetahuan kita.
           </p>
         </div>
       </section>
-
-      <section className="mx-auto grid w-full max-w-5xl grid-cols-1 grid-rows-2 gap-6 px-4 md:grid-cols-2">
+      
+      <section className="mx-auto mb-32 flex w-full max-w-5xl flex-col p-4 py-0 my-20">
+        <div className='mb-10"'>
+          <h4 className="mb-2 text-2xl">Materi</h4>
+          <p className="mb-6 text-text-400">Mau Belajar Apa Hari Ini?</p>
+        </div>
+        <div className='mx-auto grid w-full max-w-5xl grid-cols-1 grid-rows-2 gap-6 px-4 md:grid-cols-2 no-pad-lef-rig'>
         {PRODUCTS.map((product) => (
           <HeroProduct {...product} key={product.title} />
         ))}
+        </div>
       </section>
     </>
   );

@@ -15,7 +15,7 @@ function SDK({ icon, to, name }: { icon: string; name: string; to?: string }) {
 
 export default function SDKs() {
   return (
-    <section className="mx-auto mb-32 flex w-full max-w-5xl flex-col p-4 py-0">
+    <section className="mx-auto mb-32 flex w-full max-w-5xl flex-col p-4 py-0 my-20">
       <span className="mb-2 uppercase tracking-wider text-text-400">
         SDK Documentation
       </span>
