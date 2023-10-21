@@ -444,10 +444,10 @@ const config = {
               },
             ],
           },
-          {
-            label: 'REST API',
-            to: '/api/',
-          },
+          // {
+          //   label: 'REST API',
+          //   to: '/api/',
+          // },
           {
             label: 'Resources',
             type: 'dropdown',
