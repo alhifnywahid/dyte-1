@@ -36,7 +36,7 @@ const PRODUCTS = [
   },
   {
     title: 'Web Scrapping',
-    beta: false,
+    beta: true,
     link: '/coming-soon',
     icon: ChatMultipleRegular,
     lightImage: '/static/landing-page/hero/chat-graphic.png',
@@ -70,7 +70,7 @@ function HeroProduct({
           {/* <Icon className="h-7 w-7" /> */}
           <div>
             {title}
-            {beta && <span className="font-normal text-text-400"> (Beta)</span>}
+            {beta && <span style={{color: 'yellow', fontSize: '13px'}} className="font-normal text-text-400"> (Segera Hadir)</span>}
           </div>
         </h3>
         <p className="mb-0 text-sm text-zinc-400">{text}</p>
@@ -103,8 +103,10 @@ export default function HeroSection() {
       
       <section className="mx-auto mb-32 flex w-full max-w-5xl flex-col p-4 py-0 my-20">
         <div className='mb-10"'>
-          <h4 className="mb-2 text-2xl">Materi</h4>
-          <p className="mb-6 text-text-400">Mau Belajar Apa Hari Ini?</p>
+          {/* <h3 style={{color: 'green'}} className="mb-2 uppercase tracking-wider text-text-400">KATEGORI</h3> */}
+          <span style={{color: 'green'}} className="mb-4 uppercase tracking-wider text-text-400">KATEGORI</span>
+          <h4 className="mb-2 text-3xl">Mau belajar apa hari ini?</h4>
+          <p className="mb-6 text-text-400">Temukan tutorial berdasarkan minatmu.</p>
         </div>
         <div style={{paddingLeft: '0px', paddingRight: '0px'}} className='mx-auto grid w-full max-w-5xl grid-cols-1 grid-rows-2 gap-6 px-4 md:grid-cols-2'>
         {PRODUCTS.map((product) => (

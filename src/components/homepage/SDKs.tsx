@@ -16,9 +16,7 @@ function SDK({ icon, to, name }: { icon: string; name: string; to?: string }) {
 export default function SDKs() {
   return (
     <section className="mx-auto mb-32 flex w-full max-w-5xl flex-col p-4 py-0 my-20">
-      <span className="mb-2 uppercase tracking-wider text-text-400">
-        SDK Documentation
-      </span>
+      <span className="mb-2 uppercase tracking-wider text-text-400">SDK Documentation</span>
 
       <h3 className="mb-12 text-4xl">
         Build the way you want in the framework you want!
