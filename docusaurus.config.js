@@ -7,7 +7,7 @@ const code_themes = {
 const meta = {
   title: 'My Notes',
   tagline: 'Website ini berisi catatan dari materi yang telah saya pelajari.',
-  url: 'https://www.mynotes.engineer',
+  url: 'https://mynotes.engineer',
   baseUrl: '/',
   favicon: '/svg/logoku.svg',
   i18n: {
