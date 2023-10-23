@@ -36,6 +36,7 @@ function Safety({ className }) {
         'flex h-24 max-w-[418px] overflow-clip rounded-2xl bg-white elemen-none',
         className
       )}
+      style={{ display: 'none' }}
     >
       <div className="flex flex-1 place-items-center justify-center rounded-2xl bg-white px-4 py-6 font-jakarta font-bold text-gray-500">
         Your Security,<br />
@@ -77,6 +78,7 @@ function Status({ className }) {
         'flex items-center gap-2 rounded-lg border border-transparent p-1 px-2 font-jakarta font-semibold text-gray-500 transition-colors hover:border-gray-400 hover:bg-white hover:no-underline elemen-none',
         className
       )}
+      style={{ display: 'none' }}
       target="_blank"
     >
       <div
@@ -115,7 +117,7 @@ export default function Footer() {
     <footer className="bg-[#F4F7FF]">
       <div className="mx-auto flex w-full max-w-[1080px] flex-col px-6 py-12">
         <div className="mb-12 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-          <img src="/svg/logoku.svg" alt="Dyte" className="h-9 w-fit lg:h-12" />
+          <img src="/svg/logoku.svg" alt="Dyte" className="h-9 w-fit lg:h-12" style={{ display: 'none' }}/>
 
           <Safety className="hidden lg:flex" />
           <BrowserOnly>
@@ -146,6 +148,7 @@ export default function Footer() {
             <Link
               href="https://dyte.io/privacy-policy"
               className="text-inherit hover:text-black hover:underline elemen-none"
+              style={{ display: 'none' }}
             >
               Privacy Policy
             </Link>
@@ -153,6 +156,7 @@ export default function Footer() {
             <Link
               href="https://dyte.io/terms-of-service"
               className="text-inherit hover:text-black hover:underline elemen-none"
+              style={{ display: 'none' }}
             >
               Terms of Service
             </Link>
@@ -160,6 +164,7 @@ export default function Footer() {
             <Link
               href="https://dyte.io/website-terms-of-use"
               className="text-inherit hover:text-black hover:underline elemen-none"
+              style={{ display: 'none' }}
             >
               Website Terms of Use
             </Link>
