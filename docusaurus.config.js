@@ -188,9 +188,9 @@ const docs = [
 
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
 const defaultSettings = {
-  breadcrumbs: true,
-  editUrl: 'https://github.com/dyte-in/docs/tree/main/',
-  showLastUpdateTime: true,
+  breadcrumbs: false,
+  editUrl: 'https://github.com/alhifnywahid',
+  showLastUpdateTime: false,
   sidebarCollapsible: true,
   remarkPlugins: [
     [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }],
@@ -509,62 +509,75 @@ const config = {
         },
         links: [
           {
-            title: 'Product',
+            title: 'Belajar',
             items: [
               {
-                label: 'Demo',
-                href: 'https://app.dyte.io',
+                label: 'Artikel',
+                href: '#',
               },
               {
-                label: 'Developer Portal',
-                href: 'https://dev.dyte.io',
+                label: 'Tutorial',
+                href: '#',
               },
               {
-                label: 'Pricing',
-                href: 'https://dyte.io/#pricing',
+                label: 'Buku',
+                href: '#',
               },
             ],
           },
           {
-            title: 'Company',
+            title: 'Populer Tutorial',
             items: [
               {
-                label: 'About Us',
-                href: 'https://dyte.io',
+                label: 'Java',
+                href: '#',
               },
               {
-                label: 'Join Us',
-                href: 'https://dyte.freshteam.com/jobs',
+                label: 'Javascript',
+                href: '#',
               },
               {
-                label: 'Privacy Policy',
-                href: 'https://dyte.io/privacy-policy',
-              },
-              {
-                label: 'Contact Us',
-                href: 'https://dyte.io/contact',
+                label: 'Basisdata',
+                href: '#',
               },
             ],
           },
           {
-            title: 'Resources',
+            title: 'Sosial Media',
             items: [
               {
-                label: 'Documentation',
-                href: '/',
+                label: 'Facebook',
+                href: '#',
               },
               {
-                label: 'Blog',
-                href: 'https://dyte.io/blog',
+                label: 'Instagram',
+                href: '#',
               },
               {
-                label: 'Community',
-                href: 'https://community.dyte.io',
+                label: 'LinkeId',
+                href: '#',
+              },
+            ],
+          },
+          {
+            title: 'My Notes',
+            items: [
+              {
+                label: 'About',
+                href: '#',
+              },
+              {
+                label: 'FAQs',
+                href: '#',
+              },
+              {
+                label: 'Contact',
+                href: '#',
               },
             ],
           },
         ],
-        copyright: 'Copyright © Dyte since 2023. All rights reserved.',
+        copyright: 'Copyright © My Notes Inc.',
       },
       prism: {
         theme: code_themes.light,
@@ -577,6 +590,7 @@ const config = {
           'java',
           'swift',
           'objectivec',
+          'javascript',
         ],
         magicComments: [
           {
