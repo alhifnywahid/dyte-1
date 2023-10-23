@@ -33,7 +33,7 @@ function Safety({ className }) {
   return (
     <div
       className={clsx(
-        'flex h-24 max-w-[418px] overflow-clip rounded-2xl bg-white',
+        'flex h-24 max-w-[418px] overflow-clip rounded-2xl bg-white elemen-none',
         className
       )}
     >
@@ -74,7 +74,7 @@ function Status({ className }) {
     <Link
       href="https://status.dyte.io"
       className={clsx(
-        'flex items-center gap-2 rounded-lg border border-transparent p-1 px-2 font-jakarta font-semibold text-gray-500 transition-colors hover:border-gray-400 hover:bg-white hover:no-underline',
+        'flex items-center gap-2 rounded-lg border border-transparent p-1 px-2 font-jakarta font-semibold text-gray-500 transition-colors hover:border-gray-400 hover:bg-white hover:no-underline elemen-none',
         className
       )}
       target="_blank"
@@ -145,52 +145,43 @@ export default function Footer() {
           <div className="flex flex-wrap gap-2 text-sm text-gray-500">
             <Link
               href="https://dyte.io/privacy-policy"
-              className="text-inherit hover:text-black hover:underline"
+              className="text-inherit hover:text-black hover:underline elemen-none"
             >
               Privacy Policy
             </Link>
-            &bull;
+            {/* &bull; */}
             <Link
               href="https://dyte.io/terms-of-service"
-              className="text-inherit hover:text-black hover:underline"
+              className="text-inherit hover:text-black hover:underline elemen-none"
             >
               Terms of Service
             </Link>
-            &bull;
+            {/* &bull; */}
             <Link
               href="https://dyte.io/website-terms-of-use"
-              className="text-inherit hover:text-black hover:underline"
+              className="text-inherit hover:text-black hover:underline elemen-none"
             >
               Website Terms of Use
             </Link>
-            &bull;
+            {/* &bull; */}
             <span className="text-inherit">
-              &copy; {new Date().getFullYear()} Dyte Inc.
+              &copy; {new Date().getFullYear()} My Notes Inc.
             </span>
           </div>
 
           <div className="flex items-center gap-4">
-            <Link
-              href="https://github.com/dyte-io"
-              aria-label="Dyte's GitHub Organization"
-            >
+            <Link href="https://github.com/alhifnywahid" aria-label="Dyte's GitHub Organization" >
               <Github className="h-7 w-7 text-zinc-400 hover:text-primary" />
             </Link>
-            <Link
-              href="https://linkedin.com/company/dyteio"
-              aria-label="LinkedIn"
-            >
+            {/* <Link href="https://linkedin.com/company/dyteio" aria-label="LinkedIn" >
               <Linkedin className="h-7 w-7 text-zinc-400 hover:text-primary" />
             </Link>
             <Link href="https://twitter.com/dyte_io" aria-label="Twitter">
               <XIcon className="h-7 w-7 text-zinc-400 hover:text-primary" />
             </Link>
-            <Link
-              href="https://youtube.com/company/dyteio"
-              aria-label="Dyte YouTube Channel"
-            >
+            <Link href="https://youtube.com/company/dyteio" aria-label="Dyte YouTube Channel" >
               <Youtube className="h-7 w-7 text-zinc-400 hover:text-primary" />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
