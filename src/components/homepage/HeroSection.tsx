@@ -1,11 +1,5 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
-import {
-  ChatMultipleRegular,
-  LiveRegular,
-  MicRegular,
-  VideoRegular,
-} from '@fluentui/react-icons';
 import ThemedImage from '@theme/ThemedImage';
 import clsx from 'clsx';
 
@@ -13,7 +7,7 @@ const PRODUCTS = [
   {
     title: 'Programing',
     link: '#',
-    icon: VideoRegular,
+    iconLink: '/svg/programing.svg',
     lightImage: '/static/landing-page/hero/video-graphic.png',
     darkImage: '/static/landing-page/hero/video-graphic-dark.png',
     text: 'Belajar HTML, CSS, Javascript, Java dan Lainnya.',
@@ -22,7 +16,7 @@ const PRODUCTS = [
     title: 'Database',
     beta: true,
     link: '#',
-    icon: MicRegular,
+    iconLink: '/svg/logoku.svg',
     lightImage: '/static/landing-page/hero/voice-graphic.png',
     darkImage: '/static/landing-page/hero/voice-graphic-dark.png',
     text: 'Belajar Database seperti Basis data, MySQL, MongoDB dan Lainnya.',
@@ -31,7 +25,7 @@ const PRODUCTS = [
     title: 'Web Scrapping',
     beta: true,
     link: '#',
-    icon: ChatMultipleRegular,
+    iconLink: '/svg/logoku.svg',
     lightImage: '/static/landing-page/hero/chat-graphic.png',
     darkImage: '/static/landing-page/hero/chat-graphic-dark.png',
     text: 'Belajar Scrapping Web menggunakan package seperti Axios, Cheerio, Playwright Chormium dan Lainnya.',
@@ -40,7 +34,7 @@ const PRODUCTS = [
     title: 'Bahasa Inggris',
     beta: true,
     link: '#',
-    icon: LiveRegular,
+    iconLink: '/svg/logoku.svg',
     lightImage: '/static/landing-page/hero/livestream-graphic.png',
     darkImage: '/static/landing-page/hero/livestream-graphic-dark.png',
     text: 'Belajar bahasa inggris mulai dari cara membaca dan Lainnya.',
@@ -50,7 +44,7 @@ const PRODUCTS = [
 function HeroProduct({
   link,
   title,
-  // icon: Icon,
+  iconLink,
   text,
   lightImage,
   darkImage,
@@ -69,7 +63,7 @@ function HeroProduct({
     >
       <div className="p-6 !pb-0">
         <h3 className="mb-1.5 flex items-center gap-3 font-jakarta group-hover:text-primary">
-          {/* <Icon className="h-7 w-7" /> */}
+        <img className="h-10 w-10" src={iconLink} />
           <div>
             {title}
             {beta && <span style={{color: 'yellow', fontSize: '13px'}} className="font-normal text-text-400"> (Segera Hadir)</span>}

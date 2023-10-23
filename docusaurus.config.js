@@ -460,18 +460,18 @@ const config = {
               },
             ],
           },
-          {
-            label: 'Tutorial',
-            type: 'dropdown',
-            className: 'dyte-dropdown resources-dropdown',
-            items: [
-              {
-                type: 'html',
-                value: resourcesHTML,
-                className: 'dyte-dropdown',
-              },
-            ],
-          },
+          // {
+          //   label: 'Tutorial',
+          //   type: 'dropdown',
+          //   className: 'dyte-dropdown resources-dropdown',
+          //   items: [
+          //     {
+          //       type: 'html',
+          //       value: resourcesHTML,
+          //       className: 'dyte-dropdown',
+          //     },
+          //   ],
+          // },
           // {
           //   label: 'Support',
           //   to: 'https://dyte.io/contact',

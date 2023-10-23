@@ -1,6 +1,5 @@
 import React from 'react';
 import Layout from '@theme/Layout';
-
 import HeroSection from '../components/homepage/HeroSection';
 import APIReferenceSection from '../components/homepage/APIReferenceSection';
 import CommunitySection from '../components/homepage/CommunitySection';
@@ -14,7 +13,7 @@ import SDKs from '../components/homepage/SDKs';
 export default function Homepage() {
   return (
     <Layout
-      description="Real-time audio & video SDKs, ready to launch 🚀"
+      description="My Notes"
       wrapperClassName="homepage flex flex-col"
       noFooter
     >
