@@ -189,7 +189,7 @@ const docs = [
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
 const defaultSettings = {
   breadcrumbs: false,
-  // editUrl: 'https://github.com/alhifnywahid',
+  editUrl: 'https://github.com/alhifnywahid',
   showLastUpdateTime: false,
   sidebarCollapsible: true,
   remarkPlugins: [
