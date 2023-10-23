@@ -5,77 +5,28 @@ import { Linkedin, Youtube, Github } from '@styled-icons/boxicons-logos';
 import { XIcon } from '@site/src/icons';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 
-const products = [
-  {
-    name: 'Live Video',
-    href: 'https://dyte.io/video-sdk',
-  },
-  {
-    name: 'Voice Conferencing',
-    href: 'https://dyte.io/voice-sdk',
-  },
-  {
-    name: 'Live Streaming',
-    href: 'https://dyte.io/live-streaming-sdk',
-  },
-  {
-    name: 'Chat SDK',
-    href: 'https://dyte.io/chat-sdk',
-  },
-  {
-    name: 'Pricing',
-    href: 'https://dyte.io/pricing',
-  },
+const belajar = [
+  { name: 'Artikel', href: '#', },
+  { name: 'Tutorial', href: '#', },
+  { name: 'Buku', href: '#', },
 ];
 
-const developers = [
-  {
-    name: 'Developer Portal',
-    href: 'https://dev.dyte.io',
-  },
-  {
-    name: 'Documentation',
-    href: 'https://docs.dyte.io',
-  },
-  {
-    name: 'Showcase',
-    href: 'https://dyte.io/showcase',
-  },
-  {
-    name: 'API Reference',
-    href: '/api',
-  },
-  {
-    name: 'Guides',
-    href: '/guides',
-  },
+const popularTutorial = [
+  { name: 'Java', href: '#', },
+  { name: 'Javascript', href: '#', },
+  { name: 'Basisdata', href: '#', },
 ];
 
-const usecases = [
-  { name: 'Ed-Tech', href: 'https://dyte.io/use-cases/ed-tech' },
-  { name: 'Telehealth', href: 'https://dyte.io/use-cases/telehealth' },
-  { name: 'HR Tech', href: 'https://dyte.io/use-cases/hr-tech' },
-  { name: 'Fitness', href: 'https://dyte.io/use-cases/fitness' },
-  { name: 'Social', href: 'https://dyte.io/use-cases/social' },
-  { name: 'Gaming', href: 'https://dyte.io/use-cases/gaming' },
-  { name: 'Events', href: 'https://dyte.io/use-cases/events' },
+const sosialMedia = [
+  { name: 'Facebook', href: '#' },
+  { name: 'Instagram', href: '#' },
+  { name: 'LinkeId', href: '#' },
 ];
 
-const company = [
-  { name: 'About Us', href: 'https://dyte.io/about' },
-  { name: 'Blog', href: 'https://dyte.io/blog' },
-  { name: 'Careers', href: 'https://jobs.lever.co/dyte-io' },
-  { name: 'Community', href: 'https://dyte.io/community' },
-  { name: 'Startup Program', href: 'https://dyte.io/startups' },
-  { name: 'Contact Us', href: 'https://dyte.io/contact' },
-  { name: 'FAQ', href: '/faq' },
-];
-
-const comparisons = [
-  { name: 'Dyte vs Agora', href: 'https://dyte.io/agora-competitor' },
-  { name: 'Dyte vs Zoom', href: 'https://dyte.io/zoom-sdk-competitor' },
-  { name: 'Dyte vs Twilio', href: 'https://dyte.io/twilio-video-competitor' },
-  { name: 'Dyte vs Vonage', href: 'https://dyte.io/vonage-video-alternative' },
+const myNotes = [
+  { name: 'About', href: '#' },
+  { name: 'FAQs', href: '#' },
+  { name: 'Contact', href: '#' },
 ];
 
 function Safety({ className }) {
@@ -175,11 +126,10 @@ export default function Footer() {
         </div>
 
         <div className="grid grid-cols-2 gap-6 gap-y-12 md:justify-between lg:flex lg:flex-wrap">
-          <Links name="Product" links={products} />
-          <Links name="Developers" links={developers} />
-          <Links name="Usecases" links={usecases} />
-          <Links name="Company" links={company} />
-          <Links name="Compare" links={comparisons} />
+          <Links name="Belajar" links={belajar} />
+          <Links name="Populer Tutorial" links={popularTutorial} />
+          <Links name="Sosial Media" links={sosialMedia} />
+          <Links name="My Notes" links={myNotes} />
         </div>
 
         <hr className="my-12 !bg-gray-300" />
