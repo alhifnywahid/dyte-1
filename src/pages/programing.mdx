@@ -1,0 +1,37 @@
+import {
+  ChatMultipleRegular,
+  LiveRegular,
+  MicRegular,
+  VideoRegular,
+} from '@fluentui/react-icons';
+
+<CardSection
+  id="Quickstart"
+  title="Materi Programing"
+  description="ini kumpulan materi programing"
+>
+  <Card
+    title="HTML"
+    icon={<VideoRegular />}
+    to="/guides/live-video/intro-video-conf"
+    description="Materi HTML"
+  />
+  <Card
+    title="CSS"
+    icon={<MicRegular />}
+    to="/guides/voice-conf/intro-voice-conf"
+    description="Materi CSS"
+  />
+  <Card
+    title="Javascript"
+    icon={<LiveRegular />}
+    to="/guides/livestream/livestream-overview"
+    description="Materi Javascript"
+  />
+  <Card
+    title="Java"
+    icon={<ChatMultipleRegular />}
+    to="/java"
+    description="Materi Java"
+  />
+</CardSection>

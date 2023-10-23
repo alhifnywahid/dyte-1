@@ -6,7 +6,7 @@ import clsx from 'clsx';
 const PRODUCTS = [
   {
     title: 'Programing',
-    link: '#',
+    link: '/web-core',
     iconLink: '/svg/programing.svg',
     lightImage: '/static/landing-page/hero/video-graphic.png',
     darkImage: '/static/landing-page/hero/video-graphic-dark.png',

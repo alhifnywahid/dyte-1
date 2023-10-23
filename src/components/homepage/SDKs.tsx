@@ -108,6 +108,11 @@ export default function SDKs() {
             to="/android-core"
             icon="/static/landing-page/sdk-icons/kotlin.png"
           />
+          <SDK
+            name="Java"
+            to="/java"
+            icon="/static/landing-page/sdk-icons/kotlin.png"
+          />
         </div>
       </div>
     </section>

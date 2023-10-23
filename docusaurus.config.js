@@ -40,6 +40,11 @@ const docs = [
     path: 'docs/community-packages',
     routeBasePath: '/community-packages',
   },
+  {
+    id: 'java',
+    path: 'docs/java',
+    routeBasePath: '/java',
+  },
 
   // Web UI Kits
   {
@@ -370,7 +375,6 @@ const resourcesHTML = fs.readFileSync('./src/snippets/resources.html', 'utf-8');
 const config = {
   ...meta,
   plugins,
-
   trailingSlash: false,
   themes: ['@docusaurus/theme-live-codeblock'],
   clientModules: [require.resolve('./src/client/define-ui-kit.js')],
