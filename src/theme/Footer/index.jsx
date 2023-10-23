@@ -22,9 +22,11 @@ export default function FooterWrapper(props) {
       </Head>
 
       <Docsly
-        publicId="pk_ISePLVXw6GE0nIZqLZ7fHdCfxegenbom4hvb9loPst4uzB6W"
+        publicId="public_vzrAqhBkB7RSYu2xJ73FVYrZDBZwryg2Lkr4mluOpjUbbyp4PqVGZbs35RR6py6U"
+        // publicId="pk_ISePLVXw6GE0nIZqLZ7fHdCfxegenbom4hvb9loPst4uzB6W"
         pathname={pathname}
       />
     </>
   );
 }
+//src\theme\Footer\index.jsx
