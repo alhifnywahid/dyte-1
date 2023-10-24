@@ -433,7 +433,7 @@ const config = {
         },
         items: [
           {
-            label: 'thisblog',
+            label: 'Blog',
             to: '/coming-soon',
           },
           // {
