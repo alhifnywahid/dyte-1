@@ -13,7 +13,7 @@ const PRODUCTS = [
     text: 'Belajar HTML, CSS, Javascript, Java dan Lainnya.',
   },
   {
-    title: 'Database',
+    title: 'Editing',
     beta: true,
     link: '#',
     iconLink: '/svg/logoku.svg',
@@ -98,7 +98,7 @@ export default function HeroSection() {
       </section>
       
       <section className="mx-auto mb-32 flex w-full max-w-5xl flex-col p-4 py-0 my-20">
-        <div className='mb-10"'>
+        <div className="mb-10">
           {/* <h3 style={{color: 'green'}} className="mb-2 uppercase tracking-wider text-text-400">KATEGORI</h3> */}
           <span style={{color: 'green'}} className="mb-4 uppercase tracking-wider text-text-400">KATEGORI</span>
           <h4 className="mb-2 text-3xl">Mau belajar apa hari ini?</h4>
