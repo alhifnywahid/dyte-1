@@ -24,6 +24,11 @@ const docs = [
     routeBasePath: '/cli',
   },
   {
+    id: 'dokumentasi',
+    path: 'docs/dokumentasi',
+    routeBasePath: '/dokumentasi',
+  },
+  {
     id: 'plugin-sdk',
     path: 'docs/plugin-sdk',
     routeBasePath: '/plugin-sdk',
