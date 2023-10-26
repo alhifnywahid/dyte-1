@@ -6,7 +6,7 @@ import { XIcon } from '@site/src/icons';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 
 const belajar = [
-  { name: 'Artikel', href: '#', },
+  { name: 'Artikel', href: '/', },
   { name: 'Tutorial', href: '#', },
   { name: 'Buku', href: '#', },
 ];
@@ -134,7 +134,7 @@ export default function Footer() {
           <Links name="My Notes" links={myNotes} />
         </div>
 
-        <hr className="my-12 !bg-gray-300" />
+        <hr className="my-6 !bg-gray-300" />
 
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-0">
           <BrowserOnly>
@@ -145,46 +145,34 @@ export default function Footer() {
           <Safety className="flex w-full max-w-full lg:hidden" />
 
           <div className="flex flex-wrap gap-2 text-sm text-gray-500">
-            <Link
-              href="https://dyte.io/privacy-policy"
-              className="text-inherit hover:text-black hover:underline elemen-none"
-              style={{ display: 'none' }}
-            >
+            {/* <Link href="/" className="text-inherit hover:text-black hover:underline elemen-none" style={{ display: 'none' }} >
               Privacy Policy
             </Link>
-            {/* &bull; */}
-            <Link
-              href="https://dyte.io/terms-of-service"
-              className="text-inherit hover:text-black hover:underline elemen-none"
-              style={{ display: 'none' }}
-            >
+            &bull;
+            <Link href="/" className="text-inherit hover:text-black hover:underline elemen-none" style={{ display: 'none' }} >
               Terms of Service
             </Link>
-            {/* &bull; */}
-            <Link
-              href="https://dyte.io/website-terms-of-use"
-              className="text-inherit hover:text-black hover:underline elemen-none"
-              style={{ display: 'none' }}
-            >
+            &bull;
+            <Link href="/" className="text-inherit hover:text-black hover:underline elemen-none" style={{ display: 'none' }} >
               Website Terms of Use
             </Link>
-            {/* &bull; */}
+            &bull; */}
             <span className="text-inherit">
-              &copy; {new Date().getFullYear()} My Notes Inc.
+              &copy; {new Date().getFullYear()} My Notes | Made using <a href="https://docusaurus.io/">Docusaurus V2</a>.
             </span>
           </div>
 
           <div className="flex items-center gap-4">
-            <Link href="https://github.com/alhifnywahid" aria-label="Dyte's GitHub Organization" >
+            <Link href="https://github.com/alhifnywahid" aria-label="My Github" >
               <Github className="h-7 w-7 text-zinc-400 hover:text-primary" />
             </Link>
-            {/* <Link href="https://linkedin.com/company/dyteio" aria-label="LinkedIn" >
+            {/* <Link href="/" aria-label="LinkedIn" >
               <Linkedin className="h-7 w-7 text-zinc-400 hover:text-primary" />
             </Link>
-            <Link href="https://twitter.com/dyte_io" aria-label="Twitter">
+            <Link href="/" aria-label="Twitter">
               <XIcon className="h-7 w-7 text-zinc-400 hover:text-primary" />
             </Link>
-            <Link href="https://youtube.com/company/dyteio" aria-label="Dyte YouTube Channel" >
+            <Link href="/" aria-label="Dyte YouTube Channel" >
               <Youtube className="h-7 w-7 text-zinc-400 hover:text-primary" />
             </Link> */}
           </div>
