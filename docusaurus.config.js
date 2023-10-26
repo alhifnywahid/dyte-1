@@ -2,7 +2,6 @@ const code_themes = {
   light: require('prism-react-renderer/themes/github'),
   dark: require('prism-react-renderer/themes/vsDark'),
 };
-
 /** @type {import('@docusaurus/types').Config} */
 const meta = {
   title: 'My Notes',
@@ -417,9 +416,20 @@ const config = {
     ],
   ],
 
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      mermaid: {
+        theme: {light: 'neutral', dark: 'forest'},
+        options: {
+          // maxTextSize: 50,
+        },
+      },
       image: '/svg/logoku.svg',
       colorMode: {
         defaultMode: 'light',
@@ -616,8 +626,8 @@ const config = {
         ],
       },
       algolia: {
-        appId: 'HL0HSV62RK',
-        apiKey: '72ebf02146698733b7114c7b36da0945',
+        appId: 'RAXRF0BNQG',
+        apiKey: '7c23fad7208e493b6addd4150066cf48',
         indexName: 'docs',
         contextualSearch: true,
         searchParameters: {},
