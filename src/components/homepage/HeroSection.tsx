@@ -71,6 +71,14 @@ export default function HeroSection() {
           <p className="max-w-xl text-center text-text-400">
           "Mencatat ilmu itu seperti mengumpulkan permata berharga. Setiap catatan adalah batu mulia yang menghiasi mahkota pengetahuan kita."
           </p>
+          <div className="flex gap-4">
+            <Link to="/programing">
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">Mulai Belajar</button>
+            </Link>
+            <Link to={"/java"}>
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">Tentang Kami</button>
+            </Link>
+          </div>
         </div>
       </section>
       
@@ -81,7 +89,7 @@ export default function HeroSection() {
           <h4 className="mb-2 text-3xl">Mau belajar apa hari ini?</h4>
           <p className="mb-1 text-text-400">Temukan tutorial berdasarkan minatmu.</p>
         </div>
-        <div style={{paddingLeft: '0px', paddingRight: '0px'}} className='mx-auto grid w-full max-w-5xl grid-cols-1 grid-rows-2 gap-6 px-4 md:grid-cols-2 mt-0'>
+        <div style={{paddingLeft: '0px', paddingRight: '0px'}} className='mx-auto grid w-full max-w-5xl grid-cols-1 grid-rows-1 gap-6 px-4 md:grid-cols-2 mt-0'>
         {PRODUCTS.map((product) => (
           <HeroProduct {...product} key={product.judul} />
         ))}

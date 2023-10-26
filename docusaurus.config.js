@@ -428,14 +428,16 @@ const config = {
         },
       },
       navbar: {
-        logo: {
-          href: '/',
-          src: '/svg/logoku.svg',
-          srcDark: '/svg/logoku.svg',
-          alt: 'My Notes',
-          height: '40px',
-          width: '101px',
-        },
+        title: 'My Notes', // Ganti dengan teks yang Anda inginkan
+        hideOnScroll: false,
+        // logo: {
+        //   href: '/',
+        //   src: '/svg/logoku.svg',
+        //   srcDark: '/svg/logoku.svg',
+        //   alt: 'My Notes',
+        //   height: '40px',
+        //   width: '101px',
+        // },
         items: [
           {
             label: 'Blog',
