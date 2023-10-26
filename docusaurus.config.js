@@ -97,18 +97,7 @@ const docs = [
       },
     },
   },
-
-  // Mobile Core
-  {
-    id: 'android-core',
-    path: 'docs/android-core',
-    routeBasePath: '/android-core',
-    versions: {
-      current: {
-        label: '1.x.x',
-      },
-    },
-  },
+  
   {
     id: 'flutter-core',
     path: 'docs/flutter-core',

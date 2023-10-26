@@ -78,12 +78,7 @@ const SECTIONS: Section[] = [
     section: 'web-core-sdk',
   },
   // Mobile SDKs
-  {
-    name: 'Android Core',
-    docId: 'android-core',
-    icon: AndroidIcon,
-    section: 'mobile-core',
-  },
+  
 
   {
     name: 'iOS Core',
