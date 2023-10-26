@@ -43,9 +43,9 @@
       "selectors_key": "react-native"
     },
     {
-      "url": "https://docs.dyte.io/android",
-      "tags": "android",
-      "selectors_key": "android"
+      "url": "#",
+      "tags": "#",
+      "selectors_key": "#"
     },
     {
       "url": "https://docs.dyte.io/ios",
@@ -73,9 +73,9 @@
       "selectors_key": "rn-core"
     },
     {
-      "url": "https://docs.dyte.io/android-core",
-      "tags": "android-core",
-      "selectors_key": "android-core"
+      "url": "#",
+      "tags": "#",
+      "selectors_key": "#"
     },
     "https://docs.dyte.io/"
   ],

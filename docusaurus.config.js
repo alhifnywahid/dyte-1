@@ -152,16 +152,16 @@ const docs = [
   },
 
   // Mobile UI Kits
-  {
-    id: 'android',
-    path: 'docs/android',
-    routeBasePath: '/android',
-    versions: {
-      current: {
-        label: '0.14.x',
-      },
-    },
-  },
+  // {
+  //   id: 'android',
+  //   path: 'docs/android',
+  //   routeBasePath: '/android',
+  //   versions: {
+  //     current: {
+  //       label: '0.14.x',
+  //     },
+  //   },
+  // },
   {
     id: 'flutter',
     path: 'docs/flutter',

@@ -61,11 +61,6 @@ export default function SDKs() {
             to="/ios"
             icon="/static/landing-page/sdk-icons/swift.png"
           />
-          <SDK
-            name="Android"
-            to="/android"
-            icon="/static/landing-page/sdk-icons/kotlin.png"
-          />
         </div>
       </div>
 
@@ -102,11 +97,6 @@ export default function SDKs() {
             name="iOS"
             to="/ios-core"
             icon="/static/landing-page/sdk-icons/swift.png"
-          />
-          <SDK
-            name="Android"
-            to="/android-core"
-            icon="/static/landing-page/sdk-icons/kotlin.png"
           />
           <SDK
             name="Java"
