@@ -8,9 +8,9 @@
       "selectors_key": "guides"
     },
     {
-      "url": "https://docs.dyte.io/cli",
-      "tags": "cli",
-      "selectors_key": "cli"
+      "url": "#",
+      "tags": "#",
+      "selectors_key": "#"
     },
     {
       "url": "https://docs.dyte.io/react-ui-kit",
@@ -101,20 +101,6 @@
         "selector": "",
         "global": true,
         "default_value": "Guides"
-      },
-      "lvl1": "article h1",
-      "lvl2": "article h2",
-      "lvl3": "article h3",
-      "lvl4": "article h4",
-      "lvl5": "article h5, article td:first-child",
-      "lvl6": "article h6",
-      "text": "article p, article li, article td:last-child"
-    },
-    "cli": {
-      "lvl0": {
-        "selector": "",
-        "global": true,
-        "default_value": "CLI"
       },
       "lvl1": "article h1",
       "lvl2": "article h2",
