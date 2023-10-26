@@ -45,14 +45,7 @@ const docs = [
       },
     },
   },
-
-  // Community packages
-  // {
-  //   id: 'community-packages',
-  //   path: 'docs/community-packages',
-  //   routeBasePath: '/community-packages',
-  // },
-
+  
   // Web UI Kits
   {
     id: 'ui-kit',
