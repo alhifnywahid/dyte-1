@@ -158,7 +158,7 @@ export default function Footer() {
             </Link>
             &bull; */}
             <span className="text-inherit">
-              &copy; {new Date().getFullYear()} My Notes | Made using <a href="https://docusaurus.io/">Docusaurus V2</a>.
+              &copy; {new Date().getFullYear()} My Notes.
             </span>
           </div>
 
