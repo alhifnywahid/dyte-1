@@ -30,11 +30,7 @@ const docs = [
   { id: 'pribadi', path: 'docs/pribadi/pribadi', routeBasePath: '/pribadi', },
 
   /* =================================================== */
-  // {
-  //   id: 'cli',
-  //   path: 'docs/cli',
-  //   routeBasePath: '/cli',
-  // },
+  
   {
     id: 'plugin-sdk',
     path: 'docs/plugin-sdk',
