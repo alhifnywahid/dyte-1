@@ -30,18 +30,6 @@ const docs = [
   { id: 'pribadi', path: 'docs/pribadi/pribadi', routeBasePath: '/pribadi', },
 
   /* =================================================== */
-  
-  // {
-  //   id: 'plugin-sdk',
-  //   path: 'docs/plugin-sdk',
-  //   routeBasePath: '/plugin-sdk',
-  //   versions: {
-  //     current: {
-  //       label: '1.x.x',
-  //     },
-  //   },
-  // },
-  
   // Web UI Kits
   {
     id: 'ui-kit',
