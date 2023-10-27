@@ -117,13 +117,7 @@ const plugins = [
   [
     '@docusaurus/plugin-client-redirects',
     {
-      createRedirects(path) {
-        if (path.startsWith('/web-core/livestreaming')) {
-          return [path.replace('/web-core/livestreaming', '/web-core/livestreaming/livestream-apis')];
-        } 
-        if (path.startsWith('/web-core/stage')) {
-          return [path.replace('/web-core/stage', '/web-core/livestreaming/state-management-apis')];
-        } 
+      createRedirects(path) {  
         if (path.startsWith('/guides/capabilities/webhooks')) {
           return [
             path.replace('/guides/capabilities/webhooks', '/guides/webhooks'),

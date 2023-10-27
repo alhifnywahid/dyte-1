@@ -34,18 +34,18 @@ const REFERENCE_PROPS = {
   //   name: 'Poll',
   // },
   plugins: {
-    path: '/web-core/reference/DytePlugin',
+    path: '/java',
     name: 'DytePlugin[]',
   },
   plugin: {
-    path: '/web-core/reference/DytePlugin',
+    path: '/java',
     name: 'DytePlugin',
   },
 };
 
 const WEB_CORE_TYPE_REFERENCES = {
   DyteClient: {
-    path: '/web-core/reference/DyteClient',
+    path: '/java',
     name: 'DyteClient',
   },
 };
@@ -55,10 +55,10 @@ function PropType({ prop }) {
     return (
       <pre className={styles.propType}>
         <code>
-          <Link href="/web-core/reference/DyteParticipant">
+          <Link href="/java">
             DyteParticipant
           </Link>{' '}
-          | <Link href="/web-core/reference/DyteSelf">DyteSelf</Link>
+          | <Link href="/java">DyteSelf</Link>
         </code>
       </pre>
     );
@@ -69,10 +69,10 @@ function PropType({ prop }) {
       <pre className={styles.propType}>
         <code>
           (
-          <Link href="/web-core/reference/DyteParticipant">
+          <Link href="/java">
             DyteParticipant
           </Link>{' '}
-          | <Link href="/web-core/reference/DyteSelf">DyteSelf</Link>)[]
+          | <Link href="/java">DyteSelf</Link>)[]
         </code>
       </pre>
     );

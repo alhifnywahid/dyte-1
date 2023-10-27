@@ -57,11 +57,7 @@ Here's a series of steps that you need to perform:
 
 - Use the `useDyteClient()` hook and `initMeeting`
 - Provide the `authToken` that you fetched from your server-side
-
-
-### Set up `DyteProvider`
- `DyteProvider` basically is a hook wrapper on `dytesdk/web-core`. This provides a meeting object to child components.
-
+ 
 
 `fallback` can be used to add a loading indicator while the meeting is being initialized.
 
@@ -94,11 +90,7 @@ function MyMeeting() {
   );
 }
 ```
-
-### Build your own UI
-
-If you require additional customizations, you can choose specific components and utilize the low-level APIs offered by our [core SDK](/web-core/introduction) to construct the rest of the UI according to your specific needs.
-
+ 
 ```jsx
 import { DyteGrid, DyteMicToggle } from '@dytesdk/react-ui-kit';
 

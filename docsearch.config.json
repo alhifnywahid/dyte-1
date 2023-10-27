@@ -26,12 +26,7 @@
       "url": "https://docs.dyte.io/vue-ui-kit",
       "tags": "vue-ui-kit",
       "selectors_key": "vue-ui-kit"
-    },
-    {
-      "url": "https://docs.dyte.io/web-core",
-      "tags": "web-core",
-      "selectors_key": "web-core"
-    },
+    }, 
     {
       "url": "#",
       "tags": "#",
