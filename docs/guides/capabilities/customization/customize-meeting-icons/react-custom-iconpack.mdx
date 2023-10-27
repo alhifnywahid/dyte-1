@@ -19,9 +19,6 @@ Customizing the meeting icons involve the following steps:
     </summary>
     1. Install the package using npm or Yarn.
 
-```bash npm2yarn
-npm install @dytesdk/react-ui-kit @dytesdk/react-web-core
-```
 
 2. Initialize the Dyte client using the `useDyteClient()` hook. It returns an array with two values, the meeting object and a function to initialize the meeting.
 3. Create a meeting room using the [Create Meeting API](/api#/operations/create_meeting).
@@ -31,26 +28,6 @@ npm install @dytesdk/react-ui-kit @dytesdk/react-web-core
 
 The `DyteMeeting` component generates the default UI experience. Read more about how to customize the UI [here](/react-ui-kit/basics/components-basics).
 
-```jsx
-import { useDyteClient } from '@dytesdk/react-web-core';
-import { DyteMeeting } from '@dytesdk/react-ui-kit';
-
-function App() {
-  const [client, initClient] = useDyteClient();
-
-  useEffect(() => {
-    initClient({
-      authToken: '<auth-token>',
-      defaults: {
-        audio: false,
-        video: true,
-      },
-    });
-  }, []);
-
-  return <DyteMeeting meeting={client} />;
-}
-```
 
 </details>
 

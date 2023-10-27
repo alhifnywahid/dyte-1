@@ -67,12 +67,7 @@ export default function SDKs() {
             name="JS"
             to="/web-core"
             icon="/img/coming-soon.png"
-          />
-          <SDK
-            name="React"
-            to="/react-web-core"
-            icon="/img/coming-soon.png"
-          />
+          /> 
           <SDK
             name="Java"
             to="/java"

@@ -51,11 +51,7 @@ Since the UI Kit is built on top of the Core SDK, you must install the
 `react-web-core` package along with the `ui-kit`. 
 
 You can install the package using npm or Yarn.
-
-```bash npm2yarn
-npm install @dytesdk/react-ui-kit @dytesdk/react-web-core
-```
-
+ 
 :::tip Import Errors
 
 If you get errors when importing the `react-ui-kit` and `react-web-core`
@@ -63,20 +59,12 @@ packages, try installing them separately.
 
 :::
 
-### Version
-
-|                         |                                                                                                                              |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| @dytesdk/react-ui-kit   | [![npm version](https://badge.fury.io/js/@dytesdk%2Freact-ui-kit.svg)](https://badge.fury.io/js/@dytesdk%2Freact-ui-kit)     |
-| @dytesdk/react-web-core | [![npm version](https://badge.fury.io/js/@dytesdk%2Freact-web-core.svg)](https://badge.fury.io/js/@dytesdk%2Freact-web-core) |
-
+### Version 
 ## Step 2: Get Started with Dyte Prebuilt Components
 
 Here's a series of steps that you need to perform:
 
-1. Set up `DyteProvider`. You need it to import the `DyteProvider` from the
-   `dytesdk/react-web-core`. DyteProvider basically is a hook wrapper on
-   dytesdk/web-core. This provides a meeting object to child components.
+1. Set up `DyteProvider`. You need it to import the `DyteProvider` from the  
 2. Initialize the Dyte client. Use the `useDyteClient()` hook and `initMeeting`
    to initialize a client.
 3. Call the `init()` method and pass the `authToken`:
@@ -90,29 +78,7 @@ Here's a series of steps that you need to perform:
 
    The meeting object serves as the link between web-core and UI Kit, allowing
    them to communicate with one another. Once the UI Kit has the meeting object,
-   it can join and leave meetings, and so on.
-
-```jsx
-import { useEffect } from 'react';
-import { useDyteClient } from '@dytesdk/react-web-core';
-import { DyteMeeting } from '@dytesdk/react-ui-kit';
-
-export default function App() {
-  const [meeting, initMeeting] = useDyteClient();
-
-  useEffect(() => {
-    initMeeting({
-      authToken: '<auth-token>',
-      defaults: {
-        audio: false,
-        video: false,
-      },
-    });
-  }, []);
-
-  return <DyteMeeting meeting={meeting} />;
-}
-```
+   it can join and leave meetings, and so on. 
 
 ## Example: Using Prebuilt `DyteMeeting` Component
 
