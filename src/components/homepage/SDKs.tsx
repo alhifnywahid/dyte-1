@@ -74,11 +74,6 @@ export default function SDKs() {
             icon="/img/coming-soon.png"
           />
           <SDK
-            name="Flutter"
-            to="/flutter-core"
-            icon="/img/coming-soon.png"
-          />
-          <SDK
             name="Java"
             to="/java"
             icon="/img/coming-soon.png"

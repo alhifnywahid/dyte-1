@@ -85,28 +85,6 @@ const docs = [
       },
     },
   },
-  
-  {
-    id: 'flutter-core',
-    path: 'docs/flutter-core',
-    routeBasePath: '/flutter-core',
-    versions: {
-      current: {
-        label: '1.x.x',
-      },
-    },
-  },
-  
-  // {
-  //   id: 'rn-core',
-  //   path: 'docs/rn-core',
-  //   routeBasePath: '/rn-core',
-  //   versions: {
-  //     current: {
-  //       label: '0.5.x',
-  //     },
-  //   },
-  // },
 ];
 
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
