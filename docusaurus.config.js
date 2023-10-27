@@ -31,16 +31,16 @@ const docs = [
 
   /* =================================================== */
   
-  {
-    id: 'plugin-sdk',
-    path: 'docs/plugin-sdk',
-    routeBasePath: '/plugin-sdk',
-    versions: {
-      current: {
-        label: '1.x.x',
-      },
-    },
-  },
+  // {
+  //   id: 'plugin-sdk',
+  //   path: 'docs/plugin-sdk',
+  //   routeBasePath: '/plugin-sdk',
+  //   versions: {
+  //     current: {
+  //       label: '1.x.x',
+  //     },
+  //   },
+  // },
   
   // Web UI Kits
   {
