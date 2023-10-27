@@ -23,9 +23,7 @@ Customizing the locale involve the following steps:
 3. Generate an `authToken` using the [Add Participant API](/api#/operations/add_participant). An `authToken` is a unique token that is used to identify a user in the meeting.
 4. Initialize the Dyte client using the `DyteClient.init({ authToken })`. It returns the meeting object.
 5. Pass the meeting object to the UI Kit.
-
-The `dyte-meeting` component generates the default UI experience. Read more about how to customize the UI [here](/angular-ui-kit/basics/components-basics).
-
+ 
 ```ts
 class AppComponent {
   title = 'MyProject';
@@ -50,11 +48,7 @@ class AppComponent {
 Now that you've integrated Dyte SDK into your application successfully, let's quickly understand how you can customize the language pack for your application.
 
 Dyte's default language pack can be imported like so.
-
-```jsx
-import { defaultLanguage, useLanguage } from '@dytesdk/angular-ui-kit';
-```
-
+ 
 In order to replace Dyte's default locale set with your own, you can pass your own locale to the `t` prop exposed by the UI components.
 
 ```jsx

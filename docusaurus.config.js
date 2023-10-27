@@ -60,19 +60,7 @@ const docs = [
         label: '1.x.x',
       },
     },
-  },
-
-  // Web Core
-  {
-    id: 'web-core',
-    path: 'docs/web-core',
-    routeBasePath: '/web-core',
-    versions: {
-      current: {
-        label: '1.x.x',
-      },
-    },
-  },
+  }, 
 ];
 
 /** @type {import('@docusaurus/plugin-content-docs').Options} */

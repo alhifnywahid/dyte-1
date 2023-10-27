@@ -44,10 +44,7 @@ You'll learn how to:
 - [Create an Angular workspace](https://angular.io/guide/setup-local#create-a-workspace-and-initial-application)
   with initial application. If you don't have a project, create one using ng new
   `<project-name>`, where `<project-name>` is the name of your Angular
-  application.
-- Read the [Introduction to Angular UI Kit](/angular-ui-kit) to understand the
-  UI Kit and its relationship with web core SDKs.
-
+  application. 
 ## Step 1: Install the SDK
 
 Since the UI Kit is built on top of the Core SDK, you must install the
@@ -68,22 +65,7 @@ Load the `DyteComponentsModule` into your app module. This is typically the
 This allows you to use Dyte's UI components in your component HTML files. For
 more information on the components, see
 [Angular components](https://angular.io/guide/component-overview).
-
-```ts
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { DyteComponentsModule } from '@dytesdk/angular-ui-kit';
-
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, DyteComponentsModule],
-  providers: [],
-  bootstrap: [AppComponent],
-})
-export class AppModule {}
-```
+ 
 
 ## (Optional) Step 3: Allow Synthetic Default Imports
 

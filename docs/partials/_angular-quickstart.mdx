@@ -76,21 +76,7 @@ A single `<dyte-meeting />` component that is feature rich renders a complete me
 This is how typically the `app.module.ts` file looks like. This allows you to use Dyte's UI components in your component HTML files. For
 more information on the components, see
 [Angular components](https://angular.io/guide/component-overview).
-
-```ts {3,8}
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { DyteComponentsModule } from '@dytesdk/angular-ui-kit';
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, DyteComponentsModule],
-  providers: [],
-  bootstrap: [AppComponent],
-})
-export class AppModule {}
-```
+ 
 
 #### (Optional) Allow synthetic default imports for TypeScript
 
