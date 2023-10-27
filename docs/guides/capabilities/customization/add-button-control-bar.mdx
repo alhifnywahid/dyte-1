@@ -8,12 +8,7 @@ Dyte's UI kit provides a convenient solution for customizing the UI of your Dyte
 This guide will take you through the process of adding a hand-raise button to the control bar of your meeting.
 
 ## Prerequisites
-
-- Review [Components of DyteMeeting](/react-ui-kit#components-of-dytemeeting)
-- Review the [Get Started with Dyte Prebuilt Components](/react-ui-kit/quickstart#step-2-get-started-with-dyte-prebuilt-components) and [Example](/react-ui-kit/quickstart#example-using-prebuilt-dytemeeting-component) sections in the React UI kit quickstart
-- Integrate [DyteParticipantsAudio](/react-ui-kit/basics/integrate#dyteparticipantsaudio)
-- Integrate [DyteNotifications](/react-ui-kit/basics/integrate#dytenotifications)
-
+ 
 ## Step 1: Create a meeting interface
 
 Meeting setup consists of two files `App.jsx` and `App.css`.
@@ -99,9 +94,7 @@ const raiseHand = async () => {
 ```
 
 ## Step 4: Listen for the broadcasted message
-
-When the event is fired a notification is sent to the user using the `sendNotification` method exposed by `@dytesdk/react-ui-kit`.
-
+ 
 ```js
 useEffect(() => {
   if (!client) return;

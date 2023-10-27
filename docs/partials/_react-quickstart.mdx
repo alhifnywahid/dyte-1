@@ -9,11 +9,7 @@ sidebar_position: 1
   This quickstart shows how to use Dyte's {props.product} in your{' '}
   <a href="https://react.dev/">React</a> applications with a variety of meeting
   UI customization options.
-</span>
-
-Dyte also offers the flexibility to build your own UI using various individual
-components. This offers limitless customization options to tailor the UI to fit
-your requirements. For more information, see the [Build your own UI section](/react-ui-kit/basics/components-basics).
+</span> 
 
 For getting started quickly, you can use our
 [sample code](https://github.com/dyte-io/react-samples). You can clone and run a
@@ -75,35 +71,5 @@ Create a `MyMeeting` component and render it within `DyteProvider`.
 `DyteMeeting` renders the entire meeting UI. It loads your preset and renders
 the UI based on it. With this component, you don't have to handle all the
 states, dialogs, and other smaller bits of managing the application.
-
-For more information on the other props of `DyteMeeting`, see [DyteMeeting](/react-ui-kit/components/dyte-meeting).
-
-```jsx
-import { DyteMeeting } from '@dytesdk/react-ui-kit';
-function MyMeeting() {
-  const { meeting } = useDyteMeeting();
-
-  return (
-    <div style={{ height: '480px' }}>
-      <DyteMeeting mode="fill" meeting={meeting} />
-    </div>
-  );
-}
-```
+  
  
-```jsx
-import { DyteGrid, DyteMicToggle } from '@dytesdk/react-ui-kit';
-
-function MyMeeting() {
-  const { meeting } = useDyteMeeting();
-
-  return (
-    <div style={{ height: '480px' }}>
-      <DyteGrid meeting={meeting} />
-      <div className="controlbar">
-        <DyteMicToggle meeting={meeting} />
-      </div>
-    </div>
-  );
-}
-```

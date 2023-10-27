@@ -27,24 +27,7 @@ You'll learn how to:
 - Go live!
 
 ## Before Getting Started
-
-- Make sure you've read the [Getting Started with Dyte](/getting-started) topic
-  and completed the following steps:
-  - Create a [Dyte Developer Account](https://dev.dyte.io/)
-  - Create [Presets](https://dev.dyte.io/roles-presets). Dyte also includes the
-    following pre-configured presets for group call and webinar. You can simply
-    use the default preset if you don't wish to create one.
-    - webinar_viewer
-    - webinar_presenter
-    - group_call_host
-    - group_call_participant
-  - Create a [Dyte Meeting](/api/?v=v2#/operations/create_meeting)
-  - [Add Participant](/api/?v=v2#/operations/add_participant) to the meeting
-- Install [React 16.8](https://reactjs.org/blog/2019/02/06/react-v16.8.0.html)
-  or higher on your device
-- Read the [Introduction to React UI Kit](/react-ui-kit) to understand the UI
-  Kit and its relationship with web core SDKs.
-
+ 
 ## Step 1: Install the SDK
 
 Since the UI Kit is built on top of the Core SDK, you must install the
@@ -89,10 +72,7 @@ the `DyteProvider`.
 `DyteMeeting` renders the entire meeting UI. It loads your preset and renders
 the UI based on it. With this component, you don't have to handle all the
 states, dialogs, and other smaller bits of managing the application.
-
-For more information on the other props of `DyteMeeting`, see
-[DyteMeeting](/react-ui-kit/components/dyte-meeting).
-
+ 
 ```jsx live
 function MyMeeting() {
   const { meeting } = useDyteMeeting();
