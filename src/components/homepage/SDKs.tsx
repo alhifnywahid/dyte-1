@@ -47,11 +47,6 @@ export default function SDKs() {
             icon="/static/landing-page/sdk-icons/html.png"
           />
           <SDK
-            name="Flutter"
-            to="/flutter"
-            icon="/static/landing-page/sdk-icons/flutter.png"
-          />
-          <SDK
             name="React Native"
             to="/react-native"
             icon="/static/landing-page/sdk-icons/react.png"

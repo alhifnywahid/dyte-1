@@ -2,7 +2,6 @@ import type { ComponentProps, ReactNode } from 'react';
 import {
   ReactIcon,
   AngularIcon,
-  AndroidIcon,
   AppleIcon,
   FlutterIcon,
   HTMLIcon,
@@ -99,21 +98,9 @@ const SECTIONS: Section[] = [
     section: 'mobile-core',
   },
   {
-    name: 'Android',
-    docId: 'android',
-    icon: AndroidIcon,
-    section: 'mobile-ui-kit',
-  },
-  {
     name: 'iOS',
     docId: 'ios',
     icon: AppleIcon,
-    section: 'mobile-ui-kit',
-  },
-  {
-    name: 'Flutter',
-    docId: 'flutter',
-    icon: FlutterIcon,
     section: 'mobile-ui-kit',
   },
   {

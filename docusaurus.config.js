@@ -118,16 +118,6 @@ const docs = [
   },
   
   {
-    id: 'flutter',
-    path: 'docs/flutter',
-    routeBasePath: '/flutter',
-    versions: {
-      current: {
-        label: '0.7.x',
-      },
-    },
-  },
-  {
     id: 'ios',
     path: 'docs/ios',
     routeBasePath: '/ios',
