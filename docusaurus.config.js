@@ -109,16 +109,6 @@ const docs = [
   },
   
   {
-    id: 'ios',
-    path: 'docs/ios',
-    routeBasePath: '/ios',
-    versions: {
-      current: {
-        label: '1.33.x',
-      },
-    },
-  },
-  {
     id: 'react-native',
     path: 'docs/rn-ui-kit',
     routeBasePath: '/react-native',

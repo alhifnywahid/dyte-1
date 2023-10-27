@@ -51,11 +51,6 @@ export default function SDKs() {
             to="/react-native"
             icon="/static/landing-page/sdk-icons/react.png"
           />
-          <SDK
-            name="iOS"
-            to="/ios"
-            icon="/static/landing-page/sdk-icons/swift.png"
-          />
         </div>
       </div>
 
