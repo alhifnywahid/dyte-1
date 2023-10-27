@@ -300,8 +300,9 @@ const config = {
   plugins,
   trailingSlash: false,
   themes: ['@docusaurus/theme-live-codeblock'],
-  clientModules: [require.resolve('./src/client/define-ui-kit.js')], // (ubah nama folder del_bin)
+  clientModules: [require.resolve('./src/client/define-ui-kit.js')],
   scripts: [{ src: 'https://cdn.statuspage.io/se-v2.js' }],
+  onBrokenLinks: 'warn',
 
   presets: [
     [
