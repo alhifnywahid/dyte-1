@@ -80,10 +80,10 @@ const SECTIONS: Section[] = [
   
 
   {
-    name: 'iOS Core',
-    docId: 'ios-core',
+    name: 'html',
+    docId: 'html',
     icon: AppleIcon,
-    section: 'mobile-core',
+    section: 'html',
   },
   {
     name: 'Flutter Core',

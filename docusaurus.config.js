@@ -96,16 +96,7 @@ const docs = [
       },
     },
   },
-  {
-    id: 'ios-core',
-    path: 'docs/ios-core',
-    routeBasePath: '/ios-core',
-    versions: {
-      current: {
-        label: '1.x.x',
-      },
-    },
-  },
+  
   {
     id: 'rn-core',
     path: 'docs/rn-core',

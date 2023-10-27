@@ -89,11 +89,6 @@ export default function SDKs() {
             icon="/static/landing-page/sdk-icons/react.png"
           />
           <SDK
-            name="iOS"
-            to="/ios-core"
-            icon="/static/landing-page/sdk-icons/swift.png"
-          />
-          <SDK
             name="Java"
             to="/java"
             icon="/static/landing-page/sdk-icons/kotlin.png"
