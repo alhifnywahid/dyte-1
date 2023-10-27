@@ -83,7 +83,7 @@ const SECTIONS: Section[] = [
     name: 'html',
     docId: 'html',
     icon: AppleIcon,
-    section: 'html',
+    section: 'java',
   },
   {
     name: 'Flutter Core',
