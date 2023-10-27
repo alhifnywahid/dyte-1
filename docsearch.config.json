@@ -13,11 +13,6 @@
       "selectors_key": "#"
     },
     {
-      "url": "https://docs.dyte.io/react-ui-kit",
-      "tags": "react-ui-kit",
-      "selectors_key": "react-ui-kit"
-    },
-    {
       "url": "https://docs.dyte.io/ui-kit",
       "tags": "ui-kit",
       "selectors_key": "ui-kit"
@@ -36,11 +31,6 @@
       "url": "https://docs.dyte.io/web-core",
       "tags": "web-core",
       "selectors_key": "web-core"
-    },
-    {
-      "url": "https://docs.dyte.io/react-native",
-      "tags": "react-native",
-      "selectors_key": "react-native"
     },
     {
       "url": "#",
@@ -81,20 +71,6 @@
         "selector": "",
         "global": true,
         "default_value": "Guides"
-      },
-      "lvl1": "article h1",
-      "lvl2": "article h2",
-      "lvl3": "article h3",
-      "lvl4": "article h4",
-      "lvl5": "article h5, article td:first-child",
-      "lvl6": "article h6",
-      "text": "article p, article li, article td:last-child"
-    },
-    "react-ui-kit": {
-      "lvl0": {
-        "selector": "",
-        "global": true,
-        "default_value": "React UI Kit"
       },
       "lvl1": "article h1",
       "lvl2": "article h2",

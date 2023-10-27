@@ -107,17 +107,6 @@ const docs = [
       },
     },
   },
-  
-  {
-    id: 'react-native',
-    path: 'docs/rn-ui-kit',
-    routeBasePath: '/react-native',
-    versions: {
-      current: {
-        label: '1.4.x',
-      },
-    },
-  },
 ];
 
 /** @type {import('@docusaurus/plugin-content-docs').Options} */

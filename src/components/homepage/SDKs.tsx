@@ -32,23 +32,23 @@ export default function SDKs() {
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
           <SDK
-            name="React"
-            to="/react-ui-kit"
+            name="Java"
+            to="/java"
             icon="/static/landing-page/sdk-icons/react.png"
           />
           <SDK
-            name="Angular"
-            to="/angular-ui-kit"
+            name="CSS"
+            to="/css"
             icon="/static/landing-page/sdk-icons/angular.png"
           />
           <SDK
             name="HTML"
-            to="/ui-kit"
+            to="/html"
             icon="/static/landing-page/sdk-icons/html.png"
           />
           <SDK
-            name="React Native"
-            to="/react-native"
+            name="javascript"
+            to="/js"
             icon="/static/landing-page/sdk-icons/react.png"
           />
         </div>

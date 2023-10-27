@@ -8,8 +8,7 @@ Dyte's React Native UI Kit provides multiple
 [Hooks](https://beta.reactjs.org/reference/react). Hooks let you use different
 React features from your components.
 
-This provides seamless developer experience when integrating Dyte’s UI Kit in
-your React native project. You can simply import the package from `dytesdk/react-native-core`.
+This provides seamless developer experience when integrating Dyte’s
 
 This page lists all the built-in Hooks in Dyte.
 
@@ -22,63 +21,10 @@ This page lists all the built-in Hooks in Dyte.
 
 It is a simple context provider providing the meeting object to child
 components.
-
-```jsx
-import { useDyteClient } from '@dytesdk/react-native-core';
-
-function App() {
-  const [client, initClient] = useDyteClient();
-
-  useEffect(() => {
-    initClient({
-      authToken: '<auth-token>',
-      // set default values for user media
-      defaults: {
-        audio: false,
-        video: true,
-      },
-    });
-  }, []);
-
-  return (
-    <DyteProvider value={client}>
-      <Meeting />
-    </DyteProvider>
-  );
-}
-```
-
 ## `<DyteUIProvider />`
 
 It is a simple context provider providing the dyte design system to child
-components.
-
-```jsx
-import { useDyteClient } from '@dytesdk/react-native-core';
-import { DyteUIProvider, DyteMeeting} from '@dytesdk/react-native-ui-kit';
-
-export default function App() {
-  const [meeting, initMeeting] = useDyteClient();
-
-  useEffect(() => {
-    initMeeting({
-      authToken: '<auth-token>',
-      defaults: {
-        audio: false,
-        video: false,
-      },
-    });
-  }, []);
-
-  return (
-    <DyteProvider value={meeting}>
-      <DyteUIProvider>
-        <DyteMeeting meeting={meeting} />
-      </DyteUIProvider>
-    </DyteProvider>
-  );
-}
-```
+components. 
 
 And to consume the context value, we provide two more hooks, each serving a
 specific purpose.
@@ -94,26 +40,7 @@ This hook essentially returns the `meeting` object you passed to the
 `DyteProvider`.
 
 The value returned doesn't re-render always whenever properties inside the
-object change.
-
-```jsx
-import { useDyteSelector, useDyteMeeting } from '@dytesdk/react-native-core';
-
-function Meeting() {
-  const { meeting } = useDyteMeeting();
-
-  /*
-    use joinRoom() method or the setup screen component
-    to actually enter the meeting
-  */
-  useEffect(() => {
-    meeting.joinRoom();
-  }, [meeting]);
-
-  // show DyteMeeting
-  return <DyteMeeting meeting={meeting} />;
-}
-```
+object change. 
 
 ## `useDyteSelector()`
 
@@ -138,33 +65,4 @@ const joinedParticipants = useDyteSelector(
 Refer to core [documentation for reference](/rn-core/reference/DyteClient) on
 the various properties of the `meeting` object.
 
-### Example
-
-```jsx
-import React from 'react';
-import { View } from 'react-native';
-import { useDyteMeeting, useDyteSelector } from '@dytesdk/react-native-core';
-import { DyteGrid, DyteButton } from '@dytesdk/react-ui-kit';
-
-function Meeting() {
-  const { meeting } = useDyteMeeting();
-  const roomJoined = useDyteSelector((m) => m.self.roomJoined);
-
-  if (!roomJoined) {
-    return (
-      <div>
-        <p>You haven't joined the room yet.</p>
-        <DyteButton onClick={() => meeting.joinRoom()}>Join Room</DyteButton>
-      </div>
-    );
-  }
-
-  return (
-    <View style={{ height: '100', width: '100' }}>
-      <DyteGrid meeting={meeting} />
-    </View>
-  );
-}
-
-export default Meeting;
-```
+### Example 
