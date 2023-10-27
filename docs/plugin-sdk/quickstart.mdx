@@ -1,7 +1,7 @@
 ---
 title: Quickstart
 sidebar_position: 2
-tags: [plugin-sdk, quickstart, setup]
+tags: [quickstart, setup]
 ---
 
 :::info before you start
@@ -34,7 +34,6 @@ folder.
 
 You can customise a bunch of properties for your plugin using this config file.
 It allows you to change the name, description, logo, build config and more.
-[Read More](/plugin-sdk/setup/customize)
 
 :::danger important
 
@@ -121,21 +120,21 @@ import TabItem from '@theme/TabItem';
   <TabItem value="npm">
 
 ```shell
-npm install @dytesdk/plugin-sdk
+npm install
 ```
 
   </TabItem>
   <TabItem value="yarn">
 
 ```shell
-yarn add @dytesdk/plugin-sdk
+yarn add
 ```
 
   </TabItem>
   <TabItem value="CDN">
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@dytesdk/plugin-sdk" />
+<script src="https://cdn.jsdelivr.net/npm" />
 ```
 
   </TabItem>
@@ -146,7 +145,7 @@ yarn add @dytesdk/plugin-sdk
 This is a simple plugin that greets every new person who joins the meeting.
 
 ```ts
-import DytePlugin from '@dytesdk/plugin-sdk';
+import DytePlugin from '@dytesdk';
 
 const plugin = DytePlugin.init();
 await plugin.stores.populate('storeName');

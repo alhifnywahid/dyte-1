@@ -1,0 +1,24 @@
+---
+sidebar_position: 4
+---
+
+<details open>
+    <summary>
+        What is the difference between <code>DytePlugin.init()</code> and <code>DytePlugin.ready()</code>?
+    </summary>
+    <p>
+        <code>plugin.init()</code> is called to initialise the plugin and <code>plugin.ready()</code> is called when the plugin is ready to emit and receive events from the client app. <b>Usually these events occur one after the other and the user need not manually call <code>plugin.ready()</code></b>.  
+    </p>
+    <p>
+        <code>plugin.ready()</code> can be manually used to control when this communication starts.
+    </p>
+
+    import DytePlugin from "@dytesdk/plugin-sdk";
+    ...
+    const plugin = await DytePlugin.init({ready: false});
+
+    // .. do something
+
+    plugin.ready();
+
+</details>

@@ -50,7 +50,7 @@ plugin.on('myAwesomeEvent', (data) => {
 The emitEvent method is used to emit custom events to the (client SDK) room.
 
 ```ts
-import DytePlugin from "@dytesdk/plugin-sdk";
+import DytePlugin from "@dytesdk";
 
 const plugin = DytePlugin.init();
 
@@ -60,7 +60,7 @@ plugin.room.emitEvent('myAwesomeEvent', {...});
 ### Listen for custom messages from the dyte meeting
 
 ```ts
-import DytePlugin from '@dytesdk/plugin-sdk';
+import DytePlugin from '@dytesdk';
 
 const plugin = DytePlugin.init();
 

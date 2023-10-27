@@ -28,7 +28,7 @@ The following is the schema for the `config` object :
 | ready     | boolean  | `true` when the plugin initialization has completed. | `true`                     | false        |
 
 ```jsx
-import DytePlugin from "@dytesdk/plugin-sdk";
+import DytePlugin from "@dytesdk";
 ...
 const plugin = DytePlugin.init();
 await plugin.stores.populate('storeName');

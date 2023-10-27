@@ -37,10 +37,10 @@ const SECTIONS: Section[] = [
   // Plugin SDKs
   // - web
   {
-    name: 'Javascript',
-    docId: 'plugin-sdk',
+    name: 'java',
+    docId: 'java',
     icon: JSIcon,
-    section: 'plugin-sdk',
+    section: 'java',
   },
 
   // Web SDKs
@@ -162,13 +162,6 @@ const SECTION_GROUPS: SectionsGroup[][] = [
       name: 'Core SDK',
       section: 'mobile-core',
       description: 'Build your own UI from scratch, use our low level APIs.',
-    },
-  ],
-  [
-    {
-      name: 'Plugin SDK for Web',
-      section: 'plugin-sdk',
-      description: 'Build real-time collaborative apps using Dyte.',
     },
   ],
 ];
