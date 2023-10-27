@@ -79,11 +79,6 @@ export default function SDKs() {
             icon="/img/coming-soon.png"
           />
           <SDK
-            name="React Native"
-            to="/rn-core"
-            icon="/img/coming-soon.png"
-          />
-          <SDK
             name="Java"
             to="/java"
             icon="/img/coming-soon.png"

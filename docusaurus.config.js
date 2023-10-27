@@ -97,16 +97,16 @@ const docs = [
     },
   },
   
-  {
-    id: 'rn-core',
-    path: 'docs/rn-core',
-    routeBasePath: '/rn-core',
-    versions: {
-      current: {
-        label: '0.5.x',
-      },
-    },
-  },
+  // {
+  //   id: 'rn-core',
+  //   path: 'docs/rn-core',
+  //   routeBasePath: '/rn-core',
+  //   versions: {
+  //     current: {
+  //       label: '0.5.x',
+  //     },
+  //   },
+  // },
 ];
 
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
@@ -155,17 +155,11 @@ const plugins = [
         if (path.startsWith('/web-core/livestreaming')) {
           return [path.replace('/web-core/livestreaming', '/web-core/livestreaming/livestream-apis')];
         }
-        if (path.startsWith('/rn-core/livestreaming')) {
-          return [path.replace('/rn-core/livestreaming', '/rn-core/livestreaming/livestream-apis')];
-        }
         if (path.startsWith('/react-web-core/livestreaming')) {
           return [path.replace('/react-web-core/livestreaming', '/react-web-core/livestreaming/livestream-apis')];
         }
         if (path.startsWith('/web-core/stage')) {
           return [path.replace('/web-core/stage', '/web-core/livestreaming/state-management-apis')];
-        }
-        if (path.startsWith('/rn-core/stage')) {
-          return [path.replace('/rn-core/stage', '/rn-core/livestreaming/state-management-apis')];
         }
         if (path.startsWith('/react-web-core/stage')) {
           return [path.replace('/react-web-core/stage', '/react-web-core/livestreaming/state-management-apis')];

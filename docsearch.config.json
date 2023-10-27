@@ -38,11 +38,6 @@
       "selectors_key": "#"
     },
     {
-      "url": "https://docs.dyte.io/rn-core",
-      "tags": "rn-core",
-      "selectors_key": "rn-core"
-    },
-    {
       "url": "#",
       "tags": "#",
       "selectors_key": "#"
