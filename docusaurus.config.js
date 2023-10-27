@@ -302,7 +302,7 @@ const config = {
   themes: ['@docusaurus/theme-live-codeblock'],
   clientModules: [require.resolve('./src/client/define-ui-kit.js')],
   scripts: [{ src: 'https://cdn.statuspage.io/se-v2.js' }],
-  onBrokenLinks: 'warn',
+  // onBrokenLinks: 'warn',
 
   presets: [
     [

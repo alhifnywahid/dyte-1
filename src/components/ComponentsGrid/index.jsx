@@ -13,7 +13,8 @@ function Card({ item, basePath }) {
   return (
     <Link
       className={styles.card}
-      to={`./components/${item.component}`}
+      to={`#`}
+      // to={`./components/${item.component}`} Originale Syntax
       key={item.component}
     >
       <div className={styles.imageContainer}>
