@@ -42,16 +42,6 @@ const docs = [
     },
   },
   {
-    id: 'react-ui-kit',
-    path: 'docs/react-ui-kit',
-    routeBasePath: '/react-ui-kit',
-    versions: {
-      current: {
-        label: '1.x.x',
-      },
-    },
-  },
-  {
     id: 'angular-ui-kit',
     path: 'docs/angular-ui-kit',
     routeBasePath: '/angular-ui-kit',
@@ -193,31 +183,6 @@ const plugins = [
             '/javascript/usage',
             '/javascript/virtual-background',
             '/javascript/',
-          ];
-        }
-        if (path === '/react-ui-kit') {
-          return [
-            '/react/advanced-usage',
-            '/react/customize-meeting-ui',
-            '/react/events',
-            '/react/installation',
-            '/react/quickstart',
-            '/react/reference/chat-message',
-            '/react/reference/connection-config',
-            '/react/reference/dyte-client',
-            '/react/reference/dyte-control-bar',
-            '/react/reference/dyte-errors',
-            '/react/reference/dyte-grid',
-            '/react/reference/dyte-meeting-events',
-            '/react/reference/dyte-plugin',
-            '/react/reference/dyte-ui-config',
-            '/react/reference/meeting',
-            '/react/reference/participant',
-            '/react/reference/self-participant',
-            '/react/sample-app',
-            '/react/usage',
-            '/react/virtual-background',
-            '/react/',
           ];
         }
         return undefined; // Return a falsy value: no redirect created
