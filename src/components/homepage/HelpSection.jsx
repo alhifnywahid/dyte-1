@@ -17,7 +17,7 @@ export default function HelpSection({ className = '' }) {
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
           <div className="rounded-lg bg-zinc-100 p-6 dark:bg-zinc-900">
             <img
-              src="/static/landing-page/calendar.svg"
+              src="/svg/icon-html.svg"
               alt="Book a demo"
               width="48"
               height="48"
@@ -37,7 +37,7 @@ export default function HelpSection({ className = '' }) {
 
           <div className="rounded-lg bg-zinc-100 p-6 dark:bg-zinc-900">
             <img
-              src="/static/landing-page/customer.svg"
+              src="/svg/icon-html.svg"
               alt="Support"
               width="48"
               height="48"
@@ -57,7 +57,7 @@ export default function HelpSection({ className = '' }) {
 
           <div className="rounded-lg bg-zinc-100 p-6 dark:bg-zinc-900">
             <img
-              src="/static/landing-page/chat.svg"
+              src="/svg/icon-html.svg"
               alt="FAQs"
               width="48"
               height="48"

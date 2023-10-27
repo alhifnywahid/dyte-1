@@ -8,8 +8,8 @@ export default function APIReferenceSection() {
   return (
     <section className="no-underline-links relative px-6 elemen-none">
       <Head>
-        <link rel="prefetch" href="/static/landing-page/api-ref-light.png" />
-        <link rel="prefetch" href="/static/landing-page/api-ref-dark.png" />
+        <link rel="prefetch" href="/img/coming-soon.png" />
+        <link rel="prefetch" href="/img/coming-soon.png" />
       </Head>
       <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center gap-10 rounded-2xl bg-gradient-to-r from-black to-zinc-800 px-6 py-20 text-center text-white dark:from-zinc-100 dark:to-white dark:text-black lg:flex-row lg:p-20 lg:text-left">
         <Link
@@ -81,8 +81,8 @@ export default function APIReferenceSection() {
         <div className="flex flex-1 justify-end">
           <ThemedImage
             sources={{
-              light: '/static/landing-page/api-ref-light.png',
-              dark: '/static/landing-page/api-ref-dark.png',
+              light: "/img/coming-soon.png",
+              dark: "/img/coming-soon.png",
             }}
             alt="API Reference Preview"
             loading="lazy"

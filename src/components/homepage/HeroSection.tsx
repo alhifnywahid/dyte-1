@@ -8,8 +8,8 @@ const PRODUCTS = [
     judul: 'Programing',
     urlWeb: '/programing',
     iconLink: '/svg/programing.svg',
-    // lightImage: '/static/landing-page/hero/video-graphic.png',
-    // darkImage: '/static/landing-page/hero/video-graphic-dark.png',
+    // lightImage: '/img/coming-soon.png',
+    // darkImage: '/img/coming-soon.png',
     text: 'Baca tutorial seputar bahsa pemerograman, framework dan masih banyak lagi',
   },
   {
@@ -17,8 +17,8 @@ const PRODUCTS = [
     beta: true,
     urlWeb: '#',
     iconLink: '/svg/logoku.svg',
-    // lightImage: '/static/landing-page/hero/voice-graphic.png',
-    // darkImage: '/static/landing-page/hero/voice-graphic-dark.png',
+    // lightImage: '/img/coming-soon.png',
+    // darkImage: '/img/coming-soon.png',
     text: 'Belajar editing foto & video menggunakan software adobe premier, photoshop dan masih banyak lagi.',
   },
 ];

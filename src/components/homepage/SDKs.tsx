@@ -34,22 +34,22 @@ export default function SDKs() {
           <SDK
             name="Java"
             to="/java"
-            icon="/static/landing-page/sdk-icons/react.png"
+            icon="/img/coming-soon.png"
           />
           <SDK
             name="CSS"
             to="/css"
-            icon="/static/landing-page/sdk-icons/angular.png"
+            icon="/img/coming-soon.png"
           />
           <SDK
             name="HTML"
             to="/html"
-            icon="/static/landing-page/sdk-icons/html.png"
+            icon="/img/coming-soon.png"
           />
           <SDK
             name="javascript"
             to="/js"
-            icon="/static/landing-page/sdk-icons/react.png"
+            icon="/img/coming-soon.png"
           />
         </div>
       </div>
@@ -66,27 +66,27 @@ export default function SDKs() {
           <SDK
             name="JS"
             to="/web-core"
-            icon="/static/landing-page/sdk-icons/js.png"
+            icon="/img/coming-soon.png"
           />
           <SDK
             name="React"
             to="/react-web-core"
-            icon="/static/landing-page/sdk-icons/react.png"
+            icon="/img/coming-soon.png"
           />
           <SDK
             name="Flutter"
             to="/flutter-core"
-            icon="/static/landing-page/sdk-icons/flutter.png"
+            icon="/img/coming-soon.png"
           />
           <SDK
             name="React Native"
             to="/rn-core"
-            icon="/static/landing-page/sdk-icons/react.png"
+            icon="/img/coming-soon.png"
           />
           <SDK
             name="Java"
             to="/java"
-            icon="/static/landing-page/sdk-icons/kotlin.png"
+            icon="/img/coming-soon.png"
           />
         </div>
       </div>
