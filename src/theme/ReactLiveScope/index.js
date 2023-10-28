@@ -5,9 +5,7 @@ import DemoElements from '../../components/DemoElements';
 // Add react-live imports you need here
 const ReactLiveScope = {
   React,
-  ...React,
-
-  // DemoElements used in react-ui-kit live codeblocks
+  ...React, 
   ...DemoElements,
 };
 
