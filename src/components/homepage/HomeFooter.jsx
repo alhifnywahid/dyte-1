@@ -95,7 +95,7 @@ function Status({ className }) {
 function Links({ name, links }) {
   return (
     <div>
-      <h3 className="font-jakarta text-base font-semibold uppercase text-gray-400">
+      <h3 className="font-jakarta text-base font-semibold uppercase text-gray-400 color-black">
         {name}
       </h3>
       <div className="flex flex-col gap-3">
