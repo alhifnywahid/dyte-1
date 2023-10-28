@@ -115,7 +115,7 @@
     "fixes": [
       "Optimized the performance of `<dyte-participants-audio />`",
       "Fixed a style issue with `<participant-tile />` on Safari browser.",
-      "Optimized a few more components for [Breakout rooms](/guides/breakoutroom/introduction-breakout-rooms)."
+      "Optimized a few more components for [Breakout rooms](/java)."
     ],
     "features": [
       "A new `dialogClose` not gets fired when you close the dialog.",
@@ -149,7 +149,7 @@
     "version": "1.45.0",
     "createdAt": 1678209000,
     "features": [
-      "**Interactive Livestream Release (LL-HLS)** \n 1. Broadcast a meeting to up to 100,000 viewers with low latency of just 3 to 6 seconds.\n 2. Interactive chat and polls. \n 3. Viewers can raise hands to join the stage or the host can invite viewers to join the stage. \n For more information, see [ILS Overview](https://docs.dyte.io/guides/livestream/livestream-overview) and [Getting Started with ILS](https://docs.dyte.io/guides/livestream/getting-started-with-livestreaming)."
+      "**Interactive Livestream Release (LL-HLS)** \n 1. Broadcast a meeting to up to 100,000 viewers with low latency of just 3 to 6 seconds.\n 2. Interactive chat and polls. \n 3. Viewers can raise hands to join the stage or the host can invite viewers to join the stage. \n For more information, see [ILS Overview](/java) and [Getting Started with ILS](/java)."
     ],
     "new_api": [
       "New `<dyte-livestream-player />`, `<dyte-livestream-toggle />` and `<dyte-livestream-indicator />` components."

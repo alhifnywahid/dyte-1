@@ -18,7 +18,7 @@ interface Resource {
 
 const ALL_RESOURCES: Resource[] = [
   {
-    url: '/guides/v2-migration-guide',
+    url: '/java',
     type: 'blog',
     title: 'Migrate to v2 REST API',
     description:

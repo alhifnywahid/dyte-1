@@ -228,7 +228,7 @@ const config = {
           // {
           //   label: 'Guides',
           //   to: 'guides',
-          //   className: 'guides-top-header',
+          //   className: 'triometri',
           // },
           // {
           //   label: 'Materi',
