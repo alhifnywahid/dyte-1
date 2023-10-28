@@ -1,9 +1,6 @@
 import type { ComponentProps, ReactNode } from 'react';
 import {
-  ReactIcon,
-  AngularIcon,
-  AppleIcon,
-  FlutterIcon,
+  ReactIcon, 
   HTMLIcon,
   JSIcon,
 } from './icons';
@@ -19,95 +16,30 @@ export type Section = { docId: string } & (
   }
 );
 
-const SECTIONS: Section[] = [
+const SECTIONS: Section[] = [ 
   {
-    name: 'React',
-    docId: 'react',
-    icon: ReactIcon,
-    section: 'web-prebuilt',
-  },
-  {
-    name: 'JavaScript',
-    docId: 'javascript',
+    name: 'js',
+    docId: 'js',
     icon: JSIcon,
-    section: 'web-prebuilt',
+    section: 'java',
   },
-
-  // Plugin SDKs
-  // - web
   {
     name: 'java',
     docId: 'java',
     icon: JSIcon,
     section: 'java',
   },
-
-  // Web SDKs
-  // - web-ui-kit
-  {
-    name: 'Web Components',
-    docId: 'ui-kit',
-    icon: HTMLIcon,
-    section: 'web-ui-kit',
-  },
-  {
-    name: 'React UI Kit',
-    docId: 'react-ui-kit',
-    icon: ReactIcon,
-    section: 'web-ui-kit',
-  },
-  {
-    name: 'Angular UI Kit',
-    docId: 'angular-ui-kit',
-    icon: AngularIcon,
-    section: 'web-ui-kit',
-  },
-
-  // - web-core-sdk
-  {
-    name: 'JavaScript',
-    docId: 'web-core',
-    icon: JSIcon,
-    section: 'web-core-sdk',
-  },
-  {
-    name: 'React',
-    docId: 'react-web-core',
-    icon: ReactIcon,
-    section: 'web-core-sdk',
-  },
-  // Mobile SDKs
-  
-
   {
     name: 'html',
     docId: 'html',
-    icon: AppleIcon,
+    icon: HTMLIcon,
     section: 'java',
   },
   {
-    name: 'Flutter Core',
-    docId: 'flutter-core',
-    icon: FlutterIcon,
-    section: 'mobile-core',
-  },
-  {
-    name: 'React Native Core',
-    docId: 'rn-core',
+    name: 'css',
+    docId: 'css',
     icon: ReactIcon,
-    section: 'mobile-core',
-  },
-  {
-    name: 'iOS',
-    docId: 'ios',
-    icon: AppleIcon,
-    section: 'mobile-ui-kit',
-  },
-  {
-    name: 'React Native',
-    docId: 'react-native',
-    icon: ReactIcon,
-    section: 'mobile-ui-kit',
+    section: 'java',
   },
 ];
 
