@@ -64,6 +64,17 @@ const plugins = [
   tailwindPlugin,
   ...docs_plugins,
   webpackPlugin,
+  [
+    '@docusaurus/plugin-client-redirects',
+    {
+      createRedirects(path) {
+        if (path.startsWith('/catatan')) {
+          return [path.replace('/catatan', '/catatan')];
+        } 
+        return undefined; // Return a falsy value: no redirect created
+      },
+    },
+  ],
 ];
 
 const fs = require('fs'); 
@@ -86,9 +97,9 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: 'docs/materi',
-          id: 'materi',
-          routeBasePath: '/materi',
+          path: 'docs/catatan',
+          id: 'catatan',
+          routeBasePath: '/catatan',
           ...defaultSettings,
         },
         blog: false,
