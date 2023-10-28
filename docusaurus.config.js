@@ -27,30 +27,7 @@ const docs = [
 
   // PRIBADI
   { id: 'dokumentasi', path: 'docs/pribadi/dokumentasi', routeBasePath: '/dokumentasi', },
-  { id: 'pribadi', path: 'docs/pribadi/pribadi', routeBasePath: '/pribadi', },
-
-  /* =================================================== */
-  // Web UI Kits
-  {
-    id: 'ui-kit',
-    path: 'docs/ui-kit',
-    routeBasePath: '/ui-kit',
-    versions: {
-      current: {
-        label: '1.x.x',
-      },
-    },
-  },
-  {
-    id: 'angular-ui-kit',
-    path: 'docs/angular-ui-kit',
-    routeBasePath: '/angular-ui-kit',
-    versions: {
-      current: {
-        label: '1.x.x',
-      },
-    },
-  }, 
+  { id: 'pribadi', path: 'docs/pribadi/pribadi', routeBasePath: '/pribadi', }, 
 ];
 
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
@@ -159,32 +136,7 @@ const plugins = [
         /* for everything else */
         if (path.startsWith('/guides/capabilities')) {
           return [path.replace('/guides/capabilities', '/guides/features')];
-        }
-        if (path === '/ui-kit') {
-          return [
-            '/javascript/advanced-usage',
-            '/javascript/customize-meeting-ui',
-            '/javascript/events',
-            '/javascript/installation',
-            '/javascript/quickstart',
-            '/javascript/reference/chat-message',
-            '/javascript/reference/connection-config',
-            '/javascript/reference/dyte-client',
-            '/javascript/reference/dyte-control-bar',
-            '/javascript/reference/dyte-errors',
-            '/javascript/reference/dyte-grid',
-            '/javascript/reference/dyte-meeting-events',
-            '/javascript/reference/dyte-plugin',
-            '/javascript/reference/dyte-ui-config',
-            '/javascript/reference/meeting',
-            '/javascript/reference/participant',
-            '/javascript/reference/self-participant',
-            '/javascript/sample-app',
-            '/javascript/usage',
-            '/javascript/virtual-background',
-            '/javascript/',
-          ];
-        }
+        } 
         return undefined; // Return a falsy value: no redirect created
       },
     },

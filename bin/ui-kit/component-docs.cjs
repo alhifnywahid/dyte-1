@@ -7,9 +7,7 @@ const { pascalCase } = require('pascal-case');
 const {
   components,
 } = require('@dytesdk/ui-kit/dist/docs/docs-components.json');
-
-/** @typedef {import('@dytesdk/ui-kit/dist/docs/docs-components').JsonDocsComponent} Component */
-
+ 
 const basePaths = {
   core: 'docs/ui-kit/components',
   react: 'docs/react-ui-kit/components',
@@ -26,7 +24,7 @@ function generateFile(component, framework = 'core') {
   const { tag, docs, props, usage } = component;
 
   function getFrontmatter() {
-    const path = `/static/ui-kit/1.x.x/components/${tag}.svg`;
+    const path = `/svg/${tag}.svg`;
     if (fs.existsSync(`static${path}`)) {
       return ['---', `image: ${path}`, '---'];
     }
