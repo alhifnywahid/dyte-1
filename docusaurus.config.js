@@ -30,7 +30,6 @@ const docs = [
   { id: 'pribadi', path: 'docs/pribadi/pribadi', routeBasePath: '/pribadi', }, 
 ];
 
-/** @type {import('@docusaurus/plugin-content-docs').Options} */
 const defaultSettings = {
   breadcrumbs: false,
   // editUrl: 'https://github.com/alhifnywahid',
@@ -40,12 +39,8 @@ const defaultSettings = {
     [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }],
   ],
   sidebarPath: require.resolve('./sidebars-default.js'),
-};
+}; 
 
-/**
- * Create a section
- * @param {import('@docusaurus/plugin-content-docs').Options} options
- */
 function create_doc_plugin({
   sidebarPath = require.resolve('./sidebars-default.js'),
   ...options
@@ -69,78 +64,6 @@ const plugins = [
   tailwindPlugin,
   ...docs_plugins,
   webpackPlugin,
-  [
-    '@docusaurus/plugin-client-redirects',
-    {
-      createRedirects(path) {  
-        if (path.startsWith('/guides/capabilities/webhooks')) {
-          return [
-            path.replace('/guides/capabilities/webhooks', '/guides/webhooks'),
-            path.replace(
-              '/guides/capabilities/webhooks',
-              '/guides/features/webhooks'
-            ),
-          ];
-        }
-        if (path.startsWith('/guides/capabilities/recording')) {
-          return [
-            path.replace('/guides/capabilities/recording', '/guides/recording'),
-            path.replace(
-              '/guides/capabilities/recording',
-              '/guides/features/recording'
-            ),
-          ];
-        }
-        if (path.startsWith('/guides/capabilities/recording')) {
-          return [
-            path.replace('/guides/capabilities/recording', '/guides/recording'),
-            path.replace(
-              '/guides/capabilities/recording',
-              '/guides/features/recording'
-            ),
-          ];
-        }
-        if (path.startsWith('/guides/capabilities/embed')) {
-          return [
-            path.replace('/guides/capabilities/embed', '/guides/embed'),
-            path.replace(
-              '/guides/capabilities/embed',
-              '/guides/features/embed'
-            ),
-          ];
-        }
-        if (path.startsWith('/guides/capabilities/export-chat-dump')) {
-          return [
-            path.replace(
-              '/guides/capabilities/export-chat-dump',
-              '/guides/export-chat-dump'
-            ),
-            path.replace(
-              '/guides/capabilities/export-chat-dump',
-              '/guides/features/export-chat-dump'
-            ),
-          ];
-        }
-        if (path.startsWith('/guides/capabilities/breakoutroom')) {
-          return [
-            path.replace(
-              '/guides/capabilities/breakoutroom',
-              '/guides/breakoutroom'
-            ),
-            path.replace(
-              '/guides/capabilities/breakoutroom',
-              '/guides/features/breakoutroom'
-            ),
-          ];
-        }
-        /* for everything else */
-        if (path.startsWith('/guides/capabilities')) {
-          return [path.replace('/guides/capabilities', '/guides/features')];
-        } 
-        return undefined; // Return a falsy value: no redirect created
-      },
-    },
-  ],
 ];
 
 const fs = require('fs'); 
@@ -163,9 +86,9 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: 'docs/guides',
-          id: 'guides',
-          routeBasePath: '/guides',
+          path: 'docs/materi',
+          id: 'materi',
+          routeBasePath: '/materi',
           ...defaultSettings,
         },
         blog: false,
