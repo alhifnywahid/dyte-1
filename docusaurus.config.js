@@ -330,8 +330,9 @@ const config = {
       },
       algolia: {
         appId: 'RAXRF0BNQG',
-        apiKey: '7c23fad7208e493b6addd4150066cf48',
+        apiKey: '47d475a6dca169c45208d48d1e446da4',
         indexName: 'docs',
+        placeholder: "Search...",
         contextualSearch: true,
         searchParameters: {},
       },

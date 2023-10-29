@@ -1,6 +1,6 @@
 {
   "index_name": "docs",
-  "sitemap_urls": ["https://docs.dyte.io/sitemap.xml"],
+  "sitemap_urls": ["https://mynotes.engineer/sitemap.xml"],
   "start_urls": [ 
     {
       "url": "#",
@@ -8,9 +8,9 @@
       "selectors_key": "#"
     }, 
     {
-      "url": "https://docs.dyte.io/vue-ui-kit",
-      "tags": "vue-ui-kit",
-      "selectors_key": "vue-ui-kit"
+      "url": "https://mynotes.engineer/java",
+      "tags": "java",
+      "selectors_key": "java"
     }, 
     {
       "url": "#",
@@ -22,7 +22,7 @@
       "tags": "#",
       "selectors_key": "#"
     },
-    "https://docs.dyte.io/"
+    "https://mynotes.engineer/"
   ],
   "stop_urls": [],
 
@@ -41,11 +41,11 @@
       "lvl6": "article h6",
       "text": "article p, article li, article td:last-child"
     }, 
-    "ui-kit": {
+    "java": {
       "lvl0": {
         "selector": "",
         "global": true,
-        "default_value": "UI Kit"
+        "default_value": "Java"
       },
       "lvl1": "article h1",
       "lvl2": "article h2",
@@ -55,11 +55,11 @@
       "lvl6": "article h6",
       "text": "article p, article li, article td:last-child"
     }, 
-    "web-core": {
+    "js": {
       "lvl0": {
         "selector": "",
         "global": true,
-        "default_value": "Web Core"
+        "default_value": "js"
       },
       "lvl1": "article h1",
       "lvl2": "article h2",

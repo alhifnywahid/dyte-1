@@ -4,14 +4,14 @@
 }
 
 .DocSearch-Button {
-  display: none;
+  /* display: none; */
   margin: 0;
   transition: all var(--ifm-transition-fast)
     var(--ifm-transition-timing-default);
 }
 
 .DocSearch-Container {
-  display: none;
+  /* display: none; */
   z-index: calc(var(--ifm-z-index-fixed) + 1);
 }
 
