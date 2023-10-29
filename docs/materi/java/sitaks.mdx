@@ -3,27 +3,58 @@ title: 'Sintaks'
 sidebar_position: 2
 ---
 
-**Kodingan**
+Sintaks adalah sekumpulan aturan yang harus diikuti agar kode dapat dipahami dan dieksekusi oleh komputer. Setiap bahasa pemrograman memiliki sintaksnya sendiri, dan melanggar aturan sintaks akan mengakibatkan kesalahan (error) yang disebut kesalahan sintaks.
 
-```java title="HaloDunia.main
+Java adalah bahasa pemerograman static dimana setiap penulisan kode harus benar **contoh** di setiap akhir steatmen harus di akhiri dengan tanda titik koma `;`
+
+## Source Code
+
+```java title="HaloDunia.java" showLineNumbers
+// highlight-next-line-error
 public class HaloDunia {
   public static void main(String[] args){
-    System.out.println("Halo Dunia")
+    System.out.println("Halo Dunia");
   }
 }
 ```
+<details>
+<summary>Some details containing headings</summary>
+<h2 id="#heading-id">I'm a heading that will not show up in the TOC</h2>
 
-**output**
-
-```java title="HaloDunia.main
-public class HaloDunia {
-  public static void main(String[] args){
-    System.out.println("Halo Dunia")
-  }
-}
+```java 
+System.out.println("One")
 ```
+  <details>
+  <summary>Some details containing headings</summary>
+  <h2 id="#heading-id">I'm a heading that will not show up in the TOC</h2>
+
+  ```java 
+  System.out.println("One")
+  ```
+
+  </details>
+
+</details>
+
+## Output
+
+```bash
+Halo Dunia
+```
+
+## Penjelasan
+
+- `public class HaloDunia {` : definnisi awal dari sebuah kelas. Java adalah OOP dimana setiap progam harus berada di dalam sebuah kelas.
+  - `public` : ini adalah kata kunci yang mengindikasikan bahwa kelas ini bisa di akses/di panggil  dari mana saja.
+  - `class` : sintaks yang di gunakan untuk mengidefinikasn sebuah kelas.
+  - `HaloDunia` : sintaks ini adalah nama dari sebuah kelasnya, dimana nama kelas harus sama dengan nama filenya, berarti nama file yang berisi kodingan ini adalah `HaloDunia.java`.
+  `{` : Kurung kurawal buka menandakan awal dari blok kode yang termasuk dalam kelas, dimana setiap stea
+
+
 
 import GiscusComments from '@site/src/components/Comentar';
+
+<hr />
 
 <GiscusComments
   categoryId="DIC_kwDOKmYCJs4CahRs"
