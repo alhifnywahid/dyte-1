@@ -1,44 +1,90 @@
 ---
 title: 'Sintaks Java'
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 Sintaks adalah sekumpulan aturan yang harus diikuti agar kode dapat dipahami dan dieksekusi oleh komputer. Setiap bahasa pemrograman memiliki sintaksnya sendiri, dan melanggar aturan sintaks akan mengakibatkan kesalahan (error) yang disebut kesalahan sintaks.
 
-Java adalah bahasa pemerograman static dimana setiap penulisan kode harus benar **contoh** di setiap akhir steatmen harus di akhiri dengan tanda titik koma `;`
+Java adalah bahasa pemerograman statis dimana setiap penulisan kode harus benar **contoh** di setiap akhir steatmen harus di akhiri dengan tanda titik koma `;`
 
-## Source Code
+## Program Halo Dunia
 
 ```java title="HaloDunia.java" showLineNumbers
-// highlight-next-line-error
 public class HaloDunia {
   public static void main(String[] args){
     System.out.println("Halo Dunia");
   }
 }
 ```
-<details>
-<summary>Some details containing headings</summary>
-</details>
 
 ## Output
 
 ```bash
 Halo Dunia
 ```
+Di atas adalah contoh program sederhana menampilkan pesan `Halo Dunia` ke layar.
+
+**Bingung?**
+
+**Program sedrhana tapi penulisan kodenya banyak?**
+
+Mari saya jelaskan setiap sintaks di atas, silahkan pahami baik baik.
 
 ## Penjelasan
 
-- `public class HaloDunia {` : definnisi awal dari sebuah kelas. Java adalah OOP dimana setiap progam harus berada di dalam sebuah kelas.
-  - `public` : ini adalah kata kunci yang mengindikasikan bahwa kelas ini bisa di akses/di panggil  dari mana saja.
-  - `class` : sintaks yang di gunakan untuk mengidefinikasn sebuah kelas.
-  - `HaloDunia` : sintaks ini adalah nama dari sebuah kelasnya, dimana nama kelas harus sama dengan nama filenya, berarti nama file yang berisi kodingan ini adalah `HaloDunia.java`.
-  `{` : Kurung kurawal buka menandakan awal dari blok kode yang termasuk dalam kelas, dimana setiap stea
+```java 
+public class HaloDunia {
+
+}
+```
+
+- `public class HaloDunia{ }` : ini adalah deklarasi class pada java, karena java adalah bahasa yang ber orientasi object maka setiap program harus di tuliskan di dalam class. di dalam class ini lah tempat membuat method
+
+  - `public` : ini berarti class yang di buat bersifat public atau bisa di akses atau di panggil dari mana saja.
+
+  - `class` : ini berarti mendefinisakn kalo anda menuliskan sebuah class bukan method.
+
+  - `HaloDunia` : ini adalah nama class yang di buat, di java nama class dan nama file harus sama, berarti bisa kita ketahui program di atas filenya bernama *HaloDunia.java*
+
+  - `{}` di tengah tengah tanda kurawal buka dan tutup inilah kita bisa menuliskan sebuah sintaks seperti *method*.
 
 
+```java  
+  public static void main(String[] args){
+
+    System.out.println("Halo Dunia");
+
+  }
+```
+
+- `public static void main(String[] args){ }` : ini adalah sekumpulan sintaks yang dinamakan method main, dimana method main inilah yang akan di jalankan oleh lebih awal oleh si program, penulisan method main atau method lainnya harus di dalam class.
+
+  - `public` : sintaks ini berarti bahsa method tersebut bersifat public atau bisa di akses dari mana saja.
+
+  - `static` : Ini adalah sintaks yang menunjukkan bahwa metode *main* adalah metode statis yang dapat dipanggil tanpa membuat objek dari kelas *HaloDunia*.
+
+  - `void` : ini adalah tipe data kembalian method *main*, yang berarti method ini tidak mengembalikan nilai.
+  - main : ini adalah method utama, seperti yang sudah di jelaskan di atas, method inilah yang akan di cari oleh program dan di eksekusi terlebih dahulu.
+
+  - `String[] args` : ini adalah parameter yang di terima oleh method *main*, ini adalah daftar argumen yang dapat di teruskan ke program saat di jalankan.
+
+  - `{ }` di tengah tengah tanda kurawal buka tutup ini lah kita bisa menuliskan sintaks sintaks lainnya. kita tidak bisa menuliskan sintaks *method* di dalam sebuah *method main* ataupun *method* lainnya
+
+    - `System.out.println("Halo Dunia");` : sintaks inilah yang bertugas mencetak tulisan *"Halo Dunia"* ke layar. sintaks seperti inilah yang bisa kita tuliskan di dalam *method* main. kita harus mengakhiri sebuat sintaks dengan tanda titik koma.
+
+
+**Sampai sini masih belum faham?**
+
+**pasti kalian masih timbul pertanyaan apa itu method? apa itu class?**
+
+**Abaikan dulu, intinya kalian tau dimana kita harus menuliskan sintaks sintaks sederhana agar program bisa berjalan, kalian akan tahu apa itu class dan method ketika sudah belajar `JAVA OOP`**.
+
+
+
+
+
+<br /><br /><hr />
 
 import GiscusComments from '@site/src/components/Comentar';
-
-<hr />
 
 <GiscusComments categoryId="DIC_kwDOKmYCJs4CahRs" dataRepo="R_kgDOKmYCJg" />

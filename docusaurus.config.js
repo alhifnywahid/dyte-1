@@ -128,6 +128,9 @@ const config = {
             require.resolve('./src/css/custom.css'),
             require.resolve('./src/css/api-reference.css'),
           ],
+        },
+        sitemap: {
+          ignorePatterns: ['/tags/**'],
         }, 
       }),
     ],
