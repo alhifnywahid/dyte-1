@@ -75,6 +75,26 @@ const plugins = [
       },
     },
   ],
+  [
+    '@docusaurus/plugin-google-gtag',
+    {
+      trackingID: 'G-LB65R5JZJB',
+      anonymizeIP: true,
+    },
+  ],
+  [
+    '@docusaurus/plugin-google-analytics',
+    {
+      trackingID: 'G-LB65R5JZJB',
+      anonymizeIP: true,
+    },
+  ],
+  [
+    '@docusaurus/plugin-google-tag-manager',
+    {
+      containerId: 'GTM-K9FW3VQG',
+    },
+  ],
 ];
 
 const fs = require('fs'); 
@@ -108,13 +128,7 @@ const config = {
             require.resolve('./src/css/custom.css'),
             require.resolve('./src/css/api-reference.css'),
           ],
-        },
-        sitemap: {
-          ignorePatterns: ['/tags/**'],
-        },
-        googleTagManager: {
-          containerId: 'GTM-5FDFFSS',
-        },
+        }, 
       }),
     ],
   ],
