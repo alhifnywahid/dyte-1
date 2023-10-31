@@ -1202,6 +1202,15 @@ html[data-theme='dark'] .video_sidebar_header > div > a::before {
   padding: 10px;
 } */
 
+
+
+#sinal {
+  font-weight: bold;
+	cursor: pointer;
+	/* padding: 1em .5em; */
+	list-style: none; 
+}
+
 .tabs-container {
   border: 1px solid yellow;
   padding: 1em;
