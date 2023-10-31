@@ -1201,6 +1201,13 @@ html[data-theme='dark'] .video_sidebar_header > div > a::before {
   color: white; 
   padding: 10px;
 } */
+
+#__docusaurus_skipToContent_fallback > div > main > div > div > div.col.docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module > div > article > div.theme-doc-markdown.markdown > div.tabs-container.tabList_node_modules-\@docusaurus-theme-classic-lib-theme-Tabs-styles-module {
+  border: 1px solid yellow;
+  padding: 1em;
+  border-radius: 8px;
+}
+
 .mid {
   display: flex;
   justify-content: center;

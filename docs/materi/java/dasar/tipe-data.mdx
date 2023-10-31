@@ -5,18 +5,66 @@ sidebar_position: 1
 
 tipe data berfungsi untuk menentukan data pada sebuah variabel contoh bilangan bulat menggunakan tipe data `int`, bilangan pecahan menggunakan tipe data `float`.
 
+## Macam Macam Tipe Data di Java
+
 di java sendiri ada banyak macam tipe data di antaranya sebagai berikut ini :
 
-![f](/img/materi/tipedata-java.png)
+![Macam Macam Tipe Data di Java](/img/java/macam-macam-tipe-data-di-java.png)
+
+## Alasan banyakknya tipe data di java
+
+Salah satu tujuan banyaknya tipe di java adalah **Hemat Memory**, di mana programer java bisa menentukan tipe data yang ingin di gunakan pada variabel.
+
+contoh si programer ingin membuat variabel yang bernilai `100` maka si programer bisa menggunakan tipe data `byte` karena byte adalah bilangan bulat dan maksimal bisa menampung nilai sebesar `127`.
+
+Setiap tipe data di java mempunyai nilai minimum dan maksimum, silahkan simak penjelasan berikut untuk mengetahui ukuran-ukuran setiap tipe data.
+
+
 
 ## Tipe Data Primitive
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+Ciri - Ciri tipe data primitiv
+
+  1. **Representasi Nilai** : mempresentasikan nilai sebenarnya dan di simpan secara langsung di dalam memori. ini membuat operasi terhadap tipe data primitiv biasanya lebih cepat.
+
+  2. **Ukuran Tetap** : memiliki ukuran yang tetap dan dan telah di definiskan sejak awal, misalnya `int` selalu memiliki ukuran `4 byte` dalam memori. dan `boolean` hanya bernilai `true` atau `false`.
+
+  3. **Memiliki Nilai Default** : tipe data primitiv memiliki default meskipun kita tidak memberi nilai pada sebuah variabel misalnya `int` nilai defaultnya `0` dan `boolean` nilai defaultnya `true`
+
+Silahkan pelajari lebih dalam setiap tipe data primitiv karena semua tipe data primitiv akan di pakai di java dasar.
+
+
 
 <Tabs>
   <TabItem value="boolean" label="boolean" default>
-    Tipe data boolean
+  
+<div>
+
+**Tipe data boolean**
+
+Tipe data boolean adalah tipe data yang mempresentasikan nilai kebenaran, tipe data boolean hanya mempunyai 2 nilai yaitu : `true` : benar & `false` : salah.
+
+- **Ukuran** : 1 byte
+- **Nilai Default** : true
+- **Deskripsi** : hanya meyimpan nilai `true` dan `false`
+
+contoh penggunaan : 
+
+```java title="Main.java"
+public class Main {
+  public static void main(String[] args){
+
+    boolean iniBenar = true;
+    boolean iniSalah = false;
+
+  }
+}
+```
+
+
+
+</div>
+  
   </TabItem>
   <TabItem value="char" label="char">
     Tipe data char
@@ -32,23 +80,6 @@ import TabItem from '@theme/TabItem';
   </TabItem>
   <TabItem value="long" label="long">
     Tipe data long
-  </TabItem>
-</Tabs>
-
-| **Tipe Data** | **Ukuran** | **Description**      | **Default Value**          | **Required** |
-| ------------- | ---------- | -------------------- | -------------------------- | ------------ |
-| authToken     | string     | Authorisation token. | auto-filled by client SDK. | false        |
-
-<Tabs>
-  <TabItem value="one" label="one" default>
-  <code>
-    byte namaVariabel = 89;
-  </code>
-  
-    byte namaVariabel = 78;
-  </TabItem>
-  <TabItem value="two" label="two" default>
-    byte namaVariabel = 78;
   </TabItem>
 </Tabs>
 

@@ -3,7 +3,7 @@ import MDXComponents from '@theme-original/MDXComponents';
 import comentar from '../components/Comentar';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-
+import DocCardList from '@theme/DocCardList';
 import ColorCode from '../components/ColorCode';
 import ColorPalette from '../components/ColorPalette';
 import VideoPlayer from '../components/VideoPlayer';
@@ -27,6 +27,7 @@ export default {
   InfoTooltip,
   PropsTable,
   comentar,
+  DocCardList,
   ComponentsGrid,
   CardSection,
   Card,
