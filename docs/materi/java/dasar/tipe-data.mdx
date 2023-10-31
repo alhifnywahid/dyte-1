@@ -1,6 +1,7 @@
 ---
-title: 'Tipe Data'
+title: 'Tipe Data Java'
 sidebar_position: 1
+slug: /tipe-data
 ---
 
 tipe data berfungsi untuk menentukan data pada sebuah variabel contoh bilangan bulat menggunakan tipe data `int`, bilangan pecahan menggunakan tipe data `float`.
@@ -21,7 +22,7 @@ Setiap tipe data di java mempunyai nilai minimum dan maksimum, silahkan simak pe
 
 
 
-## Tipe Data Primitive
+## Tipe Data Primitiv
 
 **Ciri - Ciri tipe data primitiv**
 
@@ -46,7 +47,7 @@ di java cara penulisan tipe data primitiv ialah dengan huruf kecil, tidak boleh 
 
 Tipe data boolean di gunakan untuk mempresentasikan nilai benar atau salah, tipe data boolean hanya mempunyai 2 nilai yaitu : `true` : benar & `false` : salah.
 
-- **Ukuran** : 1 byte
+- **Ukuran** : 1 bit
 - **Nilai Default** : true
 - **Deskripsi** : hanya meyimpan nilai `true` dan `false`
 
@@ -323,8 +324,8 @@ public class Main {
   public static void main(String[] args){
     
     // highlight-start
-    int angka1 = 2147483647;
-    int angka2 = 9223372036854775807L;
+    long angka1 = 2147483647;
+    long angka2 = 9223372036854775807L;
     // highlight-end
 
   }
@@ -345,11 +346,11 @@ public class Main {
   public static void main(String[] args){
     
     // highlight-next-line-error
-    int angka3 = 9223372036854775809L;
+    long angka3 = 9223372036854775809L;
     // highlight-next-line-error
-    int angka4 = 9223372036854775807;
+    long angka4 = 9223372036854775807;
     // highlight-next-line-error
-    int angka5 = 9,223,372,036,854,775,807L;
+    long angka5 = 9,223,372,036,854,775,807L;
 
   }
 }
@@ -360,14 +361,140 @@ public class Main {
   
   </TabItem>
   <TabItem value="float" label="float">
-    Tipe data float
+ 
+<div>
+
+**Tipe data float**
+
+Tipe data float termasuk dalam tipe data floating point yang di gunakan untuk mempresentasikan nilai bilangan pecahan dengan maksimal nilai hingga 6 sampai 7 angka desimal.
+
+di tipe data float anda harus menggunakan huruf `f` kecil atau `F` besar di akhir angka desimal jika ingin secara eksplisit mendeklarasikan angka tersebut sebagai tipe data `float`.
+
+- **Ukuran** : 4 bytes
+- **Nilai Default** : 0.0
+- **Deskripsi** : untuk meyimpan bilangan pecahan dari 3.4e-038 sampai 3.4e + 038.
+
+contoh penggunaan : 
+
+:::tip contoh benar
+
+- variabel `angka1` benar karena nilai yang di tampung tidak melebihi batas maksimal dari tipe data long dan di akhir bilangan desimal menggunakan huruf `f`
+
+```java title="Main.java"
+public class Main {
+  public static void main(String[] args){
+    
+    // highlight-start
+    float angka1 = 5.75f;
+    // highlight-end
+
+  }
+}
+```
+:::
+
+:::danger contoh salah
+
+- variabel `angka2` salah karena tidak menggunakan tambahan huruf `f` di akhir bilangan desimal.
+
+```java title="Main.java"
+public class Main {
+  public static void main(String[] args){
+    
+    // highlight-next-line-error
+    float angka2 = 5.75;
+
+  }
+}
+```
+:::
+
+</div>
+  
   </TabItem>
-  <TabItem value="dobule" label="dobule">
-    Tipe data long
+  <TabItem value="double" label="double">
+ 
+<div>
+
+**Tipe data double**
+
+Tipe data double termasuk dalam tipe data floating point yang di gunakan untuk mempresentasikan nilai bilangan pecahan dengan maksimal nilai hingga 15 angka desimal.
+
+di tipe data double anda boleh menggunakan huruf `d` kecil atau `D` besar di akhir angka desimal. **(opsional)**.
+
+- **Ukuran** : 8 bytes
+- **Nilai Default** : 0.0
+- **Deskripsi** : untuk meyimpan bilangan pecahan dari 1.7e-308 sampai 1.7e + 308.
+
+contoh penggunaan : 
+
+```java title="Main.java"
+public class Main {
+  public static void main(String[] args){
+    
+    // highlight-start
+    float angka1 = 19.99d;
+    // highlight-end
+
+  }
+}
+``` 
+
+</div>
+  
   </TabItem>
 </Tabs>
 
+## Tipe Data Non Primitiv
 
+Untuk tipe data primitiv saya hanya akan menjelaskan bagian `String` saja, karena seperti `Array`, dll akan ada penjelasan tersendiri.
 
-<br /><br /><hr />
+**Tipe Data String**
+
+tipe data String digunakan untuk menyimpan kata atau kalimat baik berupa karakter huruf, angka dan simbol. 
+
+Nilai dari tipe data String harus di apit oleh simbol (Double Qoute) `""`.
+
+contoh penggunaan : 
+
+:::tip contoh benar
+
+- contoh berikut ini benar karena nilai variabel `nama` memnuhi aturan tipe data string `(menggunakan simbol double quote)`.
+
+```java title="Main.java"
+public class Main {
+  public static void main(String[] args){
+    
+    // highlight-start
+    String nama = "Alhifny Wahid";
+    // highlight-end
+
+  }
+}
+```
+:::
+
+:::danger contoh salah
+
+- contoh pada variabel `nama1` salah karena nilainya di apit oleh simbol single quotes.
+
+- contoh pada variabel `nama2` salah karena nilainya tidak di apit oleh simbol double quotes.
+
+```java title="Main.java"
+public class Main {
+  public static void main(String[] args){
+    
+    // highlight-next-line-error
+    String nama1 = 'Alhifny Wahid'
+    String nama2 = Alhifny Wahid
+
+  }
+}
+```
+:::
+
+<hr />
+<details>
+<summary>Silahkan tulis komentar jika ada pertanyaan.</summary>
 <comentar />
+</details>
