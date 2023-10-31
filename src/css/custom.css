@@ -1194,7 +1194,13 @@ html[data-theme='dark'] .video_sidebar_header > div > a::before {
   color: green;
   background-color: red;
 } */
-
+/* #__docusaurus_skipToContent_fallback > div > main > div > div > div > div > nav::after {
+  content: "Konten Tambahan"; 
+  display: block;
+  background-color: blue; 
+  color: white; 
+  padding: 10px;
+} */
 .mid {
   display: flex;
   justify-content: center;

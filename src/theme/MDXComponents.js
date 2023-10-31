@@ -1,6 +1,6 @@
 // Import the original mapper
 import MDXComponents from '@theme-original/MDXComponents';
-
+import comentar from '../components/Comentar';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -26,6 +26,7 @@ export default {
   VideoPlayer,
   InfoTooltip,
   PropsTable,
+  comentar,
   ComponentsGrid,
   CardSection,
   Card,

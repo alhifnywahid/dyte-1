@@ -21,6 +21,7 @@
     "spell-check": "npx cspell docs/**/*.mdx"
   },
   "dependencies": {
+    "@docusaurus/theme-common": "^2.4.1",
     "@docsly/react": "^1.8.6",
     "@docusaurus/core": "^2.4.3",
     "@docusaurus/module-type-aliases": "^2.4.3",
