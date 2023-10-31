@@ -23,15 +23,17 @@ Setiap tipe data di java mempunyai nilai minimum dan maksimum, silahkan simak pe
 
 ## Tipe Data Primitive
 
-Ciri - Ciri tipe data primitiv
+**Ciri - Ciri tipe data primitiv**
 
-  1. **Representasi Nilai** : mempresentasikan nilai sebenarnya dan di simpan secara langsung di dalam memori. ini membuat operasi terhadap tipe data primitiv biasanya lebih cepat.
+- **Representasi Nilai** : mempresentasikan nilai sebenarnya dan di simpan secara langsung di dalam memori. ini membuat operasi terhadap tipe data primitiv biasanya lebih cepat.
 
-  2. **Ukuran Tetap** : memiliki ukuran yang tetap dan dan telah di definiskan sejak awal, misalnya `int` selalu memiliki ukuran `4 byte` dalam memori. dan `boolean` hanya bernilai `true` atau `false`.
+- **Ukuran Tetap** : memiliki ukuran yang tetap dan dan telah di definiskan sejak awal, misalnya `int` selalu memiliki ukuran `4 byte` dalam memori. dan `boolean` hanya bernilai `true` atau `false`.
 
-  3. **Memiliki Nilai Default** : tipe data primitiv memiliki default meskipun kita tidak memberi nilai pada sebuah variabel misalnya `int` nilai defaultnya `0` dan `boolean` nilai defaultnya `true`
+- **Memiliki Nilai Default** : tipe data primitiv memiliki default meskipun kita tidak memberi nilai pada sebuah variabel misalnya `int` nilai defaultnya `0` dan `boolean` nilai defaultnya `true`
 
-Silahkan pelajari lebih dalam setiap tipe data primitiv karena semua tipe data primitiv akan di pakai di java dasar.
+**Aturan penulisan tipe data primitiv**
+
+di java cara penulisan tipe data primitiv ialah dengan huruf kecil, tidak boleh menggunakan huruf besar.
 
 
 
@@ -42,7 +44,7 @@ Silahkan pelajari lebih dalam setiap tipe data primitiv karena semua tipe data p
 
 **Tipe data boolean**
 
-Tipe data boolean adalah tipe data yang mempresentasikan nilai kebenaran, tipe data boolean hanya mempunyai 2 nilai yaitu : `true` : benar & `false` : salah.
+Tipe data boolean di gunakan untuk mempresentasikan nilai benar atau salah, tipe data boolean hanya mempunyai 2 nilai yaitu : `true` : benar & `false` : salah.
 
 - **Ukuran** : 1 byte
 - **Nilai Default** : true
@@ -53,32 +55,314 @@ contoh penggunaan :
 ```java title="Main.java"
 public class Main {
   public static void main(String[] args){
-
-    boolean iniBenar = true;
-    boolean iniSalah = false;
+    
+    // highlight-start
+    boolean peryantaanBenar = true;
+    boolean pernyataanSalah = false;
+    // highlight-end
 
   }
 }
 ```
 
-
-
 </div>
   
   </TabItem>
   <TabItem value="char" label="char">
-    Tipe data char
+  
+<div>
+
+**Tipe data char**
+
+Tipe data char di gunakan untuk mempresetasikan nilai ASCII, dimana tipe data char ini dipresentasikan dengan menggunakan simbol kutip tunggal (single quotes), seperti 'A', '7', atau '!'. 
+
+- **Ukuran** : 2 bytes
+- **Nilai Default** : ''
+- **Deskripsi** : Menyimpan satu karakter / huruf / nilai ASCII.
+
+contoh penggunaan : 
+
+:::tip contoh benar
+
+- contoh berikut benar karena masing masing variabel hanya berisi 1 karakter.
+
+```java title="Main.java"
+public class Main {
+  public static void main(String[] args){
+    
+    // highlight-start
+    char iniHuruf = 'A';
+    char iniSimbol = '@';
+    char iniAngka = '1';
+    // highlight-end
+
+  }
+}
+```
+:::
+
+:::danger contoh salah 
+
+- variabel `iniHuruf` salah karena tipe data char hanya bisa untuk variabel yang menampung nilai dengan maksimal 1 karakter.
+
+- variabel `iniSimbol` salah karena tidak menggunakan simbol (Single Quote) `'`
+
+- variabel `iniAngka` salah karena menggunakan simbol (Dobule Quote) `"` bukan simbol (Single Quote) `'`
+
+```java title="Main.java"
+public class Main {
+  public static void main(String[] args){
+    
+    // highlight-next-line-error
+    char iniHuruf = 'Aku';
+    // highlight-next-line-error
+    char iniSimbol = @;
+    // highlight-next-line-error
+    char iniAngka = "1021";
+
+  }
+}
+```
+
+:::
+
+Kalian bisa melihat karakter ASCII lebih lengkap [di sini](https://www.commfront.com/pages/ascii-chart) 
+
+</div>
+  
   </TabItem>
   <TabItem value="byte" label="byte">
-    Tipe data byte
+  
+<div>
+
+**Tipe data byte**
+
+Tipe data byte adalah tipe data integer yang di gunakan untuk mempresentasikan nilai bilangan bulat dengan maksimal nilai hingga 127.
+
+- **Ukuran** : 1 byte
+- **Nilai Default** : 0
+- **Deskripsi** : untuk mempresentasikan bilangan bulat dari nilai minmal -128 hingga 127.
+
+contoh penggunaan : 
+
+:::tip contoh benar
+
+- contoh berikut benar karena nilai yang di tampung oleh variabel `angka1` dan `angka2` tidak melewati nilai maksimal dari tipe data byte.
+
+```java title="Main.java"
+public class Main {
+  public static void main(String[] args){
+    
+    // highlight-start
+    byte angka1 = 100;
+    byte angka2 = 127;
+    // highlight-end
+
+  }
+}
+```
+:::
+
+:::danger contoh salah
+
+- variabel `angka3` salah karena nilai yang di tampung tersebut melebihi batas dari tipe data byte.
+
+- variabel `angka4` salah karena menggunakan simbol titik `.` di tipe data byte tidak boleh menggunakan simbol atau huruf apapun selain angka.
+
+```java title="Main.java"
+public class Main {
+  public static void main(String[] args){
+    
+    // highlight-next-line-error
+    byte angka3 = 129;
+    // highlight-next-line-error
+    byte angka4 = 1.27;
+
+  }
+}
+```
+:::
+
+</div>
+  
   </TabItem>
   <TabItem value="short" label="short">
-    Tipe data short
+
+<div>
+
+**Tipe data short**
+
+Tipe data byte adalah tipe data integer yang di gunakan untuk mempresentasikan nilai bilangan bulat dengan maksimal nilai hingga 32,767.
+
+- **Ukuran** : 2 bytes
+- **Nilai Default** : 0
+- **Deskripsi** : untuk meyimpan bilangan bulat dengan minimal nilai -32,768 sampai 32,767.
+
+contoh penggunaan : 
+
+:::tip contoh benar
+
+- contoh berikut benar karena nilai yang di tampung oleh variabel `angka1` dan `angka2` tidak melewati nilai maksimal dari tipe data short.
+
+```java title="Main.java"
+public class Main {
+  public static void main(String[] args){
+    
+    // highlight-start
+    short angka1 = 1000;
+    short angka2 = 32767;
+    // highlight-end
+
+  }
+}
+```
+:::
+
+:::danger contoh salah
+
+- variabel `angka3` salah karena nilai yang di tampung tersebut melebihi batas dari tipe data short.
+
+- variabel `angka4` salah karena menggunakan simbol koma `,` di tipe data short tidak boleh menggunakan simbol atau huruf apapun selain angka.
+
+```java title="Main.java"
+public class Main {
+  public static void main(String[] args){
+    
+    // highlight-next-line-error
+    short angka3 = 32769;
+    // highlight-next-line-error
+    short angka4 = 32,767;
+
+  }
+}
+```
+:::
+
+</div>
+  
   </TabItem>
   <TabItem value="int" label="int">
-    Tipe data int
+ 
+<div>
+
+**Tipe data int**
+
+Tipe data int adalah tipe data integer yang di gunakan untuk mempresentasikan nilai bilangan bulat dengan maksimal nilai hingga 2,147,483,647.
+
+- **Ukuran** : 4 bytes
+- **Nilai Default** : 0
+- **Deskripsi** : untuk meyimpan bilangan bulat dengan minimal nilai -2,147,483,648 sampai 2,147,483,647.
+
+contoh penggunaan : 
+
+:::tip contoh benar
+
+- contoh berikut benar karena nilai yang di tampung oleh variabel `angka1` dan `angka2` tidak melewati nilai maksimal dari tipe data short.
+
+```java title="Main.java"
+public class Main {
+  public static void main(String[] args){
+    
+    // highlight-start
+    int angka1 = 500000;
+    int angka2 = 2147483647;
+    // highlight-end
+
+  }
+}
+```
+:::
+
+:::danger contoh salah
+
+- variabel `angka3` salah karena nilai yang di tampung tersebut melebihi batas dari tipe data int.
+
+- variabel `angka4` salah karena menggunakan simbol koma `,` di tipe data int tidak boleh menggunakan simbol atau huruf apapun selain angka.
+
+```java title="Main.java"
+public class Main {
+  public static void main(String[] args){
+    
+    // highlight-next-line-error
+    int angka3 = 2147483648;
+    // highlight-next-line-error
+    int angka4 = 2,147,483,647;
+
+  }
+}
+```
+:::
+
+</div>
+  
   </TabItem>
   <TabItem value="long" label="long">
+ 
+<div>
+
+**Tipe data long**
+
+Tipe data long adalah tipe data integer yang di gunakan untuk mempresentasikan nilai bilangan bulat dengan maksimal nilai hingga 2,147,483,647.
+
+**Catatan** : khusus tipe data long jika nilainya lebih dari tipe data int makan harus menggunakan tambahan huruf `l` kecil atau `L` besar, `disarankan memakai huruf "L" besar`, jadi penambahan huruf `L` ini hanya untuk membedakan tipe data long dan int jika nilai dari variabel dengan tipe data long ini lebih dari nilai maksimum tipe data int.
+
+- **Ukuran** : 8 bytes
+- **Nilai Default** : 0
+- **Deskripsi** : untuk meyimpan bilangan bulat dengan minimal nilai -9223372036854775808 sampai 9223372036854775807.
+
+contoh penggunaan : 
+
+:::tip contoh benar
+
+- variabel `angka1` benar karena nilai yang di tampung tidak melebihi batas maksimal dari tipe data long.
+
+- variabel `angka2` benar menggunakan tambahan huruf di akhir angka karena nilai tersebut sudah melebihi nilai maksimal dari tipe data int.
+
+```java title="Main.java"
+public class Main {
+  public static void main(String[] args){
+    
+    // highlight-start
+    int angka1 = 2147483647;
+    int angka2 = 9223372036854775807L;
+    // highlight-end
+
+  }
+}
+```
+:::
+
+:::danger contoh salah
+
+- variabel `angka3` salah karena nilai yang di tampung tersebut melebihi batas dari tipe data long.
+
+- variabel `angka4` salah karena tidak menggunakan tambahan huruf "L" di setelah angka terakhir (nilai tersebut sudah melebihi dari maksimum tipe data int.)
+
+- variabel `angka5` salah karena menggunakan simbol koma `,` di tipe data long tidak boleh menggunakan simbol atau huruf apapun selain `angka dan huruf (L) setelah angka terakhir` jika angka lebih dari maksimum tipe data int.
+
+```java title="Main.java"
+public class Main {
+  public static void main(String[] args){
+    
+    // highlight-next-line-error
+    int angka3 = 9223372036854775809L;
+    // highlight-next-line-error
+    int angka4 = 9223372036854775807;
+    // highlight-next-line-error
+    int angka5 = 9,223,372,036,854,775,807L;
+
+  }
+}
+```
+:::
+
+</div>
+  
+  </TabItem>
+  <TabItem value="float" label="float">
+    Tipe data float
+  </TabItem>
+  <TabItem value="dobule" label="dobule">
     Tipe data long
   </TabItem>
 </Tabs>
