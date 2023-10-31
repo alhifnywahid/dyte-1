@@ -22,7 +22,7 @@ const GiscusComments = () => {
     // script.setAttribute('crossorigin', 'anonymous');
 
     document.getElementById('giscus-container').appendChild(script);
-  }, []);
+  }, [colorMode]);
 
   return <div id="giscus-container" />;
 };
