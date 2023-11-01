@@ -8,60 +8,107 @@ Variabel berfungsi untuk menyimpan sebuah data atau nilai yang beresifat sementa
 
 ## Aturan penulisan variabel
 
-### Larangan
-- tidak boleh di awali dengan angka.
-- tidak boleh angka semua.
-- tidak boleh ada spasi.
-- tidak boleh menggunakan angka yang telah di pakai oleh java seperti `args`, `static`, `public` dan masih banyak lagi.
+Setiap bahasa pemerograman biasanya mempunyai aturan - aturan dalam penulisan sintaks variabel.
 
-### Disarankan
-- tulis variabel dengan huruf kecil.
-- gunakan camel cases dimana ketika nama variabel berupa kalimat atau lebih dari 1 kata maka huruf pertama di kata pertama berhuruf kecil, dan huruf pertama di kata selanjutnya menggunakan huruf besar.
+Berikut aturan penulisan variabel yang di sarankan / di perbolehkan / yang dilarang.
+
+<Tabs>
+<TabItem value="disarankan" label="Di Sarankan" default>
+
+:::tip contoh penulisan variabel yang di sarankan.
+
+Pernulisan varaibel pada java sangat di sarankan sebagai berikut ini : 
+
+- menggunakan huruf kecil semua.
 
   contoh : 
-  - Nama Lengkap : namaLengkap
-  - Pintu Bagian Belakang : pintuBagianBelakang
+  ```java
+  String nama = "Hifny";
+  ```
+- gunakan camel case jika lebih dari 1 kata. (misal ada 2 kata, maka huruf pertama di kata ke dua gunakan huruf kapital)
 
+  contoh : 
+  ```java
+  String namaLengkap = "Alhifny Wahid";
+  ```
 
-- boleh menggunakan simbol di bagian mana saja.
-- boleh menggunakan angka dimana saja kecuali di awal nama variabel.
-
-### contoh
-:::tip penulisan variabel yang benar
-
-```java
-// menggunakan abjad semua
-String nama = "Alhifny"; 
-
-// jika lebih dari 1 kata gunakan teknik camel cases
-String namaLengkap = "Alhifny Wahid"; 
-
-// boleh menggunakan angka di belakang
-String nama1 = "Alhifny"; 
-
-// boleh menggunakan angka di belakang
-String nama2 = "Wahid"; 
-```
 :::
 
-<hr />
+</TabItem>
+<TabItem value="diperbolehkan" label="Di Perbolehkan">
 
-:::danger penulisan variabel yang salah
+:::info contoh penulisan variabel yang di perbolehkan.
 
-```java
-// tidak boleh menggunakan angka semua
-String 12345 = "Alhifny Wahid"; 
+Pernulisan varaibel pada java sangat di sarankan sebagai berikut ini : 
 
-// tidak boleh di awali angka
-String 1nama = "Alhifny Wahid"; 
+- boleh menggunakan huruf kecil, besar, atau campuran sekaligus.
 
-// tidak boleh menggunakan spasi
-String nama lengkap = "Alhifny Wahid"; 
+  contoh : 
+  ```java
+  String NAMADEPAN = "Ahmad";
+  String namabelakang = "Iham";
+  String NamaLengkap = "Ahmad Ilham";
+  ```
+- boleh menggunakan campuran simbol di awal, di tengah baik di akhir kata. (hanya boleh menggunakan beberapa simbol seperti `_ $`)
 
-// tidak boleh menggunakan kata yang telah di pakai oleh java.
-String args = "Alhifny Wahid"; 
-```
+  contoh : 
+  ```java
+  String $NamaDepan = "Ahmad";
+  String Nama_Belakang = "Ilham";
+  String _namaLengkap$ = "Ahmad Ilham";
+  ```
+- boleh menggunakan campuran angka di setelah huruf pertama.
+
+  contoh : 
+  ```java
+  String nama1 = "Ahmad";
+  String nama2nya = "Ilham";
+  String namalenkap3 = "Ahmad Ilham";
+  ```
+
 :::
+
+</TabItem>
+<TabItem value="dilarang" label="Di Larang">
+
+:::danger contoh penulisan variabel yang di di larang.
+
+Pernulisan varaibel pada java sangat di sarankan sebagai berikut ini : 
+
+- tidak boleh di meggunakan kata yang telah di pakai oleh java seperti (args, static final dll).
+
+  contoh : 
+  ```java
+  String args = "Ilham Saifuddin";
+  String static = "Fernando Imam";
+  ```
+
+- tidak boleh di awali angka.
+
+  contoh : 
+  ```java
+  String 1nama = "Ilham Saifuddin";
+  String 2nama = "Fernando Imam";
+  ```
+- tidak boleh menggunakan angka semua.
+
+  contoh : 
+  ```java
+  String 12345 = "Ahmad";
+  ```
+- tidak boleh menggunakan spasi.
+
+  contoh : 
+  ```java
+  String nama depan = "Ilham";
+  String nama belakang = "Saifuddin";
+  String nama lengkap = "Ilham Saifuddin";
+  ```
+
+:::
+
+</TabItem>
+</Tabs> 
 
 
 <hr />
