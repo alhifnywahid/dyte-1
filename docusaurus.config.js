@@ -232,12 +232,12 @@ const config = {
           //   position: 'right',
           //   className: 'navbar-book-demo',
           // },
-          {
-            label: 'Hubungi Saya',
-            href: 'https://api.whatsapp.com/send/?phone=6285655207366&text&type=phone_number&app_absent=0',
-            position: 'right',
-            className: 'dev-portal-signup dev-portal-link',
-          },
+          // {
+          //   label: 'Hubungi Saya',
+          //   href: 'https://api.whatsapp.com/send/?phone=6285655207366&text&type=phone_number&app_absent=0',
+          //   position: 'right',
+          //   className: 'dev-portal-signup dev-portal-link',
+          // },
         ],
       },
       footer: {

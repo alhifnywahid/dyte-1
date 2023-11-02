@@ -2,34 +2,10 @@
 # General FAQs
 #
 
-- question: What does Dyte do?
-  tags: ['General']
+- question: Kenapa namanya My Notes?
+  tags: ['umum']
   answer: |-
-    Dyte offers a real-time video and voice solution for integrating
-    high-quality video/voice calls into your web, mobile, and desktop
-    applications and websites.
-
-    Call recording, live streaming, webinars,
-    live transcription and translation, chatting, polling, quizzes, and
-    many other features are available with Dyte.
-
-    Dyte includes:
-
-    **Core SDKs:** These SDKs enable you to create high-quality custom
-    video and voice calls with real-time communication. Core SDKs are
-    completely customizable and simple to integrate.
-
-    **UI Kit:** Using Dyte&quot;s prebuilt design library of UI
-    components, you can integrate video and voice calls into your app or
-    website in minutes.
-
-    The following platforms are currently supported:
-
-    - Mobile: Flutter, Android (Java/Kotlin), iOS(Objective-C/Swift), React Native
-    - Web: Javascript Core SDK + UI Kit for React JS, Angular, Web Components for everything else
-    - Desktop: Electron
-
-    For more information, see [Dyte docs](/)
+    Go
 
 - question: What businesses can use Dyte?
   tags: ['General']

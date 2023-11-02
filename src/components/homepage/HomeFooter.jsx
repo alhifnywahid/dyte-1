@@ -12,7 +12,7 @@ const belajar = [
 ];
 
 const popularTutorial = [
-  { name: 'Java', href: '#', },
+  { name: 'Java', href: '/java', },
   { name: 'Javascript', href: '#', },
   { name: 'Basisdata', href: '#', },
 ];
@@ -24,9 +24,9 @@ const sosialMedia = [
 ];
 
 const myNotes = [
-  { name: 'About', href: '#' },
+  { name: 'About', href: '/about' },
   { name: 'FAQs', href: '#' },
-  { name: 'Contact', href: '#' },
+  { name: 'Contact', href: 'https://api.whatsapp.com/send/?phone=6285655207366&text&type=phone_number&app_absent=0' },
 ];
 
 function Safety({ className }) {

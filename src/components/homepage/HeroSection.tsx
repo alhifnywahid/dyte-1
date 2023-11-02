@@ -75,9 +75,9 @@ export default function HeroSection() {
             <Link to="/programing">
               <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">Mulai Belajar</button>
             </Link>
-            <Link to={"#"}>
+            {/* <Link to={"#"}>
               <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">Tentang Kami</button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>

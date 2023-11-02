@@ -1202,7 +1202,11 @@ html[data-theme='dark'] .video_sidebar_header > div > a::before {
   padding: 10px;
 } */
 
-
+.div-about{
+  padding: 1em;
+  border: 1px solid goldenrod;
+  border-radius: 15px;
+}
 
 #sinal {
   font-weight: bold;
