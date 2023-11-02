@@ -6,161 +6,113 @@ slug: /output
 
 # Menampilkan data ke layar
 
-Di java ada beberapa cara atau `method` untuk menampilkan data seperti teks, angka atau nilai pada sebuah variabel. di sini saya hanya akan memberikan 4 method untuk menampilkan data ke layar.
+Di java ada beberapa cara untuk menampilkan data seperti teks, angka atau nilai pada sebuah variabel.
 
-- [**System.out.println();**](#systemoutprintln)
-- [**System.out.print();**](/java)
-- [**System.out.printf();**](/java)
-- [**JOptionPane.showMessageDialog();**](/java)
+Di sini saya hanya akan memberikan 1 cara yang sering di gunakan yaiut dengan method `System.out.println()`.
 
-Sebelum kita belajar print method satu persatu alangkah baiknya kita belajar `parameter` terlebih dahulu.
+Method ini bisa menggunakan maksimal 1 parameter dan bisa juga tidak menggunakan parameter, dimana jika kita tidak menggunakan parameter program hanya akan mencetak 1 baris baru saja dan jika menggunakan parameter maka akan menampilkan data lalu akan menambahakan 1 baris baru.
 
-```java showLineNumbers
-iniContohMethod(); // method tanpa parameter
-iniContohMethod(parameter); // method dengan 1 parameter
-iniContohMethod(parameter1, parameter2); // method dengan parameter lebih dari 1
+**Apa itu parameter?**
+```java
+System.out.println(parameter)
 ```
-**penjelasan :**
 
-- `baris 1` : merupakan sebuah contoh penulisan method yang tidak membutuhkan parameter, jadi kita tidak perlu menuliskan apa apa di dalam simbol `()` tersebut.
-- `baris 2` : merupakan contoh penulisan method dengan 1 parameter. kita cukup menuliskan parameternya
-- `baris 3` : merupakan contoh penulisan method yang membutuhkan lebih dari 1 parameter, kita bisa memisahkan setiap parameter tersebut menggunakan simbol koma `,`
-
-Jadi jika kita lihat dari sintaks di atas, parameter itu di tulis di tengah tengah simbol `()`.
-
-Parameter itulah yang bisa kita isi dengan `teks`, `angka` ataupun `variabel`.
+Jadi tempat penulisan parameter itu di tengah tengah simbol `()` kata parameter itulah yang nanti bisa isi dengan teks, angka ataupun variabel.
 
 <Tabs>
-<TabItem value="TEKS" default>
+<TabItem value="Cetak Teks" default>
 
-Kita bisa langsung mengisi parameter dengan teks yang kita inginkan dengan simbol (double quote) `""`.
+Kita bisa langsung mengisi parameter dengan teks yang kita inginkan dan teks tersbut harus di kutip dengan simbol (double quote) `""`.
+
+**Contoh**
 
 ```java 
-iniContohMethod("Ini Teksnya");
+public class Main {
+  public static void main(String[] args) {
+    System.out.println("Bambang")
+    System.out.println("Sugiono")
+  }
+}
+``` 
+
+**Output**
+
+```bash
+Bambang
+Sugiono.
 ``` 
 
 </TabItem>
-<TabItem value="ANGKA">
+<TabItem value="Cetak Angka">
 
-Kita bisa langsung mengisi parameter dengan angka tanpa tambahan simbol apapun.
+Kita bisa langsung mengisi parameternya dengan angka tanpa di kutip simbol apapun.
+
+**Contoh**
 
 ```java 
-iniContohMethod(100);
-```
+public class Main {
+  public static void main(String[] args) {
+    System.out.println(20)
+  }
+}
+``` 
+
+**Output**
+
+```bash
+20
+``` 
 
 </TabItem>
 <TabItem value="VARIABEL">
 
-Kita bisa langsung mengisi parameter dengan nama variabel tanpa tambahan simbol apapun. 
+Kita bisa langsung mengisi parameternya dengan nama variabel yang telah di buat.
+
+**Contoh**
 
 ```java 
-String nama = "Alhifny Wahid"
-iniContohMethod(nama);
-```
+public class Main {
+  public static void main(String[] args) {
+    String nama = "Bambang Sugiono.";
+    System.out.println(nama)
+  }
+}
+``` 
+
+**Output**
+
+```bash
+Bambang Sugiono.
+``` 
 
 </TabItem>
 <TabItem value="GABUNGAN">
 
-Kita bisa mengisi paramter dengan mengabungkan teks, angka dan variabel menggunakan simbol `+`.
+Kita bisa menggabungkan teks, angka variabel degan 1 method print saja
+
+Cara menggabungkanny adalah dengan menambahkan simbol `+`
+
+**Contoh**
 
 ```java 
-String nama = "Alhifny Wahid";
-String alamat = "Surabaya";
-iniContohMethod("Nama Saya " + nama + " Umur Saya " + 20 + " tahun.");
-```
+public class Main {
+  public static void main(String[] args) {
+    String nama = "Bambang Sugiono";
+    String alamat = "Surabaya.";
+
+    System.out.println("Halo, Nama saya " + nama + " Saya berumur " + 20 + " Tahun " + "dan saya berasal dari " + alamat);
+  }
+}
+``` 
+
+**Output**
+
+```bash
+Halo, Nama saya Bambang Sugiono Saya berumur 20 Tahun dan saya berasal dari Surabaya.
+``` 
 
 </TabItem>
 </Tabs> 
-
-
-
-Mari kita bahas satu per satu dari semua method print di atas.
-
-## System.out.println();
-
-Ini adalah metode paling umum yang sering di gunakan untuk mencetak data ke console, dimana method ini akan mencetak data lalu akan akan menambahkan baris baru (newline).
-
-Method ini bisa tanpa parameter dan maksimal bisa kita isi 1 parameter saja. jadi jika tanpa parameter maka method hanya akan menampilkan baris (newline) saja. tetapi jika kita isi parameter maka akan menampilkan data lalu menambahkan baris baru atau (newline).
-
-<details>
-<summary>Menampilkan Teks</summary>
-
-**Kode**
-```java 
-public class Main {
-  public static void main(String[] args) {
-    // highlight-start
-    System.out.println("Alhifny");
-    System.out.println("Wahid");
-    // highlight-end
-  }
-}
-```
-
-**Output**
-```bash 
-Alhifny
-Wahid
-```
-**Penjelasan**
-
-contoh di atas menampilkan 2 data sekaligus dimana setelah data pertama di cetak "Alhifny" program akan menambkan baris baru maka dari itu data ke dua "Wahid" di tampilkan di bawah data ke satu bukan di tampilkan dalam satu baris.
-
-</details>
-
-<details>
-<summary>contoh tanpa variabel</summary>
-
-### contoh menggunakan variabel
-```java showLineNumbers
-public class Main {
-  public static void main(String[] args) {
-    String nama = "Alhifny Wahid";
-    String alamat = "Surabaya";
-
-    System.out.println(nama);
-    System.out.println(alamat);
-  }
-}
-```
-### output
-```bash
-Alhifny Wahid
-Surabaya
-```
-### penjelasan 
-- baris pertama membuat variabel nama dengan nilai "Alhifny Wahid"
-- baris kedua membuat variabel alamat dengan nilai
-
-</details>
-
-<details>
-<summary>contoh tanpa variabel</summary>
-
-
-
-</details>
-
-
-
-
-
-## System.out.print();
-## System.out.printf();
-## JOptionPane.showMessageDialog();
-
-<Tabs>
-<TabItem title="print" value="print">
-
-## ONE
-
-</TabItem>
-<TabItem title="println" value="println">
-
-## TWO
-
-</TabItem>
-</Tabs>
 
 <hr />
 <details>
