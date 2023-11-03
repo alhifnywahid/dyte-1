@@ -1,0 +1,108 @@
+---
+title: 'Komentar'
+sidebar_position: 2
+slug: /komentar
+---
+Komentar digunakan untuk menambahkan penjelasan atau catatan ke dalam kode program yang tidak akan dieksekusi oleh kompiler. Komentar berguna untuk dokumentasi kode, menjelaskan fungsi, dan membantu pemahaman kode oleh pengembang lain atau diri sendiri di masa depan. Di Java, ada dua jenis komentar yang umum digunakan:
+
+- [Komentar 1 baris](#komentar-1-baris)
+- [Komentar blok](#komentar-blok)
+- [Dokumentasi Komentar](#dokumentasi-komentar)
+
+## Komentar 1 Baris
+
+Komentar satu baris digunakan untuk menambahkan catatan singkat atau penjelasan pada satu baris kode. Komentar ini dimulai dengan dua garis miring (//) dan melanjutkan hingga akhir baris.
+
+** Contoh**
+
+```java
+public class main {
+  public static void main(String[] args) {
+    // deklarasi variabel nama
+    String nama = "Irvan Santiago";
+    
+    // menampilkan nilai variabel nama ke console
+    System.out.println(nama);
+
+  }
+}
+```
+
+**Output**
+
+```bash
+Irvan Santiago
+```
+
+## Komentar blok
+
+Komentar blok digunakan untuk komentar yang panjang atau untuk menyusun komentar lebih dari satu baris. Komentar blok dimulai dengan `/*` dan diakhiri dengan `*/`. Semua teks di antara tanda awal dan tanda akhir adalah komentar.
+
+** Contoh**
+
+```java
+public class main {
+  public static void main(String[] args) {
+    /*
+    ini adalah contoh komentar blok
+
+    ini adalah program sederhana menampilkan nama dan alamat ke console.
+    */
+
+    /* deklarasi variabel nama */
+    String nama = "Indah Puspita";
+
+    /* deklarasri variabel alamat*/
+    String alamat = "Bali";
+
+    /* menampilkan data ke layar */
+    System.out.println("Nama saya " + nama + " Saya berasal dari " + alamat);
+
+  }
+}
+```
+
+**Output**
+
+```bash
+Nama saya Indah Puspita Saya berasal dari Bali
+```
+
+## Dokumentasi Komentar
+
+Dokumentasi komentar adalah jenis khusus dari komentar blok yang digunakan untuk menghasilkan dokumentasi otomatis dari kode Anda. Komentar ini dimulai dengan /** dan memiliki format tertentu yang dikenali oleh alat dokumentasi seperti JavaDoc.
+
+** Contoh**
+
+```java
+public class main {
+  public static void main(String[] args) {
+    /**
+     * @author alhifny wahid
+     * program penjumlahan sederhana
+     * @param x Nilai pertama
+     * @param y Nilai kedua
+     * @return Hasil operasi
+     */
+    public static int tambah(int x, int y) {
+        return x + y;
+    }
+    public static void main(String[] args) {
+        int hasil = tambah(5,5);
+        System.out.println("Hasil Pertambahan 5 + 5 = " + hasil);
+    }
+  }
+}
+```
+
+**Output**
+
+```bash
+Hasil Pertambahan 5 + 5 = 10
+```
+
+<hr />
+<details>
+<summary id="sinal">Klik disini untuk berkomentar</summary>
+<comentar />
+</details>

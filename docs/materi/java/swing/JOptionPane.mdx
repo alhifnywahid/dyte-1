@@ -3,9 +3,137 @@ title: 'JOptionPane'
 sidebar_position: 1
 ---
 
-| Method            | Deskripsi                                                               | Tipe Data | 
-| ----------------- | ----------------------------------------------------------------------- | --------- |
-| showConfirmDialog | Untuk menampilkan dialog konfirmasi seperti *Yes, No & Cancel*          | int
-| showInputDialog	  | Untuk menmapilkan input dialog dimana user diminta untuk menginput data | String
-| showMessageDialog | Untuk menampilkan pesan dialog.                                         |
-| showOptionDialog  | Untuk menampilkan dialog pilihan.                                       |
+<hr />
+
+JOptionPane adalah kelas dalam bahasa pemrograman Java yang terkait dengan penciptaan dialog box pop-up untuk berinteraksi dengan pengguna. Dialog box ini dapat digunakan untuk menampilkan pesan, mengumpulkan input dari pengguna, atau mengonfirmasi tindakan tertentu.
+
+Kita harus mengimport `JOptionPane` dari pustaka `javax.swing` sebelum deklarasi class.
+```java 
+// highlight-start
+import javax.swing.JOptionPane;
+// highlight-end
+
+public class Main {
+  public static void main(String[] args) {
+
+  }
+}
+```
+Atau bisa dengan cara berikut ini, yaitu mengimport semua class yang berada di pustaka `java.swing`.
+```java 
+// highlight-start
+import javax.swing.*;
+// highlight-end
+
+public class Main {
+  public static void main(String[] args) {
+
+  }
+}
+```
+
+## Jenis Jenis JOptionPane
+
+Di Java, terdapat berbagai jenis dialog box yang dapat dibuat menggunakan kelas JOptionPane untuk berinteraksi dengan pengguna. Berikut jenis jenis JoptionPane yang umum di gunakan.
+
+<details>
+<summary className="sum-bold">showMessageDialog</summary>
+
+- Berfungsi untuk menampilkan dialog pesan.
+- Tidak membutuhkan variabel.
+- Membutuhkan minimal 2 parameter dan maksimal 5 parameter.
+- Kita hanya bisa mengisi 2, 4 dan 5 parameter saja. 
+
+Silahkan lihat penjelasan parameter [disini](#penjelasan-parameter)
+
+<Tabs>
+<TabItem value="2 Parameter">
+
+**Parameter yang di butuhkan**
+
+```java
+JOptionPane.showMessageDialog(parentComponent, Object message);
+```
+**Contoh**
+
+```java
+import javax.swing.JOptionPane;
+public class Main {
+  public static void main(String[] args) {
+    JOptionPane.showMessageDialog(null, "Hai Namaku Yanto");
+  }
+}
+```
+
+**Output**
+
+![Output showMessageDialog](/img/java/showmessagedialog.png)
+
+</TabItem>
+<TabItem value="4 Parameter">
+
+**Parameter yang di butuhkan**
+
+```java
+JOptionPane.showMessageDialog(parentComponent, Object message, String title, int messageType);
+```
+**Contoh**
+
+```java
+import javax.swing.JOptionPane;
+public class Main {
+  public static void main(String[] args) {
+    JOptionPane.showMessageDialog(null, "Hai Namaku Yanto", "INI JUDUL", JOptionPane.PLAIN_MESSAGE);
+  }
+}
+```
+
+**Output**
+
+![Output showMessageDialog 4 parameter](/img/java/showmessgaedialog-4-paramter.png)
+
+</TabItem>
+<TabItem value="5 Parameter">
+
+Menggunakan 5 parameter membutuhkan class tambahan dari pustaka `javax.swing` yaitu `Icon` dan `ImageIcon` untuk mengambil gambar dari path/lokasi yang akan kita tentukan.
+
+**Parameter yang di butuhkan**
+
+```java
+JOptionPane.showMessageDialog(Component parentComponent, Object message, String title, int messageType, Icon icon);
+```
+**Contoh**
+
+```java
+import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
+import javax.swing.Icon;
+public class Main {
+  public static void main(String[] args) {
+    Icon kustomIcon = new ImageIcon("vector.png"); 
+    JOptionPane.showMessageDialog(null, "Ini adalah pesan informasi.", "Informasi", JOptionPane.INFORMATION_MESSAGE, kustomIcon);
+  }
+}
+```
+
+**Output**
+
+![Output showMessageDialog 5 parameter](/img/java/showmessagedialog-5-parameter.png)
+
+</TabItem>
+</Tabs> 
+
+</details> 
+
+<details>
+<summary className="sum-bold">showConfirmDialog</summary>
+</details>
+
+<details>
+<summary className="sum-bold">showInputDialog</summary>
+</details>
+
+<details>
+<summary className="sum-bold">showOptionDialog</summary>
+</details>
+

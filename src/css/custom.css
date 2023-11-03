@@ -1201,7 +1201,10 @@ html[data-theme='dark'] .video_sidebar_header > div > a::before {
   color: white; 
   padding: 10px;
 } */
-
+.sum-bold {
+  font-weight: bold;
+  text-decoration: underline;
+}
 .div-about{
   padding: 1em;
   border: 1px solid goldenrod;

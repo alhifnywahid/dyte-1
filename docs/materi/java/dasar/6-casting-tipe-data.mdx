@@ -1,0 +1,55 @@
+---
+title: 'Casting Tipe Data'
+sidebar_position: 6
+slug: /casting-tipe-data
+---
+
+Casting tipe data (data type casting) adalah proses mengubah tipe data dari satu bentuk ke bentuk lain dalam pemrograman. Hal ini umumnya diperlukan ketika Anda ingin mengkonversi nilai dari satu tipe data ke tipe data lain yang berbeda. Di java sendiri ada dua jenis casting tipe data yaitu : 
+
+- **Implicit Casting (Otomatis)**
+- **Explicit Casting (Manual)**
+
+<Tabs>
+<TabiItem value="Otomatis" default>
+
+**Casting Secara Otamatis**
+
+- Casting otomatis terjadi ketika tipe data yang lebih kecil diubah secara otomatis menjadi tipe data yang lebih besar.
+```bash
+byte -> short -> int -> long -> float -> double
+```
+- Ini tidak memerlukan operator khusus, dan Java akan melakukan konversi secara otomatis jika tidak ada risiko kehilangan data.
+- Misalnya, konversi dari `byte` ke `double` adalah casting otomatis karena tidak ada risiko kehilangan data.
+
+**Contoh**
+```java
+public class Main {
+  public static void main(String[] args) {
+    byte angka1 = 120;
+    long angka2 = angka1L;
+
+    System.out.println(angka2);
+  }
+}
+```
+
+**Output**
+
+```bash
+120.0
+```
+
+</TabiItem>
+<TabiItem value="Manual" default>
+
+**Casting Secara Manual**
+
+</TabiItem>
+</Tabs>
+
+
+<hr />
+<details>
+<summary id="sinal">Klik disini untuk berkomentar</summary>
+<comentar />
+</details>
