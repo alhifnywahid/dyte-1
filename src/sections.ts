@@ -17,30 +17,30 @@ export type Section = { docId: string } & (
 );
 
 const SECTIONS: Section[] = [ 
-  {
-    name: 'js',
-    docId: 'js',
-    icon: JSIcon,
-    section: 'java',
-  },
-  {
-    name: 'java',
-    docId: 'java',
-    icon: JSIcon,
-    section: 'java',
-  },
-  {
-    name: 'html',
-    docId: 'html',
-    icon: HTMLIcon,
-    section: 'java',
-  },
-  {
-    name: 'css',
-    docId: 'css',
-    icon: ReactIcon,
-    section: 'java',
-  },
+  // {
+  //   name: 'js',
+  //   docId: 'js',
+  //   icon: JSIcon,
+  //   section: 'java',
+  // },
+  // {
+  //   name: 'java',
+  //   docId: 'java',
+  //   icon: JSIcon,
+  //   section: 'java',
+  // },
+  // {
+  //   name: 'html',
+  //   docId: 'html',
+  //   icon: HTMLIcon,
+  //   section: 'java',
+  // },
+  // {
+  //   name: 'css',
+  //   docId: 'css',
+  //   icon: ReactIcon,
+  //   section: 'java',
+  // },
 ];
 
 export type SectionsGroup = {

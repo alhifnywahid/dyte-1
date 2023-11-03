@@ -46,13 +46,13 @@ Di Java, terdapat berbagai jenis dialog box yang dapat dibuat menggunakan kelas 
 
 Silahkan lihat penjelasan parameter [disini](#penjelasan-parameter)
 
-<Tabs>
-<TabItem value="2 Parameter">
+<Tabs groupId="showMessageDialog">
+<TabItem value="2 Parameter" default>
 
 **Parameter yang di butuhkan**
 
 ```java
-JOptionPane.showMessageDialog(parentComponent, Object message);
+JOptionPane.showMessageDialog(Component parentComponent, Object message);
 ```
 **Contoh**
 
@@ -75,7 +75,7 @@ public class Main {
 **Parameter yang di butuhkan**
 
 ```java
-JOptionPane.showMessageDialog(parentComponent, Object message, String title, int messageType);
+JOptionPane.showMessageDialog(Component parentComponent, Object message, String title, int messageType);
 ```
 **Contoh**
 
@@ -127,13 +127,347 @@ public class Main {
 
 <details>
 <summary className="sum-bold">showConfirmDialog</summary>
+
+- Berfungsi untuk menampilkan dialog pilihan sepert `Yes`, `No` dan `Cancel`.
+- Bisa menggunakan variabel dengan tipe data default int.
+- Kita hanya bisa mengisi 2, 4, 5 dan 6 parameter. 
+
+Silahkan lihat penjelasan parameter [disini](#penjelasan-parameter)
+
+<Tabs groupId="showConfirmDialog">
+<TabItem value="2 Parameter" default>
+
+**Parameter yang di butuhkan**
+
+```java
+JOptionPane.showConfirmDialog(Component parentComponent, Object message);
+```
+**Contoh**
+
+```java
+import javax.swing.JOptionPane;
+public class Main {
+  public static void main(String[] args) {
+    JOptionPane.showConfirmDialog(null, "apakah anda yakin ingin keluar?");
+  }
+}
+```
+
+**Output**
+
+![Output showConfirmDialog](/img/java/showconfirmdialog-2-parameter.png)
+
+</TabItem>
+<TabItem value="4 Parameter">
+
+**Parameter yang di butuhkan**
+
+```java
+JOptionPane.showConfirmDialog(Component parentComponent, Object message, String title, int optionType);
+```
+**Contoh**
+
+```java
+import javax.swing.JOptionPane;
+public class Main {
+  public static void main(String[] args) {
+    JOptionPane.showConfirmDialog(null, "ulangi program", "pop up pemberitahuan", JOptionPane.YES_NO_OPTION);
+  }
+}
+```
+
+**Output**
+
+![Output showConfirmDialog 4 parameter](/img/java/showconfirmdialog-4-parameter.png)
+
+</TabItem>
+<TabItem value="5 Parameter">
+
+**Parameter yang di butuhkan**
+
+```java
+JOptionPane.showConfirmDialog(Component parentComponent, Object message, String title, int optionType, int messageType);
+```
+**Contoh**
+
+```java
+import javax.swing.JOptionPane;
+public class Main {
+  public static void main(String[] args) {
+    JOptionPane.showConfirmDialog(null, "ulangi program", "pop up pemberitahuan", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE);
+  }
+}
+```
+
+**Output**
+
+![Output showConfirmDialog 4 parameter](/img/java/showconfirmdialog-5-parameter.png)
+
+</TabItem>
+<TabItem value="6 Parameter">
+
+Menggunakan 6 parameter membutuhkan class tambahan dari pustaka `javax.swing` yaitu `Icon` dan `ImageIcon` untuk mengambil gambar dari path/lokasi yang akan kita tentukan.
+
+**Parameter yang di butuhkan**
+
+```java
+JOptionPane.showConfirmDialog(Component parentComponent, Object message, String title, int messageType, Icon icon);
+```
+**Contoh**
+
+```java
+import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
+import javax.swing.Icon;
+public class Main {
+  public static void main(String[] args) {
+    Icon iconKusom = new ImageIcon("vector.png");
+    JOptionPane.showConfirmDialog(null, "ulangi program", "pop up pemberitahuan", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, iconKusom);
+  }
+}
+```
+
+**Output**
+
+![Output showConfirmDialog 6 parameter](/img/java/showconfirmdialog-6-parameter.png)
+
+</TabItem>
+</Tabs> 
+
 </details>
 
 <details>
 <summary className="sum-bold">showInputDialog</summary>
+
+- Berfungsi untuk menampilkan dialog input kepada pengguna.
+- Bisa menggunakan variabel dengan tipe data default String.
+- Kita bisa mengisi 1, 2, 3 dan 7 parameter. 
+
+Silahkan lihat penjelasan parameter [disini](#penjelasan-parameter)
+
+<Tabs groupId="showConfirmDialog">
+<TabItem value="1 Parameter" default>
+
+**Parameter yang di butuhkan**
+
+```java
+JOptionPane.showInputDialog(Object message);
+```
+**Contoh**
+
+```java
+import javax.swing.JOptionPane;
+public class Main {
+  public static void main(String[] args) {
+    JOptionPane.showInputDialog("Masukkan Nama Anda : ");
+  }
+}
+```
+
+**Output**
+
+![Output showInputDialog](/img/java/inputdialog-1-parameter.png)
+
+</TabItem>
+<TabItem value="2 Parameter">
+
+Menggunakan 2 parameter ada 2 Cara :
+- **mengisi parameter `Component parentComponent` dan `Object message`.**
+  ```java
+  JOptionPane.showInputDialog(Component parentComponent, Object message);
+  ```
+
+  **Contoh**
+  ```java
+  import javax.swing.JOptionPane;
+  public class Main {
+    public static void main(String[] args) {
+      JOptionPane.showInputDialog(null, "Masukkan Alamat Anda : ");
+    }
+  }
+  ```
+
+  **Output**
+  ![Output showInputDialog 2 v2 parameter](/img/java/inputdialog-2parameterv1.png)
+
+- **mengisi parameter `Object message` dan `Object initialSelectonValue`.**
+  ```java
+  JOptionPane.showInputDialog(Object message, Object Object initialSelectonValue);
+  ```
+
+  **Contoh**
+  ```java
+  import javax.swing.JOptionPane;
+  public class Main {
+    public static void main(String[] args) {
+      JOptionPane.showInputDialog("Masukkan Alamat Anda : ", "Contoh : Jakarta");
+    }
+  }
+  ```
+
+  **Output**
+  ![Output showInputDialog 4 parameter](/img/java/inputdialog-2parameterv2.png)
+
+</TabItem>
+<TabItem value="3 Parameter">
+
+**Parameter yang di butuhkan**
+
+```java
+JOptionPane.showInputDialog(Component parentComponent, Object message, Object initialSelectonValue);
+```
+**Contoh**
+
+```java
+import javax.swing.JOptionPane;
+public class Main {
+    public static void main(String[] args) {
+    JOptionPane.showInputDialog(null, "Masukkan Umur Anda : ", "Contoh : 30");
+  }
+}
+```
+
+**Output**
+
+![Output showInputDialog 3 parameter](/img/java/inputdialog-3-parameter.png)
+
+</TabItem>
+<TabItem value="4 Parameter">
+
+**Parameter yang di butuhkan**
+
+```java
+JOptionPane.showInputDialog(Component parentComponent, Object message, String title, int messageType);
+```
+**Contoh**
+
+```java
+import javax.swing.JOptionPane;
+public class Main {
+    public static void main(String[] args) {
+    JOptionPane.showInputDialog(null, "Masukkan NIM : ", "Input Nim", JOptionPane.PLAIN_MESSAGE);JOptionPane.showInputDialog(null, "Masukkan Umur Anda : ", "Contoh : 30");
+  }
+}
+```
+
+**Output**
+
+![Output showInputDialog 3 parameter](/img/java/inputdialog-4-parameter.png)
+
+</TabItem>
+<TabItem value="7 Parameter">
+
+Menggunakan 7 parameter membutuhkan beberapa hal berikut : 
+- class tambahan dari pustaka `javax.swing` yaitu `Icon` dan `ImageIcon` untuk mengambil gambar dari path/lokasi yang akan kita tentukan.
+- Array Object 1 dimensi.
+
+**Parameter yang di butuhkan**
+
+```java
+JOptionPane.showInputDialog(Component parentComponent, Object message, String title, int messageType, Icon icon, Object[] selectionValues, Object initialSelectionValue);
+```
+**Contoh 1**
+
+```java
+import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
+import javax.swing.Icon;
+public class Main {
+  public static void main(String[] args) {
+    Icon iconKusom = new ImageIcon("vector.png");
+    String[] pilihan = {"Pilihan 1", "Pilihan 2", "Pilihan 3"};
+
+    JOptionPane.showInputDialog(null, "Pilih salah satu opsi:", "Pilih Opsi", JOptionPane.QUESTION_MESSAGE, iconKusom, pilihan, pilihan[2]);
+  }
+}
+```
+
+**Contoh 2**
+
+```java
+import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
+import javax.swing.Icon;
+public class Main {
+  public static void main(String[] args) {
+    Icon iconKusom = new ImageIcon("vector.png");
+    JOptionPane.showInputDialog(null, "Pilih salah satu opsi:", "Pilih Opsi", JOptionPane.QUESTION_MESSAGE, iconKusom, new Object[]{"Pilihan 1", "Pilihan 2", "Pilihan 3"}, "Pilihan 3");
+  }
+}
+```
+
+**Output**
+
+![Output showInputDialog 7 parameter v1.1](/img/java/inputdialog-7-parameter-v1.1.png)
+![Output showInputDialog 7 parameter v1.2](/img/java/inputdialog-7-parameter-v1.2.png)
+
+
+</TabItem>
+</Tabs> 
+
+
+**Contoh Menggunakan Variabel**
+
+```java
+import javax.swing.JOptionPane;
+
+public class Main {
+  public static void main(String[] args) {
+    String pilihan = (String) JOptionPane.showInputDialog(null, "Pilih salah satu opsi:", "Pilih Opsi", JOptionPane.PLAIN_MESSAGE, null, new Object[]{"Pilihan 1", "Pilihan 2", "Pilihan 3"},"Pilihan 1");
+
+    System.out.println("Anda memilih pilihan ke : " + pilihan);
+  }
+}
+```
+
 </details>
 
 <details>
 <summary className="sum-bold">showOptionDialog</summary>
+
+- Berfungsi untuk menampilkan opsi dialog kepada pengguna.
+- Bisa menggunakan variabel dengan tipe data default int.
+- Membutuhkan 8 parameter.
+- Array Object 1 dimensi.
+
+Silahkan lihat penjelasan parameter [disini](#penjelasan-parameter)
+
+**Parameter yang di butuhkan**
+
+```java
+JOptionPane.showInputDialog(Component parentComponent, Object message, String title, int optionType, int messageType, Icon icon, Object[] options, Object initialValue);
+```
+**Contoh**
+
+```java
+import javax.swing.JOptionPane;
+public class Main {
+  public static void main(String[] args) {
+    Byte[] opsi = {1,2,3,4,5};
+    int pilihan = JOptionPane.showOptionDialog(null, "Pilih Angka : ", "Program Pilih Angka", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null, opsi, opsi[2]);
+    System.out.println("Anda memilih angka : " + pilihan);
+  }
+}
+```
+
+**Output**
+
+![Output showInputDialog](/img/java/showoptiondialog.png)
+
+```bash 
+Anda memilih angka : 2
+```
+
 </details>
 
+## Penjelasan Parameter
+
+- **Component parentComponent** : Ini adalah komponen Swing yang digunakan sebagai referensi untuk posisi dialog. Dialog akan muncul di atas komponen ini. Parameter ini bersifat opsional. Anda dapat menggunakan null jika tidak ada komponen yang harus dijadikan referensi.
+- **Object message** : Ini adalah pesan atau konten yang akan ditampilkan dalam dialog. Ini bisa berupa teks (String) atau objek lain yang akan diubah menjadi pesan dalam dialog.
+- **String title** : Ini adalah judul dialog, yang akan muncul di bagian atas dialog.
+- **int messageType** : 
+- **Icon icon** : 
+- **Object[] selectionValues** : 
+- **Object initialSelectionValue** : 
+- **Object[] options** : 
+- **Object initialValue** : 
