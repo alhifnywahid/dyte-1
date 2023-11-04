@@ -32,9 +32,9 @@ public class Main {
 }
 ```
 
-## Jenis Jenis JOptionPane
+## Jenis Dialog JOptionPane
 
-Di Java, terdapat berbagai jenis dialog box yang dapat dibuat menggunakan kelas JOptionPane untuk berinteraksi dengan pengguna. Berikut jenis jenis JoptionPane yang umum di gunakan.
+Di Java, terdapat berbagai jenis dialog box yang dapat dibuat menggunakan kelas JOptionPane untuk berinteraksi dengan pengguna. Berikut Jenis Dialog JOptionPane yang umum di gunakan.
 
 <details>
 <summary className="sum-bold">showMessageDialog</summary>
@@ -211,7 +211,7 @@ Menggunakan 6 parameter membutuhkan class tambahan dari pustaka `javax.swing` ya
 **Parameter yang di butuhkan**
 
 ```java
-JOptionPane.showConfirmDialog(Component parentComponent, Object message, String title, int messageType, Icon icon);
+JOptionPane.showConfirmDialog(Component parentComponent, Object message, String title, int optionType, int messageType, Icon icon);
 ```
 **Contoh**
 
@@ -462,12 +462,182 @@ Anda memilih angka : 2
 
 ## Penjelasan Parameter
 
-- **Component parentComponent** : Ini adalah komponen Swing yang digunakan sebagai referensi untuk posisi dialog. Dialog akan muncul di atas komponen ini. Parameter ini bersifat opsional. Anda dapat menggunakan null jika tidak ada komponen yang harus dijadikan referensi.
-- **Object message** : Ini adalah pesan atau konten yang akan ditampilkan dalam dialog. Ini bisa berupa teks (String) atau objek lain yang akan diubah menjadi pesan dalam dialog.
-- **String title** : Ini adalah judul dialog, yang akan muncul di bagian atas dialog.
-- **int messageType** : 
-- **Icon icon** : 
-- **Object[] selectionValues** : 
-- **Object initialSelectionValue** : 
-- **Object[] options** : 
-- **Object initialValue** : 
+Berikut penjelasan masing masing parameter di JOptionPane :  
+
+<details>
+<summary>Component parentComponent</summary>
+
+Ini adalah komponen Swing yang digunakan sebagai referensi untuk posisi dialog, `(biasanya sebuah JFrame, JDialog, atau JPanel)`. Dialog akan muncul di atas komponen ini.
+  - parameter ini bersifat opsional untuk opsi **showInputDialog**
+  - Dialog bisa di isi **null** jika tidak ada **parent component**
+
+  ```java
+  import javax.swing.JFrame;
+  import javax.swing.JOptionPane;
+
+  public class Main {
+    public static void main(String[] args) {
+      JFrame parentComponent = new JFrame;
+
+      // dengan parameter parentComponent
+      JOptionPane.showMessageDialog(parentComponent, Object message);
+
+      // tanpa parameter parentComponent
+      JOptionPane.showMessageDialog(null, Object message);
+
+      // Opsional bagi opsi showInputDialog
+      JOptionPane.showInputDialog(Object message;)
+    }
+  }
+  ```
+
+</details>
+
+<details>
+<summary>Object message</summary>
+
+Ini adalah parameter yang berfungsi untuk mengisi pesan atau konten yang akan ditampilkan dalam dialog.
+  - Parameter ini harus di isi.
+  - Bisa di isi Object ataupun variabel dengan tipe data primitiv.
+  ```java 
+  // menggunakan object string
+  JOptionPane.showMessageDialog(null, "Testing");
+
+  // menggunakan tipe data primitiv
+  byte number = 120;
+  JOptionPane.showMessageDialog(null, number);
+  ```
+
+</details>
+
+<details>
+<summary>String title</summary>
+
+Ini adalah judul dialog, yang akan muncul di bagian atas dialog.
+  - Nilai harus berupa **String**
+  - Harus di isi untuk opsi **showOptionDialog**
+  - Untuk opsi lainnya bersifat opsional yang mempunyai judul tersendiri dari setiap opsi
+  ```java
+  JOptionPane.showMessageDialog(null, "Testing", "Ini Judul", int messageType);
+
+  // bisa juga
+  String judul = "Ini Judul";
+  JOptionPane.showMessageDialog(null, "Testing", judul, int messageType);
+  ```
+
+</details>
+
+<details>
+<summary>int messageType</summary>
+
+Parameter ini di gunakan untuk menentukan tipe pesan atau ikon yang akan di tampilkan dalam dialog, parameter ini hanya menerima value **int**. Berikut beberapa pesan yang bisa di tampilkan : 
+
+  | Pesan               | Nilai  | Deskripsi                                            |
+  |---------------------|--------|------------------------------------------------------|
+  | PLAIN_MESSAGE       | -1     | menampilkan pesan biasa tanpa ikon tambahan.         |
+  | ERROR_MESSAGE       | 0      | menampilkan pesan kesalahan dengan ikon kesalahan.   |
+  | INFORMATION_MESSAGE | 1      | menampilkan pesan informasi dengan ikon informasi.   |
+  | WARNING_MESSAGE     | 2      | menampilkan pesan peringatan dengan ikon peringatan. |
+  | QUESTION_MESSAGE    | 3      | menampilkan pesan pertanyaan dengan ikon pertanyaan. |
+
+  Parameter ini bisa kita isi dengan **Pesan** atau **Nilai** yang berada ditabel diatas.
+  ```java
+  // mengisi dengan pesan
+  JOptionPane.showMessageDialog(null, "Testing", "Ini Judul", JOptionPane.PLAIN_MESSAGE);
+
+  // mengisi dengan Nilai int 
+  JOptionPane.showMessageDialog(null, "Testing", "Ini Judul", -1);
+  ```
+
+</details>
+
+<details>
+<summary>int optionType</summary>
+
+Parameter ini digunakan untuk menentukan tipe tombol yang akan ditampilkan dalam dialog, 
+  - hanya menerima value **int**. Berikut beberapa tombol yang bisa di tampilkan : 
+
+  | Pesan                | Nilai  | Deskripsi                                            |
+  |----------------------|--------|------------------------------------------------------|
+  | DEFAULT_OPTION       | -1     | menampilkan tombol "Ok"                              |
+  | YES_NO_OPTION        | 0      | menampilkan tombol "Yes" dan "No"                  |
+  | YES_NO_CANCEL_OPTION | 1      | menampilkan tombol "Yes" "No" dan "Cancel"          |
+  | OK_CANCEL_OPTION     | 2      | menampilkan tombol "Ok" dan "Cancel"                  |
+
+  Parameter ini bisa kita isi dengan **Pesan** atau **Nilai** yang berada ditabel diatas.
+  ```java
+  // mengisi dengan pesan
+  JOptionPane.showConfirmDialog(null, "Testing", "Ini Judul", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+
+  // mengisi dengan Nilai int 
+  JOptionPane.showConfirmDialog(null, "Testing", "Ini Judul", 1, JOptionPane.PLAIN_MESSAGE);
+  ```
+
+</details> 
+
+<details>
+<summary>Icon icon</summary>
+
+Di gunakan untuk memberi ikon kustom ke dialog message.
+  - Bersifat opsional untuk semua opsi JOptionPane.
+  - Membutuhkan class tambahan dari pustaka **JAVA SWING** berupa **Icon** dan **IconImage** untuk mengambil gambar ikonnya.
+  ```java
+  import javax.swing.JOptionPane;
+  import javax.swing.ImageIcon;
+  import javax.swing.Icon;
+  public class Main {
+    public static void main(String[] args) {
+      Icon kustomIcon = new ImageIcon("vector.png"); 
+      JOptionPane.showMessageDialog(null, "Testing", "Ini Judul", JOptionPane.PLAIN_MESSAGE, kustomIcon);
+    }
+  }
+  ```
+
+</details> 
+
+<details>
+<summary>Object[] selectionValues & Object[] options</summary>
+
+2 parameter ini sama sama digunakan untuk menentukan nilai-nilai atau opsi yang akan ditampilkan kepada pengguna dalam **showConfirmDialog** atau **showOptionDialog** dengan beberapa pilihan yang anda inginkan.
+  - Membutuhkan Object berupa array 1 dimensi.
+
+  ```java
+  String[] pilihan = {"opsi 1", "opsi 2", "opsi 3"};
+
+  // Object[] selectionValues
+  JOptionPane.showInputDialog(null, "Pilih salah satu opsi:", "Ini Judul", JOptionPane.PLAIN_MESSAGE, null, pilihan, null);
+
+  // Object[] options
+  JOptionPane.showOptionDialog(null, "Pilih Angka : ", "Ini Judul", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null, pilihan, null);
+  ```
+
+</details> 
+
+<details>
+<summary>Object initialSelectionValue & Object initialValue</summary>
+
+2 parameter ini sama sama di gunakan untuk menentukan nilai default pada dialog **showConfirmDialog** atau **showOptionDialog**
+  - Jika tidak ingin menentukan bisa di isi **null**
+  - Jika di isi value/nilai harus sama dengan yang ada di Object Array yang telah di buat sebelumnya (**Object[] selectionValues** atau **Object[] options**)
+  - Jika nilai tidak sama tidak akan terjadi eror, tetapi tidak akan ada nilai default yang di pilih.
+
+    ```java
+    String[] pilihan = {"opsi 1", "opsi 2", "opsi 3"};
+
+    // Object initialSelectionValue
+    JOptionPane.showInputDialog(null, "Pilih salah satu opsi:", "Ini Judul", JOptionPane.PLAIN_MESSAGE, null, pilihan, pilihan[2]);
+
+    // Object initialValue
+    JOptionPane.showOptionDialog(null, "Pilih Angka : ", "Ini Judul", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null, pilihan, pilihan[2]);
+    ```
+
+</details>  
+
+
+
+
+<hr />
+<details>
+<summary id="sinal">Klik disini untuk berkomentar</summary>
+<comentar />
+</details>

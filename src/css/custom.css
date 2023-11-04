@@ -1099,7 +1099,7 @@ details p {
 }
 
 .DocSearch-Button-Key {
-  background: theme(colors.secondary.800) !important;
+  background: theme(colors.secondary.800)!important;
   top: 0 !important;
   padding: 0 !important;
   @apply !border !border-solid !border-text-400/30;

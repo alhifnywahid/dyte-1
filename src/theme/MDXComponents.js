@@ -11,6 +11,7 @@ import InfoTooltip from '../components/InfoTooltip';
 import PropsTable from '../components/PropsTable';
 import ComponentsGrid from '../components/ComponentsGrid';
 import { CardSection, Card } from '../components/CardComponents';
+import { DemoLiveEditor } from '../components/LiveCode';
 import * as icons from '../icons';
 
 export default {
@@ -31,4 +32,5 @@ export default {
   ComponentsGrid,
   CardSection,
   Card,
+  DemoLiveEditor,
 };

@@ -154,6 +154,12 @@ const config = {
       colorMode: {
         defaultMode: 'light',
       },
+      liveCodeBlock: {
+        languages: ['javascript', 'jsx'],
+        css: {
+          fontSize: '16px',
+        },
+      },
       docs: {
         sidebar: {
           autoCollapseCategories: true,
@@ -330,7 +336,7 @@ const config = {
           'kotlin',
           'java',
           'swift',
-          'objectivec',
+          'objectivec', 
           'javascript',
         ],
         magicComments: [
