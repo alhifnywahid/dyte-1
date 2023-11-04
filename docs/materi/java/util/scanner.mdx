@@ -1,0 +1,261 @@
+---
+title: 'Scanner'
+sidebar_position: 1
+slug: /scanner
+---
+
+Scanner adalah class dari pustaka **java.util** yang berfungsi untuk membaca masuka (input) dari pengguna. Dengan **Scanner** kita bisa membaca dari berbagai jenis tipe data seperti bilangan bulat, pecahan, dll.
+
+Class Scanner sendiri memiliki banyak sekali method untuk di gunakan, Berikut beberapa method yang umum di gunakan.
+
+## Method Scanner
+
+| **Method** | **Deskripsi** |
+|--------|-----------|
+| nextBoolean() | untuk membaca nilai boolean | 
+| nextByte() | untuk membaca nilai byte |
+| nextShort() | untuk membaca  nilai short |
+| nextInt() | untuk membaca nilai int | 
+| nextLong() | untuk membaca nilai long | 
+| nextFloat() | untuk membaca nilai float |
+| nextDouble() | untuk membaca nilai double |
+| nextLine() | untuk membaca teks |
+| next() | untuk membaca teks |
+| cloe() | untuk menutup scanner |
+
+## Cara menggunakan Scanner
+
+Karena **Scanner** adalah Class dari pustaka **java.util** maka kita harus import package terlebih dahulu sebelum deklarasi membuat class.
+
+- import class **Scanner** saja
+```java 
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args){
+    Scanner userInput = new Scanner(System.in);
+  }
+}
+```
+- import semua class yang berada di pustaka **java.util**
+```java 
+import java.util.*;
+public class Main {
+  public static void main(String[] args){
+    Scanner userInput = new Scanner(System.in);
+  }
+}
+```
+
+
+## Contoh Penggunaan
+
+<Tabs>
+<TabItem value="nextBoolean()" default>
+
+Contoh penggunaan method **nextBoolean()**
+
+```java
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Masukkan data : ");
+    boolean hasil = input.nextBoolean();
+    System.out.println(hasil);
+  }
+}
+
+```
+
+</TabItem>
+<TabItem value="nextByte()">
+
+Contoh penggunaan method **nextByte()**
+
+```java
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Masukkan angka : ");
+    byte hasil = input.nextByte();
+    System.out.println(hasil);
+  }
+}
+
+```
+
+</TabItem>
+<TabItem value="nextShort()">
+
+Contoh penggunaan method **nextShort()**
+
+```java
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Masukkan angka : ");
+    short hasil = input.nextShort();
+    System.out.println(hasil);
+  }
+}
+
+```
+
+</TabItem>
+<TabItem value="nextInt()">
+
+Contoh penggunaan method **nextInt()**
+
+```java
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Masukkan angka : ");
+    int hasil = input.nextInt();
+    System.out.println(hasil);
+  }
+}
+
+```
+
+</TabItem>
+<TabItem value="nextLong()">
+
+Contoh penggunaan method **nextLong()**
+
+```java
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Masukkan angka : ");
+    long hasil = input.nextLong();
+    System.out.println(hasil);
+  }
+}
+
+```
+
+</TabItem>
+<TabItem value="nextFloat()">
+
+Contoh penggunaan method **nextFloat()**
+
+```java
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Masukkan angka : ");
+    float hasil = input.nextFloat();
+    System.out.println(hasil);
+  }
+}
+
+```
+
+</TabItem>
+<TabItem value="nextDouble()">
+
+Contoh penggunaan method **nextDouble()**
+
+```java
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Masukkan angka : ");
+    double hasil = input.nextDouble();
+    System.out.println(hasil);
+  }
+}
+
+```
+
+</TabItem>
+<TabItem value="nextLine()">
+
+Contoh penggunaan method **nextLine()**
+
+- Metode **nextLine()** membaca dan mengembalikan seluruh baris teks, termasuk semua karakter hingga karakter baris baru (**\n** atau **\r\n**) atau akhir masukan.
+- Ini membaca seluruh baris teks, termasuk spasi dan karakter lainnya hingga akhir baris.
+- Contoh: Jika Anda memasukkan **"Halo Dunia"**, **nextLine()** akan membaca **"Halo Dunia"** dan mengikutsertakan seluruh teks.
+
+```java
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Masukkan angka : ");
+    String hasil = input.nextLine();
+    System.out.println(hasil);
+  }
+}
+
+```
+
+</TabItem>
+<TabItem value="next()">
+
+Contoh penggunaan method **next()**
+
+- Metode **next()** membaca dan mengembalikan token (kata atau kata-kata) pertama yang dipisahkan oleh spasi putih (seperti spasi atau baris baru) dari masukan.
+- Ini hanya membaca satu kata atau token, dan berhenti ketika ada spasi putih.
+- Contoh: Jika Anda memasukkan **"Halo Dunia"**, **next()** akan membaca **"Halo"** dan mengabaikan "**Dunia"**.
+
+```java
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Masukkan angka : ");
+    String hasil = input.next();
+    System.out.println(hasil);
+  }
+}
+
+```
+
+</TabItem>
+<TabItem value="close()">
+
+Metode **close()** dalam kelas Scanner digunakan untuk menutup atau mengakhiri sumber masukan yang sedang digunakan oleh objek **Scanner**. Ini merupakan praktik yang baik untuk selalu menutup objek **Scanner** setelah selesai menggunakannya, terutama jika sumber masukannya adalah berkas atau aliran data. Menutup objek **Scanner** membantu memastikan bahwa sumber daya yang digunakan oleh objek tersebut akan dibebaskan dan tidak akan memakan memori atau sumber daya lainnya.
+
+Contoh penggunaan method **close()** 
+
+```java
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Masukkan angka : ");
+    String hasil = input.next();
+    System.out.println(hasil);
+    input.close();
+  }
+}
+
+```
+
+</TabItem>
+</Tabs>
+
+
+<hr />
+<details>
+<summary id="sinal">Klik disini untuk berkomentar</summary>
+<comentar />
+</details>
