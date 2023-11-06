@@ -353,8 +353,8 @@ const config = {
       },
       algolia: {
         appId: 'RAXRF0BNQG',
-        apiKey: '47d475a6dca169c45208d48d1e446da4',
-        indexName: 'docs',
+        apiKey: '32f2f80116214685d9f4648ac21b5277',
+        indexName: 'dev_imgopret',
         placeholder: "Search...",
         contextualSearch: true,
         searchParameters: {},
