@@ -1107,6 +1107,10 @@ details p {
   @apply flex items-center;
 }
 
+table {
+  text-align: center;
+}
+
 .DocSearch-Modal {
   /* after introducting ai chat bot */
   margin-top: 80px !important;

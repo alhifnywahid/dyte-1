@@ -498,6 +498,68 @@ public class Main {
 ```
 :::
 
+## Kata Kunci (Var)
+
+- Sejak versi Java 10, Java mendukung pembuatan varaibel dengan kata kunci var, sehingga kita tidak perlu menyebutkan tipe datanya.
+- Namun perlu diingat, saat kita menggunakan kata kunci var untuk membuat variabel, kita harus menginisialisasi value/nila dari variabel tersebut secara langsung.
+
+:::tip contoh benar
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    var nama = "Indah Puspita";
+    var alaamt = "Surabaya";
+  }
+}
+```
+- kodingan di atas tidak akan terjadi eror karena kita sudah menginisialisasi variabel langsung.
+
+:::
+
+:::danger contoh salah
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    var nama;
+    var alaamt;
+
+    nama = "Indah Puspita";
+    alamat = "Surabaya";
+  }
+}
+```
+- Kodingan di atas akan eror karena kita hanya melakukan deklarasi saja (Tidak langsung mengisi nilainya).
+
+:::
+
+## Kata Kunci final
+
+- Secara default, variabel di Java nilainya bisa di ubah.
+- Jika kita ingin membuat sebuah variabel yang datanya tidak boleh di ubah setelah pertama kali dibuat, kita bisa menggunakan kata kunci final sebelum penulisan tipe data.
+- Istilah variabel seperti ini, banyak juga yang menyebutkan konstanta.
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    final byte angka = 100;
+  }
+}
+```
+
+- nilai dari variabel byte sudah tidak bisa di ubah, jika kita mencoba memaksa untuk di ubah akan terjadi eror.
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    final byte angka = 100;
+
+    angka = 30; // ini akan terjadi eror
+  }
+}
+```
+
 <hr />
 <details>
 <summary id="sinal">Klik disini untuk berkomentar</summary>

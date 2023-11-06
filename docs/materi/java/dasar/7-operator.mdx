@@ -1,0 +1,106 @@
+---
+title: 'Operator'
+sidebar_position: 7
+slug: /operator
+---
+
+<hr />
+
+Operator adalah sebuah simbol atau karakter khusus  yang di gunakan untuk melakukan operasi matematika, perbandingan, logika atau manipulasi data pada sebuah varaibel.
+
+## Jenis Operator di Java
+
+Di Java ada 6 jenis operator yaitu : 
+
+  1. **Operator Artimatika.**
+  2. **Operator Penugasan.**
+  3. **Operator Pembanding.**
+  4. **Operator Logika.**
+  5. **Operator Bitwise.**
+  6. **Operator Ternary.**
+
+![opeator java](/img/java/operator.png)
+
+Apa saja perbedaan dari semua jenis operator tersebut?
+
+Mari kita bahas, satu per satu…
+
+### 1. Operator Aritmatika
+
+Operator aritmatika digunakan untuk melakukan operasi aritmatika.
+
+Operator ini terdiri dari:
+
+| **Nama**        | **Simbol** |
+|-------------|--------|
+| Penjumlahan | `+`    |
+| Pengurangan | `-`    |
+| Perkalian   | `*`    |
+| Pembagian   | `/`    |
+| Sisa Bagi   | `%`    | 
+
+#### Contoh Penggunaan
+
+<Tabs>
+<TabItem value="+">
+
+```java
+public class Main {
+  public static void main(String[] args) {
+
+    // contoh 1
+    byte angka1 = 20;
+    byte angka2 = 20;
+    byte hasil = (byte) (angka1 + angka2);
+
+    System.out.println("Hasil Penjumlahan : " + hasil);
+
+    // contoh 2
+    System.out.println("Hasil Penjumlahan : " + (angka1 + angka2));
+
+    // contoh 3
+    System.out.println("Hasil Penjumlahan : " + (25 + 25));
+
+    // contoh 4
+    System.out.println("Hasil Penjumlahan : " + (angka1 + angka2 + hasil + 25));
+  }
+}
+```
+
+</TabItem>
+<TabItem value="-">
+
+```java
+public class Main {
+  public static void main(String[] args) {
+
+    // contoh 1
+    byte angka1 = 20;
+    byte angka2 = 20;
+    byte hasil = (byte) (angka1 - angka2);
+
+    System.out.println("Hasil Pengurangan : " + hasil);
+
+    // contoh 2
+    System.out.println("Hasil Pengurangan : " + (angka1 - angka2));
+
+    // contoh 3
+    System.out.println("Hasil Pengurangan : " + (25 - 25));
+
+    // contoh 4
+    System.out.println("Hasil Pengurangan : " + (angka1 - angka2 - hasil - 25));
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
+
+
+
+<hr />
+<details>
+<summary id="sinal">Klik disini untuk berkomentar</summary>
+<comentar />
+</details>

@@ -4,18 +4,20 @@ sidebar_position: 6
 slug: /casting-tipe-data
 ---
 
-Casting tipe data (data type casting) adalah proses mengubah tipe data dari satu bentuk ke bentuk lain dalam pemrograman. Hal ini umumnya diperlukan ketika Anda ingin mengkonversi nilai dari satu tipe data ke tipe data lain yang berbeda. Di java sendiri ada dua jenis casting tipe data yaitu : 
+<hr />
 
-- **Implicit Casting (Otomatis)**
-- **Explicit Casting (Manual)**
+Casting tipe data (data type casting) adalah proses mengubah tipe data dari satu bentuk ke bentuk lain. Hal ini umumnya diperlukan ketika Anda ingin mengkonversi nilai dari satu tipe data ke tipe data lain yang berbeda. Di java sendiri ada dua jenis casting tipe data yaitu : 
+
+- **Widening Casting : ** Konversi tipe data secara otomatis.
+- **Narrowing Casting : ** Konversi tipe data secara manual.
 
 <Tabs>
 <TabiItem value="Otomatis" default>
 
-**Casting Secara Otamatis**
+**Widening Casting (Otomatis)**
 
-- Casting otomatis terjadi ketika tipe data yang lebih kecil diubah secara otomatis menjadi tipe data yang lebih besar.
-```bash
+- Casting otomatis terjadi ketika tipe data yang lebih kecil diubah secara otomatis menjadi tipe data ke yang lebih besar.
+```java
 byte -> short -> int -> long -> float -> double
 ```
 - Ini tidak memerlukan operator khusus, dan Java akan melakukan konversi secara otomatis jika tidak ada risiko kehilangan data.
@@ -26,7 +28,7 @@ byte -> short -> int -> long -> float -> double
 public class Main {
   public static void main(String[] args) {
     byte angka1 = 120;
-    long angka2 = angka1L;
+    long angka2 = angka1;
 
     System.out.println(angka2);
   }
@@ -42,7 +44,52 @@ public class Main {
 </TabiItem>
 <TabiItem value="Manual" default>
 
-**Casting Secara Manual**
+**Narrowing Casting (Manual)**
+
+- Casting manual terjadi ketika ingin mengubah tipe data yang berukuran besar ke yang lebih kecil.
+
+```java
+double -> float -> long -> int -> short -> byte
+```
+- Memerlukan simbol `(tipe data)`
+- Bisa kehilangan data jika ukuran lebih besar dari ukuran maksimal tipe data yang lebih kecil.
+
+**Contoh**
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    int angka1 = 120;
+    byte angka2 = (byte) angka1;
+
+    System.out.println(angka2);
+  }
+}
+```
+
+**Output**
+```bash
+120
+```
+
+- Kodingan di atas akan menghasilkan ouput 120 dan aman aman saja, bagaimaan jika angka 1 bernilai lebih besar dari ukuran maksimal tipe data byte? Mari kika coba
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    int angka1 = 300;
+    byte angka2 = (byte) angka1;
+
+    System.out.println(angka2);
+  }
+}
+```
+```bash
+44
+```
+
+- Nah Outputnya tidak sesuai dengan yang kita inginkan.
+- Karena byte hanya menampung nilai di rentang -128 hingga 127, maka dari itu ketika angka2 sudah mencapai 127 maka dia akan menghitung ulang dari -128 sampai varaibel angka2 ini bisa menampung nilai angka1 maka dari itu nilainya adalah 44 bukan 300. 
 
 </TabiItem>
 </Tabs>

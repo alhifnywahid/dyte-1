@@ -5,9 +5,16 @@ sidebar_position: 1
 
 <hr />
 
-JOptionPane adalah kelas dalam bahasa pemrograman Java yang terkait dengan penciptaan dialog box pop-up untuk berinteraksi dengan pengguna. Dialog box ini dapat digunakan untuk menampilkan pesan, mengumpulkan input dari pengguna, atau mengonfirmasi tindakan tertentu.
+JOptionPane adalah sebuah Class yang berada dalam paket **java.swing**. 
 
-Kita harus mengimport `JOptionPane` dari pustaka `javax.swing` sebelum deklarasi class.
+JOptionPane berfungsi untuk menampilkan data dalam yang berabsis **GUI** seperti Dialog, Tombol, Input, Icon dll.
+
+## Cara Menggunakan JOptonPane
+
+Untuk menggunakan JOptionPane kita perlu mengimpor Class JOptionPane dari paket **java.swing**.
+
+- Impor Class JOptionPane saja.
+
 ```java 
 // highlight-start
 import javax.swing.JOptionPane;
@@ -19,7 +26,8 @@ public class Main {
   }
 }
 ```
-Atau bisa dengan cara berikut ini, yaitu mengimport semua class yang berada di pustaka `java.swing`.
+- Import semua Class yang berada di dalam paket **java.swing**
+
 ```java 
 // highlight-start
 import javax.swing.*;
@@ -34,7 +42,7 @@ public class Main {
 
 ## Jenis Dialog JOptionPane
 
-Di Java, terdapat berbagai jenis dialog box yang dapat dibuat menggunakan kelas JOptionPane untuk berinteraksi dengan pengguna. Berikut Jenis Dialog JOptionPane yang umum di gunakan.
+Di Java ada 4 jenis dialog yang di sediakan oleh JOptionPane.
 
 <details>
 <summary className="sum-bold">showMessageDialog</summary>
