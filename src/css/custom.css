@@ -1111,6 +1111,10 @@ table {
   text-align: center;
 }
 
+#reactions{
+  display: none;
+}
+
 .DocSearch-Modal {
   /* after introducting ai chat bot */
   margin-top: 80px !important;

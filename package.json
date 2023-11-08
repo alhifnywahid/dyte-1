@@ -21,13 +21,13 @@
     "spell-check": "npx cspell docs/**/*.mdx"
   },
   "dependencies": {
-    "@docusaurus/theme-common": "^2.4.1",
     "@docsly/react": "^1.8.6",
     "@docusaurus/core": "^2.4.3",
     "@docusaurus/module-type-aliases": "^2.4.3",
     "@docusaurus/plugin-client-redirects": "^2.4.3",
     "@docusaurus/preset-classic": "^2.4.3",
     "@docusaurus/remark-plugin-npm2yarn": "^2.4.3",
+    "@docusaurus/theme-common": "^2.4.1",
     "@docusaurus/theme-live-codeblock": "^2.4.3",
     "@docusaurus/theme-mermaid": "^2.4.3",
     "@dytesdk/docs-ai-react": "^1.0.10",
