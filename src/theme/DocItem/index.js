@@ -11,7 +11,7 @@ export default function DocItemWrapper(props) {
     <>
       <DocItem {...props} />
         <DiscussionEmbed
-          shortname='https-www-mynotes-engineer-1'
+          shortname='mynotes-5'
           config={{
             identifier: pathname,
             pathname,
