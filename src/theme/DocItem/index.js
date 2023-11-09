@@ -10,6 +10,7 @@ export default function DocItemWrapper(props) {
   return (
     <>
       <DocItem {...props} />
+      <br/>
         <DiscussionEmbed
           shortname='mynotes-5'
           config={{
