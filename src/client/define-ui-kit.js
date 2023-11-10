@@ -1,6 +1,6 @@
 import { defineCustomElements } from '@dytesdk/ui-kit/loader';
 
-defineCustomElements(); 
+defineCustomElements();
 
 function onLoad() {
   if (typeof window === 'undefined') return;

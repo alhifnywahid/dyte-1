@@ -20,7 +20,7 @@ const ButtonExample = (props) => (
 // Add react-live imports you need here
 const ReactLiveScope = {
   React,
-  ...React, 
+  ...React,
   ...DemoElements,
   ButtonExample,
 };

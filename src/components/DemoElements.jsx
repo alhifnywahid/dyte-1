@@ -44,7 +44,7 @@ export function Center({ children, style, ...props }) {
       {children}
     </div>
   );
-} 
+}
 export default {
   Row,
   Col,

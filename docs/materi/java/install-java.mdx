@@ -31,7 +31,7 @@ Setelah kita ekstrak file zip atau tar.gz yang sudah kita download. Kurang lebih
 
 ## Setting Path
 
-Sebelum kita menggunakan Java, kita perlu melakukan setting Path terlebih dahulu. Tujuannya adalah agar kita bisa mengakses program JDK dan JRE dari mana saja menggunakan terminal / command line. Tanpa melakukan pengaturan Path, maka secara otomatis sistem operasi kita tidak akan mengerti dimana harus menemukan program JDK dan JRE nya. 
+Sebelum kita menggunakan Java, kita perlu melakukan setting Path terlebih dahulu. Tujuannya adalah agar kita bisa mengakses program JDK dan JRE dari mana saja menggunakan terminal / command line. Tanpa melakukan pengaturan Path, maka secara otomatis sistem operasi kita tidak akan mengerti dimana harus menemukan program JDK dan JRE nya.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -39,9 +39,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="windows" label="Windows">
 
-
-Untuk melakukan setting di Windows, klkik tombol windows di laptop/pc kalian, lalu ketik `environment variabeles` di kolom pencarian, maka akan muncul seperti berikut : 
-
+Untuk melakukan setting di Windows, klkik tombol windows di laptop/pc kalian, lalu ketik `environment variabeles` di kolom pencarian, maka akan muncul seperti berikut :
 
 ![setpatwindows1](/img/java/envoronment-variables.png)
 
@@ -69,10 +67,6 @@ Untuk setting Path di Mac silahkan cari di home kita file .bashrc, atau .profile
 export PATH="/Users/alhifny/App/jdk22/Contents/Home/bin:$PATH"
 ```
 
-
-
-
-
   </TabItem>
   <TabItem value="linux" label="Linux" default>
 
@@ -88,12 +82,13 @@ export PATH="/Users/alhifny/App/jdk22/bin:$PATH"
 
 ## Mencoba JDK dan JRE
 
-Untuk memastikan bahwa kita telah benar melakukan pengaturan JDK dan JRE, kita bisa mencoba menjalankannya menggunakan terminal / command line lalu ketik perintah berikut : 
+Untuk memastikan bahwa kita telah benar melakukan pengaturan JDK dan JRE, kita bisa mencoba menjalankannya menggunakan terminal / command line lalu ketik perintah berikut :
 
 ```bash title="CMD"
 javac -version
 ```
-Jika JDK tersinstall maka akan muncul versi JDK yang telah di instal seperti berikut ini : 
+
+Jika JDK tersinstall maka akan muncul versi JDK yang telah di instal seperti berikut ini :
 
 ```bash title="OUTPUT"
 javac 17.0.8.1

@@ -45,7 +45,7 @@
 - question: What is the UI Kit?
   tags: ['General']
   answer: |-
-    Dyte's React UI Kit is a prebuilt design library of UI components that makes it easy to integrate video and voice calls into any app or website within minutes. See 
+    Dyte's React UI Kit is a prebuilt design library of UI components that makes it easy to integrate video and voice calls into any app or website within minutes. See
 
 - question: What is the Plugin SDK?
   tags: ['General']
@@ -194,14 +194,14 @@
     allow to trigger specific server actions in response to Dyte meeting
     events and state changes. 
 
-    To access the current list of events that can be used with webhooks 
+    To access the current list of events that can be used with webhooks
 
 - question: How do I set up and transfer a recording to my storage configuration?
   tags: ['Technical', 'Recording']
   answer: |-
     You can pass an optional object storageConfig in the start recording
     request, and we will publish the recording directly to your cloud provider
-    once it stops. For more information, see [Publishing a recording to  
+    once it stops. For more information, see [Publishing a recording to
 
 - question: I'm unable to locate my recorded meeting through the Developer Portal or downloadUrl. Was my meeting successfully recorded?
   tags: ['Technical', 'Recording']
@@ -210,7 +210,7 @@
 
     1. Dyte's recording feature will automatically stop recording if no participants are present in the meeting for 1 minute or longer. Please verify whether there were any participants present during the time the recording was initiated. 
 
-    2. In case you haven't set up an external storage configuration and have also disabled uploads to Dyte's bucket, the recording will not be saved in any location and will be considered invalid. For more information, see [Publishing a recording to your 
+    2. In case you haven't set up an external storage configuration and have also disabled uploads to Dyte's bucket, the recording will not be saved in any location and will be considered invalid. For more information, see [Publishing a recording to your
 
 - question: How do I create a region-specific room?
   tags: ['Technical']

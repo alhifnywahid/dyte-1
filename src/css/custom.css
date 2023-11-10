@@ -1099,7 +1099,7 @@ details p {
 }
 
 .DocSearch-Button-Key {
-  background: theme(colors.secondary.800)!important;
+  background: theme(colors.secondary.800) !important;
   top: 0 !important;
   padding: 0 !important;
   @apply !border !border-solid !border-text-400/30;
@@ -1111,7 +1111,7 @@ table {
   text-align: center;
 }
 
-#reactions{
+#reactions {
   display: none;
 }
 
@@ -1213,7 +1213,7 @@ html[data-theme='dark'] .video_sidebar_header > div > a::before {
   font-weight: bold;
   text-decoration: underline;
 }
-.div-about{
+.div-about {
   padding: 1em;
   border: 1px solid goldenrod;
   border-radius: 15px;
@@ -1221,9 +1221,9 @@ html[data-theme='dark'] .video_sidebar_header > div > a::before {
 
 #sinal {
   font-weight: bold;
-	cursor: pointer;
-	/* padding: 1em .5em; */
-	list-style: none; 
+  cursor: pointer;
+  /* padding: 1em .5em; */
+  list-style: none;
 }
 
 .tabs-container {

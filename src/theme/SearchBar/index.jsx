@@ -175,7 +175,7 @@ function DocSearch({ contextualSearch, externalUrlRegex, ...props }) {
 
       <div className="relative flex items-center gap-2">
         <div
-          className="group flex h-9 cursor-pointer items-center gap-2 rounded-lg border-2 border-transparent bg-[var(--docsearch-searchbox-background)] px-3 transition-colors hover:border-primary hover:dark:border-primary-100 elemen-none"
+          className="elemen-none group flex h-9 cursor-pointer items-center gap-2 rounded-lg border-2 border-transparent bg-[var(--docsearch-searchbox-background)] px-3 transition-colors hover:border-primary hover:dark:border-primary-100"
           title="Dyte AI Chatbot"
           onClick={() => {
             setSelectedIndex(0);
@@ -183,7 +183,7 @@ function DocSearch({ contextualSearch, externalUrlRegex, ...props }) {
           }}
         >
           <DyteAISearchIcon className="h-6 w-6" />
-          <span className="sr-only pointer-events-none text-xs font-medium text-[var(--docsearch-muted-color)] transition-all group-hover:xl:not-sr-only elemen-none">
+          <span className="elemen-none sr-only pointer-events-none text-xs font-medium text-[var(--docsearch-muted-color)] transition-all group-hover:xl:not-sr-only">
             Chatbot
           </span>
         </div>
@@ -210,7 +210,7 @@ function DocSearch({ contextualSearch, externalUrlRegex, ...props }) {
             className={clsx(
               'fixed inset-0 z-[300] flex flex-col overflow-y-auto',
               selectedIndex === 0 &&
-                'bg-gradient-to-br from-blue-600/40 to-red-600/40 elemen-none'
+                'elemen-none bg-gradient-to-br from-blue-600/40 to-red-600/40'
             )}
             onClick={(e) => {
               if (
@@ -239,7 +239,7 @@ function DocSearch({ contextualSearch, externalUrlRegex, ...props }) {
                   className={({ selected }) =>
                     clsx(
                       'flex flex-1 items-center justify-center gap-2 rounded-lg border-0 bg-transparent py-2 px-4 text-sm font-medium leading-5',
-                      'cursor-pointer focus:outline-none elemen-none',
+                      'elemen-none cursor-pointer focus:outline-none',
                       selected
                         ? 'bg-white text-primary shadow dark:bg-secondary dark:text-white'
                         : 'text-text-400'

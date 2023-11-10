@@ -6,7 +6,7 @@ import ThemedImage from '@theme/ThemedImage';
 
 export default function APIReferenceSection() {
   return (
-    <section className="no-underline-links relative px-6 elemen-none">
+    <section className="no-underline-links elemen-none relative px-6">
       <Head>
         <link rel="prefetch" href="/img/coming-soon.png" />
         <link rel="prefetch" href="/img/coming-soon.png" />
@@ -24,8 +24,9 @@ export default function APIReferenceSection() {
           <h2 className="text-4xl">REST API Reference</h2>
           <p className="text-zinc-400">
             Don&apos;t worry, they are&apos;t complex. Use our
-            developer-friendly REST APIs and integrate video and voice communication
-            into your web, mobile, or desktop applications programmatically.
+            developer-friendly REST APIs and integrate video and voice
+            communication into your web, mobile, or desktop applications
+            programmatically.
           </p>
           <Link
             href="#"
@@ -81,8 +82,8 @@ export default function APIReferenceSection() {
         <div className="flex flex-1 justify-end">
           <ThemedImage
             sources={{
-              light: "/img/coming-soon.png",
-              dark: "/img/coming-soon.png",
+              light: '/img/coming-soon.png',
+              dark: '/img/coming-soon.png',
             }}
             alt="API Reference Preview"
             loading="lazy"

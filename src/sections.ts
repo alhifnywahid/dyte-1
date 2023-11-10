@@ -1,22 +1,18 @@
 import type { ComponentProps, ReactNode } from 'react';
-import {
-  ReactIcon, 
-  HTMLIcon,
-  JSIcon,
-} from './icons';
+import { ReactIcon, HTMLIcon, JSIcon } from './icons';
 
 export type Section = { docId: string } & (
   | {
-    section: false;
-  }
+      section: false;
+    }
   | {
-    section: string;
-    icon: (props: ComponentProps<'svg'>) => ReactNode;
-    name: string;
-  }
+      section: string;
+      icon: (props: ComponentProps<'svg'>) => ReactNode;
+      name: string;
+    }
 );
 
-const SECTIONS: Section[] = [ 
+const SECTIONS: Section[] = [
   // {
   //   name: 'js',
   //   docId: 'js',

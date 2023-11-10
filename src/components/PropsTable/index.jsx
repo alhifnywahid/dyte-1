@@ -55,10 +55,8 @@ function PropType({ prop }) {
     return (
       <pre className={styles.propType}>
         <code>
-          <Link href="/java">
-            DyteParticipant
-          </Link>{' '}
-          | <Link href="/java">DyteSelf</Link>
+          <Link href="/java">DyteParticipant</Link> |{' '}
+          <Link href="/java">DyteSelf</Link>
         </code>
       </pre>
     );
@@ -68,11 +66,8 @@ function PropType({ prop }) {
     return (
       <pre className={styles.propType}>
         <code>
-          (
-          <Link href="/java">
-            DyteParticipant
-          </Link>{' '}
-          | <Link href="/java">DyteSelf</Link>)[]
+          (<Link href="/java">DyteParticipant</Link> |{' '}
+          <Link href="/java">DyteSelf</Link>)[]
         </code>
       </pre>
     );

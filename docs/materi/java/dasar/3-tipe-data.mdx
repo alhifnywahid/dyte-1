@@ -6,12 +6,9 @@ slug: /tipe-data
 
 <hr />
 
-
 Tipe data berfungsi untuk menentukan data pada sebuah variabel contoh bilangan bulat menggunakan tipe data `int`, bilangan pecahan menggunakan tipe data `float`.
 
-Sebelum masuk lebih lanjut mengenai materi Tipe Data silahkan pahami gambar berikut terlebih dahulu : 
-
-
+Sebelum masuk lebih lanjut mengenai materi Tipe Data silahkan pahami gambar berikut terlebih dahulu :
 
 ## Macam Macam Tipe Data di Java
 
@@ -27,8 +24,6 @@ contoh si programer ingin membuat variabel yang bernilai `100` maka si programer
 
 Setiap tipe data di java mempunyai nilai minimum dan maksimum, silahkan simak penjelasan berikut untuk mengetahui ukuran-ukuran setiap tipe data.
 
-
-
 ## Tipe Data Primitiv
 
 **Ciri - Ciri tipe data primitiv**
@@ -43,8 +38,6 @@ Setiap tipe data di java mempunyai nilai minimum dan maksimum, silahkan simak pe
 
 di java cara penulisan tipe data primitiv ialah dengan huruf kecil, tidak boleh menggunakan huruf besar.
 
-
-
 <Tabs>
   <TabItem value="boolean" label="boolean" default>
   
@@ -58,12 +51,12 @@ Tipe data boolean di gunakan untuk mempresentasikan nilai benar atau salah, tipe
 - **Nilai Default** : true
 - **Deskripsi** : hanya meyimpan nilai `true` dan `false`
 
-contoh penggunaan : 
+contoh penggunaan :
 
 ```java title="Main.java"
 public class Main {
   public static void main(String[] args){
-    
+
     // highlight-start
     boolean peryantaanBenar = true;
     boolean pernyataanSalah = false;
@@ -82,13 +75,13 @@ public class Main {
 
 **Tipe data char**
 
-Tipe data char di gunakan untuk mempresetasikan nilai ASCII, dimana tipe data char ini dipresentasikan dengan menggunakan simbol kutip tunggal (single quotes), seperti 'A', '7', atau '!'. 
+Tipe data char di gunakan untuk mempresetasikan nilai ASCII, dimana tipe data char ini dipresentasikan dengan menggunakan simbol kutip tunggal (single quotes), seperti 'A', '7', atau '!'.
 
 - **Ukuran** : 2 bytes
 - **Nilai Default** : ''
 - **Deskripsi** : Menyimpan satu karakter / huruf / nilai ASCII.
 
-contoh penggunaan : 
+contoh penggunaan :
 
 :::tip contoh benar
 
@@ -97,7 +90,7 @@ contoh penggunaan :
 ```java title="Main.java"
 public class Main {
   public static void main(String[] args){
-    
+
     // highlight-start
     char iniHuruf = 'A';
     char iniSimbol = '@';
@@ -107,9 +100,10 @@ public class Main {
   }
 }
 ```
+
 :::
 
-:::danger contoh salah 
+:::danger contoh salah
 
 - variabel `iniHuruf` salah karena tipe data char hanya bisa untuk variabel yang menampung nilai dengan maksimal 1 karakter.
 
@@ -120,7 +114,7 @@ public class Main {
 ```java title="Main.java"
 public class Main {
   public static void main(String[] args){
-    
+
     // highlight-next-line-error
     char iniHuruf = 'Aku';
     // highlight-next-line-error
@@ -134,7 +128,7 @@ public class Main {
 
 :::
 
-Kalian bisa melihat karakter ASCII lebih lengkap [di sini](https://www.commfront.com/pages/ascii-chart) 
+Kalian bisa melihat karakter ASCII lebih lengkap [di sini](https://www.commfront.com/pages/ascii-chart)
 
 </div>
   
@@ -151,7 +145,7 @@ Tipe data byte adalah tipe data integer yang di gunakan untuk mempresentasikan n
 - **Nilai Default** : 0
 - **Deskripsi** : untuk mempresentasikan bilangan bulat dari nilai minmal -128 hingga 127.
 
-contoh penggunaan : 
+contoh penggunaan :
 
 :::tip contoh benar
 
@@ -160,7 +154,7 @@ contoh penggunaan :
 ```java title="Main.java"
 public class Main {
   public static void main(String[] args){
-    
+
     // highlight-start
     byte angka1 = 100;
     byte angka2 = 127;
@@ -169,6 +163,7 @@ public class Main {
   }
 }
 ```
+
 :::
 
 :::danger contoh salah
@@ -180,7 +175,7 @@ public class Main {
 ```java title="Main.java"
 public class Main {
   public static void main(String[] args){
-    
+
     // highlight-next-line-error
     byte angka3 = 129;
     // highlight-next-line-error
@@ -189,6 +184,7 @@ public class Main {
   }
 }
 ```
+
 :::
 
 </div>
@@ -206,7 +202,7 @@ Tipe data byte adalah tipe data integer yang di gunakan untuk mempresentasikan n
 - **Nilai Default** : 0
 - **Deskripsi** : untuk meyimpan bilangan bulat dengan minimal nilai -32,768 sampai 32,767.
 
-contoh penggunaan : 
+contoh penggunaan :
 
 :::tip contoh benar
 
@@ -215,7 +211,7 @@ contoh penggunaan :
 ```java title="Main.java"
 public class Main {
   public static void main(String[] args){
-    
+
     // highlight-start
     short angka1 = 1000;
     short angka2 = 32767;
@@ -224,6 +220,7 @@ public class Main {
   }
 }
 ```
+
 :::
 
 :::danger contoh salah
@@ -235,7 +232,7 @@ public class Main {
 ```java title="Main.java"
 public class Main {
   public static void main(String[] args){
-    
+
     // highlight-next-line-error
     short angka3 = 32769;
     // highlight-next-line-error
@@ -244,6 +241,7 @@ public class Main {
   }
 }
 ```
+
 :::
 
 </div>
@@ -261,7 +259,7 @@ Tipe data int adalah tipe data integer yang di gunakan untuk mempresentasikan ni
 - **Nilai Default** : 0
 - **Deskripsi** : untuk meyimpan bilangan bulat dengan minimal nilai -2147483648 sampai 2147483647.
 
-contoh penggunaan : 
+contoh penggunaan :
 
 :::tip contoh benar
 
@@ -270,7 +268,7 @@ contoh penggunaan :
 ```java title="Main.java"
 public class Main {
   public static void main(String[] args){
-    
+
     // highlight-start
     int angka1 = 500000;
     int angka2 = 2147483647;
@@ -279,6 +277,7 @@ public class Main {
   }
 }
 ```
+
 :::
 
 :::danger contoh salah
@@ -290,7 +289,7 @@ public class Main {
 ```java title="Main.java"
 public class Main {
   public static void main(String[] args){
-    
+
     // highlight-next-line-error
     int angka3 = 2147483648;
     // highlight-next-line-error
@@ -299,6 +298,7 @@ public class Main {
   }
 }
 ```
+
 :::
 
 </div>
@@ -318,7 +318,7 @@ Tipe data long adalah tipe data integer yang di gunakan untuk mempresentasikan n
 - **Nilai Default** : 0
 - **Deskripsi** : untuk meyimpan bilangan bulat dengan minimal nilai -9223372036854775808 sampai 9223372036854775807.
 
-contoh penggunaan : 
+contoh penggunaan :
 
 :::tip contoh benar
 
@@ -329,7 +329,7 @@ contoh penggunaan :
 ```java title="Main.java"
 public class Main {
   public static void main(String[] args){
-    
+
     // highlight-start
     long angka1 = 2147483647;
     long angka2 = 9223372036854775807L;
@@ -338,6 +338,7 @@ public class Main {
   }
 }
 ```
+
 :::
 
 :::danger contoh salah
@@ -351,7 +352,7 @@ public class Main {
 ```java title="Main.java"
 public class Main {
   public static void main(String[] args){
-    
+
     // highlight-next-line-error
     long angka3 = 9223372036854775809L;
     // highlight-next-line-error
@@ -362,6 +363,7 @@ public class Main {
   }
 }
 ```
+
 :::
 
 </div>
@@ -381,7 +383,7 @@ di tipe data float anda harus menggunakan huruf `f` kecil atau `F` besar di akhi
 - **Nilai Default** : 0.0
 - **Deskripsi** : untuk meyimpan bilangan pecahan dari 3.4e-038 sampai 3.4e + 038.
 
-contoh penggunaan : 
+contoh penggunaan :
 
 :::tip contoh benar
 
@@ -390,7 +392,7 @@ contoh penggunaan :
 ```java title="Main.java"
 public class Main {
   public static void main(String[] args){
-    
+
     // highlight-start
     float angka1 = 5.75f;
     // highlight-end
@@ -398,6 +400,7 @@ public class Main {
   }
 }
 ```
+
 :::
 
 :::danger contoh salah
@@ -407,13 +410,14 @@ public class Main {
 ```java title="Main.java"
 public class Main {
   public static void main(String[] args){
-    
+
     // highlight-next-line-error
     float angka2 = 5.75;
 
   }
 }
 ```
+
 :::
 
 </div>
@@ -433,19 +437,19 @@ di tipe data double anda boleh menggunakan huruf `d` kecil atau `D` besar di akh
 - **Nilai Default** : 0.0
 - **Deskripsi** : untuk meyimpan bilangan pecahan dari 1.7e-308 sampai 1.7e + 308.
 
-contoh penggunaan : 
+contoh penggunaan :
 
 ```java title="Main.java"
 public class Main {
   public static void main(String[] args){
-    
+
     // highlight-start
     float angka1 = 19.99d;
     // highlight-end
 
   }
 }
-``` 
+```
 
 </div>
   
@@ -458,11 +462,11 @@ Untuk tipe data primitiv saya hanya akan menjelaskan bagian `String` saja, karen
 
 **Tipe Data String**
 
-tipe data String digunakan untuk menyimpan kata atau kalimat baik berupa karakter huruf, angka dan simbol. 
+tipe data String digunakan untuk menyimpan kata atau kalimat baik berupa karakter huruf, angka dan simbol.
 
 Nilai dari tipe data String harus di apit oleh simbol (Double Qoute) `""`.
 
-contoh penggunaan : 
+contoh penggunaan :
 
 :::tip contoh benar
 
@@ -471,7 +475,7 @@ contoh penggunaan :
 ```java title="Main.java"
 public class Main {
   public static void main(String[] args){
-    
+
     // highlight-start
     String nama = "Alhifny Wahid";
     // highlight-end
@@ -479,6 +483,7 @@ public class Main {
   }
 }
 ```
+
 :::
 
 :::danger contoh salah
@@ -490,7 +495,7 @@ public class Main {
 ```java title="Main.java"
 public class Main {
   public static void main(String[] args){
-    
+
     // highlight-next-line-error
     String nama1 = 'Alhifny Wahid'
     // highlight-next-line-error
@@ -499,6 +504,7 @@ public class Main {
   }
 }
 ```
+
 :::
 
 ## Kata Kunci (Var)
@@ -516,6 +522,7 @@ public class Main {
   }
 }
 ```
+
 - kodingan di atas tidak akan terjadi eror karena kita sudah menginisialisasi variabel langsung.
 
 :::
@@ -533,6 +540,7 @@ public class Main {
   }
 }
 ```
+
 - Kodingan di atas akan eror karena kita hanya melakukan deklarasi saja (Tidak langsung mengisi nilainya).
 
 :::

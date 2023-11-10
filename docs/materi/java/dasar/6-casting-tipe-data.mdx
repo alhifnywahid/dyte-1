@@ -6,7 +6,7 @@ slug: /casting-tipe-data
 
 <hr />
 
-Casting tipe data (data type casting) adalah proses mengubah tipe data dari satu bentuk ke bentuk lain. Hal ini umumnya diperlukan ketika Anda ingin mengkonversi nilai dari satu tipe data ke tipe data lain yang berbeda. Di java sendiri ada dua jenis casting tipe data yaitu : 
+Casting tipe data (data type casting) adalah proses mengubah tipe data dari satu bentuk ke bentuk lain. Hal ini umumnya diperlukan ketika Anda ingin mengkonversi nilai dari satu tipe data ke tipe data lain yang berbeda. Di java sendiri ada dua jenis casting tipe data yaitu :
 
 - **Widening Casting : ** Konversi tipe data secara otomatis.
 - **Narrowing Casting : ** Konversi tipe data secara manual.
@@ -17,13 +17,16 @@ Casting tipe data (data type casting) adalah proses mengubah tipe data dari satu
 **Widening Casting (Otomatis)**
 
 - Casting otomatis terjadi ketika tipe data yang lebih kecil diubah secara otomatis menjadi tipe data ke yang lebih besar.
+
 ```java
 byte -> short -> int -> long -> float -> double
 ```
+
 - Ini tidak memerlukan operator khusus, dan Java akan melakukan konversi secara otomatis jika tidak ada risiko kehilangan data.
 - Misalnya, konversi dari `byte` ke `double` adalah casting otomatis karena tidak ada risiko kehilangan data.
 
 **Contoh**
+
 ```java
 public class Main {
   public static void main(String[] args) {
@@ -51,6 +54,7 @@ public class Main {
 ```java
 double -> float -> long -> int -> short -> byte
 ```
+
 - Memerlukan simbol `(tipe data)`
 - Bisa kehilangan data jika ukuran lebih besar dari ukuran maksimal tipe data yang lebih kecil.
 
@@ -68,6 +72,7 @@ public class Main {
 ```
 
 **Output**
+
 ```bash
 120
 ```
@@ -84,13 +89,13 @@ public class Main {
   }
 }
 ```
+
 ```bash
 44
 ```
 
 - Nah Outputnya tidak sesuai dengan yang kita inginkan.
-- Karena byte hanya menampung nilai di rentang -128 hingga 127, maka dari itu ketika angka2 sudah mencapai 127 maka dia akan menghitung ulang dari -128 sampai varaibel angka2 ini bisa menampung nilai angka1 maka dari itu nilainya adalah 44 bukan 300. 
+- Karena byte hanya menampung nilai di rentang -128 hingga 127, maka dari itu ketika angka2 sudah mencapai 127 maka dia akan menghitung ulang dari -128 sampai varaibel angka2 ini bisa menampung nilai angka1 maka dari itu nilainya adalah 44 bukan 300.
 
 </TabiItem>
 </Tabs>
-

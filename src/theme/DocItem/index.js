@@ -1,8 +1,8 @@
 import React from 'react';
-import { DiscussionEmbed } from 'disqus-react'
+import { DiscussionEmbed } from 'disqus-react';
 import DocItem from '@theme-original/DocItem';
-import { useLocation } from "@docusaurus/router";
-import GiscusComments from "../../components/Comentar/index"
+import { useLocation } from '@docusaurus/router';
+import GiscusComments from '../../components/Comentar/index';
 
 export default function DocItemWrapper(props) {
   const { pathname } = useLocation();
@@ -10,15 +10,15 @@ export default function DocItemWrapper(props) {
   return (
     <>
       <DocItem {...props} />
-      <br/>
-        <DiscussionEmbed
-          shortname='mynotes-5'
-          config={{
-            identifier: pathname,
-            pathname,
-            language: 'id',
-          }}
-        />
+      <br />
+      <DiscussionEmbed
+        shortname="mynotes-5"
+        config={{
+          identifier: pathname,
+          pathname,
+          language: 'id',
+        }}
+      />
     </>
   );
 }

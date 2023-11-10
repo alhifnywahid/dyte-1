@@ -6,15 +6,15 @@ import { XIcon } from '@site/src/icons';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 
 const belajar = [
-  { name: 'Artikel', href: '/', },
-  { name: 'Tutorial', href: '#', },
-  { name: 'Buku', href: '#', },
+  { name: 'Artikel', href: '/' },
+  { name: 'Tutorial', href: '#' },
+  { name: 'Buku', href: '#' },
 ];
 
 const popularTutorial = [
-  { name: 'Java', href: '/java', },
-  { name: 'Javascript', href: '#', },
-  { name: 'Basisdata', href: '#', },
+  { name: 'Java', href: '/java' },
+  { name: 'Javascript', href: '#' },
+  { name: 'Basisdata', href: '#' },
 ];
 
 const sosialMedia = [
@@ -26,20 +26,24 @@ const sosialMedia = [
 const myNotes = [
   { name: 'About', href: '/about' },
   { name: 'FAQs', href: '#' },
-  { name: 'Contact', href: 'https://api.whatsapp.com/send/?phone=6285655207366&text&type=phone_number&app_absent=0' },
+  {
+    name: 'Contact',
+    href: 'https://api.whatsapp.com/send/?phone=6285655207366&text&type=phone_number&app_absent=0',
+  },
 ];
 
 function Safety({ className }) {
   return (
     <div
       className={clsx(
-        'flex h-24 max-w-[418px] overflow-clip rounded-2xl bg-white elemen-none',
+        'elemen-none flex h-24 max-w-[418px] overflow-clip rounded-2xl bg-white',
         className
       )}
       style={{ display: 'none' }}
     >
       <div className="flex flex-1 place-items-center justify-center rounded-2xl bg-white px-4 py-6 font-jakarta font-bold text-gray-500">
-        Your Security,<br />
+        Your Security,
+        <br />
         Our Priority.
       </div>
       <div className="flex flex-1 items-center justify-around px-6">
@@ -75,7 +79,7 @@ function Status({ className }) {
     <Link
       href="https://status.dyte.io"
       className={clsx(
-        'flex items-center gap-2 rounded-lg border border-transparent p-1 px-2 font-jakarta font-semibold text-gray-500 transition-colors hover:border-gray-400 hover:bg-white hover:no-underline elemen-none',
+        'elemen-none flex items-center gap-2 rounded-lg border border-transparent p-1 px-2 font-jakarta font-semibold text-gray-500 transition-colors hover:border-gray-400 hover:bg-white hover:no-underline',
         className
       )}
       style={{ display: 'none' }}
@@ -95,7 +99,7 @@ function Status({ className }) {
 function Links({ name, links }) {
   return (
     <div>
-      <h3 className="font-jakarta text-base font-semibold uppercase text-gray-400 color-black">
+      <h3 className="color-black font-jakarta text-base font-semibold uppercase text-gray-400">
         {name}
       </h3>
       <div className="flex flex-col gap-3">
@@ -117,7 +121,12 @@ export default function Footer() {
     <footer className="bg-[#F4F7FF]">
       <div className="mx-auto flex w-full max-w-[1080px] flex-col px-6 py-12">
         <div className="mb-12 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-          <img src="/svg/logoku.svg" alt="Dyte" className="h-9 w-fit lg:h-12" style={{ display: 'none' }}/>
+          <img
+            src="/svg/logoku.svg"
+            alt="Dyte"
+            className="h-9 w-fit lg:h-12"
+            style={{ display: 'none' }}
+          />
 
           <Safety className="hidden lg:flex" />
           <BrowserOnly>
@@ -163,7 +172,7 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-4">
-            <Link href="https://github.com/alhifnywahid" aria-label="My Github" >
+            <Link href="https://github.com/alhifnywahid" aria-label="My Github">
               <Github className="h-7 w-7 text-zinc-400 hover:text-primary" />
             </Link>
             {/* <Link href="/" aria-label="LinkedIn" >

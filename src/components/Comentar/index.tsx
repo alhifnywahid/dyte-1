@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useColorMode } from "@docusaurus/theme-common";
+import { useColorMode } from '@docusaurus/theme-common';
 const GiscusComments = () => {
   const { colorMode } = useColorMode();
   useEffect(() => {

@@ -3,6 +3,7 @@ title: 'BufferedReader'
 sidebar_position: 1
 slug: /bufferedreader
 ---
+
 # Belajar BufferedReader
 
 <hr />
@@ -17,29 +18,33 @@ Class ini juga dapat di gunakan untuk membaca input dari file dan jaringan.
 
 **BufferedReader** memiliki banyak sekali method untuk di gunakan, Berikut beberapa method yang umum di gunakan.
 
-| **Method**      | **Deskripsi** |
-|-----------------|-----------|
-| readLine()      | untuk membaca satu baris teks dari input stream. | 
-| close()         | untuk menutup BufferedReader dan melepaskan sumber daya yang digunakan. | 
+| **Method** | **Deskripsi**                                                           |
+| ---------- | ----------------------------------------------------------------------- |
+| readLine() | untuk membaca satu baris teks dari input stream.                        |
+| close()    | untuk menutup BufferedReader dan melepaskan sumber daya yang digunakan. |
 
 ## Cara menggunakan BufferedReader
 
 **BufferedReader** adalah Class dari paket **java.io** maka kita harus mengimport paketnya terlebih dahulu sebelum pembuatan class.
 
 - mengimpor class **BufferedReader** saja.
+
 ```java
 import java.io.BufferedReader;
 ```
 
 - mengimpor semua class dari paket **java.io**
+
 ```java
 import java.io.*;
 ```
+
 ## Contoh Penggunaan BufferedReader
 
 Di sini saya akan mencontohkan penggunaan method **readLine()** saja untuk mendapatkan input dari user.
 
 Untuk mendapatkan input dari user menggunakan **BufferedReader** ini kita membutuhkan class tambahan dari pustaka **java.io** juga yaitu :
+
 ```java
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -75,4 +80,3 @@ public class Main {
 
 }
 ```
-

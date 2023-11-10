@@ -44,8 +44,8 @@ export default function HelpSection({ className = '' }) {
             />
             <h3 className="my-3">Support</h3>
             <p className="text-zinc-600 dark:text-zinc-400">
-              Dyte&apos;s expert support team is always available to help. Connect for
-              dedicated 1:1 support!
+              Dyte&apos;s expert support team is always available to help.
+              Connect for dedicated 1:1 support!
             </p>
             <Link
               href="https://dyte.io/contact"
@@ -56,12 +56,7 @@ export default function HelpSection({ className = '' }) {
           </div>
 
           <div className="rounded-lg bg-zinc-100 p-6 dark:bg-zinc-900">
-            <img
-              src="/svg/icon-html.svg"
-              alt="FAQs"
-              width="48"
-              height="48"
-            />
+            <img src="/svg/icon-html.svg" alt="FAQs" width="48" height="48" />
             <h3 className="my-3">FAQs</h3>
             <p className="text-zinc-600 dark:text-zinc-400">
               Browse through our FAQs to find answers to commonly asked

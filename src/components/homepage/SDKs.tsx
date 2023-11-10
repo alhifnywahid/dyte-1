@@ -15,8 +15,10 @@ function SDK({ icon, to, name }: { icon: string; name: string; to?: string }) {
 
 export default function SDKs() {
   return (
-    <section className="mx-auto mb-32 flex w-full max-w-5xl flex-col p-4 py-0 my-20">
-      <span className="mb-2 uppercase tracking-wider text-text-400">SDK Documentation</span>
+    <section className="mx-auto my-20 mb-32 flex w-full max-w-5xl flex-col p-4 py-0">
+      <span className="mb-2 uppercase tracking-wider text-text-400">
+        SDK Documentation
+      </span>
 
       <h3 className="mb-12 text-4xl">
         Build the way you want in the framework you want!
@@ -31,26 +33,10 @@ export default function SDKs() {
         </p>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
-          <SDK
-            name="Java"
-            to="/java"
-            icon="/img/coming-soon.png"
-          />
-          <SDK
-            name="CSS"
-            to="/css"
-            icon="/img/coming-soon.png"
-          />
-          <SDK
-            name="HTML"
-            to="/html"
-            icon="/img/coming-soon.png"
-          />
-          <SDK
-            name="javascript"
-            to="/js"
-            icon="/img/coming-soon.png"
-          />
+          <SDK name="Java" to="/java" icon="/img/coming-soon.png" />
+          <SDK name="CSS" to="/css" icon="/img/coming-soon.png" />
+          <SDK name="HTML" to="/html" icon="/img/coming-soon.png" />
+          <SDK name="javascript" to="/js" icon="/img/coming-soon.png" />
         </div>
       </div>
 
@@ -63,16 +49,8 @@ export default function SDKs() {
         </p>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
-          <SDK
-            name="JS"
-            to="/js"
-            icon="/img/coming-soon.png"
-          /> 
-          <SDK
-            name="Java"
-            to="/java"
-            icon="/img/coming-soon.png"
-          />
+          <SDK name="JS" to="/js" icon="/img/coming-soon.png" />
+          <SDK name="Java" to="/java" icon="/img/coming-soon.png" />
         </div>
       </div>
     </section>
