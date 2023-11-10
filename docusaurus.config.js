@@ -152,7 +152,7 @@ const config = {
       },
       image: '/svg/logoku.svg',
       colorMode: {
-        defaultMode: 'light',
+        defaultMode: 'dark',
       },
       liveCodeBlock: {
         languages: ['javascript', 'jsx'],
