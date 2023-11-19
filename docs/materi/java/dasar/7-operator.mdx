@@ -8,6 +8,12 @@ slug: /operator
 
 Operator adalah sebuah simbol atau karakter khusus yang di gunakan untuk melakukan operasi matematika, perbandingan, logika atau manipulasi data pada sebuah varaibel.
 
+Misalkan kita ingin menjumlahkan nilai dari variabel `x` dan `y`, maka kita bisa menggunakan operator penjumlahan (+).
+
+```bash
+x + y
+```
+
 ## Jenis Operator di Java
 
 Di Java ada 6 jenis operator yaitu :
@@ -19,13 +25,18 @@ Di Java ada 6 jenis operator yaitu :
 5. **Operator Bitwise.**
 6. **Operator Ternary.**
 
+Bila digambarkan dalam mind map, akan terlihat seperti ini:
+
 ![opeator java](/img/java/operator.png)
 
 Apa saja perbedaan dari semua jenis operator tersebut?
 
 Mari kita bahas, satu per satu…
 
-### 1. Operator Aritmatika
+<Tabs>
+<TabItem value="Aritmatika" default>
+
+#### Operator Aritmatika
 
 Operator aritmatika digunakan untuk melakukan operasi aritmatika.
 
@@ -39,10 +50,14 @@ Operator ini terdiri dari:
 | Pembagian   | `/`        |
 | Sisa Bagi   | `%`        |
 
-#### Contoh Penggunaan
+##### Contoh Penggunaan
 
 <Tabs>
-<TabItem value="+">
+<TabItem value="Penjumlahan">
+
+Operator Penjumlahan di gunakan untuk menjumlahkan dua nilai atau ekspresi.
+
+Operator Penjumlahan menggunakan simbol `+`
 
 ```java
 public class Main {
@@ -68,7 +83,11 @@ public class Main {
 ```
 
 </TabItem>
-<TabItem value="-">
+<TabItem value="Pengurangan">
+
+Operator Pengurangan di gunakan untuk mengurangkan dua nilai atau ekspresi.
+
+Operator Pengurangan menggunakan simbol `-`
 
 ```java
 public class Main {
@@ -92,6 +111,661 @@ public class Main {
   }
 }
 ```
+
+</TabItem>
+<TabItem value="Perkalian">
+
+Operator Perkalian di gunakan untuk mengalikan dua nilai atau ekspresi.
+
+Operator Perkalian menggunakan simbol `*`
+
+```java
+public class Main {
+  public static void main(String[] args) {
+
+    // contoh 1
+    byte angka1 = 20;
+    byte angka2 = 20;
+    byte hasil = (byte) (angka1 * angka2);
+
+    System.out.println("Hasil Perkalian : " + hasil);
+
+    // contoh 2
+    System.out.println("Hasil Perkalian : " + (angka1 * angka2));
+
+    // contoh 3
+    System.out.println("Hasil Perkalian : " + (25 * 25));
+
+    // contoh 4
+    System.out.println("Hasil Perkalian : " + (angka1 * angka2 * hasil * 25));
+  }
+}
+```
+
+</TabItem>
+<TabItem value="Pembagian">
+
+Operator Pembagian di gunakan untuk membagi dua nilai atau ekspresi.
+
+Operator Pembagian menggunakan simbol `/`
+
+```java
+public class Main {
+  public static void main(String[] args) {
+
+    // contoh 1
+    byte angka1 = 20;
+    byte angka2 = 20;
+    byte hasil = (byte) (angka1 / angka2);
+
+    System.out.println("Hasil Pembagian : " + hasil);
+
+    // contoh 2
+    System.out.println("Hasil Pembagian : " + (angka1 / angka2));
+
+    // contoh 3
+    System.out.println("Hasil Pembagian : " + (25 / 25));
+
+    // contoh 4
+    System.out.println("Hasil Pembagian : " + (angka1 / angka2 / hasil / 25));
+  }
+}
+```
+
+</TabItem>
+<TabItem value="SisaBagi">
+
+Operator Sisa Bagi atau biasa di sebut Modulus ini di gunakan untuk melihat hasil dari operator pembagian.
+
+Operator ini menggunakan simbol `%`
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    int a = 10;
+    int b = 3;
+    System.out.println("Hasil Sisa Bagi : " + a % b);
+    System.out.println("Hasil Sisa Bagi : " + b % a);
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
+</TabItem>
+<TabItem value="Penugasan">
+
+#### Operator Penugasan
+
+Operator penugasan atau yang biasa di sebut (Assignment Operator) fungsinya untuk meberikan tugas pada variabel tertentu. Biasanya untuk mengisi nilai.
+
+Operator Penugasan terdiri dari:
+
+| **Nama**                  | **Simbol** |
+| ------------------------- | ---------- |
+| Pengisian Saja            | `=`        |
+| Pengisian dan Penambahan  | `+=`       |
+| Pengisian dan Pengurangan | `-=`       |
+| Pengisian dan Perkalian   | `*=`       |
+| Pengisian dan Pembagian   | `/=`       |
+| Pengisian dan Sisa Bagi   | `%=`       |
+
+##### Contoh Penggunaan
+
+<Tabs>
+<TabItem value="=">
+
+Operator `=` di gunakan untuk mengisi nilai pada sebuah variabel.
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    int a = 10;
+    System.out.prinln("Isi Variabel a : " a) // Output 10
+
+    a = 40;
+    System.out.prinln("Isi Variabel a2 : " + a) // Output 40
+  }
+}
+```
+
+Awalnya variabel `a` di tugaskan untuk meyimpan nilai `10`. Dan nilai berubah menjadi 40 karena variabel `a` di tugaskan menyimpan nilai baru yaitu `40`.
+
+</TabItem>
+<TabItem value="+=">
+
+Operator `+=` di gunakan untuk mengisi sekaligus menambah nilai pada sebuah variabel.
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    int a = 10;
+    System.out.prinln("Isi Variabel a : " a) // Output 10
+
+    a += 40;
+    System.out.prinln("Isi Variabel a2 : " + a) // Output 50
+  }
+}
+```
+
+Awalnya variabel `a` di tugaskan untuk meyimpan nilai `10`. Dan nilai berubah menjadi 50 karena variabel `a` di tugaskan menyimpan nilai `10` sekaligus menambahkan nilai baru yaitu `40`.
+
+Operator ini sama halnya kita membuat :
+
+```java
+int a = 10;
+a = a + 40;
+
+// atau
+
+int a = 10 + 40;
+```
+
+</TabItem>
+<TabItem value="-=">
+
+Operator `-=` di gunakan untuk mengurangi nilai pada sebuah variabel.
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    int a = 50;
+    System.out.prinln("Isi Variabel a : " a) // Output 50
+
+    a -= 40;
+    System.out.prinln("Isi Variabel a2 : " + a) // Output 10
+  }
+}
+```
+
+Awalnya variabel `a` di tugaskan untuk meyimpan nilai `50`. Dan nilai berubah menjadi 10 karena variabel `a` di tugaskan untuk mengurangi nilai awalnya sebesar `40`.
+
+Operator ini sama halnya kita membuat :
+
+```java
+int a = 50;
+a = a - 40;
+
+// atau
+
+int a = 50 - 40;
+```
+
+</TabItem>
+<TabItem value="*=">
+
+Operator `*=` di gunakan untuk mengalikan nilai pada sebuah variabel.
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    int a = 10;
+    System.out.prinln("Isi Variabel a : " a) // Output 10
+
+    a *= 5;
+    System.out.prinln("Isi Variabel a2 : " + a) // Output 50
+  }
+}
+```
+
+Awalnya variabel `a` di tugaskan untuk meyimpan nilai `10`. Dan nilai berubah menjadi `50` karena variabel di beri tugas baru yaitu mengalikan nilai yang telah di simpan dengan `5` maka dari itu nilai menjadi `50` karena `10 * 5`
+
+Operator ini sama halnya kita membuat :
+
+```java
+int a = 10;
+a = a * 5;
+
+// atau
+
+int a = 10 * 5;
+```
+
+</TabItem>
+<TabItem value="/=">
+
+Operator `/=` di gunakan untuk membagi nilai pada pada sebuah variabel.
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    int a = 10;
+    System.out.prinln("Isi Variabel a : " a) // Output 10
+
+    a /= 5;
+    System.out.prinln("Isi Variabel a2 : " + a) // Output 2
+  }
+}
+```
+
+Awalnya variabel `a` di tugaskan untuk meyimpan nilai `10`. Dan nilai berubah menjadi `2` karena varibel di tugaskan untuk membagi nilai yang di simpan dengan `5` maka dari itu `10 / 5 = 2`.
+
+Operator ini sama halnya kita membuat :
+
+```java
+int a = 10;
+a = a / 5;
+
+// atau
+
+int a = 10 / 5;
+```
+
+</TabItem>
+<TabItem value="%=">
+
+Operator `%=` di gunakan untuk melihat sisa bagi nilai pada sebuah variabel.
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    int a = 10;
+    System.out.prinln("Isi Variabel a : " a) // Output 10
+
+    a %= 5;
+    System.out.prinln("Isi Variabel a2 : " + a) // Output 2
+  }
+}
+```
+
+Awalnya variabel `a` di tugaskan untuk meyimpan nilai `10`. Dan nilai berubah menjadi `0` karena di tugaskan untuk melihat hasil dari sisa bagi `10 / 5`
+
+Operator ini sama halnya kita membuat :
+
+```java
+int a = 10;
+a = a % 5;
+
+// atau
+
+int a = 10 % 5;
+```
+
+</TabItem>
+</Tabs>
+
+</TabItem>
+<TabItem value="Perbandingan">
+
+#### Operator Perbandingan
+
+Operator perbandingan di gunakan untuk membandingkan 2 buah nilai atau lebih.
+
+Operator perbandingan hanya memiliki 2 nilai, yaitu `true / benar` dan `false / salah`. Jadi kita bisa langsung menampilkan hasilnya atau bisa kita simpan di dalam variabel dengan tipe data `boolean`.
+
+Operator ini terdiri dari:
+
+| **Nama**                | **Simbol** |
+| ----------------------- | ---------- |
+| Sama Dengan             | `==`       |
+| Lebih Besar             | `>`        |
+| Lebih Besar Sama Dengan | `>=`       |
+| Lebih Kecil             | `<`        |
+| Lebih Kecil Sama Dengan | `<=`       |
+| Tidak Sama Dengan       | `!=`       |
+
+##### Contoh Penggunaan
+
+<Tabs>
+<TabItem value="==" default>
+
+Operator `==` di gunakan untuk mengecek apakah 2 buah nilai sama atau tidak.
+
+```java showLineNumbers
+public class Main {
+  public static void main(String[] args) {
+    byte a = 10;
+
+    System.out.println("Apakah 10 == 5 ? " + (a == 5)); // false
+
+    System.out.println("Apakah 10 == 10 ? " + (a == 10)); // true
+
+  }
+}
+```
+
+- Di baris ke `5` bernilai `false` karena nilai pada variabel `a` tidak sama dengan 10.
+- Di baris ke `7` bernilai `true` karena nilai pada variabel `a` sama dengan 10.
+
+</TabItem>
+<TabItem value=">">
+
+Operator `>` di gunakan untuk mengecek apakah nilai pertama lebih besar dari nilai ke dua.
+
+```java showLineNumbers
+public class Main {
+  public static void main(String[] args) {
+    byte a = 10;
+
+    System.out.println("Apakah 10 > 10 ? " + (a > 10)); // false
+
+    System.out.println("Apakah 10 > 11 ? " + (a > 9)); // true
+
+  }
+}
+```
+
+- Di baris ke `5` bernilai `false` karena nilai pada variabel `a` tidak lebih besar dari `10`.
+- Di baris ke `7` bernilai `true` karena nilai pada variabel `a` lebih besar dari `10`.
+
+</TabItem>
+<TabItem value=">=">
+
+Operator `>=` di gunakan untuk mengecek apakah nilai pertama lebih besar dari atau sama dengan nilai ke dua.
+
+```java showLineNumbers
+public class Main {
+  public static void main(String[] args) {
+    byte a = 10;
+
+    System.out.println("Apakah 10 >= 11 ? " + (a >= 11)); // false
+
+    System.out.println("Apakah 10 >= 10 ? " + (a >= 10)); // true
+
+  }
+}
+```
+
+- Di baris ke `5` bernilai `false` karena nilai pada variabel `a` tidak lebih besar atau tidak sama dengan `11`.
+- Di baris ke `7` bernilai `true` meskipun tidak lebih besar dari `10` karena variabel `a` sama dengan `10`.
+
+</TabItem>
+<TabItem value="<">
+
+Operator `<` di gunakan untuk mengecek apakah nilai pertama lebih kecil dari nilai ke dua.
+
+```java showLineNumbers
+public class Main {
+  public static void main(String[] args) {
+    byte a = 10;
+
+    System.out.println("Apakah 10 < 10 ? " + (a < 10)); // false
+
+    System.out.println("Apakah 10 < 11 ? " + (a < 11)); // true
+
+  }
+}
+```
+
+- Di baris ke `5` bernilai `false` karena nilai pada variabel `a` tidak lebih kecil dari `10` melainkan sama dengan `10`.
+- Di baris ke `7` bernilai `true` karena nilai pada variabel `a` lebih kecil dari `10`.
+
+</TabItem>
+<TabItem value="<=">
+
+Operator `<=` di gunakan untuk mengecek apakah nilai pertama lebih kecil sama dengan nilai ke dua.
+
+```java showLineNumbers
+public class Main {
+  public static void main(String[] args) {
+    byte a = 10;
+
+    System.out.println("Apakah 10 < 9 ? " + (a <= 9)); // false
+
+    System.out.println("Apakah 10 < 10 ? " + (a <= 10)); // true
+
+    System.out.println("Apakah 10 < 11 ? " + (a <= 11)); // true
+
+  }
+}
+```
+
+- Di baris ke `5` bernilai `false` karena nilai pada variabel `a` tidak lebih kecil sama dengan `9`.
+- Di baris ke `7` bernilai `true` karena nilai pada variabel `a` sama dengan `10`.
+- Di basir ke `9` bernilai `true` karena nilai pada variabel `a` lebih kecil sama dengan `11`.
+
+</TabItem>
+<TabItem value="!=">
+
+Operator `!=` di gunakan untuk mengecek apakah nilai pertama tidak sama dengan nilai ke dua.
+
+```java showLineNumbers
+public class Main {
+  public static void main(String[] args) {
+    byte a = 10;
+
+    System.out.println("Apakah 10 < 10 ? " + (a != 10)); // false
+
+    System.out.println("Apakah 10 < 9 ? " + (a != 9)); // true
+
+  }
+}
+```
+
+- Di baris ke `5` bernilai `false` karena nilai pada variabel `a` sama dengan `10`.
+- Di baris ke `7` bernilai `true` karena nilai pada variabel `a` tidak sama dengan `9`.
+
+</TabItem>
+</Tabs>
+
+</TabItem>
+<TabItem value="Logika">
+
+#### Operator Logika
+
+Operator Logika di gunakan untuk membuat operasi logika seperti contoh :
+
+- Pernyataan 1 : Ilham adalah seorang programer.
+- Peryantaan 2 : Ilham menggunakan Linux.
+
+Jika di tanya, Apakah ilham programer yang menggunakan linux?
+
+Tentu kita akan cek dulu kebenarannya :
+
+- Pernyataan 1 : Ilham adalah seorang programer = `true`
+- Peryantaan 2 : Ilham menggunakan Linux = `true`
+
+Apakah ilham programer yang menggunakan linux?
+
+```bash
+Peryataan 1 && Pernyataan 2 = true
+```
+
+Operator ini terdiri dari:
+
+| **Nama**         | **Simbol** |
+| ---------------- | ---------- | --- | --- |
+| AND              | `&&`       |
+| OR               | `          |     | `   |
+| Negasi/Kebalikan | `!`        |
+
+##### Contoh Penggunaan
+
+<Tabs>
+<TabItem value="AND" default>
+
+Operator `AND` berfungsi untuk mengecek lebih dari 1 kondisi.
+
+Operator `AND` akan bernilai `true` jika semua kondisi bernilai `true` dan sebaliknya akan bernilai `false` jika salah satu kondisi bernilai `false`.
+
+| Pernyataan 1 | Pernyataan 2 | Logika AND |
+| ------------ | ------------ | ---------- |
+| true         | true         | true       |
+| true         | false        | false      |
+| false        | true         | false      |
+| false        | false        | false      |
+
+Misalnya seperti ini :
+
+```bash
+Pernyataan 1 : a = 10
+Pernyataan 2 : b = 20
+```
+
+Jika ditanya, apakah variabel `a` = `10` dan variabel `b` = `20`?
+
+Tentu kita akan cek dulu kebenarannya
+
+```bash
+Pernyataan 1 : a = 10 // true
+Pernyataan 2 : b = 20 // true
+```
+
+Apakah variabel `a` = `10` dan variabel `b` = `20`?
+
+```bash
+Pertnyataan 1 && Pernyataan 2 = true
+```
+
+**Contoh Program**
+
+```java showLineNumbers
+public class Main {
+  public static void main(String[] args){
+    byte a = 10;
+    byte b = 20;
+
+    System.out.println("a = 10? dan b = 20? : " + (a == 10 && b == 20)); // true
+
+    System.out.println("a = 10? dan b = 5? : " + (a == 10 && b == 5)); // false
+
+    System.out.println("a = 7? dan b = 20? : " + (a == 7 && b == 20)); // false
+
+    System.out.println("a = 7? dan b = 5? : " + (a == 10 && b == 20)); // false
+  }
+}
+```
+
+**Penjelasan Program**
+
+- Baris ke `6` bernilai `true` karena semua pernyataan benar **a = 10 dan b =20**
+- Baris ke `8` bernilai `false` karena pernyataan ke dua salah dimana variabel `b` tidak sama dengan `5`
+- Baris ke `10` bernilai `false` karena pernyataan pertama salah dimana variabel `a` tidak sama dengan `7`
+- Baris ke `12` bernilai `false` karena semua pernyataan salah dimana varaibel `a` tidak sama dengan `7` dan variabel `b` tidak sama dengan `5`
+
+</TabItem>
+<TabItem value="OR" default>
+
+Operator `OR` berfungsi untuk mengecek lebih dari 1 pernyataan.
+
+Operator `OR` akan bernilai `true` jika salah satu pernyataan bernilai `true` dan akan bernilai `false` jika semua pernyataan bernilai `false`.
+
+| Pernyataan 1 | Pernyataan 2 | Logika OR |
+| ------------ | ------------ | --------- |
+| true         | true         | true      |
+| true         | false        | true      |
+| false        | true         | true      |
+| false        | false        | false     |
+
+Misalnya seperti ini :
+
+```bash
+Pernyataan 1 : a = 10
+Pernyataan 2 : b = 20
+```
+
+Jika ditanya, apakah variabel `a` = `10` atau variabel `b` = `20`?
+
+Tentu kita akan cek dulu kebenarannya
+
+```bash
+Pernyataan 1 : a = 10 // true
+Pernyataan 2 : b = 20 // true
+```
+
+Apakah variabel `a` = `10` atau variabel `b` = `20`?
+
+```bash
+Pertnyataan 1 || Pernyataan 2 = true
+```
+
+**Contoh Program**
+
+```java showLineNumbers
+public class Main {
+  public static void main(String[] args){
+    byte a = 10;
+    byte b = 20;
+
+    System.out.println("a = 10? atau b = 20? : " + (a == 10 || b == 20)); // true
+
+    System.out.println("a = 10? atau b = 5? : " + (a == 10 || b == 5)); // true
+
+    System.out.println("a = 7? atau b = 20? : " + (a == 7 || b == 20)); // true
+
+    System.out.println("a = 7? atau b = 5? : " + (a == 10 || b == 20)); // false
+  }
+}
+```
+
+**Penjelasan Program**
+
+- Baris ke `6` bernilai `true` karena semua pernyataan benar **a = 10 atau b =20**
+- Baris ke `8` bernilai `true` karena pernyataan pertama benar dimana `a` sama dengan `10`
+- Baris ke `10` bernilai `true` kaerena pernyataan ke dua benar dimana `b` sama dengan `20`
+- Baris ke `12` bernilai `false` karena semua pernyataan salah
+
+</TabItem>
+<TabItem value="Negasi" default>
+
+Operator `Negasi` atau `kebalikan` berfungsi untuk membalik sebuah nilai `boolean`.
+
+Jika suatu ekspresi `boolean` awalnya `true`, menggunakan operator `!` akan membuatnya menjadi `false`, dan sebaliknya.
+
+Kita bisa menggunakan simbol `!` sebelum variabel seperti contoh `!nilaiBoolean`
+
+**Contoh Program**
+
+```java showLineNumbers
+public class Main {
+  public static void main(String[] args){
+    boolean nilaiBoolean = true;
+
+    // tanpa operator negasi
+    System.out.println("Tanpa Operator Negasi = " + nilaiBoolean); // true
+
+    // menggunakan operator negasi
+    System.out.println("Menggunakan Operator Negasi = " + !nilaiBoolean); // false
+  }
+}
+```
+
+**Penjelasan Program**
+
+- Baris ke `6` bernilai `true` karena tidak menggunakan operator negasi dimana program akan menampilkan isi dari `boolean` yang asli.
+- Baris ke `9` bernilai `false` karena menggunakan operator negasi dimana yang nilai awalnya `true` akan di ubah ke `false`.
+
+</TabItem>
+</Tabs>
+
+</TabItem>
+<TabItem value="Bitwise">
+
+#### Operator Bitwise
+
+Operator aritmatika digunakan untuk melakukan operasi aritmatika.
+
+Operator ini terdiri dari:
+
+| **Nama**    | **Simbol** |
+| ----------- | ---------- |
+| Penjumlahan | `+`        |
+| Pengurangan | `-`        |
+| Perkalian   | `*`        |
+| Pembagian   | `/`        |
+| Sisa Bagi   | `%`        |
+
+##### Contoh Penggunaan
+
+</TabItem>
+<TabItem value="Ternary">
+
+#### Operator Ternary
+
+Operator aritmatika digunakan untuk melakukan operasi aritmatika.
+
+Operator ini terdiri dari:
+
+| **Nama**    | **Simbol** |
+| ----------- | ---------- |
+| Penjumlahan | `+`        |
+| Pengurangan | `-`        |
+| Perkalian   | `*`        |
+| Pembagian   | `/`        |
+| Sisa Bagi   | `%`        |
+
+##### Contoh Penggunaan
 
 </TabItem>
 </Tabs>
