@@ -19,11 +19,12 @@ x + y
 Di Java ada 6 jenis operator yaitu :
 
 1. **Operator Artimatika.**
-2. **Operator Penugasan.**
-3. **Operator Pembanding.**
+2. **Operator Assignments / Penugasan.**
+3. **Operator Komparasi / Pembanding.**
 4. **Operator Logika.**
 5. **Operator Bitwise.**
 6. **Operator Ternary.**
+7. **Operator Unary.**
 
 Bila digambarkan dalam mind map, akan terlihat seperti ini:
 
@@ -33,10 +34,7 @@ Apa saja perbedaan dari semua jenis operator tersebut?
 
 Mari kita bahas, satu per satu…
 
-<Tabs>
-<TabItem value="Aritmatika" default>
-
-#### Operator Aritmatika
+### 1. Operator Aritmatika
 
 Operator aritmatika digunakan untuk melakukan operasi aritmatika.
 
@@ -193,12 +191,9 @@ public class Main {
 </TabItem>
 </Tabs>
 
-</TabItem>
-<TabItem value="Penugasan">
+### 2. Operator Assignments
 
-#### Operator Penugasan
-
-Operator penugasan atau yang biasa di sebut (Assignment Operator) fungsinya untuk meberikan tugas pada variabel tertentu. Biasanya untuk mengisi nilai.
+Operator Penugasas atau yang biasa di sebut (Assignment Operator) fungsinya untuk meberikan tugas pada variabel tertentu. Biasanya untuk mengisi nilai.
 
 Operator Penugasan terdiri dari:
 
@@ -385,12 +380,9 @@ int a = 10 % 5;
 </TabItem>
 </Tabs>
 
-</TabItem>
-<TabItem value="Perbandingan">
+### 3. Operator Komparasi
 
-#### Operator Perbandingan
-
-Operator perbandingan di gunakan untuk membandingkan 2 buah nilai atau lebih.
+Operator Komparasi atau biasa di sebut Operator Perbandingan di gunakan untuk membandingkan 2 buah nilai atau lebih.
 
 Operator perbandingan hanya memiliki 2 nilai, yaitu `true / benar` dan `false / salah`. Jadi kita bisa langsung menampilkan hasilnya atau bisa kita simpan di dalam variabel dengan tipe data `boolean`.
 
@@ -539,10 +531,7 @@ public class Main {
 </TabItem>
 </Tabs>
 
-</TabItem>
-<TabItem value="Logika">
-
-#### Operator Logika
+### 4. Operator Logika
 
 Operator Logika di gunakan untuk membuat operasi logika seperti contoh :
 
@@ -564,11 +553,44 @@ Peryataan 1 && Pernyataan 2 = true
 
 Operator ini terdiri dari:
 
-| **Nama**         | **Simbol** |
-| ---------------- | ---------- | --- | --- |
-| AND              | `&&`       |
-| OR               | `          |     | `   |
-| Negasi/Kebalikan | `!`        |
+<table>
+  <thead>
+    <tr>
+      <th>
+        <strong>Nama</strong>
+      </th>
+      <th>
+        <strong>Simbol</strong>
+      </th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AND</td>
+      <td>
+        <code>&amp;&amp;</code>
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>OR</td>
+      <td>
+        <code>||</code>
+      </td>
+    </tr>
+    <tr>
+      <td>Negasi/Kebalikan</td>
+      <td>
+        <code>!</code>
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
 ##### Contoh Penggunaan
 
@@ -729,43 +751,234 @@ public class Main {
 </TabItem>
 </Tabs>
 
-</TabItem>
-<TabItem value="Bitwise">
+### 5. Operator Bitwise
 
-#### Operator Bitwise
+Operator `bitwise` merupkan operator yang digunakan untuk operasi pada nilai bit (biner).
 
-Operator aritmatika digunakan untuk melakukan operasi aritmatika.
+Operator ini berlaku untuk tipe data `int`, `long`, `short`, `char`, dan `byte` dimana operator ini akan menghitung dari bit-ke-bit.
 
-Operator ini terdiri dari:
-
-| **Nama**    | **Simbol** |
-| ----------- | ---------- |
-| Penjumlahan | `+`        |
-| Pengurangan | `-`        |
-| Perkalian   | `*`        |
-| Pembagian   | `/`        |
-| Sisa Bagi   | `%`        |
-
-##### Contoh Penggunaan
-
-</TabItem>
-<TabItem value="Ternary">
-
-#### Operator Ternary
-
-Operator aritmatika digunakan untuk melakukan operasi aritmatika.
+Silahkan pelajari dulu materi tentang bilangan biner agar mudah memahami cara menggunakan operator bitwise.
 
 Operator ini terdiri dari:
 
-| **Nama**    | **Simbol** |
-| ----------- | ---------- |
-| Penjumlahan | `+`        |
-| Pengurangan | `-`        |
-| Perkalian   | `*`        |
-| Pembagian   | `/`        |
-| Sisa Bagi   | `%`        |
+<table>
+  <thead>
+    <tr>
+      <th>
+        <strong>Nama</strong>
+      </th>
+      <th>
+        <strong>Simbol</strong>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AND</td>
+      <td>
+        <code>&</code>
+      </td>
+    </tr>
+    <tr>
+      <td>OR</td>
+      <td>
+        <code>|</code>
+      </td>
+    </tr>
+    <tr>
+      <td>XOR</td>
+      <td>
+        <code>^</code>
+      </td>
+    </tr>
+    <tr>
+      <td>Negasi/Kebalikan</td>
+      <td>
+        <code>~</code>
+      </td>
+    </tr>
+    <tr>
+      <td>Left Shift</td>
+      <td>
+        <code>&lt;&lt;</code>
+      </td>
+    </tr>
+    <tr>
+      <td>Right Shift</td>
+      <td>
+        <code>&gt;&gt;</code>
+      </td>
+    </tr>
+    <tr>
+      <td>Left Shift (unsigned)</td>
+      <td>
+        <code> &lt;&lt;&lt; </code>
+      </td>
+    </tr>
+    <tr>
+      <td>Right Shift (unsigned)</td>
+      <td>
+        <code> &gt;&gt;&gt; </code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+Bilangan biner hanya di tuliskan dengan 2 simbol yaitu `0` dan `1`, Di java kita tidak bisa menampilkan bilangan biner hanya dengan method `System.out.println()` kita membutuhkan sebuah method berikut :
+
+```java
+String hasil = String.format("%8s", Integer.toBinaryString(variabel)).replace(' ', '0');
+```
 
 ##### Contoh Penggunaan
+
+<Tabs>
+<TabItem value="&" default>
+
+Operasi `AND (&)` akan dilakukan pada setiap pasangan bit dari bilangan biner yang sesuai.
+
+Program akan menghasilkan nilai (1) dari 2 nilai yang telah di operasi, jika 2 nilai tersebut ada bit yang nilainya sama yaitu `1`.
+
+Misal kita mempunyai variabel `a = 60`, variabel `b = 13` dan variabel `hasil` untuk menampung hasil dari operasi dari variabel `a` dan `b`.
+
+Jika variabel `a`, `b` dan `hasil` di ubah ke bentuk biner maka akan seperti ini :
+
+![GO](/img/java/1-bitwise-and.png)
+
+Pada gambar di atas variabel hasil akan bernilai desimal `12` karena dari 2 nilai yang sama (variabel a dan b) hanya 2 bit.
+
+##### Contoh Program
+
+```java showLineNumbers
+public class Main {
+  public static void main(String[] args){
+
+    // contoh 1
+    int a = 5; // nilai biner = 00000101
+    int b = 3; // nilai biner = 00000011
+    int hasil = a & b; // nilai biner = 00000001
+    System.out.println(hasil); // Output 1
+
+    // contoh 2
+    a = 10; // nilai biner = 00001010
+    b = 5; // nilai biner = 00000101
+    hasil = a & b; // nilai biner = 00000000
+    System.out.println(hasil); // Output 0
+  }
+}
+```
+
+##### Penjelasan Program
+
+- Di baris ke `8` bernilai `1` karena hanya ada 2 bit yang sama bernilai `1` dari seluruh variabel `a` dan `b`.
+
+  ```bash
+          F F F F F F F T
+      a = 0 0 0 0 0 1 0 1
+      b = 0 0 0 0 0 0 1 1
+  -----------------------
+  hasil = 0 0 0 0 0 0 0 1
+  ```
+
+- Di baris ke `14` bernilai `0` karena tidak ada bit yang sama bernilai `1` dari seluruh variabel `a` dan `b`.
+
+  ```bash
+          F F F F F F F F
+      a = 0 0 0 0 1 0 1 0
+      b = 0 0 0 0 0 1 0 1
+  -----------------------
+  hasil = 0 0 0 0 0 0 0 0
+  ```
+
+</TabItem>
+<TabItem value="|">
+
+Operasi `OR (|)` akan dilakukan pada setiap pasangan bit dari bilangan biner yang sesuai.
+
+Program akan menghasilkan nilai (1) dari 2 nilai yang telah di operasi, jika salah satu dari 2 nilai tersebut ada bit yang bernilai `1`.
+
+Misal kita mempunyai variabel `a = 60`, variabel `b = 13` dan variabel `hasil` untuk menampung hasil dari operasi dari variabel `a` dan `b`.
+
+Jika variabel `a`, `b` dan `hasil` di ubah ke bentuk biner maka akan seperti ini :
+
+![GO](/img/java/2-bitwise-and.png)
+
+Pada gambar di atas variabel hasil akan bernilai desimal `61` karena ada 5 bit yang bernilai `1` dari seluruh variabel `a` dan `b`.
+
+##### Contoh Program
+
+```java showLineNumbers
+public class Main {
+  public static void main(String[] args){
+
+    // contoh 1
+    int a = 5; // nilai biner = 00000101
+    int b = 3; // nilai biner = 00000011
+    int hasil = a & b; // nilai biner = 00000111
+    System.out.println(hasil); // Output 7
+
+    // contoh 2
+    a = 10; // nilai biner = 00001010
+    b = 5; // nilai biner = 00000101
+    hasil = a & b; // nilai biner = 00001111
+    System.out.println(hasil); // Output 15
+  }
+}
+```
+
+##### Penjelasan Program
+
+- Di baris ke `8` bernilai `7` karena ada 3 bit yang bernilai `1` dari seluruh variabel `a` atau `b`
+
+  ```bash
+          F F F F T T T T
+      a = 0 0 0 0 0 1 0 1
+      b = 0 0 0 0 0 0 1 1
+  -----------------------
+  hasil = 0 0 0 0 0 1 1 1
+  ```
+
+- Di baris ke `14` bernilai `15` karena ada 4 bit yang bernilai `1` dari seluruh variabel `a` atau `b`
+
+  ```bash
+          F F F F T T T T
+      a = 0 0 0 0 1 0 1 0
+      b = 0 0 0 0 0 1 0 1
+  -----------------------
+  hasil = 0 0 0 0 1 1 1 1
+  ```
 
 </TabItem>
 </Tabs>
+
+### 6. Operator Ternary
+
+Ternary Operator.
+
+Operator ini terdiri dari:
+
+| **Nama**    | **Simbol** |
+| ----------- | ---------- |
+| Penjumlahan | `+`        |
+| Pengurangan | `-`        |
+| Perkalian   | `*`        |
+| Pembagian   | `/`        |
+| Sisa Bagi   | `%`        |
+
+##### Contoh Penggunaan
+
+### 7. Operator Unary
+
+Operator aritmatika digunakan untuk melakukan operasi aritmatika.
+
+Operator ini terdiri dari:
+
+| **Nama**    | **Simbol** |
+| ----------- | ---------- |
+| Penjumlahan | `+`        |
+| Pengurangan | `-`        |
+| Perkalian   | `*`        |
+| Pembagian   | `/`        |
+| Sisa Bagi   | `%`        |
+
+##### Contoh Penggunaan
