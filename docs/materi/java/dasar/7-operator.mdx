@@ -6,7 +6,7 @@ slug: /operator
 
 <hr />
 
-Operator adalah sebuah simbol atau karakter khusus yang di gunakan untuk melakukan operasi matematika, perbandingan, logika atau manipulasi data pada sebuah varaibel.
+Operator adalah sebuah simbol atau karakter khusus yang di gunakan untuk melakukan operasi matematika, perbandingan, logika atau manipulasi data pada sebuah variabel.
 
 Misalkan kita ingin menjumlahkan nilai dari variabel `x` dan `y`, maka kita bisa menggunakan operator penjumlahan (+).
 
@@ -654,7 +654,7 @@ public class Main {
 - Baris ke `6` bernilai `true` karena semua pernyataan benar **a = 10 dan b =20**
 - Baris ke `8` bernilai `false` karena pernyataan ke dua salah dimana variabel `b` tidak sama dengan `5`
 - Baris ke `10` bernilai `false` karena pernyataan pertama salah dimana variabel `a` tidak sama dengan `7`
-- Baris ke `12` bernilai `false` karena semua pernyataan salah dimana varaibel `a` tidak sama dengan `7` dan variabel `b` tidak sama dengan `5`
+- Baris ke `12` bernilai `false` karena semua pernyataan salah dimana variabel `a` tidak sama dengan `7` dan variabel `b` tidak sama dengan `5`
 
 </TabItem>
 <TabItem value="OR" default>
@@ -876,7 +876,7 @@ public class Main {
           F F F F F F F T
       a = 0 0 0 0 0 1 0 1
       b = 0 0 0 0 0 0 1 1
-  -----------------------
+  ----------------------- &
   hasil = 0 0 0 0 0 0 0 1
   ```
 
@@ -886,7 +886,7 @@ public class Main {
           F F F F F F F F
       a = 0 0 0 0 1 0 1 0
       b = 0 0 0 0 0 1 0 1
-  -----------------------
+  ----------------------- &
   hasil = 0 0 0 0 0 0 0 0
   ```
 
@@ -901,7 +901,7 @@ Misal kita mempunyai variabel `a = 60`, variabel `b = 13` dan variabel `hasil` u
 
 Jika variabel `a`, `b` dan `hasil` di ubah ke bentuk biner maka akan seperti ini :
 
-![GO](/img/java/2-bitwise-and.png)
+![GO](/img/java/2-bitwise-or.png)
 
 Pada gambar di atas variabel hasil akan bernilai desimal `61` karena ada 5 bit yang bernilai `1` dari seluruh variabel `a` dan `b`.
 
@@ -934,7 +934,7 @@ public class Main {
           F F F F T T T T
       a = 0 0 0 0 0 1 0 1
       b = 0 0 0 0 0 0 1 1
-  -----------------------
+  ----------------------- |
   hasil = 0 0 0 0 0 1 1 1
   ```
 
@@ -944,41 +944,367 @@ public class Main {
           F F F F T T T T
       a = 0 0 0 0 1 0 1 0
       b = 0 0 0 0 0 1 0 1
-  -----------------------
+  ----------------------- |
   hasil = 0 0 0 0 1 1 1 1
   ```
+
+</TabItem>
+<TabItem value="^">
+
+Operasi `XOR (^)` akan dilakukan pada setiap pasangan bit dari bilangan biner yang sesuai.
+
+Program akan menghasilkan nilai (1) dari 2 nilai yang telah di operasi, jika salah satu dari 2 nilai tersebut tidak ada bit yang bernilai sama yaitu `1`.
+
+Misal kita mempunyai variabel `a = 60`, variabel `b = 13` dan variabel `hasil` untuk menampung hasil dari operasi dari variabel `a` dan `b`.
+
+Jika variabel `a`, `b` dan `hasil` di ubah ke bentuk biner maka akan seperti ini :
+
+![GO](/img/java/3-bitwise-xor.png)
+
+Pada gambar di atas variabel hasil akan bernilai desimal `49` karena ada 3 bit yang tidak sama bernilai `1` dari seluruh variabel `a` dan `b`.
+
+##### Contoh Program
+
+```java showLineNumbers
+public class Main {
+  public static void main(String[] args){
+
+    // contoh 1
+    int a = 5; // nilai biner = 00000101
+    int b = 3; // nilai biner = 00000011
+    int hasil = a ^ b; // nilai biner = 00000110
+    System.out.println(hasil); // Output 6
+
+    // contoh 2
+    a = 10; // nilai biner = 00001010
+    b = 5; // nilai biner = 00000101
+    hasil = a ^ b; // nilai biner = 00001111
+    System.out.println(hasil); // Output 15
+  }
+}
+```
+
+##### Penjelasan Program
+
+- Di baris ke `8` bernilai `6` karena ada 2 bit yang tidak sama bernilai `1` dari seluruh variabel `a` atau `b`
+
+  ```bash
+          F F F F T T T F
+      a = 0 0 0 0 0 1 0 1
+      b = 0 0 0 0 0 0 1 1
+  ----------------------- ^
+  hasil = 0 0 0 0 0 1 1 0
+  ```
+
+- Di baris ke `14` bernilai `15` karena ada 4 bit yang tidak sama bernilai `1` dari seluruh variabel `a` atau `b`
+
+  ```bash
+          F F F F T T T T
+      a = 0 0 0 0 1 0 1 0
+      b = 0 0 0 0 0 1 0 1
+  ----------------------- ^
+  hasil = 0 0 0 0 1 1 1 1
+  ```
+
+</TabItem>
+<TabItem value="~">
+
+Operasi `NOT (~)` adalah operasi yang berfungsi membalik setiap bit yang ada.
+
+```bash
+1 menjadi 0
+0 menjadi 1
+```
+
+Misal kita mempunyai variabel `a = 60` dalam biner 00111100, dan variabel `hasil` untuk menampung hasil dari operasi variabel `a`
+
+![GO](/img/java/4-bitwise-not.png)
+
+Dalam contoh di atas, ~a akan membalikkan bit-bit dari nilai a. Setelah itu, hasilnya akan diinterpretasikan sebagai bilangan bulat berdasarkan representasi biner-nya, yang akan menjadi -61. Ini karena representasi biner dari 11010101 dalam format signed integer akan menyatakan bilangan -61 dalam sistem desimal.
+
+Perlu diingat bahwa operasi bitwise NOT dapat menghasilkan nilai yang mungkin tidak sesuai dengan ekspektasi jika tidak dipahami dengan baik. Hal ini karena representasi biner yang dihasilkan tergantung pada panjang bit dari tipe data yang digunakan.
+
+Misalnya, jika Anda bekerja dengan tipe data yang lebih besar, seperti long, maka hasil dari operasi ~ akan lebih besar dan lebih rumit untuk diinterpretasikan. Sebaiknya berhati-hati dalam penggunaan operator bitwise NOT, dan pastikan Anda memahami konsep dasar operasi bitwise di Java.
+
+##### Contoh Program
+
+```java showLineNumbers
+public class Main {
+  public static void main(String[] args){
+
+    // contoh 1
+    int a = 5; // nilai biner = 00000101
+    int hasil = ~a; // nilai biner = 11111010
+    System.out.println(hasil); // Output -6
+
+    // contoh 2
+    a = 10; // nilai biner = 00001010
+    hasil = ~a; // nilai biner = 11110101
+    System.out.println(hasil); // Output -11
+  }
+}
+```
+
+##### Penjelasan Program
+
+- Di baris ke `8` bernilai `-6` karena ada 6 bit di variabel `a` yang bernilai `1` di ubah ke `0`
+
+  ```bash
+      a = 0 0 0 0 0 1 0 1
+        = 1 1 1 1 1 0 1 0
+  ----------------------- ~
+  hasil = 1 1 1 1 1 0 1 0
+  ```
+
+- Di baris ke `14` bernilai `-11` karena ada 6 bit di variabel `a` yang bernilai `1` di ubah ke `0`
+
+  ```bash
+      a = 0 0 0 0 1 0 1 0
+        = 1 1 1 1 0 1 0 1
+  ----------------------- ~
+  hasil = 1 1 1 1 0 1 0 1
+  ```
+
+</TabItem>
+<TabItem value="<<">
+
+Operasi `LeftShift (<<)` berfungsi untuk menambah sebuah nilai dengan cara menggeser nilai setiap bit ke kiri sebanyak nilai yang kita tentukan dan akan mengisi nilai sebelah kanan `(bit yang telah di tempati)` dengan `0`
+
+Misal kita mempunyai variabel `a = 60` dalam biner 00111100, dan kita ingin menggeser nilai bitnya ke kiri sebanyak `5` kali maka akan menjadi seperti berikut :
+
+![GO](/img/java/5-bitwise-shiftleft.png)
+
+Gambar di atas menghasilkan biner `111100000001` jika di konversi ke desimal menjadi `1920` karena program menggeser ke setia bit ke kiri dan di kanan bit setelah bit `1` terakhir di isi `0`
+
+##### Contoh Program
+
+```java showLineNumbers
+public class Main {
+  public static void main(String[] args){
+
+    // contoh 1
+    int a = 5; // nilai biner = 00000101
+    int hasil = <<1; // nilai biner = 00001010
+    System.out.println(hasil); // Output 10
+
+    // contoh 2
+    a = 10; // nilai biner = 00001010
+    hasil = <<3; // nilai biner = 01010000
+    System.out.println(hasil); // Output 80
+  }
+}
+```
+
+##### Penjelasan Program
+
+- Di baris ke `8` bernilai `10` karena setiap bitnya di geser ke kiri sebanyak 1 kali.
+
+  ```bash
+      a = 0 0 0 0 0 1 0 1
+        = 0 0 0 0 1 0 1 0
+  ----------------------- <<
+  hasil = 0 0 0 0 1 0 1 0
+  ```
+
+- Di baris ke `14` bernilai `80` karena setiap bitnya di geser ke kiri sebanyak 3 kali.
+
+  ```bash
+      a = 0 0 0 0 1 0 1 0
+        = 0 1 0 1 0 0 0 0
+  ----------------------- <<
+  hasil = 0 1 0 1 0 0 0 0
+  ```
+
+</TabItem>
+<TabItem value=">>">
+
+Operasi `RightShift (>>)` berfungsi untuk mengurangi sebuah nilai dengan cara menggeser nilai setiap bit ke kanan sebanyak nilai yang kita tentukan dan akan mengisi nilai sebelah kiri `(bit yang telah di tempati)` dengan `0`
+
+Misal kita mempunyai variabel `a = 60` dalam biner 00111100, dan kita ingin menggeser nilai bitnya ke kiri sebanyak `5` kali maka akan menjadi seperti berikut :
+
+![GO](/img/java/6-bitwise-shiftright.png)
+
+Gambar di atas menghasilkan biner `00000001` jika di konversi ke desimal menjadi `1` karena program menggeser setiap bit ke kanan dan di kiri bit setelah bit `1` terakhir di isi `0`
+
+##### Contoh Program
+
+```java showLineNumbers
+public class Main {
+  public static void main(String[] args){
+
+    // contoh 1
+    int a = 5; // nilai biner = 00000101
+    int hasil = >>3; // nilai biner = 00000000
+    System.out.println(hasil); // Output 0
+
+    // contoh 2
+    a = 10; // nilai biner = 00001010
+    hasil = >>1; // nilai biner = 00000101
+    System.out.println(hasil); // Output 5
+  }
+}
+```
+
+##### Penjelasan Program
+
+- Di baris ke `8` bernilai `0` karena setiap bitnya di geser ke kanan sebanya 3 kali.
+
+  ```bash
+      a = 0 0 0 0 0 1 0 1
+        = 0 0 0 0 0 0 0 0
+  ----------------------- >>
+  hasil = 0 0 0 0 0 0 0 0
+  ```
+
+- Di baris ke `14` bernilai `5` karena setiap bitnya di geser ke kanan sebanyak 1 kali.
+
+  ```bash
+      a = 0 0 0 0 1 0 1 0
+        = 0 0 0 0 0 1 0 1
+  ----------------------- >>
+  hasil = 0 0 0 0 0 1 0 1
+  ```
+
+</TabItem>
+<TabItem value="<<<">
+
+**_COMING SOON_**
+
+</TabItem>
+<TabItem value=">>>">
+
+**_COMING SOON_**
 
 </TabItem>
 </Tabs>
 
 ### 6. Operator Ternary
 
-Ternary Operator.
+Ternary operator, juga dikenal sebagai conditional operator, adalah operator yang memungkinkan Anda mengevaluasi ekspresi berdasarkan suatu kondisi. Ternary operator digunakan untuk membuat kode yang lebih singkat dan ekspresif. Dalam bahasa pemrograman Java, ternary operator memiliki format penulisan sebagai berikut:
 
-Operator ini terdiri dari:
+```bash
+kondisi ? expresi1 : expresi2;
+```
 
-| **Nama**    | **Simbol** |
-| ----------- | ---------- |
-| Penjumlahan | `+`        |
-| Pengurangan | `-`        |
-| Perkalian   | `*`        |
-| Pembagian   | `/`        |
-| Sisa Bagi   | `%`        |
+- `kondisi` : menghasilkan nilai `true` kodisi benar, dan `false` jika kondisi salah.
+- `expresi1` : expresi1 akan di eksekusi jika kondisi bernilai `true`
+- `expresi2` : expresi2 akan di eksekusi jika kondisi bernilai `false`
 
 ##### Contoh Penggunaan
+
+```java
+public class Main {
+  public static void main(String[] args){
+    // contoh 1
+    byte a = 10;
+    String hasil = a > 5 ? "Benar" : "Salah";
+    System.out.println("Apakah 10 lebih besar dari 5 ? " + hasil);
+
+    // contoh 2
+    boolean apakahKamuSukaAku = false;
+    hasil = apakahKamuSukaAku ? "Iya, Aku suka kamu" : "Tidak, Aku tidak suka kamu";
+    System.out.println("Apakah kamu suka aku ? " + hasil);
+
+    // contoh 3
+    System.out.println("Apakah 1 lebih besar dari 0 ? " + (1+5==6 ? "Benar" : "Salah"));
+
+  }
+}
+```
+
+###### Output
+
+```bash
+Apakah 10 lebih besar dari 5 ? Benar
+Apakah kamu suka aku ? Tidak, Aku tidak suka kamu
+Apakah 1 lebih besar dari 0 ? Benar
+```
 
 ### 7. Operator Unary
 
-Operator aritmatika digunakan untuk melakukan operasi aritmatika.
+Operator Unary berfungsi untuk melakukan `penjumlah` atau `pengurangan` pada sebuah nilai sebanyak 1 kali.
+
+Operator ini biasanya sering di gunakan di `perulangan`.
 
 Operator ini terdiri dari:
 
-| **Nama**    | **Simbol** |
-| ----------- | ---------- |
-| Penjumlahan | `+`        |
-| Pengurangan | `-`        |
-| Perkalian   | `*`        |
-| Pembagian   | `/`        |
-| Sisa Bagi   | `%`        |
+| **Nama**  | **Simbol** |
+| --------- | ---------- |
+| Increment | `++`       |
+| Decrement | `--`       |
 
 ##### Contoh Penggunaan
+
+<Tabs>
+<TabItem value="Increment" default>
+
+Operasi `Increment (++)` di gunakan untuk menambah sebuah nilai sebanyak 1.
+
+##### Contoh Program
+
+```java
+public class Main {
+  public static void main(String[] args){
+    int a = 1;
+    System.out.println("Murid ke : " + a);
+    a++; // a = 2
+    System.out.println("Murid ke : " + a);
+    a++; // a = 3
+    System.out.println("Murid ke : " + a);
+    a++; // a = 4
+    System.out.println("Murid ke : " + a);
+    a++; // a = 5
+    System.out.println("Murid ke : " + a);
+  }
+}
+```
+
+##### Output
+
+```bash
+Murid ke : 1
+Murid ke : 2
+Murid ke : 3
+Murid ke : 4
+Murid ke : 5
+```
+
+</TabItem>
+<TabItem value="Decrement">
+
+Operasi `Decrement (--)` di gunakan untuk mengurangi sebuah nilai sebanyak 1.
+
+##### Contoh Program
+
+```java
+public class Main {
+  public static void main(String[] args){
+    int a = 5;
+    System.out.println("hitung mundur : " + a);
+    a--; // a = 4
+    System.out.println("hitung mundur : " + a);
+    a--; // a = 3
+    System.out.println("hitung mundur : " + a);
+    a--; // a = 2
+    System.out.println("hitung mundur : " + a);
+    a--; // a = 1
+    System.out.println("hitung mundur : " + a);
+    a--; // a = 0
+    System.out.println("hitung mundur : " + a);
+  }
+}
+```
+
+##### Output
+
+```bash
+hitung mundur : 5
+hitung mundur : 4
+hitung mundur : 3
+hitung mundur : 2
+hitung mundur : 1
+hitung mundur : 0
+```
+
+</TabItem>
+</Tabs>
