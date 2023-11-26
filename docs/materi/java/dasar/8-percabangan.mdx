@@ -1,0 +1,303 @@
+---
+title: 'Percabangan'
+sidebar_position: 8
+slug: /percabangan
+---
+
+<hr />
+
+Percabangan juga dikenal dengan `“Control Flow”`, `“Struktur Kondisi”`, `“Struktur IF”`, `“Decision”`, `"if steatment"`, `"if - else"` dsb. Semuanya itu sama.
+
+Percabangan ini berrfungsi untuk membuat lebih dari 1 alur program.
+
+Kalau kita perhatikan, alur pengeksekusian sebuah kode program dikerjakan satu per satu dari atas sampai ke bawah.
+
+Baris demi baris dibaca, kemudian komputer mengerjakan apa yang diperintahkan(kode yang telah di tuliskan).
+
+Misalnya seperti :
+
+![percabangan](/img/java/alur-program-tanpa-percabangan.png)
+
+Alur programnya satu, tidak ada belokan atau percabangan.
+
+Pada diagram alur (Flow Chart) pada gambar di atas, alurnya memang satu.
+
+Tapi setelah kita menggunakan percabangan, alurnya akan bertambah menjadi seperti berikut :
+
+![percabangan](/img/java/alur-program-dengan-percabangan.png)
+
+Lalu bagaimana cara menuliskan sintaks percabangan di java?
+
+Di java, tepatnya di percabangan `(if-else)` ada `3` jenis sintaks yang bisa kita tuliskan untuk mengatur alur program yaitu :
+
+- `if`
+- `else if`
+- `else`
+
+Mari simak cara menuliskan sintaks - sintaksnya untuk mengatur alur programnya.
+
+<Tabs>
+<TabItem value="if steatment" default>
+
+**if steatment**
+
+Sintaks `if` ini berfungsi untuk membuat 2 percabangan saja.
+
+Sintaks `if` membutuhkan sebuah kondisi, dimana jika kondisi `true` program akan mengeksekusi perintah yang ada di dalam kode blok yang telah kita tuliskan.
+
+Sintaks `if` hanya bisa di tuliskan 1 kali saja.
+
+#### Penulisan Sintaks
+
+```java
+if (kondisi){
+  // Kode yang akan dieksekusi jika kondisi benar
+}
+```
+
+#### Contoh Program
+
+Contoh program sederhana alur `lampu lalu lintas`.
+
+```java showLineNumbers title="Main.java"
+public class Main {
+  public static void main(String[] args){
+    String lampu = "merah";
+    if (lampu == "merah"){
+      System.out.println("Lampu merah, Silahkan Berhenti.");
+    }
+  }
+}
+```
+
+#### Output Program
+
+```bash tittle="Output"
+Lampu merah, Silahkan Berhenti.
+```
+
+#### Penjelasan Program
+
+Dari contoh di atas seharusnya kita sudah tau apa yang akan di tampilkan ke layar oleh program.
+
+- `Baris ke 3` : Inisialisasi variabel lampu = "merah"
+- `Baris ke 4` : Mengecek apakah variabel lampu = merah ?
+  - `Jika benar` (variabel lampu = merah) : akan menampilkan pesan `"Lampu merah, Silahkan Berhenti."` ke layar
+  - `Jika salah` (variabel lampu bernilai selain merah) : tidak akan menampilkan apapun ke layar karena tidak ada kode yang di eksekusi jika lampu bernilai selain merah.
+
+#### Flowchart Program
+
+![percabangan](/img/java/percabangan-if-steatment.png)
+
+Menggunakan `if steatment` saja sepertinya tidak cukup untuk program `lampu lalu lintas` ini dimana masih ada 2 lampu lagi yaitu `kuning` dan `hijau`
+
+Lalu bagaiaman cara menambah alur untuk lampu `kuning` dan `hijau` tsb? Sementara sintaks `if steatment` hanya bisa di gunakan ` kali saja.
+
+Nah di sinilah kita membutuhakan sintaks `else if steatment`
+
+</TabItem>
+<TabItem value="else if steatment">
+
+**else if steatment**
+
+Sintaks `else if` ini berfungsi untuk membuat lebih dari 2 percabangan.
+
+Sintaks `else if` juga membutuhkan sebuah kondisi, dimana jika kondisi `true` program akan mengeksekusi perintah yang ada di dalam kode blok yang telah kita tuliskan.
+
+Sintaks `else if` bisa kita tuliskan lebih dari 1 kali.
+
+Sintask `else if` tidak bisa di tuliskan tanpa sintaks `if`
+
+#### Penulisan Sintaks
+
+```java
+if (kondisi pertama){
+  // Kode yang akan dieksekusi jika kondisi pertama benar
+} else if (konsisi kedua) {
+  // Kode yang akan dieksekusi jika kondisi pertama salah dan kondisi kedua benar
+}
+```
+
+#### Contoh Program
+
+Contoh program sederhana alur `lampu lalu lintas`. menambah lampu 'kuning'.
+
+```java showLineNumbers title="Main.java"
+public class Main {
+  public static void main(String[] args){
+    String lampu = "kuning";
+    if (lampu == "merah"){
+      System.out.println("Lampu merah, Silahkan Berhenti.");
+    } else if (lampu == "kuning"){
+      System.out.println("Lampu kuning, Hati Hati.");
+    }
+  }
+}
+```
+
+#### Output Program
+
+```bash tittle="Output"
+Lampu kuning, Hati Hati.
+```
+
+#### Penjelasan Program
+
+- `Baris ke 3` : Inisialisasi variabel lampu = "kuning"
+- `Baris ke 4` : Mengecek apakah variabel lampu = merah ?
+  - `Jika benar` (variabel lampu = merah) : akan menampilkan pesan `"Lampu merah, Silahkan Berhenti."` ke layar
+  - `Jika salah` (variabel lampu bernilai selain merah) : program akan melanjutkan pengecekan ke kondisi ke dua yaitu di sintaks `else if` pada baris ke 6.
+- `Baris ke 6` : Mengecek apakah variabel lampu = kuning ?
+  - `Jika benar` (variabel lampu = kuning) : akan menampilkan pesan `"Lampu kuning, Hati Hati."` ke layar
+  - `Jika salah` (variabel lampu bernilai selain kuning) : tidak akan menampilkan apapun ke layar karena semua kondisi di baris ke `3` dan `6` salah otomatis tidak akan ada kode yang akan di eksekusi.
+
+#### Flowchart Program
+
+![percabangan](/img/java/percabangan-else-if-1-steatment.png)
+
+Contoh di atas hanya menambahkan lampu `kuning` saja.
+
+Lalu bagaimana jika ingin menambah lampu `hijau`?
+
+Kita bisa menambah sintask `else if` lagi setelah kondisi lampu `kuning` karena sintaks `else if` bisa di gunakan lebih dari satu kali intinya kondisi berbeda dan di awali dengan kondisi sintaks `if`
+
+Berikut cara menggunakan lebih dari 1 sintaks `else if`
+
+#### Penulisan Sintaks
+
+```java
+if (kondisi pertama){
+  // Kode yang akan dieksekusi jika kondisi benar
+} else if (konsisi kedua) {
+  // Kode yang akan dieksekusi jika kondisi pertama salah dan kondisi kedua benar
+} else if (kondisi ketiga) {
+  // Kode yang akan dieksekusi jika kondisi kedua salah dan kondisi ketiga benar
+}
+```
+
+#### Contoh Program
+
+Contoh program sederhana alur `lampu lalu lintas`. menambah lampu `hijau`.
+
+```java showLineNumbers title="Main.java"
+public class Main {
+  public static void main(String[] args){
+    String lampu = "hijau";
+    if (lampu == "merah"){
+      System.out.println("Lampu merah, Silahkan Berhenti.");
+    } else if (lampu == "kuning"){
+      System.out.println("Lampu kuning, Hati Hati.");
+    } else if (lampu == "hijau"){
+      System.out.println("Lampu hijau, Selamat Jalan.");
+    }
+  }
+}
+```
+
+#### Output Program
+
+```bash tittle="Output"
+Lampu hijau, Selamat Jalan.
+```
+
+#### Penjelasan Program
+
+- `Baris ke 3` : Inisialisasi variabel lampu = "hijau"
+- `Baris ke 4` : Mengecek apakah variabel lampu = merah ?
+  - `Jika benar` (variabel lampu = merah) : akan menampilkan pesan `"Lampu merah, Silahkan Berhenti."` ke layar
+  - `Jika salah` (variabel lampu bernilai selain merah) : program akan melanjutkan pengecekan ke kondisi ke dua yaitu di sintaks `else if` pada baris ke 6.
+- `Baris ke 6` : Mengecek apakah variabel lampu = kuning ?
+  - `Jika benar` (variabel lampu = kuning) : akan menampilkan pesan `"Lampu kuning, Hati Hati."` ke layar
+  - `Jika salah` (variabel lampu bernilai selain kuning) : tidak akan menampilkan apapun ke layar karena semua kondisi di baris ke `3` dan `6` salah otomatis tidak akan ada kode yang akan di eksekusi.
+- `Baris ke 8` : Mengecek apakah variabel lampu = hijau ?
+  - `Jika benar` (variabel lampu = hijau) : akan menampilkan pesan `"Lampu hijau, Selamat Jalan."` ke layar
+  - `Jika salah` (variabel lampu bernilai selain hijau) : tidak akan menampilkan apapun ke layar karena semua kondisi di baris ke `3`, `6` dan `8` salah otomatis tidak akan ada kode yang akan di eksekusi.
+
+#### Flowchart Program
+
+![percabangan](/img/java/percabangan-else-if-2-steatment.png)
+
+Nah, sepertinya menggunakan sintaks `if` dan `else if` saja tidak cukup karena varaibel lampu jika bernilai selain `merah`, `kuning` dan `hijau` program tidak akan mengeksekusi apapun alias berakhir secara cuma cuma tanpa meanampilkan apapun ke layar.
+
+Lalu bagaimana jika kita ingin menambahkan sebuah kondisi jika variabel lampu tidak bernilai `merah`, `kuning` dan `hijau`? Misalnya variabel `lampu = hitam` atau lainnya.
+
+Di sinilah kita harus menggunakan sintaks `else steatment`
+
+</TabItem>
+<TabItem value="else steatment">
+
+**else steatment**
+
+Sintaks `else` ini berfungsi untuk mengeksekusi program jika semua kondisi `if` atau `esle if` `salah` atau `false`.
+
+Sintaks `else` tidak membutuhkan sebuah kondisi, program akan otomatis mengeksekusi semua kode atau perintah yang berada di dalam blok `else`
+
+Sintaks `else` hanya bisa di tuliskan 1 kali saja, yaitu di akhir semua kondisi boleh di setelah `if` ataupun `else if` intinya di akhir semua kondidisi.
+
+#### Penulisan Sintaks
+
+```java
+
+// setelah if
+if (kondisi){
+  // Kode yang akan dieksekusi jika kondisi benar
+} else {
+  // Kode yang akan dieksekusi jika kondisi if salah
+}
+
+//setelah else if
+if (kondisi pertama){
+  // Kode yang akan dieksekusi jika kondisi benar
+} else if (kondisi kedua) {
+  // Kode yang akan dieksekusi jika kondisi pertama salah dan kondisi kedua ini benar
+} else {
+  // Kode yang akan dieksekusi jika kondisi pertama atau ke dua salah.
+}
+```
+
+#### Contoh Program
+
+Contoh program sederhana alur `lampu lalu lintas`.
+
+```java showLineNumbers title="Main.java"
+public class Main {
+  public static void main(String[] args){
+    String lampu = "hitam";
+    if (lampu == "merah"){
+      System.out.println("Lampu merah, Silahkan Berhenti.");
+    } else if (lampu == "kuning"){
+      System.out.println("Lampu kuning, Hati Hati.");
+    } else if (lampu == "hijau"){
+      System.out.println("Lampu hijau, Selamat Jalan.");
+    } else {
+      System.out.println("Maaf sepertinya lampu sedang rusak.");
+    }
+  }
+}
+```
+
+#### Output Program
+
+```bash tittle="Output"
+Maaf sepertinya lampu sedang rusak.
+```
+
+#### Penjelasan Program
+
+- `Baris ke 3` : Inisialisasi variabel lampu = "hitam"
+- `Baris ke 4` : Mengecek apakah variabel lampu = merah ?
+  - `Jika benar` (variabel lampu = merah) : akan menampilkan pesan `"Lampu merah, Silahkan Berhenti."` ke layar
+  - `Jika salah` (variabel lampu bernilai selain merah) : program akan melanjutkan pengecekan ke kondisi ke dua yaitu di sintaks `else if` pada baris ke 6.
+- `Baris ke 6` : Mengecek apakah variabel lampu = kuning ?
+  - `Jika benar` (variabel lampu = kuning) : akan menampilkan pesan `"Lampu kuning, Hati Hati."` ke layar
+  - `Jika salah` (variabel lampu bernilai selain kuning) : tidak akan menampilkan apapun ke layar karena semua kondisi di baris ke `3` dan `6` salah otomatis tidak akan ada kode yang akan di eksekusi.
+- `Baris ke 8` : Mengecek apakah variabel lampu = hijau ?
+  - `Jika benar` (variabel lampu = hijau) : akan menampilkan pesan `"Lampu hijau, Selamat Jalan."` ke layar
+  - `Jika salah` (variabel lampu bernilai selain hijau) : otomatis akan menjalankan blok perintah di dalam blok `else` di baris ke `10`
+
+#### Flowchart Program
+
+![percabangan](/img/java/percabangan-else-steatment.png)
+
+</TabItem>
+</Tabs>
