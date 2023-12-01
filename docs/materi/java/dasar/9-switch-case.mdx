@@ -1,0 +1,220 @@
+---
+title: 'Switch Statement'
+sidebar_position: 9
+slug: /percabangan-switchcase
+---
+
+<hr />
+
+`Switch Statement` atau biasa di sebut `Switch Case` berfungsi sama seperti `if statement`, Sama sama untuk membuat percabangan dalam sebuah program. Tetapi `Switch Statement` tidak bisa mengecek suatu kondisi variabel menggunakan operator.
+
+`switch case` mempunyai `3 sintaks` penting agar program berjalan dengan baik tanpa eror, di antaranya berikut :
+
+- `switch` : untuk memeriksa kondisi dari sebuah variabel. (hanya bisa di tulis 1 kali)
+- `case` : untuk mengecek sebuah nilai yang ada di dalam variabel, dimana jika variabel bernilai sesuai dengan kondisi maka kode atau perintah yang berada di dalam `case` yang sesuai akan di jalankan. (bisa di tulis lebih dari 1 kali).
+- `break` : berfungsi untuk menghentikan eksekusi. (di tulis di setiap akhir case)
+- `default` : fungsinya sama seperti `else` yaitu jika semua nilai tidak ada yang cocok dengan variabel yang telah di cek di dalam `switch` otomatis kode atau perintah yang berada di dalam `default` lah yang akan di eksekusi. (hanya bisa di tulis 1 kali tepatnya di akhir kondisi setelah case)
+
+Berikut sintaks penulisan percabangan `switch case` dalam bahasa Java:
+
+### Penulisan Sintaks
+
+```java title="Main.java"
+switch (variabel) {
+  case nilai_variabel_1:
+    // code yang akan dieksekusi jika nilai dari variabel sama dengan nilai_variabel_1
+    break;
+  case nilai_variabel_2:
+    // code yang akan dieksekusi jika nilai dari variabel sama dengan nilai_variabel_2
+    break;
+  default
+    // code yang akan dieksekusi jika nilai dari semua case tidak ada yang sama dengan nilai variabel
+}
+```
+
+### Contoh Program
+
+Berikut contoh program sederhana `"Menampilkan Nama Bulan Berdasarkan Angka"`
+
+```java title="Main.java"
+public class Main {
+  public static void main(String[] args){
+    byte bulan = 1;
+    switch (bulan) {
+      case 1:
+        System.out.println("Sekarang Bulan Januari.");
+        break;
+      case 2:
+        System.out.println("Sekarang Bulan Februari.");
+        break;
+      case 3:
+        System.out.println("Sekarang Bulan Maret.");
+        break;
+      case 4:
+        System.out.println("Sekarang Bulan April.");
+        break;
+      case 5:
+        System.out.println("Sekarang Bulan Mein.");
+        break;
+      case 6:
+        System.out.println("Sekarang Bulan Juni.");
+        break;
+      case 7:
+        System.out.println("Sekarang Bulan Juli.");
+        break;
+      case 8:
+        System.out.println("Sekarang Bulan Agustus.");
+        break;
+      case 9:
+        System.out.println("Sekarang Bulan Septempber.");
+        break;
+      case 10:
+        System.out.println("Sekarang Bulan Oktober.");
+        break;
+      case 11:
+        System.out.println("Sekarang Bulan November.");
+        break;
+      case 12:
+        System.out.println("Sekarang Bulan Desember.");
+        break;
+      default:
+        System.out.println("Bulan Tidak Valid");
+    }
+  }
+}
+```
+
+### Output Program
+
+Sepertinya kamu sudah bisa menebak apa output dari program di atas, karena `case` yang sama dengan nilai variabel `hari` adalah `case` yang bernilai `1`.
+
+```bash
+Sekarang Bulan Januari.
+```
+
+:::danger Perhatian
+
+Di java sendiri sintaks `break` pada `switch case` tidak wajib di tuliskan, tetapi jika kita tidak menuliskan sintaks `break` pada setiap `case` maka program akan mengeksekusi semua perintah atau kode yang ada di dalam case yang ada.
+
+**Contoh :**
+
+```java
+public class Main {
+  public static void main(String[] args){
+    byte hari = 1;
+    switch (hari) {
+      case 1:
+        System.out.println("Hari ini Senin.");
+      case 2:
+        System.out.println("Hari ini Selasa.");
+      case 3:
+        System.out.println("Hari ini Rabu.");
+      case 4:
+        System.out.println("Hari ini Kamis.");
+      case 5:
+        System.out.println("Hari ini Jumat.");
+      case 6:
+        System.out.println("Hari ini Sabtu.");
+      case 7:
+        System.out.println("Hari ini Minggu.");
+      default:
+        System.out.println("Hari tidak valid.");
+    }
+  }
+}
+```
+
+**Output :**
+
+```bash
+Hari ini Senin.
+Hari ini Selasa.
+Hari ini Rabu.
+Hari ini Kamis.
+Hari ini Jumat.
+Hari ini Sabtu.
+Hari ini Minggu.
+Hari tidak valid.
+```
+
+Program di atas akan menampilkan semua hari yang ada di dalam setiap `case` ataupun `default` karena tidak menuliskan sintaks `break`.
+
+Kita bisa saja tidak menggunakan sintaks `break` tanpa terjadi problem seperti contoh program di atas menggunakan `switch lambda`.
+
+:::
+
+## Switch Lamda
+
+Di java 14, kita bisa menggunakan percabangan `switch case` tanpa menggunakan tambahan sintaks break di setiap `case` nya.
+
+Kita perlu menambahka sintaks `->` sebelum kode / perintah yang ingin kita tentukan di setiap  `case` nya.
+
+### Contoh Program
+
+```java title="Main.java"
+public class Main{
+  public static void main(String[] args){
+    byte bulan = 1;
+    switch(bulan){
+      case 1 -> System.out.println("Sekarang bulan 1");
+      case 2 -> System.out.println("Sekarang bulan 2");
+      case 3 -> System.out.println("Sekarang bulan 3");
+      default -> System.out.println("Angka tidak cocok dengan bulan");
+    }
+  }
+}
+```
+
+Penulisan sintaks `Switch Lamda` di atas hanya untuk 1 perintah saja di setiap `case` nya.
+
+Kita bisa menggunakan simbol kurung kurawal `{}` untuk menuliskan lebih dari 1 perintah dengan cara membungkus perintah dengan simbol kurung kurawal `{}` tsb.
+
+Berikut contoh penulisan sintaksnya : 
+
+```java title="Main.java"
+public class Main{
+  public static void main(String[] args){
+    byte bulan = 1;
+    switch(bulan){
+      case 1 -> {
+        System.out.println("Sekarang bulan 1");
+        System.out.println("Yaitu Januari.");
+      }
+      case 2 -> {
+        System.out.println("Sekarang bulan 2");
+        System.out.println("Yaitu Februari.");
+      }
+      case 3 -> {
+        System.out.println("Sekarang bulan 3");
+        System.out.println("Yaitu Maret.");
+      }
+      default -> {
+        System.out.println("Mohon maaf...");
+        System.out.println("Angka tidak cocok dengan bulan");
+      }
+    }
+  }
+}
+```
+
+Kita juga bisa mengisi lebih dari 1 nilai pada setiap case hanya dengan memisahkan setiap nilai dengan simbol koma `,`.
+
+Berikut contoh penulisan sintaksnya : 
+
+```java title="Main.java"
+public class Main{
+  public static void main(String[] args){
+    String nama = "Ahmad";
+
+    switch(nama){
+      case "Ahmad" -> System.out.println("Nama saya Ahmad");
+      case "Saiful" -> System.out.println("Nama saya Saiful");
+      case "Roni", "Ardi" -> System.out.println("Nama saya Roni, bisa di panggil Ardi"); // perintah ini akan di eksekusi jika variabel nama bernilai "Roni" atau "Ardi"
+      default -> {
+        System.out.println("Saya tak ingin menyebut nama saya");
+        System.out.println("Karena saya tidak mempunyai nama");
+      }
+    }
+  }
+}
+```
