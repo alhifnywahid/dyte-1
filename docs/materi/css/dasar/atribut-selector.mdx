@@ -1,0 +1,29 @@
+---
+title: 'Atribut Selector'
+sidebar_position: 2
+slug: /atribut-selector
+---
+
+<hr />
+
+## Atribut Saja
+
+Berfungsi memilih elemen dengan yang mempunyai atribut yang telah di tentukan baik mempunyai nilai atau tidak.
+
+```html title="HTML" 
+<body>
+  <p title="p1">pargraf 1</p>
+  <p title>pargraf 2</p>
+  <p>pargraf 3</p>
+</body> 
+```
+
+```css title="CSS"
+p[title] {
+  color: green;
+}
+```
+
+#### Penjelasan
+
+Contoh di atas akan memilih pargraf ke 1 dan 2 karena hanya 2 elemen tsb yang mempunyai atribut title.

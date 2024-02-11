@@ -6,4 +6,167 @@ slug: /perabangan-bersarang
 
 <hr />
 
-Percabangan Bersarang 
+Percabangan Bersarang adalah sebuah tekhnik dimana kita membuat percabangan di dalam percabangan.
+
+Kita bisa membuat percabangan bersarang yang tidak terbatas kedalamannya seperti :
+
+```bash
+percabangan 1 {
+  percabangan 2 {
+    percabangan 3 {
+      percabangan 4 {
+        percabangan 5 {
+          dst...
+        }
+      }
+    }
+  }
+}
+```
+
+Di java sendiri kita bisa membuat percabangan bersarang menggunakan :
+
+- Nested If `(Percabangan Bersarang dengan If Else)`
+- Nested Switch `(Percangan Bersarang dengan Switch Case)`
+- Kombinasi `(Percanban Bersarang dengan If dan Switch)`
+
+## Nested If
+
+Percabangan bersarang menggunakan `If Else` atau biasa di sebut `Nested If` adalah sebuah teknik membuat percabangan di dalam percabangan dengan `If Else`.
+
+Berikut contoh program menggunakan `Nested If` :
+
+### Contoh Program
+
+```java
+public class Main {
+  public static void main(String[] args){
+    int nilai = 75;
+
+    if (nilai >= 70) { // awal percabangan pertama
+      System.out.println("Lulus");
+
+      if (nilai >= 90) { // awal percabangan kedua
+        System.out.println("Grade A");
+      } else if (nilai >= 80) {
+        System.out.println("Grade B");
+      } else {
+        System.out.println("Grade C");
+      } // akhir percabangan kedua
+    } else {
+      System.out.println("Tidak Lulus");
+    } // akhir percabangan pertama
+  }
+}
+```
+
+### Output
+
+```bash
+Lulus
+Grade C
+```
+
+Program di atas menggukan 2 percabangan bersarang. dimana percabangan bersarang hanya terletak di bagian `if` saja.
+
+## Nested Switch
+
+Percabangan bersarang menggunakan `Switch Case` atau biasa di sebut `Nested Switch` adalah sebuah teknik membuat percabangan di dalam percabangan dengan `Switch Case`.
+
+Berikut contoh program menggunakan `Nested Switch` :
+
+### Contoh Program
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    String pilihanMenu = "Makanan";
+    String makanan = "Ayam";
+    String minuman = "Esteh";
+
+    switch (pilihanMenu) {
+      case "Makanan":
+        switch (makanan) {
+          case "Ayam":
+            System.out.println("Anda membeli makanan Ayam");
+            break;
+          case "Nasi":
+            System.out.println("Anda membeli makanan Nasi");
+            break;
+          default:
+            System.out.println("Tidak ada makanan selain Ayam & Nasi.");
+        }
+        break;
+      case "Minumann":
+        switch (minuman) {
+          case "Esteh":
+            System.out.println("Anda membeli minuman Esteh");
+            break;
+          case "Miras":
+            System.out.println("Anda membeli minuman Miras");
+            break;
+          default:
+            System.out.println("Tidak ada minuman selain Esteh & Miras.");
+        }
+        break;
+      default:
+        System.out.println("Tidak ada menu selain Makanan & Minuman.");
+    }
+  }
+}
+```
+
+### Output
+
+```bash
+Anda membeli makanan Ayam
+```
+
+Program di atas menggukan 2 percabangan bersarang. dimana setiap case berisi percabangan lagi.
+
+## Kombinasi Percabangan Bersarang
+
+Percabangan bersarang menggunakan `Kombinasi` adalah sebuah teknik membuat percabangan di dalam percabangan dengan Kombinasi percanban `If Else` dan `Switch Case`.
+
+Berikut contoh program menggunakan `Kombinasi` :
+
+### Contoh Program
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    String hari = "Senin";
+    int jam = 14;
+
+    switch (hari) {
+      case "Senin":
+        System.out.println("Hari Senin");
+        if (jam < 12) {
+          System.out.println("Selamat pagi!");
+        } else {
+          System.out.println("Selamat siang!");
+        }
+        break;
+      case "Selasa":
+        System.out.println("Hari Selasa");
+        if (jam < 12) {
+          System.out.println("Selamat pagi!");
+        } else {
+          System.out.println("Selamat siang!");
+        }
+        break;
+      default:
+        System.out.println("Hari tidak valid");
+    }
+  }
+}
+```
+
+### Output
+
+```bash
+Hari Senin
+Selamat siang!
+```
+
+Program di atas menggukan 2 percabangan bersarang. dimana `switch case` menjadi percabangan utama dan setiap `case` berisi percabangan `if else`.

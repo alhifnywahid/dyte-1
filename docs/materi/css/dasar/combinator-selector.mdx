@@ -1,0 +1,157 @@
+---
+title: 'Combinator Selector'
+sidebar_position: 2
+slug: /combinator-selector
+---
+
+<hr />
+
+## Group Selector
+
+Berfungsi memilih beberapa elemen sekaligus.
+
+### Contoh 
+
+- Untuk penulisan bisa dengan cara memberikan symbol koma (,) dan spasi setiap akhir selector.
+
+```html title="HTML" 
+<body>
+  <h1>ini heading 1</h1> ✅
+  <h2 class="t-one">ini heading 2</h2> ✅
+  <h2>ini heading 2</h2>
+  <h3>ini heading 3</h3>
+  <p>ini paragraf</p> ✅
+  <span id="t-two">ini span</span> ✅
+</body> 
+```
+
+```css title="CSS"
+h1, p, .t-one, #t-two {
+  color: green;
+}
+```
+
+### Penjelasan
+
+Contoh di atas memeilih elemen dengan tag **h1**, **p**, dan yang mempunyai class **t-one** dan juga yang mempunyai id **t-two** dimana warna fontnya akan di ubah menjadi hijau.
+
+## Descendant Selector
+
+Berfungsi untuk memilih elemen yang berada di dalam elemen lain agar. (elemen child dari parentnya)
+
+### Contoh 
+
+- Untuk penulisanya hanya perlus spasi saja.
+
+```html title="HTML" 
+<body>
+  <div class="div-one">
+    <ul>
+      <li>list 1</li>
+      <li>list 2</li>
+    </ul>
+  </div>
+  <div class="div-two">
+    <ul>
+      <li>list 1</li> ✅
+      <li>list 2</li> ✅
+    </ul>
+  </div>
+</body> 
+```
+
+```css title="CSS"
+.div-two ul li {
+    color: blue;
+}
+```
+
+### Penjelasan
+
+Contoh di atas akan memilih elemen **li** yang merupakan anak dari elemen **ul**, yang elemen **ul** tsb anak dari elemen **div** yang mempunyai class **div-two** dimana warna nya akan di ubah menjadi biru.
+Contoh di atas memeilih elemen dengan tag **h1**, **p**, dan yang mempunyai class **t-one** dan juga yang mempunyai id **t-two** dimana warna fontnya akan di ubah menjadi hijau.
+
+## Child Selector
+
+Berfungsi untuk memilih elemen yang merupakan elemen child langsung dari parentnya.
+
+### Contoh 
+
+- Untuk penulisanya hanya perlus spasi saja.
+
+```html title="HTML" 
+<body>
+  <div> <!--div parent-->
+    <p>ini p1</p> ✅ <!--anak dari div-->
+    <span> <!--anak dari div-->
+      <p>ini p2</p> <!--anak dari span atau cucu dari div-->
+    </span>
+  </div>
+</body> 
+```
+
+```css title="CSS"
+div > p {
+    color: red;
+}
+```
+
+### Penjelasan
+
+Contoh di atas akan memilih elemen **p** yang merupakan anaknya dan elemen **p** di dalam **span** tidak akan terpilih karena bukan anaknya langsung melainkan cucunya.
+
+## Adjacent Sibling Selector
+
+Berfungsi untuk memilih elemen saudara yang berada tepat di setelahnya.
+
+### Contoh 
+
+- Untuk penulisanya menggunakan simbol (+).
+
+```html title="HTML" 
+<body>
+  <span>span 1</span>
+  <p>paragraf 1</p>
+  <h5>heading 5</h5>
+  <p>paragraf 2</p>
+  <p>paragraf 3</p>
+</body> 
+```
+
+```css title="CSS"
+span + p {
+  color: pink;
+}
+```
+
+### Penjelasan
+
+Contoh di atas akan memilih elemen **p** ke 1 saja karena hanya **p** ke 1 yang bersebelahan dengan span.
+
+## General Sibling Selector
+
+Berfungsi untuk memilih semua elemen saudara yang di tunjuk tepat berada setelahnya, jika ada elemen sama maka akan di pilih semua.
+
+### Contoh 
+
+- Untuk penulisanya hanya perlu simbol (~).
+
+```html title="HTML" 
+<body>
+  <span>span 1</span>
+  <p>paragraf 1</p>
+  <h5>heading 5</h5>
+  <p>paragraf 2</p>
+  <p>paragraf 3</p>
+</body> 
+```
+
+```css title="CSS"
+span ~ p {
+  color: yellow;
+}
+```
+
+### Penjelasan
+
+Contoh di atas akan memilih semua elemen **p** karena semuanya adalah saudara dari elemen **span**.

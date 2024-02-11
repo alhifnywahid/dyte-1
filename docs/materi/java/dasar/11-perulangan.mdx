@@ -1,0 +1,196 @@
+---
+title: 'Perulangan'
+sidebar_position: 11
+slug: /perulangan
+---
+
+<hr />
+
+Perulangan adalah sebuah cara untuk menyuruh program agar mengulang kode atau perintah sebanyak yang kita mau.
+
+Semisal kita ingin mencetak teks `"Halo Dunia"` sebanyak 5 kali ke layar, maka kita bisa menuliskan kode berikut tanpa perulangan :
+
+```java
+System.out.println("Halo Dunia 1");
+System.out.println("Halo Dunia 2");
+System.out.println("Halo Dunia 3");
+System.out.println("Halo Dunia 4");
+System.out.println("Halo Dunia 5");
+```
+
+Tapi… bagaimana kalau sebanyak 1000x, apa kita akan mampu mengetik kode sebanyak itu?
+
+Tentunya tidak.
+
+Karena itu, kita harus pakai perulangan.
+
+Di java sendiri ada 4 jenis perulangan yaitu :
+
+- for loop
+- while loop
+- do while loop
+- for each
+
+<Tabs>
+<TabItem value="for" default>
+
+`for loop` adalah struktur pengulangan yang memungkinkan kita untuk mengeksekusi kode atau perintah dalam jumlah tertentu.
+
+**Sintaks**
+
+```java
+for (inisialisasi; kondisi; ekspresi iterasi) {
+  // blok kode yang akan diulang
+}
+```
+
+- `inisialisasi` : Bagian ini digunakan untuk menginisialisasi variabel kontrol loop atau menyatakan ekspresi awal sebelum loop dimulai. Ini hanya dieksekusi sekali pada awal loop.
+- `kondisi` : Bagian ini berisi ekspresi boolean yang menentukan apakah loop harus terus berlanjut atau tidak. Selama kondisi ini benar, blok kode dalam loop akan dieksekusi.
+- `ekspresi iterasi` : Bagian ini berisi ekspresi yang dieksekusi setiap kali iterasi loop selesai. Ini digunakan untuk mengubah nilai variabel kontrol loop atau melakukan tindakan lainnya.
+
+**Contoh**
+
+```java
+public class Main {
+  public static void main(String[] args){
+
+    for (int i = 1; i <= 10; i++){
+      System.out.println("Halo Dunia " + i);
+    }
+
+  }
+}
+```
+
+**Output**
+
+```bash
+Halo Dunia 1
+Halo Dunia 2
+Halo Dunia 3
+Halo Dunia 4
+Halo Dunia 5
+Halo Dunia 6
+Halo Dunia 7
+Halo Dunia 8
+Halo Dunia 9
+Halo Dunia 10
+```
+
+**Penjelasan**
+
+- `int i = 1` : inisialisasi variabel `i` dengan nilai awal 1.
+- `i <= 10` : Kondisi pengulangan. Selama nilai variabel `i` kurang dari atau sama dengan 10, blok kode dalam perulangan akan terus dieksekusi sampai variabel `i` bernilai di atas 10.
+- `i++` : Ekspresi iterasi. Setiap kali blok kode dalam perulangan selesai dieksekusi, nilai variabel `i` akan ditambah 1, maka dari itu kenapa variabel `i` bisa bernilai 10 dan otomatis perulangan akan berhenti.
+
+Maka dari itu kenapa output manampilkan `"Halo Dunia"` sampai 10 kali.
+
+**Flow Chart**
+
+![alur for loop](/img/java/alur-program-for-loop.png)
+
+<details>
+<summary>Contoh Lain</summary>
+
+**Program**
+
+Menampilkan angka genap
+
+```java title="AngkaGenap.java"
+public class AngkaGenap {
+  public static void main(String[] args){
+    for (int i = 0; i < 20; i += 2){
+      System.out.println(i);
+    }
+  }
+}
+```
+
+```java title="AngkaTerbalik.java"
+public class AngkaTerbalik {
+  public static void main(String[] args){
+    for (int i = 10; i > 10; i--){
+      System.out.println(i);
+    }
+  }
+}
+```
+
+</details>
+
+</TabItem>
+<TabItem value="while">
+
+`while loop` adalah struktur pengulangan yang akan menjalankan blok pernyataan selama suatu kondisi bernilai benar, perulangan ini sama saja dengan `for loop` cuman bedanya hanya membutuhkan kondisi saja tanpa `inisialisasi` dan `expresi iterasi`, tapi kita bisa membuatnya sendiri.
+
+**Sintaks**
+
+```java
+whie (kondisi) {
+  // blok kode yang akan diulang
+}
+```
+
+
+- `kondisi` : Bagian ini berisi ekspresi boolean yang menentukan apakah loop harus terus berlanjut atau tidak. Selama kondisi ini benar, blok kode dalam loop akan dieksekusi.
+
+**Contoh**
+
+```java
+public class Main {
+  public static void main(String[] args){
+
+    int i = 1;
+    while (i <= 5){
+      System.out.println("Perluangan ke " + i);
+      i++;
+    }
+
+  }
+}
+```
+
+**Output**
+
+```bash
+Perluangan ke 1
+Perluangan ke 2
+Perluangan ke 3
+Perluangan ke 4
+Perluangan ke 5
+```
+
+**Penjelasan**
+
+- `int i = 1` : inisialisasi variabel `i` dengan nilai awal 1.
+- `i <= 10` : Kondisi pengulangan. Selama nilai variabel `i` kurang dari atau sama dengan 10, blok kode dalam perulangan akan terus dieksekusi sampai variabel `i` bernilai di atas 10.
+- `i++` : Ekspresi iterasi. Setiap kali blok kode dalam perulangan selesai dieksekusi, nilai variabel `i` akan ditambah 1, maka dari itu kenapa variabel `i` bisa bernilai 10 dan otomatis perulangan akan berhenti.
+
+Maka dari itu kenapa output manampilkan `"Halo Dunia"` sampai 10 kali.
+
+**Flow Chart**
+
+![alur for loop](/img/java/alur-program-for-loop.png)
+
+<details>
+<summary>Contoh Lain</summary>
+
+**Program**
+
+Menampilkan angka genap
+
+```java
+public class Main {
+  public static void main(String[] args){
+    for (int i = 0; i < 20; i += 2){
+      System.out.println(i);
+    }
+  }
+}
+```
+
+</details>
+
+</TabItem>
+
+</Tabs>
