@@ -1,0 +1,40 @@
+---
+title: 'Nested Selector'
+sidebar_position: 4
+slug: /nested-selector
+---
+
+<hr />
+
+## Nested Selector
+
+Berfungsi untuk memilih elemen html yang berada di dalam elemen lain (elemen yang bersarang).
+
+### Contoh 
+
+- Berikut cara penulisan sintaks - nya.
+
+```html title="HTML" 
+<body>
+  <div class="container-1">
+    <span>span child dari container 1</span>
+    <div class="container-2">
+      <span>span child dari container 2</span>
+    </div>
+  </div>
+</body> 
+```
+
+```css title="CSS" 
+.container-1{
+  span {
+  .container-2{
+    background-color: green;
+      }
+    }
+  }
+```
+
+### Penjelasan
+
+Contoh di atas akan memilih elemen span di container ke 2.

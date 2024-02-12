@@ -1,29 +1,207 @@
 ---
 title: 'Atribut Selector'
-sidebar_position: 2
+sidebar_position: 3
 slug: /atribut-selector
 ---
 
 <hr />
 
-## Atribut Saja
+## 1. [attribute]
 
-Berfungsi memilih elemen dengan yang mempunyai atribut yang telah di tentukan baik mempunyai nilai atau tidak.
+Untuk Memilih elemen yang memiliki atribut tertentu, tidak peduli nilainya.
 
 ```html title="HTML" 
 <body>
-  <p title="p1">pargraf 1</p>
-  <p title>pargraf 2</p>
-  <p>pargraf 3</p>
+  <p title="p1">paragraf 1</p> ✅
+  <p title>paragraf 2</p> ✅
+  <p>paragraf 3</p>
 </body> 
 ```
 
 ```css title="CSS"
-p[title] {
+[title] {
   color: green;
 }
 ```
 
 #### Penjelasan
 
-Contoh di atas akan memilih pargraf ke 1 dan 2 karena hanya 2 elemen tsb yang mempunyai atribut title.
+- Contoh di atas akan memilih p1 dan p2 karena hanya 2 elemen tersebut yang mempunyai atribut title.
+
+## 2. [atribut="value"]
+
+Untuk Memilih elemen yang mempunyai atribut & value yang tepat.
+
+```html title="HTML" 
+<body>
+  <p title="p1">paragraf 1</p> ✅
+  <p title="p2">paragraf 2</p>
+  <p>paragraf 3</p>
+</body> 
+```
+
+```css title="CSS"
+p[title="p1"] {
+  color: green;
+}
+```
+
+#### Penjelasan
+
+- Contoh di atas akan memilih **paragraf 1** saja, karena hanya **paragraf 1** yang mempunyai atribut **title** dengan ber value **p1**
+
+## 3. [atribut~="value"]
+
+Untuk Memilih elemen dengan atribut dan value yang telah di tentukan, selector ini juga bisa mendeteksi lebih dari 1 value dengan syarat di beri pemisah (spasi).
+
+```html title="HTML" 
+<body>
+  <img src="klematis.jpg" title="klematis flower" width="150" height="113"> ✅
+  <img src="img_flwr.gif" title="flower" width="224" height="162"> ✅
+  <img src="img_tree.gif" title="tree" width="200" height="358">
+</body> 
+```
+
+```css title="CSS"
+[title~="flower"] {
+  border: 5px solid yellow;
+}
+```
+
+#### Penjelasan
+
+- Contoh di atas akan memilih elemen **img ke 1 dan ke 2** karena : 
+
+- ✅ **img 1** : value dari atribut title nya mengandung **flower** dan di pisahkan oleh spasi karena lebih dari 1 value.
+
+- ✅ **img 2** : value dari atribut title nya mengandung **flower**.
+
+- ❌ **img 3** tidak akan di pilih karena value dari atribut **title** nya tidak sesuai.
+
+## 4. [atribut|="value"]
+
+Untuk memilih elemen dengan atribut dan value nya yang berada di paling awal, cara ini bisa juga di terapkan pada multiple value dengan syarat harus di pisah dengan symbol (-)
+
+```html title="HTML" 
+<body>
+  <h1 class="top">heading 1</h1> ✅
+  <p class="top-text">paragraf 1</p> ✅
+  <p class="topcontent">paragraf 2</p>
+</body> 
+```
+
+```css title="CSS"
+[class|="top"] {
+  background: yellow;
+}
+```
+
+#### Penjelasan
+
+Contoh di atas akan memilih elemen **h1 dan paragraf ke 1** karena :
+
+- ✅ **h1** : mengandung value **top**
+
+- ✅ **paragraf 1** : mengandung value **top** dan di beri simbol **-** karena lebih dari 1 kata.
+
+- ❌ **paragraf 2** tidak di akan pilih meskipun mengandung value top karena value nya meyatu alias tidak ada pemisah.
+
+## 5. [atribut^="value"]
+
+Untuk memilih elemen dengan atribut dan value yang berada di paling awal, cara ini juga bisa dilakukan pada multiple value dengan pemisah opsional (bisa menggunakan pemisah atapun tidak).
+
+```html title="HTML" 
+<body>
+  <h1 class="top">heading 1</h1> ✅
+  <p class="top-text">paragraf 1</p> ✅
+  <p class="topcontent">paragraf 2</p> ✅
+  <p class="pop">paragraf 3</p>
+  <p class="prag-top">paragraf 4</p> 
+</body> 
+```
+
+```css title="CSS"
+[class^="top"] {
+  background: yellow;
+}
+```
+
+#### Penjelasan
+
+Contoh di atas akan memilih elemen **h1, p1 dan p2** karena :
+
+- ✅ **h1** : mengandung value **top**
+
+- ✅ **paragraf 1** : mengandung value **top**
+
+- ✅ **paragraf 2** : mengandung value **top**
+
+- ❌ **paragraf 3** : tidak mengandung value **top**
+
+- ❌ **paragraf 4** : elemen ini mengandung value **top** tetapi berada di paling akhir.
+
+## 6. [attribute$="value"]
+
+Untuk memilih elemen dengan atribut dan value yang berada di paling akhir, cara ini juga bisa dilakukan pada multiple value dengan pemisah opsional (bisa menggunakan pemisah atapun tidak).
+
+```html title="HTML" 
+<body>
+  <p class="test">paragraf 1</p> ✅
+  <p class="test-two">paragraf 2</p>
+  <p class="three-test">paragraf 3</p> ✅
+  <p class="mytest">paragraf 4</p> ✅
+</body> 
+```
+
+```css title="CSS"
+[class$="test"] {
+  background: yellow;
+}
+```
+
+#### Penjelasan
+
+Contoh di atas akan memilih elemen **p1 dan p3** karena :
+
+- ✅ **paragraf 1** : mengandung value **test**
+
+- ❌ **paragraf 2** : mengandung value **test** tetapi bukan di akhir.
+
+- ✅ **paragraf 3** : mengandung value **test** di akhir.
+
+- ✅ **paragraf 3** : mengandung value **test** di akhir.
+
+## 7. [attribute*="value"]
+
+Untuk memilih elemen dengan atribut dan value yang telah di tentukan, cara ini akan memilih elemen dengan value dimana posisinya berada baik di awal/tengah/akhir.
+
+```html title="HTML" 
+<body>
+  <p class="test">paragraf 1</p> ✅
+  <p class="test-two">paragraf 2</p> ✅
+  <p class="three-test">paragraf 3</p> ✅
+  <p class="mytest">paragraf 4</p> ✅
+  <p class="myt3st">paragraf 5</p>
+</body> 
+```
+
+```css title="CSS"
+[class$="es"] {
+  background: yellow;
+}
+```
+
+#### Penjelasan
+
+Contoh di atas akan memilih elemen **p1, p3, p3 dan p4** karena :
+
+- ✅ **paragraf 1** : mengandung value **es**
+
+- ✅ **paragraf 2** : mengandung value **es**
+
+- ✅ **paragraf 3** : mengandung value **es**
+
+- ✅ **paragraf 3** : mengandung value **es**
+
+- ❌ **paragraf 3** : tidak mengandung value **es**
+
