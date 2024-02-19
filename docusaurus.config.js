@@ -17,17 +17,24 @@ const meta = {
 
 /** @type {import('@docusaurus/plugin-content-docs').Options[]} */
 const docs = [
-
   // MATERI PROGRAMING
-  { id: 'html', path: 'docs/materi/html', routeBasePath: '/html', },
-  { id: 'css', path: 'docs/materi/css', routeBasePath: '/css', },
-  { id: 'js', path: 'docs/materi/js', routeBasePath: '/js', },
-  { id: 'basisdata', path: 'docs/materi/basisdata', routeBasePath: '/basisdata', },
-  { id: 'java', path: 'docs/materi/java', routeBasePath: '/java', },
+  { id: 'html', path: 'docs/materi/html', routeBasePath: '/html' },
+  { id: 'css', path: 'docs/materi/css', routeBasePath: '/css' },
+  { id: 'js', path: 'docs/materi/js', routeBasePath: '/js' },
+  {
+    id: 'basisdata',
+    path: 'docs/materi/basisdata',
+    routeBasePath: '/basisdata',
+  },
+  { id: 'java', path: 'docs/materi/java', routeBasePath: '/java' },
 
   // PRIBADI
-  { id: 'dokumentasi', path: 'docs/pribadi/dokumentasi', routeBasePath: '/dokumentasi', },
-  { id: 'pribadi', path: 'docs/pribadi/pribadi', routeBasePath: '/pribadi', }, 
+  {
+    id: 'dokumentasi',
+    path: 'docs/pribadi/dokumentasi',
+    routeBasePath: '/dokumentasi',
+  },
+  { id: 'pribadi', path: 'docs/pribadi/pribadi', routeBasePath: '/pribadi' },
 ];
 
 const defaultSettings = {
@@ -39,7 +46,7 @@ const defaultSettings = {
     [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }],
   ],
   sidebarPath: require.resolve('./sidebars-default.js'),
-}; 
+};
 
 function create_doc_plugin({
   sidebarPath = require.resolve('./sidebars-default.js'),
@@ -70,7 +77,7 @@ const plugins = [
       createRedirects(path) {
         if (path.startsWith('/catatan')) {
           return [path.replace('/catatan', '/catatan')];
-        } 
+        }
         return undefined; // Return a falsy value: no redirect created
       },
     },
@@ -97,7 +104,7 @@ const plugins = [
   ],
 ];
 
-const fs = require('fs'); 
+const fs = require('fs');
 const sdksHTML = fs.readFileSync('./src/snippets/sdks.html', 'utf-8');
 const resourcesHTML = fs.readFileSync('./src/snippets/resources.html', 'utf-8');
 
@@ -131,7 +138,7 @@ const config = {
         },
         sitemap: {
           ignorePatterns: ['/tags/**'],
-        }, 
+        },
       }),
     ],
   ],
@@ -145,7 +152,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       mermaid: {
-        theme: {light: 'neutral', dark: 'forest'},
+        theme: { light: 'neutral', dark: 'forest' },
         options: {
           // maxTextSize: 50,
         },
@@ -336,7 +343,7 @@ const config = {
           'kotlin',
           'java',
           'swift',
-          'objectivec', 
+          'objectivec',
           'javascript',
         ],
         magicComments: [
@@ -355,9 +362,9 @@ const config = {
         appId: 'RAXRF0BNQG',
         apiKey: '32f2f80116214685d9f4648ac21b5277',
         indexName: 'dev_imgopret',
-        placeholder: "Search...",
-        contextualSearch: true,
-        searchParameters: {},
+        placeholder: 'Search...',
+        // contextualSearch: true,
+        // searchParameters: {},
       },
     }),
 

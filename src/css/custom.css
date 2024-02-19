@@ -1268,7 +1268,3 @@ html[data-theme='dark'] .video_sidebar_header > div > a::before {
   content: ' ‹';
   margin-right: 4px;
 }
-
-/* * {
-  border: 1px solid black;
-} */

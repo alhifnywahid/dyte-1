@@ -1,6 +1,7 @@
 // Import the original mapper
 import MDXComponents from '@theme-original/MDXComponents';
 import comentar from '../components/Comentar';
+import GoRealTime from '../components/GoRealTime';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import DocCardList from '@theme/DocCardList';
@@ -32,5 +33,6 @@ export default {
   ComponentsGrid,
   CardSection,
   Card,
+  GoRealTime,
   DemoLiveEditor,
 };

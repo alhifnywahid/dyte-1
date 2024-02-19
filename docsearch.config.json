@@ -1,5 +1,5 @@
 {
-  "index_name": "docs",
+  "index_name": "dev_imgopret",
   "sitemap_urls": ["https://mynotes.engineer/sitemap.xml"],
   "start_urls": [ 
     {
