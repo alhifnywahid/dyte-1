@@ -360,8 +360,8 @@ const config = {
       },
       algolia: {
         appId: 'RAXRF0BNQG',
-        apiKey: '32f2f80116214685d9f4648ac21b5277',
-        indexName: 'dev_imgopret',
+        apiKey: '588f5dc73a5326fda2da5841bb23cdaa',
+        indexName: 'mynotesori',
         placeholder: 'Search...',
         // contextualSearch: true,
         // searchParameters: {},
