@@ -359,9 +359,9 @@ const config = {
         ],
       },
       algolia: {
-        appId: 'RAXRF0BNQG',
-        apiKey: '588f5dc73a5326fda2da5841bb23cdaa',
-        indexName: 'mynotesori',
+        appId:'RAXRF0BNQG',
+        apiKey:'588f5dc73a5326fda2da5841bb23cdaa',
+        indexName:'mynotes', 
         placeholder: 'Search...',
         // contextualSearch: true,
         // searchParameters: {},

@@ -21,6 +21,7 @@
     "spell-check": "npx cspell docs/**/*.mdx"
   },
   "dependencies": {
+    "@docsearch/react": "^3.5.2",
     "@docsly/react": "^1.8.6",
     "@docusaurus/core": "^2.4.3",
     "@docusaurus/module-type-aliases": "^2.4.3",
@@ -40,6 +41,7 @@
     "@stoplight/elements": "^7.7.7",
     "clsx": "^1.2.1",
     "disqus-react": "^1.1.5",
+    "docusaurus-lunr-search": "^3.3.2",
     "giscus": "^1.3.0",
     "param-case": "^3.0.4",
     "patch-package": "^6.5.1",

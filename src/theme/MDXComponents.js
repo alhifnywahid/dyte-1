@@ -21,7 +21,6 @@ export default {
 
   Tabs,
   TabItem,
-
   color: ColorCode,
   ColorPalette,
   VideoPlayer,
