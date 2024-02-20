@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Codepen({ dataSlugHash }) {
+function Codepen({ dataSlugHash, title }) {
   return (
     <iframe
       height="300"
       style={{ width: '100%', backgroundColor: 'white' }}
       scrolling="no"
-      title="Untitled"
+      title={`${title}`}
       src={`https://codepen.io/alhifnywahid/embed/${dataSlugHash}?default-tab=html%2Cresult&editable=true&theme-id=dark`}
       frameBorder="no"
       loading="lazy"
