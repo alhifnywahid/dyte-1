@@ -10,11 +10,11 @@ slug: /nested-selector
 
 Berfungsi untuk memilih elemen html yang berada di dalam elemen lain (elemen yang bersarang).
 
-### Contoh 
+### Contoh
 
 - Berikut cara penulisan sintaks-nya.
 
-```html title="HTML" 
+```html title="HTML"
 <body>
   <div class="container-1">
     <span>span child dari container 1</span>
@@ -22,17 +22,17 @@ Berfungsi untuk memilih elemen html yang berada di dalam elemen lain (elemen yan
       <span>span child dari container 2</span>
     </div>
   </div>
-</body> 
+</body>
 ```
 
-```css title="CSS" 
-.container-1{
-  span {
-  .container-2{
-    background-color: green;
-      }
+```css title="CSS"
+.container-1 {
+  .container-2 {
+    span {
+      background-color: green;
     }
   }
+}
 ```
 
 ### Penjelasan
