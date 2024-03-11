@@ -21,20 +21,12 @@ const docs = [
   { id: 'html', path: 'docs/materi/html', routeBasePath: '/html' },
   { id: 'css', path: 'docs/materi/css', routeBasePath: '/css' },
   { id: 'js', path: 'docs/materi/js', routeBasePath: '/js' },
-  {
-    id: 'basisdata',
-    path: 'docs/materi/basisdata',
-    routeBasePath: '/basisdata',
-  },
+  { id: 'basisdata', path: 'docs/materi/basisdata', routeBasePath: '/basisdata', },
   { id: 'java', path: 'docs/materi/java', routeBasePath: '/java' },
 
   // PRIBADI
-  {
-    id: 'dokumentasi',
-    path: 'docs/pribadi/dokumentasi',
-    routeBasePath: '/dokumentasi',
-  },
-  { id: 'pribadi', path: 'docs/pribadi/pribadi', routeBasePath: '/pribadi' },
+  { id: 'dokumentasi', path: 'docs/private/dokumentasi', routeBasePath: '/dokumentasi', },
+  { id: 'pribadi', path: 'docs/private/pribadi', routeBasePath: '/pribadi' },
 ];
 
 const defaultSettings = {

@@ -1,0 +1,499 @@
+---
+title: ':nth-of-type(arg)'
+sidebar_position: 12
+slug: /nth-of-type
+---
+
+<hr />
+
+**`:nth-of-type()`** berfungsi untuk memilih elemen dengan cara kelipatan urutan elemen/semua elemen/beberapa elemen. pseudo ini juga memperhatikan jenis elemennya.
+
+Cara menggunakan pseudo ini membutuhkan sebuah argumen dan argumennya bisa kita isi dengan 8 cara berikut :
+
+- `n` contoh :nth-of-type()
+- `A` contoh :nth-of-type()
+- `An` contoh :nth-of-type()
+- `An+B` contoh :nth-of-type()
+- `An-B` contoh :nth-of-type()
+- `odd` contoh :nth-of-type()
+- `even` contoh :nth-of-type()
+- `-n+B` contoh :nth-of-type()
+
+:::info CATATAN
+
+- pseudo ini berfungsi pada semua elemen.
+
+:::
+
+## 1. :nth-of-type(n)
+
+berfungsi untuk memilih beberapa elemen tertentu ataupun semua elemen yang berada di dalam parentnya.
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="ExJKazv" title="pseudo class - nth-of-type(n)" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:nth-of-type(n)</title>
+    <style>
+      div :nth-of-type(n){
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>paragraf 1</p>
+      <span>span 1</span>
+      <p>paragraf 2</p>
+      <span>span 2</span>
+      <p>paragraf 3</p>
+      <span>span 3</span>
+    </div>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+Contoh di atas akan memilih semua elemen child dari elemen `<div>`.
+
+Jika kita ingin memmilh elemen tertentu bisa tentukan selectornya contoh hanya memilih semua elemen dengan tag `<p>` maka `div p:nth-of-type(n)`.
+
+## 2. :nth-of-type(A)
+
+Berfungsi untuk memilih elemen child berdasarkan index/urutan tertentu dari parentnya, dengan cara mengisi posisi index elemen yang ingin di pilih.
+
+- argumen (A) untuk menampung (bilangan bulat) yang berfungsi untuk memilih elemen child yang tepat/spesifik.
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="vYMGEwV" title="pseudo class - nth-of-type(A)" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:nth-of-type(A)</title>
+    <style>
+      div :nth-of-type(2) {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>paragraf 1</p>
+      <span>paragraf 1</span>
+      <p>paragraf 2</p>
+      <span>paragraf 2</span>
+      <p>paragraf 3</p>
+      <span>paragraf 3</span>
+    </div>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+Contoh di atas hanya memilih elemen `paragraf ke 2` dan `span ke 2` karena posisi nya berada di urutan ke 2 dengan jenis elemen yang berbeda.
+
+Jika ingin pemilihan lebih spesifik ke satu elemen tertentu maka tambahkan selectornya seperti berikut :
+
+```css
+/* contoh memilih elemen p ke 2 saja */
+div p:nth-of-type(2) {
+  color: red;
+}
+```
+
+## 3. :nth-of-type(An)
+
+Berfungsi untuk memilih elemen child berdasarkan angka kelipatan.
+
+- argumen (A) untuk menampung (bilangan bulat) yang befungsi untuk memilih elemen dari setiap kelipatan - nya.
+- argumen (n) untuk menampung bilangan bulat/urutan elemen yang nilainya dimulai dari (0), jadi n ke 0 untuk elemen 1, n ke 1 untuk elemen 2 dan seterusnya hingga semua elemen habis.
+
+```txt
+- (An) A * n
+- (2n) 2 * n = ?
+```
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="mdgPyYa" title="pseudo class - nth-of-type(An)" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:nth-of-type(An)</title>
+    <style>
+      div :nth-of-type(2n){
+        color: red;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>span 1</span>
+      <p>paragraf 1</p>
+      <span>span 2</span>
+      <p>paragraf 2</p>
+      <span>span 3</span>
+      <p>paragraf 3</p>
+      <span>span 4</span>
+      <p>paragraf 4</p>
+      <span>span 5</span>
+      <p>paragraf 5</p>
+      <span>span 6</span>
+      <p>paragraf 6</p>
+    </div>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+- n ke 0 : `2 * 0 = 0` tidak dipilih karena elemen ke 0 tidak ada.
+- n ke 1 : `2 * 1 = 2` di pilih karena elemen ke 2 ada
+- n ke 2 : `2 * 2 = 4` di pilih karena elemen ke 4 ada
+- n ke 3 : `2 * 3 = 6` di pilih karena elemen ke 6 ada
+
+Maka elemen yang dipilih adalah elemen `<span>` dan `<paragraf>` ke 2,4 dan 6 karena elemen tersebut berbeda tipe.
+
+
+## 4. :nth-of-type(An+B)
+
+Berfungsi untuk memilih elemen child berdasarkan angka kelipatan.
+
+- argumen (A) untuk menampung (bilangan bulat) yang befungsi untuk memilih elemen dari setiap kelipatan - nya.
+- argumen (n) untuk menampung bilangan bulat/urutan elemen yang nilainya dimulai dari (0), jadi n ke 0 untuk elemen 1, n ke 1 untuk elemen 2 dan seterusnya hingga semua elemen habis.
+- (+) untuk menjumlahkan hasil dari (A*n) dengan (B).
+- argumen (B) untuk menampung (bilangan bulat) yang berfungsi sebagai offset/pergeseran urutan elemen atau menentukan pilihan awal pada elemen.
+
+```txt
+- (An+B) A * n + B
+- (2n+1) 2 * n + 1 = ?
+```
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="OJGNPYY" title="pseudo class - nth-of-type(An+B)" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:nth-of-type(An+B)</title>
+    <style>
+      div :nth-of-type(2n + 1){
+        color: red;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>span 1</span>
+      <p>paragraf 1</p>
+      <span>span 2</span>
+      <p>paragraf 2</p>
+      <span>span 3</span>
+      <p>paragraf 3</p>
+      <span>span 4</span>
+      <p>paragraf 4</p>
+      <span>span 5</span>
+      <p>paragraf 5</p>
+      <span>span 6</span>
+      <p>paragraf 6</p>
+    </div>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+- n ke 0 : `(2 * 0) + 1 = 1` di pilih karena elemen ke 1 ada
+- n ke 1 : `(2 * 1) + 1 = 3` di pilih karena elemen ke 3 ada
+- n ke 2 : `(2 * 2) + 1 = 5` di pilih karena elemen ke 5 ada
+
+Maka elemen yang dipilih adalah elemen `<span>` dan `<paragraf>` ke 1,3 dan 5 karena elemen tersebut berbeda tipe.
+
+
+## 5. :nth-of-type(An-B)
+
+Berfungsi untuk memilih elemen child berdasarkan angka kelipatan, pseudo ini kebalikan dari (An+B).
+
+- argumen (A) untuk menampung (bilangan bulat) yang befungsi untuk memilih elemen dari setiap kelipatan - nya.
+- argumen (n) untuk menampung bilangan bulat/urutan elemen yang nilainya dimulai dari (0), jadi n ke 0 untuk elemen 1, n ke 1 untuk elemen 2 dan seterusnya hingga semua elemen habis.
+- (-) untuk mengurangi hasil dari (A*n) dengan (B).
+- argumen (B) untuk menampung (bilangan bulat) yang berfungsi sebagai offset/pergeseran urutan elemen atau menentukan pilihan awal pada elemen.
+
+```txt
+- (An-B) A * n - B
+- (2n-1) 2 * n - 1 = ?
+```
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="bGJpNPb" title="pseudo class - nth-of-type(An-B)" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:nth-of-type(An-B)</title>
+    <style>
+      div :nth-of-type(3n - 1){
+        color: red;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>span 1</span>
+      <p>paragraf 1</p>
+      <span>span 2</span>
+      <p>paragraf 2</p>
+      <span>span 3</span>
+      <p>paragraf 3</p>
+      <span>span 4</span>
+      <p>paragraf 4</p>
+      <span>span 5</span>
+      <p>paragraf 5</p>
+      <span>span 6</span>
+      <p>paragraf 6</p>
+    </div>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+- n ke 0 : `(3 * 0) - 1 = -1` tidak di pilih karena elemen ke -1 tidak ada
+- n ke 1 : `(3 * 1) - 1 = 2` di pilih karena elemen ke 2 ada
+- n ke 2 : `(3 * 2) - 1 = 5` di pilih karena elemen ke 5 ada
+
+Maka elemen yang dipilih adalah elemen `<span>` dan `<paragraf>` ke 2 dan 5 karena elemen tersebut berbeda tipe.
+
+## 6. :nth-of-type(odd)
+
+Berfungsi untuk memilih setiap elemen dengan kelipatan (2) di mulai dari elemen child ke (1) jadi yang akan di pilih elemen child ke 1,3,5 dst. (memilih elemen di index ganjil)
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="poByvMy" title="pseudo class - nth-of-type(odd)" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:nth-of-type(odd)</title>
+    <style>
+      div :nth-of-type(odd){
+        color: red;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>span 1</span>
+      <p>paragraf 1</p>
+      <span>span 2</span>
+      <p>paragraf 2</p>
+      <span>span 3</span>
+      <p>paragraf 3</p>
+      <span>span 4</span>
+      <p>paragraf 4</p>
+      <span>span 5</span>
+      <p>paragraf 5</p>
+      <span>span 6</span>
+      <p>paragraf 6</p>
+      <span>span 7</span>
+      <p>paragraf 7</p>
+      <span>span 8</span>
+      <p>paragraf 8</p>
+    </div>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+- elemen 1 : dipilih karena ganjil.
+- elemen 3 : dipilih karena ganjil.
+- elemen 5 : dipilih karena ganjil.
+- elemen 7 : dipilih karena ganjil.
+
+Maka elemen yang dipilih adalah elemen `<span>` dan `<paragraf>` ke 1,3,5 dan 7 karena elemen tersebut berbeda tipe.
+
+## 7. :nth-of-type(even)
+
+Berfungsi untuk memilih setiap elemen dengan kelipatan (2) di mulai dari elemen child ke (2) jadi yang akan di pilih elemen child ke 2,4,6 dst. (memilih elemen di index genap)
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="wvZGBVV" title="pseudo class - nth-of-type(even)" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:nth-of-type(even)</title>
+    <style>
+      div :nth-of-type(even){
+        color: red;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>span 1</span>
+      <p>paragraf 1</p>
+      <span>span 2</span>
+      <p>paragraf 2</p>
+      <span>span 3</span>
+      <p>paragraf 3</p>
+      <span>span 4</span>
+      <p>paragraf 4</p>
+      <span>span 5</span>
+      <p>paragraf 5</p>
+      <span>span 6</span>
+      <p>paragraf 6</p>
+      <span>span 7</span>
+      <p>paragraf 7</p>
+      <span>span 8</span>
+      <p>paragraf 8</p>
+    </div>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+- elemen 2 : dipilih karena genap.
+- elemen 4 : dipilih karena genap.
+- elemen 6 : dipilih karena genap.
+- elemen 8 : dipilih karena genap.
+
+Maka elemen yang dipilih adalah elemen `<span>` dan `<paragraf>` ke 2,4,6 dan 8 karena elemen tersebut berbeda tipe.
+
+## 8. :nth-of-type(-n+B)
+
+Berfungsi untuk memilih beberapa elemen child sekaligus dengan berurutan dan tanpa kelipatan.
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="ExJKjYw" title="pseudo class - nth-of-type(-n+B)" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:nth-of-type(-n+B)</title>
+    <style>
+      div :nth-of-type(-n+3){
+        color: red;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>span 1</span>
+      <p>paragraf 1</p>
+      <span>span 2</span>
+      <p>paragraf 2</p>
+      <span>span 3</span>
+      <p>paragraf 3</p>
+      <span>span 4</span>
+      <p>paragraf 4</p>
+      <span>span 5</span>
+      <p>paragraf 5</p>
+      <span>span 6</span>
+      <p>paragraf 6</p>
+    </div>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+- n ke 0 = (-0) + 3 = 3 akan dipilih karena elemen ke 3 ada
+- n ke 1 = (-1) + 3 = 2 akan dipilih karena elemen ke 2 ada
+- n ke 2 = (-2) + 3 = 1 akan dipilih karena elemen ke 1 ada
+- n ke 3 = (-3) + 3 = 0 tidak akan di pilih karena elemen ke 0 tidak ada
+
+Jika variabel (B) sudah bernilai 0 maka pengecekan setiap urutan elemen akan di hentikan sehingga yang dipilih adalah elemen `<span>` dan `<paragraf>` ke 1 - 3 karena elemen tersebut berbeda tipe.

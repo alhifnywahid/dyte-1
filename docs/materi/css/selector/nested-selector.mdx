@@ -14,27 +14,8 @@ Berfungsi untuk memilih elemen html yang berada di dalam elemen lain (elemen yan
 
 - Berikut cara penulisan sintaks-nya.
 
-```html title="HTML"
-<body>
-  <div class="container-1">
-    <span>span child dari container 1</span>
-    <div class="container-2">
-      <span>span child dari container 2</span>
-    </div>
-  </div>
-</body>
-```
-
-```css title="CSS"
-.container-1 {
-  .container-2 {
-    span {
-      background-color: green;
-    }
-  }
-}
-```
+<Codepen dataSlugHash="JjzVgPK" title="nested - selector" />
 
 ### Penjelasan
 
-Contoh di atas akan memilih elemen span di container ke 2.
+Contoh di atas akan memilih elemen `span` yang berada di dalam atau merupakan anak dari `container ke 2`.

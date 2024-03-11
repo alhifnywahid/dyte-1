@@ -1,0 +1,70 @@
+---
+title: ':not(selector)'
+sidebar_position: 29
+slug: /not
+---
+
+<hr />
+
+**`:not(selector)`** adalah sebuah pseudo-class yang berfungsi untuk memilih beberapa elemen tanpa kriteria elemen tertentu, misal kita ingin memilih semua elemen p kecuali p dengan class .special maka selector ini sangat cocok untuk di gunakan.
+
+:::info CATATAN
+
+- pseudo ini berfungsi pada semua elemen.
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="wvZGLgJ" title="pseudo class - not(selector)" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>:not(selector)</title>
+  <style>
+    /* kecuali 1 elemen tertentu */
+    ul li:not(.li-two) {
+      color: red;
+    }
+    /* kecuali 2 elemen tertentu */
+    ol li:not(.li-two, .li-four) {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>li ke 1</li>
+    <li class="li-two">li ke 2</li>
+    <li>li ke 3</li>
+    <li>li ke 4</li>
+  </ul>
+  <ol>
+    <li>li ke 1</li>
+    <li class="li-two">li ke 2</li>
+    <li>li ke 3</li>
+    <li class="li-four">li ke 4</li>
+  </ol>
+</body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+Contoh di atas memiliki 2 cara penggunaan :
+
+Pertama : elemen `<li>` di dalam `<ul>` akan di pilih semua kecuali elemen `<li>` yang mempunyai class `li-two` tidak akan dipilih, maka dari itu elemen `<li>` ke 2 tidak di pilih karena mempunyai class yang bernama `li-two`.
+
+Kedua : elemen `<li>` di dalam `<ol>` akan di pilih semua kecuali elemen `<li>` yang mempunyai class `li-two` dan `li-four` tidak akan dipilih, maka dari itu elemen `<li>` ke 2 dan 4 tidak akan di pilih karena elemen `<li>` ke 2 mempunyai class dengan nama `li-two` dan elemen `<li>` ke 4 mempunyai class dengan nama `li-four`.

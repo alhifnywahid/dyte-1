@@ -1,0 +1,66 @@
+---
+title: ':empty'
+sidebar_position: 24
+slug: /empty
+---
+
+<hr />
+
+**`:empty`** adalah sebuah pseudo-class yang berfungsi untuk memberi style pada elemen yang tidak mempunyai content ataupun child.
+
+:::info CATATAN
+
+- pseudo ini berfungsi pada semua elemen.
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="YzMqYYY" title="pseudo class - empty" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>:required</title>
+  <style>
+    *:empty{
+      width: 100%;
+      height: 50px;
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <!-- contoh 1 -->
+  <p></p>
+  <!-- contoh 2 -->
+  <div>
+    
+  </div>
+  <!-- contoh 3 -->
+  <ul>
+    <li></li>
+  </ul>
+</body>
+</html>
+
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+- Contoh 1 : elemen `<p>` mendapatkan style karena di dalamnya tidak mempunyai content ataupun elemen child.
+
+- Contoh 2 : elemen `<div>` tidak mendapatkan style karena mempunyai content berupa enter/spasi. 
+
+- Contoh 3 : elemen `<ul>` tidak mendapatkan style karena mempunyai child yaitu elmen `<li>`, tetapi elemen `<li>` mendapatkan style karena tidak mempunyai content ataupun elemen child di dalamnya.

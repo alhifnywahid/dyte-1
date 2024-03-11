@@ -1,0 +1,83 @@
+---
+title: ':last-child'
+sidebar_position: 6
+slug: /last-child
+---
+
+<hr />
+
+**`:last-child`** adalah sebuah pseudo-class yang berfungsi untuk memilih elemen child terakhir dari parent - nya.
+
+:::info CATATAN
+
+- pseudo ini berfungsi pada semua elemen.
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="ExJxPKd" title="pseudo class - last-child" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:last-child</title>
+    <style>
+      /* contoh 1 */
+      ul li:last-child {
+        font-weight: bold;
+        color: red;
+      }
+
+      /* contoh 2 */
+      div p:last-child {
+        font-weight: bold;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- contoh 1 -->
+    <ul>
+      <li>li ke 1</li>
+      <li>li ke 2</li>
+      <li>li ke 3</li>
+    </ul>
+
+    <!-- contoh 2 -->
+    <div>
+      <p>pragraph ke 1</p>
+      <span>in span ke 1</span>
+      <p>pragraph ke 2</p>
+      <span>in span ke 2</span>
+      <p>pragraph ke 3</p>
+      <span>in span ke 3</span>
+    </div>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+- Contoh 1 : elemen `<li> ke 3` akan di pilih karena merupakan child terakhir dan tidak ada elemen bertipe lain di dalam `<ul>`.
+- Contoh 2 : elemen `<p>` ke 3 tidak akan pernah di pilih karena bukan child terakhir dari `<div>`, child terakhir dari `<div>` adalah `<span> ke 3`.
+
+Jika ingin memilih child terakhir di dalam parentnya dengan catatan lebih dari 1 tipe elemen maka gunakan selector dengan spasi dan tanpa menyebut elemen child-nya seperti berikut ini :
+
+```css
+div :last-child {
+  font-weight: bold;
+  color: red;
+}
+```

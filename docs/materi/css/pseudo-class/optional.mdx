@@ -1,0 +1,61 @@
+---
+title: ':optional'
+sidebar_position: 23
+slug: /optional
+---
+
+<hr />
+
+**`:optional`** adalah sebuah pseudo-class yang berfungsi untuk memberi style pada elemen input yang bersifat optional.
+
+:::info CATATAN
+
+- pseudo ini hanya berfungsi pada elemen input.
+
+- semua elemen input pada umunya bersifat optional jadi kita tidak perlu menambahkan atribut apapun.
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="BaEKJVv" title="pseudo class - optional" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:optional</title>
+    <style>
+      input:optional {
+        color: rgb(255, 8, 0);
+        border-color: red;  
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="address1">Alamat 1 : </label>
+      <input type="text" id="address1" placeholder="optional"/>
+    </div>
+    <br /><br />
+    <div>
+      <label for="address2">Alamat 2 : </label>
+      <input type="text" id="address2" placeholder="required" required />
+    </div>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+Contoh di atas akan menerapkan style pada elemen `<input>` ke 1 karena sifatnya optional (tidak wajib di isi), sementara elemen `<input>` ke 2 bersifat required (wajib di isi).

@@ -1,0 +1,81 @@
+---
+title: ':last-of-type'
+sidebar_position: 10
+description: last-of-type mynotesv1
+keywords: [last-of-type mynotesv1, describing]
+slug: /last-of-type
+---
+
+<hr />
+
+**`:last-of-type`** adalah sebuah pseudo-class yang berfungsi untuk memilih elemen child terakhir dari parent - nya.  Jika ada elemen yang berbeda tipe/tagnya maka akan di pilih semua di setiap child pertama dari setiap tipe elemen tersebut.
+
+:::info CATATAN
+
+- pseudo ini berfungsi pada semua elemen.
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="jOROjrN" title="pseudo class - last-of-type" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:last-of-type</title>
+    <style>
+      /* contoh 1 */
+      .div1 p:last-of-type {
+        font-weight: bold;
+        color: red;
+      }
+
+      /* contoh 2 */
+      .div2 :last-of-type {
+        font-weight: bold;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- contoh 1 -->
+    <div class="div1">
+      <p>pragraph ke 1</p>
+      <span>in span ke 1</span>
+      <p>pragraph ke 2</p>
+      <span>in span ke 2</span>
+      <p>pragraph ke 3</p>
+      <span>in span ke 3</span>
+    </div>
+
+    <hr>
+
+    <!-- contoh 2 -->
+    <div class="div2">
+      <h3>heading 1</h3>
+      <span>span 1</span>
+      <p>paragraf 1</p>
+      <h3>heading 2</h3>
+      <span>span 2</span>
+      <p>paragraf 2</p>
+    </div>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+- Contoh 1 : elemen `<p> ke 3` akan di pilih karena merupakan elemen child terakhir dengan tipe `<p>` dari class `div1`
+- Contoh 2 : elemen `heading 2, span 2` dan `paragraf 2` akan dipilih karena merupakan elemen child yang berbeda tipe dan posisinya merupakan child terakhir dari elemen class `div2`

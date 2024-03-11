@@ -1,0 +1,83 @@
+---
+title: ':first-child'
+sidebar_position: 5
+slug: /first-child
+---
+
+<hr />
+
+**`:first-child`** adalah sebuah pseudo-class yang berfungsi untuk memilih elemen child pertama dari parent - nya.
+
+:::info CATATAN
+
+- pseudo ini berfungsi pada semua elemen.
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="RwOwWRe" title="pseudo class - first-child" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:first-child</title>
+    <style>
+      /* contoh 1 */
+      ul li:first-child {
+        font-weight: bold;
+        color: red;
+      }
+
+      /* contoh 2 */
+      .div1 span:first-child {
+        font-weight: bold;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- contoh 1 -->
+    <ul>
+      <li>li ke 1</li>
+      <li>li ke 2</li>
+      <li>li ke 3</li>
+    </ul>
+
+    <!-- contoh 2 -->
+    <div class="div1">
+      <p>pragraph ke 1</p>
+      <span>in span ke 1</span>
+      <p>pragraph ke 2</p>
+      <span>in span ke 2</span>
+      <p>pragraph ke 3</p>
+      <span>in span ke 3</span>
+    </div>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+- Contoh 1 : elemen `<li>` ke 1 akan di pilih karena merupakan child pertama dan tidak ada elemen bertipe lain di dalam `<ul>`.
+- Contoh 2 : elemen `<span>` tidak akan pernah di pilih karena elemen `<span>` bukan child pertama dari `<div>` melainkan child ke dua dari `<div>`.
+
+Jika ingin memilih child pertama di dalam parentnya dengan catatan lebih dari 1 tipe elemen maka gunakan selector dengan spasi dan tanpa menyebut elemen child-nya seperti berikut ini :
+
+```css
+.div1 :first-child {
+  font-weight: bold;
+  color: red;
+}
+```

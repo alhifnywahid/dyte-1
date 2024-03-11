@@ -1,0 +1,60 @@
+---
+title: ':disabled'
+sidebar_position: 19
+slug: /disabled
+---
+
+<hr />
+
+**`:disabled`** adalah sebuah pseudo-class yang berfungsi untuk memberi style pada elemen input yang mempunyai atribut disabled.
+
+:::info CATATAN
+
+- pseudo ini hanya berfungsi pada elemen input.
+
+- wajib menggunakan atribut disabled.
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="VwNazGQ" title="pseudo class - disabled" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:disabled</title>
+    <style>
+      input:disabled {
+        border-color: rgb(255, 0, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="dengan-atribut">INPUT 1 : </label>
+      <input type="text" id="dengan-atribut" disabled />
+    </div>
+    <br /><br />
+    <div>
+      <label for="tanpa-atribut">INPUT 2 : </label>
+      <input type="text" id="tanpa-atribut" />
+    </div>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+Contoh di atas akan menerapkan style pada elemen `<input>` ke 1 karena mempunyai atribut disabled, sementara elemen `<input>` ke 2 tidak mempunyai atribut disabled.

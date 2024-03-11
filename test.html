@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style> 
-    #embed-nav{
-      background-color: green;
+<html>
+<head>
+  <title>:not(selector)</title>
+  <style>
+    /* kecuali 1 elemen tertentu */
+    ul li:not(.li-two) {
+      color: red;
     }
-    </style>
-  </head>
-  <body>
-    <p class="codepen" data-height="333" data-theme-id="dark" data-default-tab="html,result" data-slug-hash="poYBdvV" data-editable="true" data-user="alhifnywahid" style="height: 333px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"> 
-    </p>
-    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-  </body>
+    /* kecuali 2 elemen tertentu */
+    ol li:not(.li-two, .li-four) {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>li ke 1</li>
+    <li class="li-two">li ke 2</li>
+    <li>li ke 3</li>
+    <li>li ke 4</li>
+  </ul>
+  <ol>
+    <li>li ke 1</li>
+    <li class="li-two">li ke 2</li>
+    <li>li ke 3</li>
+    <li class="li-four">li ke 4</li>
+  </ol>
+</body>
 </html>
-
-
-<iframe height="300" style="width: 100%;" scrolling="no" title="display - blcok" src="https://codepen.io/alhifnywahid/embed/poYBdvV?default-tab=html%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="false" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/alhifnywahid/pen/poYBdvV">
-  display - blcok</a> by Alhifny Wahid (<a href="https://codepen.io/alhifnywahid">@alhifnywahid</a>)
-  on <a href="https://codepen.io">CodePen</a>.
-</iframe>

@@ -1,0 +1,60 @@
+---
+title: ':enabled'
+sidebar_position: 20
+slug: /enabled
+---
+
+<hr />
+
+**`:enabled`** adalah sebuah pseudo-class yang berfungsi untuk memberi style pada elemen input yang bersifat enabled.
+
+:::info CATATAN
+
+- pseudo ini hanya berfungsi pada elemen input yang bersifat enabled.
+
+- semua elemen input pada umunya bersifat enabled jadi kita tidak perlu menambahkan atribut enabled.
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="VwNazGQ" title="pseudo class - enabled" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:enabled</title>
+    <style>
+      input:enabled {
+        border-color: rgb(255, 0, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="dengan-atribut">INPUT 1 : </label>
+      <input type="text" id="dengan-atribut" />
+    </div>
+    <br /><br />
+    <div>
+      <label for="tanpa-atribut">INPUT 2 : </label>
+      <input type="text" id="tanpa-atribut" disabled />
+    </div>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+Contoh di atas akan menerapkan style pada elemen `<input>` ke 1 karena sifatnya enabled, sementara elemen `<input>` ke 2 bersifat disabled.

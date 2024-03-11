@@ -1,0 +1,65 @@
+---
+title: ':in-range'
+sidebar_position: 14
+slug: /in-range
+---
+
+<hr />
+
+**`:in-range`** adalah sebuah pseudo-class yang berfungsi untuk memberi style pada elemen input yang brtipe number & memiliki atribut min & max, dimana elemen tersebut akan berubah ketika user memasukkan angka masih di dalam jangkauan min & max yang telah di tentukan.
+
+:::info CATATAN
+
+- pseudo ini hanya berfungsi pada elemen input yang bertipe number dengan syarat mempunyai atribut min & max
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="LYvNxNw" title="pseudo class - in-range" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:in-range</title>
+    <style>
+      input {
+        border: 2px solid black;
+      }
+      input:in-range {
+        border-color: rgb(44, 156, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <label for="number-phone">Masukkan Angka : </label>
+    <input
+      type="number"
+      name="number-phone"
+      id="number-phone"
+      min="6"
+      max="10"
+      value="0"
+    />
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+Contoh di atas akan menerapkan style pada elemen `<input>` jika angka yang dimasukkan adalah bilangan bulat 6 - 10 maka warna bordernya akan berubah menjadi hijau, jika di luar bilangan bulat 6 - 10 maka warnanya akan hitam.
+
+#### Contoh Lain
+
+<Codepen dataSlugHash="ExJKZvz" title="pseudo class - in-range - contoh lain" />

@@ -9,7 +9,7 @@ function Codepen({ dataSlugHash, title }) {
       title={`${title}`}
       src={`https://codepen.io/alhifnywahid/embed/${dataSlugHash}?default-tab=html%2Cresult&editable=true&theme-id=dark`}
       frameBorder="no"
-      loading="lazy"
+      loading="eager"
       allowTransparency="true"
       allowFullScreen="true"
     >

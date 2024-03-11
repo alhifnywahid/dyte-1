@@ -1,0 +1,60 @@
+---
+title: ':lang(language)'
+sidebar_position: 28
+slug: /lang
+---
+
+<hr />
+
+**`:lang(language)`** adalah sebuah pseudo-class yang berfungsi memilih elemen berdasarkan nilai atribut lang mereka. Pseudo-class ini berguna untuk menargetkan elemen yang memiliki nilai bahasa tertentu. Dengan cara mengisi kode bahasa negaranya sesuai yang telah di tentukan pada elemen yang ingin di berikan style.
+
+:::info CATATAN
+
+- pseudo ini hanya berfungsi pada elemen yang mempunyai atribut lang.
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="gOyrNMr" title="pseudo class - lang(language)" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>:lang(language)</title>
+  <style>
+    li:lang(id){
+      color: red;
+    }
+    li:lang(en){
+      color: blue;
+    }
+    li:lang(id-en){
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li lang="id">Konten bahasa indonesia.</li>
+    <li lang="en">English content language.</li>
+    <li lang="id-en">Konten dengan English language.</li>
+  </ul>
+</body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+Contoh di atas akan menerapkan warna yang berbeda - beda pada elemen `<li>` sesuai kode bahasa yang telah di tentukan.

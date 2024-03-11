@@ -1,0 +1,53 @@
+---
+title: ':active'
+sidebar_position: 1
+slug: /active
+---
+
+<hr />
+
+**`:active`** adalah pseudo-class yang befungsi untuk menerapkan gaya pada elemen yang sedang dalam keadaan aktif. (`Ketika elemen tersebut diklik`) maka gaya yang telah ditetapkan akan diterapkan.
+
+:::info CATATAN 
+  - pseudo ini berfungsi pada semua elemen.
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="gOEVKbz" title="pseudo class - active" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:active</title>
+    <style>
+      h1:active {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>heading 1</h1>
+    <p>paragraf</p>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+Contoh di atas akan menerapkan style pada elemen `h1` dimana ketika elemen `h1` di klik dan & di tahan maka warnanya akan berubah menjadi hijau.
+
+#### Contoh Lain
+
+<Codepen dataSlugHash="LYvPONm" title="pseudo class - active" />

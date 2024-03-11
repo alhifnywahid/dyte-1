@@ -1,6 +1,6 @@
 ---
 title: ':hover'
-sidebar_position: 1
+sidebar_position: 2
 slug: /hover
 ---
 
@@ -8,22 +8,41 @@ slug: /hover
 
 **`:hover`** adalah sebuah pseudo-class yang berfungsi untuk menerapkan style pada elemen ketika kursor berada di atas elemen yang telah di tentukan.
 
+:::info CATATAN 
+  - pseudo ini berfungsi pada semua elemen.
+:::
+
 #### Contoh
 
-- Tuliskan selector pada elemen yang ingin di berikan style lalu tambah dengan `:hover` tanpa spasi.
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
 
-```html title="HTML"
-<body>
-  <h1>heading 1</h1>
-  <p>paragraf</p>
-</body>
+<Codepen dataSlugHash="xxBvbRx" title="pseudo class - hover" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:hover</title>
+    <style>
+      h1:hover {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>heading 1</h1>
+    <p>paragraf</p>
+  </body>
+</html>
 ```
 
-```css title="CSS"
-p:hover {
-  color: green;
-}
-```
+</TabItem>
+</Tabs>
 
 #### Penjelasan
 
@@ -31,9 +50,5 @@ Contoh di atas akan menerapkan style pada elemen `h1` dimana ketika kursor berad
 
 #### Contoh Lain
 
-```html title="HTML"
-<body>
-  <h1>heading 1</h1>
-  <p>paragraf</p>
-</body>
-```
+<Codepen dataSlugHash="ZEPgYxd" title="pseudo class - hover" />
+

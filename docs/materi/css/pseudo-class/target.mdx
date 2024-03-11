@@ -1,0 +1,64 @@
+---
+title: ':target'
+sidebar_position: 26
+slug: /target
+---
+
+<hr />
+
+**`:target`** adalah sebuah pseudo-class yang berfungsi untuk memilih dan memberi style pada elemen yang menjadi target dalam URL fragmen (URI fragment identifier).
+
+:::info CATATAN
+
+- pseudo ini hanya berfungsi pada elemen `<a>` berupa (URI fragment identifier) atau href berupa anchor (#).
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="xxeVMWj" title="pseudo class - target" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>:target</title>
+  <style>
+    :target {
+      background-color: rgb(202, 179, 179);
+    }
+    :target h2 {
+      background-color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="#section1">section 1</a></li>
+    <li><a href="#section2">section 2</a></li>
+  </ul>
+  <div id="section1">
+    <h2>Section 1</h2>
+    <p>Lorem ipsum dolor sit amet...</p>
+  </div>
+  <div id="section2">
+    <h2>Section 2</h2>
+    <p>Lorem ipsum dolor sit amet...</p>
+  </div>
+</body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+contoh di atas akan menerapkan style pada elemen yang id nya sesuai dengan href yang telah di tentukan dimana jika mengklik elemen li ke 1 (section 1) maka akan mengarah ke section 1 serta menerapkan style pada elemen yang mempunyai id section1, jika mengklik li ke 2 maka style akan berpindah pada elemen yang mempunyai id section2 begitu seterusnya.

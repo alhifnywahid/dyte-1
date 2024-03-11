@@ -1,0 +1,51 @@
+---
+title: ':visited'
+sidebar_position: 4
+slug: /visited
+---
+
+<hr />
+
+**`:visited`** berfungsi untuk memberi style sebuah elemen `<a>` yang sudah pernah dikunjungi/diklik. normalnya semua elemen `<a>` pada html sifatnya visited yang warna biru. Dengan pseudo ini kita bisa mengubah elemen `<a>` yang sudah pernah kita kunjungi dengan bebas.
+
+:::info CATATAN
+
+- pseudo ini hanya berfungsi pada elemen `<a>` atau elemen yang mengandung (anchor/hyperlink).
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="yLrBPqX" title="pseudo class - visited" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:visited</title>
+    <style>
+      *:visited {
+        color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">ini elemen a</a>
+    <p>ini elemen p</p>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+Contoh di atas saya menggunakan `universal selector (*)` yang berarti akan menerapkan style pada semua elemen yang mengandung anchor/hyperlink ketika sudah pernah dikunjungi / diklik, itulah mengapa contoh di atas hanya merubah elemen `<a>` karena hanya elemen `<a>` yang mengandung anchor/hyperlink.

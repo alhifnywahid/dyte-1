@@ -1,0 +1,64 @@
+---
+title: ':root'
+sidebar_position: 27
+slug: /root
+---
+
+<hr />
+
+**`:root`** adalah sebuah pseudo-class yang berfungsi untuk menargetkan elemen root dari dokumen HTML, yang pada umumnya merupakan elemen `<html>`. Pseudo-class ini sering digunakan untuk mendefinisikan variabel CSS kustom menggunakan CSS Variables (atau disebut juga Custom Properties).
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="RwOadbw" title="pseudo class - root" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>:root</title>
+  <style>
+    :root {
+      /* membuat variabel */
+      background-color: lightblue;
+      --warna-nama: red;
+      --warna-alamat: blue;
+      --warna-umur: green;
+    }
+    p:nth-child(1){
+      /* memanggil variabel */
+      color: var(--warna-nama);
+    }
+    p:nth-child(2){
+      /* memanggil variabel */
+      color: var(--warna-alamat);
+    }
+    p:nth-child(3){
+      /* memanggil variabel */
+      color: var(--warna-umur);
+    }
+  </style>
+</head>
+<body>
+  <p>Nama : Jhon Doe</p>
+  <p>Alamat : Surabaya</p>
+  <p>Umur : 24 Tahun</p>
+</body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+contoh di atas akan menerapkan style pada background html nya sendiri karena pseudo root akan menerapkan pada elemen paling tinggi yaitu elemen `<html>` dan kedua akan menerapkan style yang berbeda pada setiap elemen `<p>`, dimana di awali pembuatan variabel lalu di terapkan pada masing masing elemen `<p>`. 
+
+pembuatan variabel kita bisa gunakan sintaks sesuai yang kita inginkan, namun pada saat pemanggilan variabel penulisan sintaks harus sama dengan variabel yang telah di buat sebelumnya.

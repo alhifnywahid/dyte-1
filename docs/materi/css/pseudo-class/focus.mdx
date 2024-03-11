@@ -1,0 +1,78 @@
+---
+title: ':focus'
+sidebar_position: 25
+slug: /focus
+---
+
+<hr />
+
+**`:focus`** adalah sebuah pseudo-class yang berfungsi untuk memberi style pada elemen ketika kursor dalam keadaan focus pada elemen tersebut seperti elemen input dimana jika kursor sedang dalam keadaan masuk ke dalam input maka style akan di terapkan.
+
+:::info CATATAN
+
+- pseudo ini hanya berfungsi pada beberapa elemen yang bisa focus seperti :
+  - Elemen Formulir: Seperti input, textarea, dan select.
+  - Elemen Anchor (Link): `<a>` atau elemen yang memiliki atribut tabindex.
+  - Elemen dengan Atribut contenteditable: Elemen yang dapat diedit oleh pengguna, misalnya, `<div contenteditable="true">`.
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="poByKRE" title="pseudo class - focus" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>:focus</title>
+  <style>
+    input:focus {
+      border: 2px solid blue;
+      outline: none;
+    }
+    
+    a:focus {
+      color: red;
+    }
+    
+    [contenteditable="true"]:focus {
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <!-- contoh 1 -->
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username">
+
+  <br>
+
+  <!-- contoh 2 -->
+  <a href="#" tabindex="0">Link</a>
+
+  <br>
+
+  <!-- contoh 3 -->
+  <p contenteditable="true">Elemen p yang bisa di edit</p>
+</body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+- Contoh 1 : elemen `<input>` border nya akan berubah ukuran serta warnanya berubah biru ketika kursor masuk ke dalamnya/dalam keadaan mengetik dan akan balik ke warna semula setelah kursor mengklik ke arah lain.
+
+- Contoh 2 : elemen `<a>` akan berwarna merah ketika di klik dan akan balik ke warna semula setelah kursor mengklik ke arah lain.
+
+- Contoh 3 : elemen `<p>` akan mempunyai warna background lightblue ketika kita mengedit kontennya dan akan balik ke warna semula setelah kursor mengklik ke arah lain.

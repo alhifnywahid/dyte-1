@@ -1,0 +1,61 @@
+---
+title: ':read-write'
+sidebar_position: 21
+slug: /read-write
+---
+
+<hr />
+
+**`:read-write`** adalah sebuah pseudo-class yang berfungsi untuk memberi style pada elemen input yang bersifat read-write.
+
+:::info CATATAN
+
+- pseudo ini hanya berfungsi pada elemen input.
+
+- semua elemen input pada umunya bersifat read-write jadi kita tidak perlu menambahkan atribut apapun.
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="eYoZGNg" title="pseudo class - read-write" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:read-write</title>
+    <style>
+      input:read-write {
+        color: rgb(255, 8, 0);
+        border-color: red;  
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="name">Namaku : </label>
+      <input type="text" id="name" value="John Doe" />
+    </div>
+    <br /><br />
+    <div>
+      <label for="address">Alamatku : </label>
+      <input type="text" id="address" value="Indonesia" readonly />
+    </div>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+Contoh di atas akan menerapkan style pada elemen `<input>` ke 1 karena sifatnya read-write (teks bisa di edit), sementara elemen `<input>` ke 2 bersifat read-only (teks tidak bisa di edit).

@@ -1,0 +1,63 @@
+---
+title: ':invalid'
+sidebar_position: 17
+slug: /invalid
+---
+
+<hr />
+
+**`:invalid`** adalah sebuah pseudo-class yang berfungsi untuk memberi style pada elemen input jika inputan user tidak sesuai dengan tipe yang telah di tentukan.
+
+:::info CATATAN
+
+- pseudo ini hanya berfungsi pada elemen form seperti input dll.
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="oNOxZEG" title="pseudo class - invalid" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:invalid</title>
+    <style>
+      input {
+        border: 2px solid black;
+      }
+      input:invalid {
+        border-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="email">Masukkan Email : </label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      placeholder="youremail@gmail.com"
+    />
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+Contoh di atas akan menerapkan style pada elemen `<input>` jika user memasukkan selain email maka warna border pada elemen `<input>` akan berubah menjadi merah.
+
+#### Contoh Lain
+
+<Codepen dataSlugHash="jORqBZg" title="pseudo class - invalid - contoh lain" />

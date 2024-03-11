@@ -1,0 +1,70 @@
+---
+title: ':only-of-type'
+sidebar_position: 11
+slug: /only-of-type
+---
+
+<hr />
+
+**`:only-of-type`** adalah sebuah pseudo-class yang berfungsi untuk memilih elemen yang merupakan satu-satunya child dari induknya atau elemen child yang tidak mempunyai saudara dengan jenis elemen yang sama.
+
+:::info CATATAN
+
+- pseudo ini berfungsi pada semua elemen.
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="zYXYgNa" title="pseudo class - only-of-type" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:only-of-type</title>
+    <style>
+      /* contoh 1 */
+      .one :only-of-type{
+        color: red;
+      }
+
+      /* contoh 2 */
+      .two :only-of-type{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- contoh 1 -->
+    <div class="one">
+      <p>p1 di dalam div one</p>
+      <span>span1 di dalam div one</span>
+      <p>p2 di dalam div one</p>
+      <span>span2 di dalam div one</span>
+    </div>
+
+    <hr>
+    <!-- contoh 2 -->
+    <div class="two">
+      <p>p1 di dalam div two</p>
+      <span>span1 di dalam div two</span>
+    </div>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+- Contoh 1 : child dari elemen `<div>` dengan class .one tidak akan ada yang di pilih karena elemen `<p>` dan `<span>` sama sama mempunyai saudara dengan jenis elemen yang sama.
+- Contoh 2 : semua child dari elemen `<div>` dengan class .two akan dipilih karena elemen `<p>` dan `<span>` sama sama tidak mempunyai saudara dengan jenis yang sama.

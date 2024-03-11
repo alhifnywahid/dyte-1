@@ -1,0 +1,65 @@
+---
+title: ':valid'
+sidebar_position: 16
+slug: /valid
+---
+
+<hr />
+
+**`:valid`** adalah sebuah pseudo-class yang berfungsi untuk memberi style pada elemen input jika inputan user sesuai dengan tipe yang telah di tentukan.
+
+:::info CATATAN
+
+- pseudo ini hanya berfungsi pada elemen form seperti input dll.
+
+- agar style tidak di terapkan terlebih dahulu kita bisa menambahkan atribut `required` pada elemen `<input>` tsb.
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="PogNpPR" title="pseudo class - valid" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:valid</title>
+    <style>
+      input {
+        border: 2px solid rgb(252, 0, 0);
+      }
+      input:valid {
+        border-color: rgb(9, 255, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <label for="email">Masukkan Email : </label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      placeholder="youremail@gmail.com"
+    />
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+Contoh di atas akan menerapkan style pada elemen `<input>` jika user memasukkan email maka warna border pada elemen `<input>` akan berubah menjadi hijau, jika user memasukkan selain email maka warna border akan merah.
+
+#### Contoh Lain
+
+<Codepen dataSlugHash="rNbeyzO" title="pseudo class - valid - contoh lain" />

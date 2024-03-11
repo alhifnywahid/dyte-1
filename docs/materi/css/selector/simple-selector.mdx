@@ -10,71 +10,55 @@ slug: /simple-selector
 
 Berfungsi memilih elemen html berdasarkan tagnya.
 
-### Contoh 
+### Contoh
 
 - Tuliskan nama tag html yang ingin di ubah style nya.
 
-```css 
-h1 {
-  color: green;
-}
-```
+<Codepen dataSlugHash="xxBeoRo" title="simple selector - tag" />
 
 ### Penjelasan
 
-Contoh di atas akan memilih semua elemen html yang menggunakan tag **h1**.
+Contoh di atas akan memilih semua elemen html yang menggunakan tag `h1` saja dan mengubah warnanya menjadi hijau, elemen selain `h1` warnanya akan tetap hitam.
 
 ## Class Selector
 
 Berfungsi untuk memilih elemen html berdasarkan class.
 
-### Contoh 
+### Contoh
 
 - Tuliskan symbol titik (.) lalu tuliskan nama class-nya.
 
-```css
-.text-header {
-  font-size: 40px;
-}
-```
+<Codepen dataSlugHash="eYXowex" title="simple selector - class" />
 
 ### Penjelasan
 
-Contoh di atas akan memilih elemen yang mempunyai class **text-header** dan akan di ubah ukuran fontnya menjadi 40px.
-
+Contoh di atas akan memilih elemen `list ke 1 - 3` karena mempunyai class yang cocok.
 
 ## ID Selector
 
 Berfungsi untuk memilih elemen html berdasarkan id.
 
-### Contoh 
+### Contoh
 
 - Tuliskan symbol pagar (#) lalu tuliskan nama id-nya.
 
-```css
-#text-footer {
-  text-align: center;
-}
-```
+<Codepen dataSlugHash="WNmWqyy" title="simple selector - id" />
 
 ### Penjelasan
 
-Contoh di atas akan memilih elemen yang mempunyai id **text-footer** dan akan di ubah poisisnya menjadi ke tengah.
+Contoh di atas akan memilih `list ke 3 - 5` karena mempunyai id yang cocok.
 
 ## Universal Selector
 
-Berfungsi untuk memilih semua elemen yang ada di html.
+Berfungsi untuk memilih semua elemen yang ada di html (tanpa terkecuali) baik mempunyai class/id maupun tidak mempunyai class/id
 
-### Contoh 
+### Contoh
 
-- Tuliskan symbol pagar (*) untuk memilih semua elmen yang ada.
+- Tuliskan symbol bintang (*) untuk memilih semua elmen yang ada.
 
-```css
-* {
-  color: green;
-}
-```
+<Codepen dataSlugHash="BabEgqY" title="simple selector - universal" />
+
 
 ### Penjelasan
 
-Contoh di atas akan memilih semua elemen dan mengubah warna teksnya menjadi hijau.
+Contoh di atas akan memilih semua elemen dan mengubah warna teksnya menjadi biru.

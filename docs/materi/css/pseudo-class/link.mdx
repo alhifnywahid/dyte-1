@@ -1,0 +1,51 @@
+---
+title: ':link'
+sidebar_position: 3
+slug: /link
+---
+
+<hr />
+
+**`:link`** berfungsi untuk memberi style pada sebuah elemen `<a>` yang belum pernah di kunjungi. normalnya semua elemen `<a>` pada html sifatnya link yang berwarna biru dengan text-decoration underline. dengan pseudo ini kita bisa mengubah elemen `<a>` yang belum pernah kita kunjungi dengan bebas.
+
+:::info CATATAN
+
+- pseudo ini hanya berfungsi pada elemen `<a>` atau elemen yang mengandung (anchor/hyperlink).
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="oNOvoBM" title="pseudo class - link" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:link</title>
+    <style>
+      *:link {
+        color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">ini elemen a</a>
+    <p>ini elemen p</p>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+Contoh di atas saya menggunakan `universal selector (*)` yang berarti akan menerapkan style pada semua elemen yang mengandung anchor/hyperlink ketika belum pernah dikunjungi / diklik, itulah mengapa contoh di atas hanya merubah elemen `<a>` karena hanya elemen `<a>` yang mengandung anchor/hyperlink.

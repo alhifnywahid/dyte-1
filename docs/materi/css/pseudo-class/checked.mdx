@@ -1,0 +1,86 @@
+---
+title: ':checked'
+sidebar_position: 18
+slug: /checked
+---
+
+<hr />
+
+**`:checked`** adalah sebuah pseudo-class yang berfungsi untuk memberi style pada elemen tertentu seperti input yang bertipe checkbox dimana style akan di terapkan jika pilihan sudah ter - cheklist/centang.
+
+:::info CATATAN
+
+- pseudo ini hanya berfungsi pada elemen tertentu seperti input bertipe radion, checkbox dan option.
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="ExJKvLN" title="pseudo class - checked" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:checked</title>
+    <style>
+      input[name="jenis-kelamin"]:checked + label {
+        color: blue;
+        font-weight: bold;
+      }
+      input[name="hobi"]:checked + label {
+        color: green;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Jenis Kelamin</h3>
+    <input
+      type="radio"
+      name="jenis-kelamin"
+      id="L"
+    />
+    <label for="L">Laki - Laki</label>
+    <input
+      type="radio"
+      name="jenis-kelamin"
+      id="P"
+    />
+    <label for="P">Perempuan</label>
+    <h3>Jenjang</h3>
+    <input
+      type="checkbox"
+      name="hobi"
+      id="mancing"
+    />
+    <label for="mancing">Memancing</label>
+    <input
+      type="checkbox"
+      name="hobi"
+      id="berenang"
+    />
+    <label for="berenang">Berenang</label>
+    <input
+      type="checkbox"
+      name="hobi"
+      id="game"
+    />
+    <label for="game">Game</label>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+Contoh di atas akan menerapkan style pada elemen `<input>` jika user memasukkan selain email maka warna border pada elemen `<input>` akan berubah menjadi merah.

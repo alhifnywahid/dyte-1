@@ -1,0 +1,61 @@
+---
+title: ':read-only'
+sidebar_position: 20
+slug: /read-only
+---
+
+<hr />
+
+**`:read-only`** adalah sebuah pseudo-class yang berfungsi untuk memberi style pada elemen input yang bersifat read-only.
+
+:::info CATATAN
+
+- pseudo ini hanya berfungsi pada elemen input.
+
+- wajib menambahkan atribut readonly.
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="YzMqxoj" title="pseudo class - read-only" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:read-only</title>
+    <style>
+      input:read-only {
+        color: rgb(255, 8, 0);
+        border-color: red;  
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="name">Namaku : </label>
+      <input type="text" id="name" value="John Doe" readonly />
+    </div>
+    <br /><br />
+    <div>
+      <label for="address">Alamatku : </label>
+      <input type="text" id="address" value="Indonesia" />
+    </div>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+Contoh di atas akan menerapkan style pada elemen `<input>` ke 1 karena sifatnya read-only (teks tidak bisa di edit), sementara elemen `<input>` ke 2 bersifat read-write (teks bisa di edit).

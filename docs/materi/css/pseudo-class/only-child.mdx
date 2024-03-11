@@ -1,0 +1,57 @@
+---
+title: ':only-child'
+sidebar_position: 7
+slug: /only-child
+---
+
+<hr />
+
+**`:only-child`** adalah sebuah pseudo-class yang berfungsi untuk memilih elemen yang merupakan satu-satunya child dari induknya atau elemen child yang tidak mempunyai saudara.
+
+:::info CATATAN
+
+- pseudo ini berfungsi pada semua elemen.
+
+:::
+
+#### Contoh
+
+<Tabs>
+<TabItem value="DEMO" label="DEMO" default>
+
+<Codepen dataSlugHash="LYvYGbo" title="pseudo class - only-child" />
+
+</TabItem>
+
+<TabItem value="COPY CODE" label="COPY CODE">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>:only-child</title>
+    <style>
+      ul li:only-child {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>elemen li ke 1 di dalam elemen ul ke 1</li>
+      <li>elemen li ke 2 di dalam elemen ul ke 1</li>
+      <li>elemen li ke 3 di dalam elemen ul ke 1</li>
+    </ul>
+    <ul>
+      <li>elemen li satu-staunya di dalam elemen ul ke 2</li>
+    </ul>
+  </body>
+</html>
+```
+
+</TabItem>
+</Tabs>
+
+#### Penjelasan
+
+child dari elemen `<ul> ke` 1 tidak akan ada yang di pilih karena elemen `<ul> ke 1` mempunyai 3 child, sementara child dari `<ul> ke 2` akan di pilih karena elemen `<ul> ke 2` hanya mempunyai 1 child saja.
