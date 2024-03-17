@@ -179,8 +179,7 @@ const config = {
         items: [
           {
             label: 'Blog',
-            to: 'blog',
-            position: 'left'
+            to: '/coming-soon',
           },
           // {
           //   label: 'Guides',
