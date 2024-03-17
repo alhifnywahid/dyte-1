@@ -121,11 +121,7 @@ const config = {
           routeBasePath: '/catatan',
           ...defaultSettings,
         },
-        blog: {
-          feedOptions: {
-            type: 'all',
-          },
-        },
+        blog: false,
         theme: {
           customCss: [
             require.resolve('./src/css/custom.css'),
