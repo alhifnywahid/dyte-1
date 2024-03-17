@@ -180,7 +180,6 @@ const config = {
           {
             label: 'Blog',
             to: 'blog',
-            position: 'left'
           },
           // {
           //   label: 'Guides',
