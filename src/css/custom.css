@@ -1268,6 +1268,35 @@ html[data-theme='dark'] .video_sidebar_header > div > a::before {
   content: ' ‹';
   margin-right: 4px;
 }
-footer.DocSearch-Footer, #__docusaurus_skipToContent_fallback > div > div.row > div.col.col--4.text--right.searchLogoColumn_node_modules-\@docusaurus-theme-search-algolia-lib-theme-SearchPage-styles-module > a > svg > g > path.algoliaLogoPathFill_node_modules-\@docusaurus-theme-search-algolia-lib-theme-SearchPage-styles-module, #__docusaurus_skipToContent_fallback > div > div.row > div.col.col--4.text--right.searchLogoColumn_node_modules-\@docusaurus-theme-search-algolia-lib-theme-SearchPage-styles-module > a > svg{
+footer.DocSearch-Footer,
+#__docusaurus_skipToContent_fallback
+  > div
+  > div.row
+  > div.col.col--4.text--right.searchLogoColumn_node_modules-\@docusaurus-theme-search-algolia-lib-theme-SearchPage-styles-module
+  > a
+  > svg
+  > g
+  > path.algoliaLogoPathFill_node_modules-\@docusaurus-theme-search-algolia-lib-theme-SearchPage-styles-module,
+#__docusaurus_skipToContent_fallback
+  > div
+  > div.row
+  > div.col.col--4.text--right.searchLogoColumn_node_modules-\@docusaurus-theme-search-algolia-lib-theme-SearchPage-styles-module
+  > a
+  > svg {
   display: none;
 }
+
+.youox {
+  border: 1px solid #2e2e2e;
+  border-radius: 0.4rem;
+  background-color: #1e1e1e;
+}
+
+.bgone {
+  color: green;
+}
+
+/* article {
+  padding: 15px;
+  border: 1px solid yellow;
+} */
