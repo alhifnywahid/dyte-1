@@ -121,7 +121,6 @@ const config = {
           routeBasePath: '/catatan',
           ...defaultSettings,
         },
-        blog: false,
         theme: {
           customCss: [
             require.resolve('./src/css/custom.css'),
@@ -177,10 +176,8 @@ const config = {
         //   width: '101px',
         // },
         items: [
-          {
-            label: 'Blog',
-            to: '/coming-soon',
-          },
+          
+          {to: '/blog', label: 'Blog', position: 'left'},
           // {
           //   label: 'Guides',
           //   to: 'guides',
