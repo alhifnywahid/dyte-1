@@ -1,6 +1,6 @@
 ---
-title: 15 Tools AI yang wajib mahasiswa ketahui
-description: 'Where you can build your very own monstrosities'
+title: Kumpulan tools AI yang wajib mahasiswa ketahui
+description: 'Kumpulan tools AI yang wajib mahasiswa ketahui'
 author_image_url: /img/blog/hifny.png
 keywords:
   [

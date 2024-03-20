@@ -1107,9 +1107,9 @@ details p {
   @apply flex items-center;
 }
 
-table {
+/* table {
   text-align: center;
-}
+} */
 
 #reactions {
   display: none;
