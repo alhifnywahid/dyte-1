@@ -1271,3 +1271,14 @@ html[data-theme='dark'] .video_sidebar_header > div > a::before {
 footer.DocSearch-Footer, #__docusaurus_skipToContent_fallback > div > div.row > div.col.col--4.text--right.searchLogoColumn_node_modules-\@docusaurus-theme-search-algolia-lib-theme-SearchPage-styles-module > a > svg > g > path.algoliaLogoPathFill_node_modules-\@docusaurus-theme-search-algolia-lib-theme-SearchPage-styles-module, #__docusaurus_skipToContent_fallback > div > div.row > div.col.col--4.text--right.searchLogoColumn_node_modules-\@docusaurus-theme-search-algolia-lib-theme-SearchPage-styles-module > a > svg{
   display: none;
 }
+
+/* #__docusaurus_skipToContent_fallback > div > div > main > article * {
+  border: 1px solid green;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+} */
+
+.blogPostTitle {
+  font-size: 1rem;
+}

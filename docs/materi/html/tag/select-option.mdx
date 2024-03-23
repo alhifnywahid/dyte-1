@@ -1,0 +1,39 @@
+---
+title: '<select> & <option>'
+slug: /select-option
+---
+
+<hr />
+
+## Fungsi
+
+Dalam HTML, tag `<select>` dan `<option>` digunakan bersama-sama untuk membuat elemen dropdown atau menu pilihan. Berikut adalah penjelasan singkat tentang fungsi masing-masing tag:
+
+- Tag `<select>` digunakan untuk membuat elemen dropdown atau menu pilihan di dalam dokumen HTML. Ini menunjukkan daftar pilihan yang tersedia untuk pengguna. Saat sebuah `<select>` didefinisikan, pengguna dapat mengkliknya untuk melihat opsi yang tersedia dan memilih salah satunya.
+
+- Tag `<option>` digunakan dalam konteks tag `<select>` untuk menentukan setiap opsi dalam daftar pilihan yang akan ditampilkan kepada pengguna saat mereka mengklik dropdown. Setiap elemen `<option>` dapat memiliki atribut value untuk menentukan nilai yang dikirim ke server saat formulir dikirimkan, dan teks di dalam tag `<option>` menentukan label yang akan ditampilkan kepada pengguna.
+
+## Atribut
+
+## Contoh
+
+```html
+<select>
+  <option value="nilai1">Opsi 1</option>
+  <option value="nilai2">Opsi 2</option>
+  <option value="nilai3">Opsi 3</option>
+</select>
+```
+
+Cara menggunakan place holder :
+
+```html
+<select>
+  <option value="" disabled hidden selected>Pilih opsi</option>
+  <option value="nilai1">Opsi 1</option>
+  <option value="nilai2">Opsi 2</option>
+  <option value="nilai3">Opsi 3</option>
+</select>
+```
+
+Kita membutuhkan 3 atribut tambahan yaitu `disabled`, `hidden` dan `selected`.
