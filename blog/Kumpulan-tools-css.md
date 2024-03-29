@@ -14,3 +14,4 @@ tags: ['css']
 | [BLOBMAKER](https://www.blobmaker.app/) | Untuk membuat background SVG |
 | [BGJAR](https://bgjar.com/) | Untuk membuat background SVG |
 | [UNIVERSE](https://uiverse.io/) | Web ini menyediakan berbagai macam elemen html dengan style yang bagus" seperti input, button, loading dan masih banyak lagi. |
+| [COOLORS](https://coolors.co/) | Refrensi Warna |
