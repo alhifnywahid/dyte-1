@@ -27,3 +27,13 @@ tags: ['AI']
 | [Mendeley](https://www.mendeley.com/) | Daftar pustaka otomatis |
 | [SCI-HUB](https://sci-hub.se/) | Membuka file terkunci |
 | [Writtefull](https://www.writefull.com/) | Menulis abstrak |
+| [Docsity](https://www.docsity.com/en/) | kumpulan catatan dosen, ujian kating  dan berbagai catatan lainnya.  |
+| [Seomagnifier](https://seomagnifier.com/) | parafrase web untuk mengurangi plagiasi.  |
+| [Symbolab](https://www.symbolab.com/) | web buat soal matematika.  |
+| [Genialy](https://genial.ly/) | kumpulan desain ppt keren. |
+| [Tldr](https://tldrthis.com/) | untuk mereview otomatis jurnal.  |
+| [Connected-paper](https://www.connectedpapers.com/) | referensi judul skripsi |
+| [Gramally](https://www.grammarly.com/) | untuk memperbaiki gramar translate yang salah.  |
+| [Smodin](https://smodin.io/) | meringkas essai otomatis |
+| [Pdf-Escape](https://www.pdfescape.com/) | untuk mengedit pdf secara online. |
+| [quizizzrocks](https://chrome.google.com/) | extension chrome untuk melihat jawaban dari quiziz |
