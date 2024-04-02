@@ -1,10 +1,11 @@
 ---
 title: Kumpulan tools JS yang sangat bermanfaat bagi programer JS
-description: 'Kumpulan tools JS yang sangat bermanfaat bagi programer JS'
-author_image_url: /img/blog/hifny.png
+authors: "hifny"
 keywords: [ 'library js', 'tools js' ]
 tags: ['Javascript']
 ---
+
+<hr/>
 
 ## AUDIO
 

@@ -1,13 +1,14 @@
 ---
 title: Kumpulan tools AI yang wajib mahasiswa ketahui
-description: 'Kumpulan tools AI yang wajib mahasiswa ketahui'
-author_image_url: /img/blog/hifny.png
+authors: "hifny"
 keywords:
   [
     'AI TOOLS',
   ]
 tags: ['AI']
 ---
+
+<hr/>
 
 | Website | Deskripsi |
 -----------|------------

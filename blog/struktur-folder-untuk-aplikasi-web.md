@@ -1,11 +1,11 @@
 ---
 title: Struktur folder untuk aplikasi WEB
-description: 'struktur folder untuk aplikasi web yang harus kamu ketahui'
 authors: "hifny"
 keywords: ['programing']
 tags: ['programing']
-image: https://static.apiseven.com/2022/10/19/634f6677742a1.png
 ---
+
+<hr/>
 
 ## Assets
 
