@@ -1,0 +1,62 @@
+---
+title: 'opacity'
+slug: /opacity
+---
+
+<hr />
+
+**`opacity`** adalah sebuah property CSS yang digunakan untuk menentukan tingkat kejelasan (transparansi) dari sebuah elemen. Nilai dari property ini berkisar antara 0.0 (sepenuhnya transparan) hingga 1.0 (sepenuhnya opak). Property ini memungkinkan pembuatan efek visual yang menarik pada elemen.
+
+- properti ini memiliki 1 value, yaitu `<number>`
+- jika elemen induk di beri properti ini maka elemen childnya akan ikut transparant juga sesuai nilai yang telah di berikan karena efek intharitance/pewarisan, jika elemen child tidak ingin mewarisi properti ini maka gunakan value `rgba()` atau `hsla()`.
+
+<Tabs value="opacity" label="opacity">
+
+<TabItem value="sintaks" label="sintaks" default>
+
+- menggunakan value number.
+
+```css
+element {
+    opacity: 0.5;
+}
+```
+
+- menggunakan value rgba(red, green, blue, alpha).
+
+```css
+element {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+```
+
+- menggunakan value hsla(hue, saturation, lightness, alpha).
+
+```css
+element {
+    background-color: hsla(0, 100%, 50%, 0.5);
+}
+```
+
+</TabItem>
+
+<TabItem value="contoh" label="contoh">
+
+<Codepen dataSlugHash="mdgGGLz" title="property - opacity" />
+
+<br />
+
+Jika di lihat, elemen `kotak1` sudah transparant tetapi elemennya juga ikut transparant karena efek dari pewarisan, jadi meskipun tidak memberi properti ini pada elemen `kotak2` maka otomatis sudah memiliki nilai `opacity: 0.5` juga, jika kita memberi opacity lagi pada elemen `kotak2` maka nilai nya akan di jumlahkan dengan nilai opacity dari induknya.
+
+Jadi meskipun kita memberi nilai penuh `1` pun tidak akan mengubah warna dari elemen `kotak2` menjadi solid kembali, maka dari itu kita bisa menggunakan `rgba()` atau `hsla()` untuk mengubah warna dari elemen `kotak2` menjadi solid.
+
+<Codepen dataSlugHash="mdgGGgv" title="property - opacity" />
+
+Nah bisa di lihat sekarang elemen `kotak` warnanya tetap solid.
+
+</TabItem>
+
+</Tabs>
+
+
+

@@ -3,7 +3,7 @@ import React from 'react';
 function Codepen({ dataSlugHash, title }) {
   return (
     <iframe
-      height="300"
+      height="400"
       style={{ width: '100%', backgroundColor: 'white' }}
       scrolling="no"
       title={`${title}`}
@@ -12,6 +12,7 @@ function Codepen({ dataSlugHash, title }) {
       loading="eager"
       allowTransparency="true"
       allowFullScreen="true"
+      className="mb-4"
     >
     See the Pen
     <a href={`https://codepen.io/alhifnywahid/pen/${dataSlugHash}`}> display - blcok</a> by

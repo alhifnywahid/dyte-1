@@ -1,0 +1,74 @@
+---
+title: 'position'
+slug: /position
+---
+
+<hr />
+
+**`position`** adalah sebuah property CSS yang digunakan untuk menentukan bagaimana elemen ditempatkan dalam dokumen. Property ini memungkinkan elemen untuk ditempatkan secara tepat dan dapat digunakan untuk membuat layout yang kompleks dan responsif.
+
+property position sendiri memiliki 5 value yang biasa di gunakan :
+
+- static
+- relative
+- absolute
+- fixed
+- sticky
+
+<Tabs value="position-value" label="position-value">
+
+<TabItem label="static" value="static" default>
+
+`static` adalah value default dari `position`.
+
+<Codepen dataSlugHash="BaEOeGL" title="property - position : static" />
+
+jika di lihat tidak akan terjadi apa apa, karena meskipun kita tidak memberi `position: static` css sudah menambahkan secara otomatis.
+
+jika di lihat secara 3d mungkin akan seperti berikut ini :
+
+<ThinkerCad dataSlugHash="7Zh0t8QojU8" title="property - position : static" />
+
+semua elemen `div` sejajar.
+
+</TabItem>
+
+  <TabItem label="relative" value="relative" default>
+
+relative adalah value yang memungkinkan elemen untuk ditempatkan relatif terhadap posisi normalnya. Dengan menggunakan `position: relative;`, kita dapat mengatur posisi elemen dengan properti `top`, `right`, `bottom`, dan `left` relatif terhadap posisinya yang sebelumnya, dimana elemennya seakan maju 1 dimensi ke atas tetapi posisi sebelumnya masih ada.
+
+<Codepen dataSlugHash="vYMVOEv" title="property - position : relative" />
+
+`top: 10px;` : bergeser dari atas posisi elemen semula ke bawah 10pixel.
+`left: 10px;` : bergeser dari kiri posisi elemen semula ke kanan 10pixel.
+
+property ini biasanya hanya di gunakan untuk memajukan sebuah elemen tidak untuk menggeser geser sebuah elemen.
+
+jika di lihat secara 3d mungkin akan seperti berikut ini :
+
+<ThinkerCad dataSlugHash="gowgPcL2rY7" title="property - position : relative" />
+
+elemen `hijau` maju 1 dimensi tetapi elemen yang `biru` tidak naik ke atas menggantikan posisi elemen `hijau` karena elemen hijau masih ada di tempat semulanya.
+    
+  </TabItem>
+
+  <TabItem label="absolute" value="absolute" default>
+
+absolute adalah value yang memungkinkan elemen untuk ditempatkan mutlak terhadap posisi normalnya. Dengan menggunakan `position: absolute;`, kita dapat mengatur posisi elemen dengan properti `top`, `right`, `bottom`, dan `left` mutlak terhadap posisinya yang sebelumnya, dimana elemennya seakan dipindahkan ke posisi absolut tanpa memperdulikan posisi sebelumnya.
+
+<Codepen dataSlugHash="NWmOqyR" title="property - position : absolute" />
+
+`top: 10px;` : bergeser dari atas posisi elemen semula ke bawah 10pixel.
+`left: 10px;` : bergeser dari kiri posisi elemen semula ke kanan 10pixel.
+
+property ini biasanya hanya di gunakan untuk memajukan sebuah elemen tidak untuk menggeser geser sebuah elemen.
+
+jika di lihat secara 3d mungkin akan seperti berikut ini :
+
+<ThinkerCad dataSlugHash="cJ8GYE4F1aB" title="property - position : absolute" />
+
+elemen `hijau` maju 1 dimensi tetapi elemen yang `biru` tidak naik ke atas menggantikan posisi elemen `hijau` karena elemen hijau masih ada di tempat semulanya.
+    
+  </TabItem>
+
+</Tabs>

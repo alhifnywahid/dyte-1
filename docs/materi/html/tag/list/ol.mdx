@@ -1,19 +1,34 @@
 ---
-title: '<ol>'
+title: 'Tag <ol>'
 slug: /tag-ol
 ---
 
 <hr />
 
-## Fungsi
+tag `<ol>` atau Ordered List befungsi untuk membuat list yang ter - urut.
 
-Berfungsi untuk membuat link.
+tag `<ol>` membutuhkan tag `<li>` di dalamnya agar menjadi sebuah list dengan tab.
 
-## Atribut
+### Atribut
 
-- **href** : untuk menyisipkan link.
-- **target** : memberi petunjuk kepada browser bagaimana tautan tersebut harus dibuka ketika diklik oleh pengguna. Ada beberapa nilai yang dapat digunakan untuk atribut target:
-  - **_blank **: Ketika tautan diklik, halaman yang ditautkan akan dibuka dalam jendela atau tab browser baru.
-  - **_self**: Ini adalah perilaku default. Halaman yang ditautkan akan terbuka di jendela atau tab yang sama tempat tautan tersebut berada.
-  - **_parent**: Jika halaman memiliki bingkai (frames), tautan akan dibuka di dalam bingkai induk dari bingkai saat ini.
-  - **_top**: Jika halaman memiliki bingkai (frames), tautan akan membuka halaman di luar semua bingkai, menggantikan seluruh halaman saat ini.
+- type
+
+### Contoh 
+
+```html 
+<ol>
+  <li>Es Teh</li>
+  <li>Es Cendol</li>
+  <li>Es Dawet</li>
+</ol>
+```
+
+cara mengubah listnya bisa menggunakan atribut type seperti berikut ini : 
+
+```html 
+<ol type="1/a/A/i/I">
+  <li>Es Teh</li>
+  <li>Es Cendol</li>
+  <li>Es Dawet</li>
+</ol>
+```

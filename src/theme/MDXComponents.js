@@ -14,6 +14,7 @@ import { DemoLiveEditor } from '../components/LiveCode';
 import comentar from '../components/Comentar';
 import IframeWindow from '../components/BrowserWindow/IframeWindow';
 import Codepen from '../components/Codepen';
+import ThinkerCad from '../components/ThinkerCad';
 import * as icons from '../icons';
 
 export default {
@@ -36,4 +37,5 @@ export default {
   comentar,
   IframeWindow,
   Codepen,
+  ThinkerCad,
 };
