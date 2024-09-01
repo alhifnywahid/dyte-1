@@ -1,4 +1,4 @@
-import 'dotenv/config';
+require('dotenv/config');
 
 const code_themes = {
   light: require('prism-react-renderer/themes/github'),
@@ -141,6 +141,7 @@ const config = {
           customCss: [
             require.resolve('./src/css/custom.css'),
             require.resolve('./src/css/api-reference.css'),
+            require.resolve('./src/css/notfound.css'),
           ],
         },
         sitemap: {

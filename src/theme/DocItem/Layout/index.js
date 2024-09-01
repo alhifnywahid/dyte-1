@@ -13,9 +13,7 @@ import { DiscussionEmbed } from 'disqus-react';
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import styles from './styles.module.css';
-/**
- * Decide if the toc should be rendered, on mobile or desktop viewports
- */
+
 function useDocTOC() {
   const { frontMatter, toc } = useDoc();
   const windowSize = useWindowSize();

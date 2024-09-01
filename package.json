@@ -1,7 +1,7 @@
 {
   "name": "mynotes",
   "version": "1.20.0",
-  "private": true,
+  "private": true, 
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
