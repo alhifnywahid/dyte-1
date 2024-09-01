@@ -23,6 +23,8 @@ const docs = [
   { id: 'js', path: 'docs/materi/js', routeBasePath: '/js' },
   { id: 'basisdata', path: 'docs/materi/basisdata', routeBasePath: '/basisdata', },
   { id: 'java', path: 'docs/materi/java', routeBasePath: '/java' },
+  { id: 'kotlin', path: 'docs/materi/kotlin', routeBasePath: '/kotlin' },
+  { id: 'android-studio', path: 'docs/materi/android-studio', routeBasePath: '/android-studio' },
 
   // PRIBADI
   { id: 'dokumentasi', path: 'docs/private/dokumentasi', routeBasePath: '/dokumentasi', },

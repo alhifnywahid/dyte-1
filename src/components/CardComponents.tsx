@@ -1,7 +1,7 @@
-import React, { ReactNode, PropsWithChildren } from 'react';
-import { paramCase } from 'param-case';
 import Link from '@docusaurus/Link';
 import clsx from 'clsx';
+import { paramCase } from 'param-case';
+import React, { PropsWithChildren, ReactNode } from 'react';
 
 export function CardSection({
   id,
@@ -14,7 +14,7 @@ export function CardSection({
 }: {
   id?: string;
   title: string;
-  children: ReactNode;
+  children: React.ReactNode;
   description?: ReactNode;
   hasSubSections?: boolean;
   HeadingTag?: keyof JSX.IntrinsicElements;
@@ -56,7 +56,7 @@ export function Card({
 }>) {
   return (
     <Link to={to} className="homepage-card">
-      {icon && <div className="icon">{icon}</div>}
+      {icon && <div className="icon overflow-hidden rounded">{icon}</div>}
       <div className="card-content">
         <div className="title" id={id && paramCase(title)}>
           {title}
