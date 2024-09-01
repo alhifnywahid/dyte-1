@@ -1,3 +1,5 @@
+import 'dotenv/config';
+
 const code_themes = {
   light: require('prism-react-renderer/themes/github'),
   dark: require('prism-react-renderer/themes/vsDark'),
@@ -6,7 +8,7 @@ const code_themes = {
 const meta = {
   title: 'My Notes',
   tagline: 'Website ini berisi catatan dari materi yang telah saya pelajari.',
-  url: 'https://mynotes.engineer',
+  url: process.env.URL || 'https://notes.alhifnywahid.xyz',
   baseUrl: '/',
   favicon: '/svg/logoku.svg',
   i18n: {
@@ -21,13 +23,25 @@ const docs = [
   { id: 'html', path: 'docs/materi/html', routeBasePath: '/html' },
   { id: 'css', path: 'docs/materi/css', routeBasePath: '/css' },
   { id: 'js', path: 'docs/materi/js', routeBasePath: '/js' },
-  { id: 'basisdata', path: 'docs/materi/basisdata', routeBasePath: '/basisdata', },
+  {
+    id: 'basisdata',
+    path: 'docs/materi/basisdata',
+    routeBasePath: '/basisdata',
+  },
   { id: 'java', path: 'docs/materi/java', routeBasePath: '/java' },
   { id: 'kotlin', path: 'docs/materi/kotlin', routeBasePath: '/kotlin' },
-  { id: 'android-studio', path: 'docs/materi/android-studio', routeBasePath: '/android-studio' },
+  {
+    id: 'android-studio',
+    path: 'docs/materi/android-studio',
+    routeBasePath: '/android-studio',
+  },
 
   // PRIBADI
-  { id: 'dokumentasi', path: 'docs/private/dokumentasi', routeBasePath: '/dokumentasi', },
+  {
+    id: 'dokumentasi',
+    path: 'docs/private/dokumentasi',
+    routeBasePath: '/dokumentasi',
+  },
   { id: 'pribadi', path: 'docs/private/pribadi', routeBasePath: '/pribadi' },
 ];
 
@@ -178,8 +192,7 @@ const config = {
         //   width: '101px',
         // },
         items: [
-          
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
           // {
           //   label: 'Guides',
           //   to: 'guides',
@@ -350,9 +363,9 @@ const config = {
         ],
       },
       algolia: {
-        appId:'RAXRF0BNQG',
-        apiKey:'588f5dc73a5326fda2da5841bb23cdaa',
-        indexName:'mynotes', 
+        appId: 'RAXRF0BNQG',
+        apiKey: '588f5dc73a5326fda2da5841bb23cdaa',
+        indexName: 'mynotes',
         placeholder: 'Search...',
         // contextualSearch: true,
         // searchParameters: {},
