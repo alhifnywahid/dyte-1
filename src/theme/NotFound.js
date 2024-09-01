@@ -1,7 +1,6 @@
 import { translate } from '@docusaurus/Translate';
 import { PageMetadata } from '@docusaurus/theme-common';
-import React from 'react';
-import './css/notfound.css';
+import React from 'react'; 
 
 export default function NotFound() {
   return (
