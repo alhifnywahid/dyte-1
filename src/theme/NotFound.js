@@ -15,7 +15,7 @@ export default function NotFound() {
       <main className="main-container">
         <div className="text-center">
           <p className="error-code">404</p>
-          <h1 className="title">Halaman tidak ditemukan</h1>
+          <h1 className="title_notfound">Halaman tidak ditemukan</h1>
           <p className="description">
             Maaf, kami tidak dapat menemukan halaman yang Anda cari.
           </p>
