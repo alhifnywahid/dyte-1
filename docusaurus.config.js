@@ -141,7 +141,6 @@ const config = {
           customCss: [
             require.resolve('./src/css/custom.css'),
             require.resolve('./src/css/api-reference.css'),
-            require.resolve('./src/css/notfound.css'),
           ],
         },
         sitemap: {
